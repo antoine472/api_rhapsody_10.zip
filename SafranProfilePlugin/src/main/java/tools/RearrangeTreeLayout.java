@@ -9,9 +9,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import javax.swing.JOptionPane;
-import javax.swing.UIManager;
-
 import com.telelogic.rhapsody.core.IRPApplication;
 import com.telelogic.rhapsody.core.IRPDependency;
 import com.telelogic.rhapsody.core.IRPDiagram;
@@ -22,6 +19,7 @@ import com.telelogic.rhapsody.core.IRPModelElement;
 
 import main.constants.RhpMetaClassConstants;
 import main.gui.tools.Toast;
+import main.gui.tools.TreeLayoutOrientationDialog;
 import utils.TreeDiagramLayout;
 import utils.TreeDiagramLayout.Box;
 import utils.TreeDiagramLayout.Node;
@@ -61,6 +59,9 @@ import utils.TreeDiagramLayout.Orientation;
 public class RearrangeTreeLayout extends RhapsodyTool {
 
 	public static final String COMMAND = "Safran Toolkit...\\Rearrange Tree Layout";
+
+	/** Dernier choix d'orientation, preselectionne a l'ouverture suivante (session Rhapsody). */
+	private static Orientation lastOrientation = Orientation.VERTICAL;
 
 	/** Type graphique d'un lien de composition : sa source est l'enfant. */
 	private static final String CONTAIN_ARROW = "ContainArrow";
@@ -383,28 +384,16 @@ public class RearrangeTreeLayout extends RhapsodyTool {
 	// ======================================================================
 
 	/**
-	 * Demande l'orientation a l'utilisateur.
+	 * Demande l'orientation a l'utilisateur dans la boite moderne du plugin,
+	 * affichee sur l'ecran de Rhapsody et au premier plan. Le dernier choix
+	 * est preselectionne.
 	 *
-	 * @return l'orientation choisie, ou null si la boite est fermee
+	 * @return l'orientation choisie, ou null si l'utilisateur annule
 	 */
 	private Orientation askOrientation(String elementName) {
-		try {
-			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-		} catch (Exception ignore) {
-			// apparence par defaut si celle du systeme est indisponible
-		}
-
-		Object[] options = { "Vertical", "Horizontal" };
-		int choice = JOptionPane.showOptionDialog(null,
-				"Rearrange the children of '" + elementName + "':",
-				"Rearrange Tree Layout",
-				JOptionPane.DEFAULT_OPTION,
-				JOptionPane.QUESTION_MESSAGE,
-				null, options, options[0]);
-
-		if (choice == 0) return Orientation.VERTICAL;
-		if (choice == 1) return Orientation.HORIZONTAL;
-		return null;
+		Orientation choice = TreeLayoutOrientationDialog.ask(elementName, lastOrientation);
+		if (choice != null) lastOrientation = choice;
+		return choice;
 	}
 
 	/**
