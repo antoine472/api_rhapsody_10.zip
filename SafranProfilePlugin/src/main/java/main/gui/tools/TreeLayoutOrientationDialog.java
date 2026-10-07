@@ -21,6 +21,7 @@ import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JComponent;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
@@ -29,10 +30,12 @@ import javax.swing.KeyStroke;
 import javax.swing.WindowConstants;
 
 import utils.DialogPlacement;
+import utils.TreeDiagramLayout;
 import utils.TreeDiagramLayout.Orientation;
 
 /**
- * Boite de dialogue de "Rearrange Tree Layout" : choix de l'orientation.
+ * Boite de dialogue de "Rearrange Tree Layout" : choix de l'orientation et
+ * du nombre de niveaux a reorganiser (comme la profondeur de Generate LBS / FBS / TBD).
  *
  * <p><b>Presentation</b> : deux cartes cliquables, chacune avec un apercu
  * dessine de la disposition (arbre indente ou organigramme). Meme style que
@@ -44,6 +47,10 @@ import utils.TreeDiagramLayout.Orientation;
  * souris, c'est-a-dire celui ou l'utilisateur vient de faire le clic droit
  * dans Rhapsody ({@link DialogPlacement}), et elle reste au premier plan,
  * devant Rhapsody.</p>
+ *
+ * <p><b>Profondeur</b> : liste "All levels (*)", "1 level", "2 levels"...
+ * limitee a la profondeur reelle de l'arbre. Les blocs plus profonds gardent
+ * leur disposition et suivent leur ancetre.</p>
  *
  * <p><b>Clavier</b> : fleches gauche / droite ou touches V / H pour choisir,
  * Entree pour appliquer, Echap pour annuler. Un double-clic sur une carte
@@ -60,13 +67,29 @@ public final class TreeLayoutOrientationDialog {
 	}
 
 	/**
+	 * Choix de l'utilisateur.
+	 *
+	 * @param orientation orientation de la mise en page
+	 * @param depth       nombre de niveaux reorganises, ou TreeDiagramLayout.ALL_LEVELS
+	 */
+	public record Choice(Orientation orientation, int depth) {}
+
+	/** Element de la liste des profondeurs : valeur et libelle affiche. */
+	private record DepthItem(int depth, String label) {
+		@Override
+		public String toString() { return label; }
+	}
+
+	/**
 	 * Affiche la boite (modale) et attend le choix de l'utilisateur.
 	 *
-	 * @param elementName nom de l'element selectionne, affiche en en-tete
-	 * @param initial     orientation preselectionnee (par exemple le dernier choix)
-	 * @return l'orientation choisie, ou null si l'utilisateur annule
+	 * @param elementName  nom de l'element selectionne, affiche en en-tete
+	 * @param initial      orientation preselectionnee (par exemple le dernier choix)
+	 * @param maxDepth     nombre de niveaux sous l'element (au moins 1)
+	 * @param initialDepth profondeur preselectionnee, ou TreeDiagramLayout.ALL_LEVELS
+	 * @return le choix, ou null si l'utilisateur annule
 	 */
-	public static Orientation ask(String elementName, Orientation initial) {
+	public static Choice ask(String elementName, Orientation initial, int maxDepth, int initialDepth) {
 		final JDialog dialog = new JDialog((Frame) null, "Rearrange Tree Layout", true);
 		dialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 		dialog.setAlwaysOnTop(true);   // devant Rhapsody, dont la fenetre est native
@@ -104,7 +127,19 @@ public final class TreeLayoutOrientationDialog {
 
 		// Etat partage entre les ecouteurs : carte choisie et resultat final
 		final OptionCard[] chosen = { initial == Orientation.HORIZONTAL ? horizontal : vertical };
-		final Orientation[] result = { null };
+		final Choice[] result = { null };
+
+		// Liste des profondeurs : "All levels (*)" puis 1 a maxDepth niveaux
+		final JComboBox<DepthItem> depthBox = new JComboBox<>();
+		depthBox.addItem(new DepthItem(TreeDiagramLayout.ALL_LEVELS, "All levels (*)"));
+		for (int d = 1; d <= Math.max(1, maxDepth); d++) {
+			depthBox.addItem(new DepthItem(d, d == 1 ? "1 level (children only)" : d + " levels"));
+		}
+		depthBox.setSelectedIndex(0);
+		for (int i = 0; i < depthBox.getItemCount(); i++) {
+			if (depthBox.getItemAt(i).depth() == initialDepth) depthBox.setSelectedIndex(i);
+		}
+		depthBox.setToolTipText("Number of levels rearranged below the selected block");
 
 		final Runnable refresh = () -> {
 			vertical.setSelected(chosen[0] == vertical);
@@ -119,7 +154,7 @@ public final class TreeLayoutOrientationDialog {
 					refresh.run();
 					// Double-clic : choix et validation en un geste
 					if (e.getClickCount() >= 2) {
-						result[0] = card.orientation;
+						result[0] = new Choice(card.orientation, selectedDepth(depthBox));
 						dialog.dispose();
 					}
 				}
@@ -130,13 +165,31 @@ public final class TreeLayoutOrientationDialog {
 		cards.setOpaque(false);
 		cards.add(vertical);
 		cards.add(horizontal);
-		root.add(cards, BorderLayout.CENTER);
+
+		// Ligne de profondeur sous les cartes
+		JPanel depthRow = new JPanel();
+		depthRow.setOpaque(false);
+		depthRow.setLayout(new BoxLayout(depthRow, BoxLayout.X_AXIS));
+		JLabel depthLabel = UiKit.sectionTitle("LEVELS TO REARRANGE", UiKit.INK2);
+		depthRow.add(depthLabel);
+		depthRow.add(Box.createHorizontalStrut(10));
+		depthBox.setMaximumSize(depthBox.getPreferredSize());
+		depthRow.add(depthBox);
+		depthRow.add(Box.createHorizontalStrut(10));
+		depthRow.add(UiKit.muted("Deeper blocks keep their layout and follow their parent."));
+		depthRow.add(Box.createHorizontalGlue());
+
+		JPanel center = new JPanel(new BorderLayout(0, 12));
+		center.setOpaque(false);
+		center.add(cards, BorderLayout.CENTER);
+		center.add(depthRow, BorderLayout.SOUTH);
+		root.add(center, BorderLayout.CENTER);
 
 		// -- Sud : rappel clavier + Apply (par defaut) + Cancel -----------------
 		JButton btnApply = UiKit.primary("Apply");
 		JButton btnCancel = UiKit.neutral("Cancel");
 		btnApply.addActionListener(e -> {
-			result[0] = chosen[0].orientation;
+			result[0] = new Choice(chosen[0].orientation, selectedDepth(depthBox));
 			dialog.dispose();
 		});
 		btnCancel.addActionListener(e -> dialog.dispose());
@@ -177,6 +230,12 @@ public final class TreeLayoutOrientationDialog {
 		dialog.setVisible(true);   // bloque jusqu'a Apply, Cancel, Echap ou fermeture
 
 		return result[0];
+	}
+
+	/** Profondeur choisie dans la liste. */
+	private static int selectedDepth(JComboBox<DepthItem> depthBox) {
+		DepthItem item = (DepthItem) depthBox.getSelectedItem();
+		return item != null ? item.depth() : TreeDiagramLayout.ALL_LEVELS;
 	}
 
 	/** Associe une touche a une action, quelle que soit la zone qui a le focus. */

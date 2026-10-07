@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.IdentityHashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -39,6 +40,10 @@ import utils.TreeDiagramLayout.Orientation;
  *       rangee d'enfants etant centree sous son parent ;</li>
  *   <li>les liens du sous-arbre sont redessines (proprietes graphiques
  *       SourcePosition, TargetPosition et Polygon) ;</li>
+ *   <li>l'utilisateur choisit aussi le nombre de niveaux reorganises
+ *       ("*" pour tous, comme dans Generate LBS) ; au-dela, chaque sous-arbre
+ *       garde sa disposition et se deplace d'un bloc avec son ancetre, ses
+ *       liens etant decales du meme vecteur ;</li>
  *   <li>la taille des blocs n'est pas modifiee ;</li>
  *   <li>les freres sont ranges dans l'ordre du modele
  *       (getNestedElementsByMetaClass), comme dans Generate LBS.</li>
@@ -60,8 +65,9 @@ public class RearrangeTreeLayout extends RhapsodyTool {
 
 	public static final String COMMAND = "Safran Toolkit...\\Rearrange Tree Layout";
 
-	/** Dernier choix d'orientation, preselectionne a l'ouverture suivante (session Rhapsody). */
+	/** Derniers choix, preselectionnes a l'ouverture suivante (session Rhapsody). */
 	private static Orientation lastOrientation = Orientation.VERTICAL;
+	private static int lastDepth = TreeDiagramLayout.ALL_LEVELS;
 
 	/** Type graphique d'un lien de composition : sa source est l'enfant. */
 	private static final String CONTAIN_ARROW = "ContainArrow";
@@ -119,21 +125,33 @@ public class RearrangeTreeLayout extends RhapsodyTool {
 		}
 
 		// ------------------------------------------------------------------
-		// 3) Choix de l'orientation
+		// 3) Choix de l'orientation et du nombre de niveaux
 		// ------------------------------------------------------------------
-		Orientation orientation = askOrientation(selected.getName());
-		if (orientation == null) {
+		TreeLayoutOrientationDialog.Choice choice = askChoice(selected.getName(),
+				TreeDiagramLayout.subtreeDepth(start));
+		if (choice == null) {
 			rhpLog.info("Cancelled by user.");
 			return;
 		}
+		Orientation orientation = choice.orientation();
+		int depth = choice.depth();
 
 		// ------------------------------------------------------------------
 		// 4) Calcul : ordre du modele, puis mise en page du sous-arbre
 		// ------------------------------------------------------------------
 		sortSubtreeByModelOrder(start, graphNodes, new HashSet<>());
-		List<Node> placed = TreeDiagramLayout.layout(start, orientation);
+		List<Node> placed = TreeDiagramLayout.layout(start, orientation, depth);
 		Set<Node> subtree = new HashSet<>(placed);
 		warnOverlaps(nodes, start, subtree);
+
+		// Trace actuel des liens qui suivront leur bloc : lu AVANT de deplacer
+		// les blocs, car Rhapsody peut recalculer un lien quand un bloc bouge
+		Map<TreeLink, List<int[]>> followingLinks = new IdentityHashMap<>();
+		for (TreeLink link : links) {
+			if (!subtree.contains(link.child()) || TreeDiagramLayout.isArranged(link.child(), depth)) continue;
+			List<int[]> points = TreeDiagramLayout.parsePolygon(readProperty(link.edge(), "Polygon"));
+			if (points != null) followingLinks.put(link, points);
+		}
 
 		// ------------------------------------------------------------------
 		// 5) Ecriture : blocs d'abord, puis liens du sous-arbre
@@ -145,17 +163,28 @@ public class RearrangeTreeLayout extends RhapsodyTool {
 			movedCount++;
 		}
 
-		int linkCount = 0;
+		int redrawn = 0;
+		int shifted = 0;
 		for (TreeLink link : links) {
-			// Seuls les liens vers un enfant du sous-arbre sont redessines ;
-			// le lien entre l'element selectionne et son propre parent ne bouge pas
+			// Seuls les liens vers un enfant du sous-arbre changent ; le lien
+			// entre l'element selectionne et son propre parent ne bouge pas
 			if (!subtree.contains(link.child())) continue;
-			redrawLink(link, orientation);
-			linkCount++;
+
+			if (TreeDiagramLayout.isArranged(link.child(), depth)) {
+				redrawLink(link, orientation);
+				redrawn++;
+			} else if (followingLinks.containsKey(link)) {
+				// Lien sous le dernier niveau reorganise : meme forme, decale
+				// du meme vecteur que les deux blocs qu'il relie
+				shiftLink(link, followingLinks.get(link));
+				shifted++;
+			}
 		}
 
-		rhpLog.info("End - " + COMMAND + " (" + orientation + "): "
-				+ movedCount + " block(s) moved, " + linkCount + " link(s) redrawn.");
+		rhpLog.info("End - " + COMMAND + " (" + orientation + ", depth "
+				+ (depth == TreeDiagramLayout.ALL_LEVELS ? "*" : String.valueOf(depth)) + "): "
+				+ movedCount + " block(s) moved, " + redrawn + " link(s) redrawn, "
+				+ shifted + " link(s) shifted.");
 	}
 
 	// ======================================================================
@@ -379,20 +408,46 @@ public class RearrangeTreeLayout extends RhapsodyTool {
 		rhpLog.debug("Link to " + link.child().key + " -> " + polygon);
 	}
 
+	/**
+	 * Decale un lien qui suit son bloc : son trace d'origine est translate
+	 * du deplacement de l'enfant (identique a celui du parent, deplace en bloc).
+	 */
+	private void shiftLink(TreeLink link, List<int[]> originalPoints) {
+		List<int[]> points = TreeDiagramLayout.translated(originalPoints,
+				link.child().dx(), link.child().dy());
+		link.edge().setGraphicalProperty("SourcePosition", TreeDiagramLayout.toPoint(points.get(0)));
+		link.edge().setGraphicalProperty("TargetPosition", TreeDiagramLayout.toPoint(points.get(points.size() - 1)));
+		link.edge().setGraphicalProperty("Polygon", TreeDiagramLayout.toPolygon(points));
+	}
+
+	/** Valeur d'une propriete graphique, ou null si elle est illisible. */
+	private static String readProperty(IRPGraphElement ge, String name) {
+		try {
+			return ge.getGraphicalProperty(name).getValue();
+		} catch (Exception e) {
+			return null;
+		}
+	}
+
 	// ======================================================================
 	// Interface et recherche du diagramme
 	// ======================================================================
 
 	/**
-	 * Demande l'orientation a l'utilisateur dans la boite moderne du plugin,
-	 * affichee sur l'ecran de Rhapsody et au premier plan. Le dernier choix
-	 * est preselectionne.
+	 * Demande l'orientation et le nombre de niveaux dans la boite du plugin,
+	 * affichee sur l'ecran de Rhapsody et au premier plan. Les derniers choix
+	 * sont preselectionnes.
 	 *
-	 * @return l'orientation choisie, ou null si l'utilisateur annule
+	 * @param maxDepth nombre de niveaux sous l'element selectionne
+	 * @return le choix, ou null si l'utilisateur annule
 	 */
-	private Orientation askOrientation(String elementName) {
-		Orientation choice = TreeLayoutOrientationDialog.ask(elementName, lastOrientation);
-		if (choice != null) lastOrientation = choice;
+	private TreeLayoutOrientationDialog.Choice askChoice(String elementName, int maxDepth) {
+		TreeLayoutOrientationDialog.Choice choice =
+				TreeLayoutOrientationDialog.ask(elementName, lastOrientation, maxDepth, lastDepth);
+		if (choice != null) {
+			lastOrientation = choice.orientation();
+			lastDepth = choice.depth();
+		}
 		return choice;
 	}
 

@@ -3,6 +3,8 @@ package test.unittest;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
 
@@ -170,5 +172,91 @@ public class TreeDiagramLayoutTest {
 		List<int[]> reversed = TreeDiagramLayout.reversed(points);
 		assertArrayEquals(new int[] { 3, 4 }, reversed.get(0));
 		assertArrayEquals(new int[] { 1, 2 }, reversed.get(1));
+	}
+
+	// ======================================================================
+	// Profondeur limitee
+	// ======================================================================
+
+	/**
+	 * Profondeur 1 en vertical : seuls les enfants directs sont empiles ;
+	 * les petits-enfants de ls_7, ranges en ligne a l'origine, gardent cette
+	 * disposition et suivent ls_7. Comme ils debordent de 100 a gauche de
+	 * ls_7, le bloc est decale pour rester a droite de l'indentation.
+	 */
+	@Test
+	void vertical_depthOne_deeperBlocksFollowTheirParent() {
+		Node root = block("ls_1", 25, 32);
+		Node ls11 = block("ls_11", 400, 900);
+		Node ls12 = block("ls_12", 0, 500);
+		Node ls7  = block("ls_7", 700, 50);
+		root.addChild(ls11);
+		root.addChild(ls12);
+		root.addChild(ls7);
+		Node ls8  = block("ls_8", 600, 200);
+		Node ls9  = block("ls_9", 940, 200);
+		Node ls14 = block("ls_14", 1280, 200);
+		ls7.addChild(ls8);
+		ls7.addChild(ls9);
+		ls7.addChild(ls14);
+
+		List<Node> placed = TreeDiagramLayout.layout(root, Orientation.VERTICAL, 1);
+
+		assertEquals(6, placed.size(), "Tous les descendants sont deplaces");
+		assertEquals(125, ls11.box.x());
+		assertEquals(152, ls11.box.y());
+		assertEquals(272, ls12.box.y());
+		// Bloc de ls_7 : bord gauche du bloc (ls_8) sur l'indentation (125)
+		assertEquals(225, ls7.box.x());
+		assertEquals(392, ls7.box.y());
+		// Disposition interne conservee : decalage identique a celui de ls_7
+		assertEquals(125, ls8.box.x());
+		assertEquals(542, ls8.box.y());
+		assertEquals(465, ls9.box.x());
+		assertEquals(805, ls14.box.x());
+		assertEquals(542, ls14.box.y());
+
+		assertEquals(1, ls7.depth);
+		assertEquals(2, ls8.depth);
+		assertTrue(TreeDiagramLayout.isArranged(ls7, 1));
+		assertFalse(TreeDiagramLayout.isArranged(ls8, 1), "ls_8 suit son parent, son lien est decale");
+	}
+
+	@Test
+	void horizontal_depthOne_blockKeepsItsShapeInItsBand() {
+		Node root = new Node("root", new Box(500, 0, 300, 100));
+		Node a = block("a", 0, 0);
+		Node b = block("b", 0, 0);
+		Node a1 = block("a1", 0, 150);
+		Node a2 = block("a2", 340, 150);
+		root.addChild(a);
+		root.addChild(b);
+		a.addChild(a1);
+		a.addChild(a2);
+
+		TreeDiagramLayout.layout(root, Orientation.HORIZONTAL, 1);
+
+		// Bande de a = encombrement de son bloc (640), b = 300 : rangee de 980 centree sous 650
+		assertEquals(160, a.box.x());
+		assertEquals(160, a.box.y());
+		assertEquals(160, a1.box.x());   // decale de (+160, +160)
+		assertEquals(310, a1.box.y());
+		assertEquals(500, a2.box.x());
+		assertEquals(840, b.box.x());
+	}
+
+	@Test
+	void subtreeDepthCountsLevelsBelowStart() {
+		assertEquals(2, TreeDiagramLayout.subtreeDepth(referenceTree()));
+	}
+
+	@Test
+	void polygonParsingAndTranslation() {
+		List<int[]> points = TreeDiagramLayout.parsePolygon("4,352,263,352,234,221,234,221,204");
+		assertEquals(4, points.size());
+		assertEquals("4,362,283,362,254,231,254,231,224",
+				TreeDiagramLayout.toPolygon(TreeDiagramLayout.translated(points, 10, 20)));
+		assertNull(TreeDiagramLayout.parsePolygon("3,1,2"), "Valeur mal formee");
+		assertNull(TreeDiagramLayout.parsePolygon(""), "Valeur vide");
 	}
 }
