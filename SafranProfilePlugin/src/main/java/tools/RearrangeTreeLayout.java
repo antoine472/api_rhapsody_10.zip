@@ -186,28 +186,54 @@ public class RearrangeTreeLayout extends RhapsodyTool {
 	}
 
 	/**
-	 * Collecte les liens entre deux blocs connus et relie parents et enfants.
-	 * Le parent est determine dans cet ordre :
+	 * Collecte les liens de l'arbre et relie parents et enfants.
+	 * <p>
+	 * Si le diagramme contient des liens de composition (Type graphique
+	 * ContainArrow), seuls ceux-ci forment l'arbre : les autres liens
+	 * (associations, dependances...) ne sont ni utilises ni redessines.
+	 * Sinon, tous les liens entre deux blocs sont utilises.
+	 * </p>
+	 * <p>Le parent est determine dans cet ordre :</p>
 	 * <ol>
 	 *   <li>Type graphique ContainArrow : la source est l'enfant ;</li>
 	 *   <li>sinon l'appartenance dans le modele (getOwner) ;</li>
 	 *   <li>en dernier recours la geometrie : l'enfant est le bloc le plus bas.</li>
 	 * </ol>
-	 * Un enfant n'a qu'un parent : un second lien vers un autre parent est ignore.
+	 * <p>Un enfant n'a qu'un parent, et un lien qui fermerait une boucle est ignore.</p>
 	 */
 	private List<TreeLink> collectLinks(List<IRPGraphElement> elements, Map<String, Node> nodes,
 			Map<String, IRPGraphNode> graphNodes) {
-		List<TreeLink> links = new ArrayList<>();
 
+		// Liens entre deux blocs connus, en notant ceux qui sont des compositions
+		List<IRPGraphEdge> edges = new ArrayList<>();
+		List<Boolean> containment = new ArrayList<>();
+		boolean anyContainment = false;
 		for (IRPGraphElement ge : elements) {
 			if (!(ge instanceof IRPGraphEdge)) continue;
 			IRPGraphEdge edge = (IRPGraphEdge) ge;
-
 			Node source = nodeOf(edge.getSource(), nodes);
 			Node target = nodeOf(edge.getTarget(), nodes);
 			if (source == null || target == null || source == target) continue;
 
-			boolean sourceIsChild = sourceIsChild(edge, source, target, graphNodes);
+			boolean isContain = isContainArrow(edge);
+			anyContainment |= isContain;
+			edges.add(edge);
+			containment.add(isContain);
+		}
+
+		List<TreeLink> links = new ArrayList<>();
+		for (int i = 0; i < edges.size(); i++) {
+			IRPGraphEdge edge = edges.get(i);
+			if (anyContainment && !containment.get(i)) {
+				rhpLog.debug("Not a containment link, left as is: "
+						+ edge.getSource().getModelObject().getName() + " -> "
+						+ edge.getTarget().getModelObject().getName());
+				continue;
+			}
+
+			Node source = nodeOf(edge.getSource(), nodes);
+			Node target = nodeOf(edge.getTarget(), nodes);
+			boolean sourceIsChild = containment.get(i) || sourceIsChild(source, target, graphNodes);
 			Node parent = sourceIsChild ? target : source;
 			Node child  = sourceIsChild ? source : target;
 
@@ -215,22 +241,42 @@ public class RearrangeTreeLayout extends RhapsodyTool {
 				rhpLog.warn("Block already has a parent, extra link ignored: " + child.key);
 				continue;
 			}
-			if (child.parent == null) parent.addChild(child);
+			if (child.parent == null) {
+				if (isAncestor(child, parent)) {
+					rhpLog.warn("Link would create a loop, ignored: " + child.key + " -> " + parent.key);
+					continue;
+				}
+				parent.addChild(child);
+			}
 			links.add(new TreeLink(edge, parent, child, sourceIsChild));
 		}
 		return links;
 	}
 
-	/** Determine si la source du lien est l'enfant (voir collectLinks). */
-	private boolean sourceIsChild(IRPGraphEdge edge, Node source, Node target, Map<String, IRPGraphNode> graphNodes) {
-		// 1) Type graphique du lien
+	/** Vrai si le lien a le type graphique ContainArrow (composition). */
+	private static boolean isContainArrow(IRPGraphEdge edge) {
 		try {
-			if (CONTAIN_ARROW.equals(edge.getGraphicalProperty("Type").getValue())) return true;
-		} catch (Exception ignore) {
-			// propriete absente pour ce type de lien : critere suivant
+			return CONTAIN_ARROW.equals(edge.getGraphicalProperty("Type").getValue());
+		} catch (Exception e) {
+			return false; // propriete absente pour ce type de lien
 		}
+	}
 
-		// 2) Appartenance dans le modele
+	/** Vrai si {@code candidate} est {@code node} ou l'un de ses ancetres. */
+	private static boolean isAncestor(Node candidate, Node node) {
+		Set<Node> seen = new HashSet<>();
+		for (Node n = node; n != null && seen.add(n); n = n.parent) {
+			if (n == candidate) return true;
+		}
+		return false;
+	}
+
+	/**
+	 * Pour un lien qui n'est pas une composition : determine si la source est
+	 * l'enfant, par l'appartenance dans le modele, sinon par la geometrie.
+	 */
+	private boolean sourceIsChild(Node source, Node target, Map<String, IRPGraphNode> graphNodes) {
+		// Appartenance dans le modele
 		try {
 			IRPModelElement sourceOwner = graphNodes.get(source.key).getModelObject().getOwner();
 			IRPModelElement targetOwner = graphNodes.get(target.key).getModelObject().getOwner();
@@ -240,7 +286,7 @@ public class RearrangeTreeLayout extends RhapsodyTool {
 			// proprietaire illisible : critere suivant
 		}
 
-		// 3) Geometrie
+		// Geometrie
 		return source.box.y() > target.box.y();
 	}
 

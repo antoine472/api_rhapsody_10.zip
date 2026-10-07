@@ -46,7 +46,7 @@ import tools.UpdateRedefinedPorts;
 
 public class SafranProfilePlugin extends RPUserPlugin {
 
-	private static final String BUILD_VERSION = "20251215_16-45";
+	private static final String BUILD_VERSION = "20261007_19-00";
 
 	private static RhapsodyLogger rhpLog = RhapsodyLogger.getInstance();
 
