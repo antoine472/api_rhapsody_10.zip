@@ -1,8 +1,10 @@
 package tools;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -18,374 +20,387 @@ import com.telelogic.rhapsody.core.IRPGraphElement;
 import com.telelogic.rhapsody.core.IRPGraphNode;
 import com.telelogic.rhapsody.core.IRPModelElement;
 
+import main.constants.RhpMetaClassConstants;
+import main.gui.tools.Toast;
+import utils.TreeDiagramLayout;
+import utils.TreeDiagramLayout.Box;
+import utils.TreeDiagramLayout.Node;
+import utils.TreeDiagramLayout.Orientation;
+
 /**
- * Rearranges children of a selected element (or the entire tree if root is selected).
+ * Rearrange Tree Layout : reorganise les descendants de l'element selectionne
+ * dans un diagramme d'arbre (LBS, FBS...), verticalement ou horizontalement.
  *
- * Partial, compact layout: when you rearrange element E's children from vertical to
- * horizontal (or vice versa), E's siblings reflow upward/downward to fill the space
- * efficiently. Only E and its subtree are repositioned on the selected axis; siblings
- * and parent remain at their original depth.
+ * <p><b>Comportement</b> :</p>
+ * <ul>
+ *   <li>l'element selectionne garde sa position, ainsi que tout ce qui n'est pas
+ *       dans son sous-arbre (son parent, ses freres, les autres arbres) ;</li>
+ *   <li>Vertical : les descendants sont empiles en arbre indente, comme les
+ *       diagrammes produits par Generate LBS ;</li>
+ *   <li>Horizontal : les descendants sont disposes en organigramme, chaque
+ *       rangee d'enfants etant centree sous son parent ;</li>
+ *   <li>les liens du sous-arbre sont redessines (proprietes graphiques
+ *       SourcePosition, TargetPosition et Polygon) ;</li>
+ *   <li>la taille des blocs n'est pas modifiee ;</li>
+ *   <li>les freres sont ranges dans l'ordre du modele
+ *       (getNestedElementsByMetaClass), comme dans Generate LBS.</li>
+ * </ul>
+ *
+ * <p>On peut combiner les orientations : appliquer Horizontal sur la racine,
+ * puis Vertical sur un de ses enfants, qui reste en place pendant que ses
+ * propres descendants passent en arbre indente. Reappliquer une orientation
+ * sur la racine remet tout son sous-arbre dans cette orientation.</p>
+ *
+ * <p>La commande est annulable : le plugin l'execute dans une transaction,
+ * un Ctrl+Z annule l'ensemble des deplacements.</p>
+ *
+ * <p><b>Limite</b> : les blocs situes hors du sous-arbre ne sont pas deplaces ;
+ * si le sous-arbre reorganise les chevauche, un avertissement est ecrit dans
+ * le log.</p>
  */
 public class RearrangeTreeLayout extends RhapsodyTool {
 
-    public static final String COMMAND = "Safran Toolkit...\\Rearrange Tree Layout";
+	public static final String COMMAND = "Safran Toolkit...\\Rearrange Tree Layout";
 
-    private static final int NODE_WIDTH  = 300;
-    private static final int NODE_HEIGHT = 100;
-    private static final int H_SPACING   = 40;
-    private static final int V_SPACING   = 60;
-    private static final int MARGIN_X    = 50;
-    private static final int MARGIN_Y    = 50;
+	/** Type graphique d'un lien de composition : sa source est l'enfant. */
+	private static final String CONTAIN_ARROW = "ContainArrow";
 
-    private boolean horizontal;
-    private IRPDiagram diagram;
-    private IRPModelElement selectedElement;
+	public RearrangeTreeLayout(IRPApplication rpyApp) {
+		super(rpyApp);
+	}
 
-    public RearrangeTreeLayout(IRPApplication rpyApp) {
-        super(rpyApp);
-    }
+	/**
+	 * Un lien du diagramme entre deux blocs de l'arbre.
+	 *
+	 * @param sourceIsChild vrai si la source du lien Rhapsody est l'enfant ;
+	 *                      le Polygon doit alors aller de l'enfant au parent
+	 */
+	private record TreeLink(IRPGraphEdge edge, Node parent, Node child, boolean sourceIsChild) {}
 
-    @Override
-    public void execute() {
-        try {
-            rhpLog.info("Start - RearrangeTreeLayout (partial layout)");
+	@Override
+	public void execute() {
+		rhpLog.info("Start - " + COMMAND);
 
-            selectedElement = rhApp.getSelectedElement();
-            if (selectedElement == null) {
-                JOptionPane.showMessageDialog(null, "Please select an element in the diagram.");
-                return;
-            }
-            rhpLog.info("Selected element: " + selectedElement.getName());
+		// ------------------------------------------------------------------
+		// 1) Element selectionne et diagramme
+		// ------------------------------------------------------------------
+		IRPModelElement selected = rhApp.getSelectedElement();
+		if (selected == null) {
+			Toast.showToast("Select an element in the breakdown diagram.", 3500);
+			return;
+		}
 
-            diagram = findDiagram(selectedElement);
-            if (diagram == null) {
-                JOptionPane.showMessageDialog(null,
-                        "No diagram found.\nOpen or activate the breakdown diagram first.");
-                return;
-            }
-            rhpLog.info("Diagram found: " + diagram.getName());
+		IRPDiagram diagram = findDiagram(selected);
+		if (diagram == null) {
+			Toast.showToast("No diagram found. Open the breakdown diagram and select the element in it.", 4000);
+			return;
+		}
+		rhpLog.info("Selected: " + selected.getName() + " | diagram: " + diagram.getName());
 
-            if (!askOrientation()) return;
+		// ------------------------------------------------------------------
+		// 2) Lecture des blocs et des liens, construction de l'arbre
+		// ------------------------------------------------------------------
+		@SuppressWarnings("unchecked")
+		List<IRPGraphElement> elements = diagram.getGraphicalElements().toList();
 
-            TreeNode root = buildTreeFromEdges();
-            if (root == null) {
-                JOptionPane.showMessageDialog(null,
-                        "Cannot detect a tree structure in the diagram.");
-                return;
-            }
+		Map<String, IRPGraphNode> graphNodes = new LinkedHashMap<>();
+		Map<String, Node> nodes = collectNodes(elements, graphNodes);
+		List<TreeLink> links = collectLinks(elements, nodes, graphNodes);
 
-            // Find the tree node corresponding to the selected element
-            TreeNode selectedNode = findNode(root, selectedElement);
-            if (selectedNode == null) {
-                JOptionPane.showMessageDialog(null,
-                        "Selected element not found in diagram tree.");
-                return;
-            }
-            rhpLog.info("Selected node in tree: " + selectedNode.element.getName());
+		Node start = nodes.get(selected.getGUID());
+		if (start == null) {
+			Toast.showToast("The selected element is not drawn in diagram " + diagram.getName() + ".", 4000);
+			return;
+		}
+		if (start.children.isEmpty()) {
+			Toast.showToast(selected.getName() + " has no child in this diagram.", 3500);
+			return;
+		}
 
-            // Partial layout: re-arrange only the selected node's children
-            if (selectedNode.children.isEmpty()) {
-                JOptionPane.showMessageDialog(null, "Selected element has no children.");
-                return;
-            }
+		// ------------------------------------------------------------------
+		// 3) Choix de l'orientation
+		// ------------------------------------------------------------------
+		Orientation orientation = askOrientation(selected.getName());
+		if (orientation == null) {
+			rhpLog.info("Cancelled by user.");
+			return;
+		}
 
-            rhpLog.info("Performing partial layout on: " + selectedNode.element.getName());
+		// ------------------------------------------------------------------
+		// 4) Calcul : ordre du modele, puis mise en page du sous-arbre
+		// ------------------------------------------------------------------
+		sortSubtreeByModelOrder(start, graphNodes, new HashSet<>());
+		List<Node> placed = TreeDiagramLayout.layout(start, orientation);
+		Set<Node> subtree = new HashSet<>(placed);
+		warnOverlaps(nodes, start, subtree);
 
-            // Assign breadth only to the selected subtree
-            assignBreadth(selectedNode);
+		// ------------------------------------------------------------------
+		// 5) Ecriture : blocs d'abord, puis liens du sous-arbre
+		// ------------------------------------------------------------------
+		int movedCount = 0;
+		for (Node n : placed) {
+			if (!n.moved()) continue;
+			graphNodes.get(n.key).setGraphicalProperty("Position", n.box.x() + "," + n.box.y());
+			movedCount++;
+		}
 
-            // Place the selected node's children according to new orientation
-            placeChildren(selectedNode, 0);
+		int linkCount = 0;
+		for (TreeLink link : links) {
+			// Seuls les liens vers un enfant du sous-arbre sont redessines ;
+			// le lien entre l'element selectionne et son propre parent ne bouge pas
+			if (!subtree.contains(link.child())) continue;
+			redrawLink(link, orientation);
+			linkCount++;
+		}
 
-            // Reflow siblings and parent to fill space compactly
-            reflowFromParent(selectedNode);
+		rhpLog.info("End - " + COMMAND + " (" + orientation + "): "
+				+ movedCount + " block(s) moved, " + linkCount + " link(s) redrawn.");
+	}
 
-            applyPositions(root);
+	// ======================================================================
+	// Lecture du diagramme
+	// ======================================================================
 
-            diagram.openDiagram();
-            rhpLog.info("End - RearrangeTreeLayout");
-        } catch (Exception ex) {
-            rhpLog.error("EXCEPTION: " + ex.getMessage());
-            ex.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Error: " + ex.getMessage());
-        }
-    }
+	/**
+	 * Collecte les blocs representant un element de modele (le cadre du
+	 * diagramme n'en a pas et est ignore). Cle = GUID de l'element de modele.
+	 * Si un element est dessine deux fois, seul le premier bloc est retenu.
+	 */
+	private Map<String, Node> collectNodes(List<IRPGraphElement> elements, Map<String, IRPGraphNode> graphNodes) {
+		Map<String, Node> nodes = new LinkedHashMap<>();
+		for (IRPGraphElement ge : elements) {
+			if (!(ge instanceof IRPGraphNode)) continue;
+			IRPModelElement mo = ge.getModelObject();
+			Box box = readBox(ge);
+			if (mo == null || box == null) continue;
 
-    // -------------------------------------------------------------------------
-    // Tree construction FROM EDGES
-    // -------------------------------------------------------------------------
+			String key = mo.getGUID();
+			if (nodes.containsKey(key)) {
+				rhpLog.warn("Element drawn twice, second block ignored: " + mo.getName());
+				continue;
+			}
+			nodes.put(key, new Node(key, box));
+			graphNodes.put(key, (IRPGraphNode) ge);
+		}
+		return nodes;
+	}
 
-    private TreeNode buildTreeFromEdges() {
-        Map<String, TreeNode> nodesByGuid = new HashMap<>();
-        @SuppressWarnings("unchecked")
-        List<IRPGraphElement> graphElements = diagram.getGraphicalElements().toList();
+	/**
+	 * Collecte les liens entre deux blocs connus et relie parents et enfants.
+	 * Le parent est determine dans cet ordre :
+	 * <ol>
+	 *   <li>Type graphique ContainArrow : la source est l'enfant ;</li>
+	 *   <li>sinon l'appartenance dans le modele (getOwner) ;</li>
+	 *   <li>en dernier recours la geometrie : l'enfant est le bloc le plus bas.</li>
+	 * </ol>
+	 * Un enfant n'a qu'un parent : un second lien vers un autre parent est ignore.
+	 */
+	private List<TreeLink> collectLinks(List<IRPGraphElement> elements, Map<String, Node> nodes,
+			Map<String, IRPGraphNode> graphNodes) {
+		List<TreeLink> links = new ArrayList<>();
 
-        rhpLog.info("Total graph elements: " + graphElements.size());
+		for (IRPGraphElement ge : elements) {
+			if (!(ge instanceof IRPGraphEdge)) continue;
+			IRPGraphEdge edge = (IRPGraphEdge) ge;
 
-        for (IRPGraphElement ge : graphElements) {
-            if (ge instanceof IRPGraphNode) {
-                IRPGraphNode gn = (IRPGraphNode) ge;
-                IRPModelElement mo = gn.getModelObject();
-                if (mo == null) continue;
-                nodesByGuid.put(mo.getGUID(), new TreeNode(mo, gn));
-                rhpLog.info("Node: " + mo.getName());
-            }
-        }
-        rhpLog.info("Total nodes collected: " + nodesByGuid.size());
-        if (nodesByGuid.isEmpty()) return null;
+			Node source = nodeOf(edge.getSource(), nodes);
+			Node target = nodeOf(edge.getTarget(), nodes);
+			if (source == null || target == null || source == target) continue;
 
-        List<String[]> edges = new ArrayList<>();
-        int edgeCount = 0;
-        for (IRPGraphElement ge : graphElements) {
-            if (!(ge instanceof IRPGraphEdge)) continue;
-            edgeCount++;
-            IRPGraphEdge edge = (IRPGraphEdge) ge;
-            IRPModelElement s = nodeModel(edge.getSource());
-            IRPModelElement t = nodeModel(edge.getTarget());
-            if (s == null || t == null) continue;
-            if (s.getGUID().equals(t.getGUID())) continue;
-            edges.add(new String[] { s.getGUID(), t.getGUID() });
-            rhpLog.info("Edge: " + s.getName() + " -> " + t.getName());
-        }
-        rhpLog.info("Total edges found: " + edgeCount + ", valid: " + edges.size());
-        if (edges.isEmpty()) return null;
+			boolean sourceIsChild = sourceIsChild(edge, source, target, graphNodes);
+			Node parent = sourceIsChild ? target : source;
+			Node child  = sourceIsChild ? source : target;
 
-        boolean sourceIsParent = orientationGivesSingleRoot(nodesByGuid, edges, true);
-        if (!sourceIsParent && !orientationGivesSingleRoot(nodesByGuid, edges, false)) {
-            sourceIsParent = true;
-        }
-        rhpLog.info("Final orientation: sourceIsParent=" + sourceIsParent);
+			if (child.parent != null && child.parent != parent) {
+				rhpLog.warn("Block already has a parent, extra link ignored: " + child.key);
+				continue;
+			}
+			if (child.parent == null) parent.addChild(child);
+			links.add(new TreeLink(edge, parent, child, sourceIsChild));
+		}
+		return links;
+	}
 
-        Set<String> hasParent = new HashSet<>();
-        for (String[] e : edges) {
-            String parent = sourceIsParent ? e[0] : e[1];
-            String child  = sourceIsParent ? e[1] : e[0];
-            TreeNode p = nodesByGuid.get(parent);
-            TreeNode c = nodesByGuid.get(child);
-            if (p == null || c == null) continue;
-            p.children.add(c);
-            c.parent = p;
-            hasParent.add(child);
-            rhpLog.info("Linked: " + p.element.getName() + " -> " + c.element.getName());
-        }
+	/** Determine si la source du lien est l'enfant (voir collectLinks). */
+	private boolean sourceIsChild(IRPGraphEdge edge, Node source, Node target, Map<String, IRPGraphNode> graphNodes) {
+		// 1) Type graphique du lien
+		try {
+			if (CONTAIN_ARROW.equals(edge.getGraphicalProperty("Type").getValue())) return true;
+		} catch (Exception ignore) {
+			// propriete absente pour ce type de lien : critere suivant
+		}
 
-        TreeNode root = null;
-        for (TreeNode n : nodesByGuid.values()) {
-            if (!hasParent.contains(n.element.getGUID())) {
-                if (root == null) {
-                    root = n;
-                    rhpLog.info("Found root: " + root.element.getName());
-                }
-            }
-        }
-        if (root == null) return null;
+		// 2) Appartenance dans le modele
+		try {
+			IRPModelElement sourceOwner = graphNodes.get(source.key).getModelObject().getOwner();
+			IRPModelElement targetOwner = graphNodes.get(target.key).getModelObject().getOwner();
+			if (sourceOwner != null && target.key.equals(sourceOwner.getGUID())) return true;
+			if (targetOwner != null && source.key.equals(targetOwner.getGUID())) return false;
+		} catch (Exception ignore) {
+			// proprietaire illisible : critere suivant
+		}
 
-        sortChildren(root);
-        return root;
-    }
+		// 3) Geometrie
+		return source.box.y() > target.box.y();
+	}
 
-    private boolean orientationGivesSingleRoot(
-            Map<String, TreeNode> nodes, List<String[]> edges, boolean sourceIsParent) {
-        Set<String> childGuids = new HashSet<>();
-        for (String[] e : edges) {
-            childGuids.add(sourceIsParent ? e[1] : e[0]);
-        }
-        int roots = 0;
-        for (String guid : nodes.keySet()) {
-            if (!childGuids.contains(guid)) roots++;
-        }
-        return roots == 1;
-    }
+	/** Bloc connu correspondant a une extremite de lien, ou null. */
+	private static Node nodeOf(IRPGraphElement ge, Map<String, Node> nodes) {
+		if (!(ge instanceof IRPGraphNode)) return null;
+		IRPModelElement mo = ge.getModelObject();
+		return mo == null ? null : nodes.get(mo.getGUID());
+	}
 
-    private void sortChildren(TreeNode node) {
-        node.children.sort((a, b) -> Integer.compare(currentOrderKey(a), currentOrderKey(b)));
-        for (TreeNode c : node.children) sortChildren(c);
-    }
+	/** Lit Position, Width et Height d'un bloc ; null si une valeur est illisible. */
+	private Box readBox(IRPGraphElement ge) {
+		try {
+			String[] pos = ge.getGraphicalProperty("Position").getValue().split(",");
+			int w = Integer.parseInt(ge.getGraphicalProperty("Width").getValue().trim());
+			int h = Integer.parseInt(ge.getGraphicalProperty("Height").getValue().trim());
+			return new Box(Integer.parseInt(pos[0].trim()), Integer.parseInt(pos[1].trim()), w, h);
+		} catch (Exception e) {
+			rhpLog.debug("Unreadable block geometry: " + e.getMessage());
+			return null;
+		}
+	}
 
-    private int currentOrderKey(TreeNode n) {
-        try {
-            String pos = n.graphNode.getGraphicalProperty("Position").getValue();
-            String[] xy = pos.split(",");
-            int x = Integer.parseInt(xy[0].trim());
-            int y = Integer.parseInt(xy[1].trim());
-            return horizontal ? x : y;
-        } catch (Exception ignore) {
-            return 0;
-        }
-    }
+	// ======================================================================
+	// Calcul
+	// ======================================================================
 
-    private IRPModelElement nodeModel(IRPGraphElement ge) {
-        if (ge instanceof IRPGraphNode) {
-            return ((IRPGraphNode) ge).getModelObject();
-        }
-        return null;
-    }
+	/**
+	 * Trie les enfants de chaque bloc du sous-arbre dans l'ordre du modele
+	 * (getNestedElementsByMetaClass, comme Generate LBS). Un enfant absent de
+	 * cette liste passe a la fin, dans son ordre vertical actuel.
+	 */
+	private void sortSubtreeByModelOrder(Node parent, Map<String, IRPGraphNode> graphNodes, Set<Node> visited) {
+		if (!visited.add(parent)) return;
 
-    // -------------------------------------------------------------------------
-    // Partial Layout Algorithm
-    // -------------------------------------------------------------------------
+		Map<String, Integer> rank = new HashMap<>();
+		try {
+			@SuppressWarnings("unchecked")
+			List<IRPModelElement> nested = graphNodes.get(parent.key).getModelObject()
+					.getNestedElementsByMetaClass(RhpMetaClassConstants.CLASS, 0).toList();
+			for (int i = 0; i < nested.size(); i++) rank.put(nested.get(i).getGUID(), i);
+		} catch (Exception e) {
+			rhpLog.debug("No model order for " + parent.key + ": " + e.getMessage());
+		}
 
-    private void assignBreadth(TreeNode v) {
-        for (TreeNode c : v.children) assignBreadth(c);
+		parent.children.sort(Comparator
+				.comparingInt((Node n) -> rank.getOrDefault(n.key, Integer.MAX_VALUE))
+				.thenComparingInt(n -> n.original.y())
+				.thenComparingInt(n -> n.original.x()));
 
-        if (v.children.isEmpty()) {
-            v.breadth = nodeSecondarySize();
-        } else {
-            double total = 0;
-            for (TreeNode c : v.children) total += c.breadth;
-            total += siblingSpacing() * (v.children.size() - 1);
-            v.breadth = Math.max(nodeSecondarySize(), total);
-        }
-        rhpLog.info("breadth " + v.element.getName() + ": " + v.breadth);
-    }
+		for (Node child : parent.children) sortSubtreeByModelOrder(child, graphNodes, visited);
+	}
 
-    // Place only the children of the selected node
-    private void placeChildren(TreeNode parent, double bandStart) {
-        if (parent.children.isEmpty()) return;
+	/** Ecrit dans le log les blocs hors sous-arbre que la nouvelle mise en page chevauche. */
+	private void warnOverlaps(Map<String, Node> nodes, Node start, Set<Node> subtree) {
+		for (Node inside : subtree) {
+			for (Node outside : nodes.values()) {
+				if (outside == start || subtree.contains(outside)) continue;
+				if (intersects(inside.box, outside.box)) {
+					rhpLog.warn("Rearranged block overlaps a block outside the subtree: "
+							+ inside.key + " / " + outside.key);
+				}
+			}
+		}
+	}
 
-        double childrenTotal = 0;
-        for (TreeNode c : parent.children) childrenTotal += c.breadth;
-        childrenTotal += siblingSpacing() * (parent.children.size() - 1);
+	/** Vrai si deux rectangles se chevauchent. */
+	private static boolean intersects(Box a, Box b) {
+		return a.x() < b.right() && b.x() < a.right() && a.y() < b.bottom() && b.y() < a.bottom();
+	}
 
-        // Center children around bandStart
-        double childStart = bandStart - childrenTotal / 2.0 + parent.breadth / 2.0;
-        for (TreeNode c : parent.children) {
-            placeNodeAndDescendants(c, childStart, parent.depth + 1);
-            childStart += c.breadth + siblingSpacing();
-        }
-    }
+	// ======================================================================
+	// Ecriture des liens
+	// ======================================================================
 
-    private void placeNodeAndDescendants(TreeNode v, double bandStart, int depth) {
-        v.depth = depth;
-        v.secondary = bandStart;
+	/**
+	 * Redessine un lien : extremites puis trace complet (Polygon). Le Polygon
+	 * va de la source a la cible du lien ; les points sont calcules de l'enfant
+	 * vers le parent, puis inverses si la source est le parent.
+	 */
+	private void redrawLink(TreeLink link, Orientation orientation) {
+		List<int[]> points = TreeDiagramLayout.linkPointsFromChild(link.child(), orientation);
+		if (!link.sourceIsChild()) points = TreeDiagramLayout.reversed(points);
 
-        for (TreeNode c : v.children) {
-            placeNodeAndDescendants(c, bandStart, depth + 1);
-        }
-        rhpLog.info("place " + v.element.getName() + ": secondary=" + v.secondary);
-    }
+		String polygon = TreeDiagramLayout.toPolygon(points);
+		link.edge().setGraphicalProperty("SourcePosition", TreeDiagramLayout.toPoint(points.get(0)));
+		link.edge().setGraphicalProperty("TargetPosition", TreeDiagramLayout.toPoint(points.get(points.size() - 1)));
+		link.edge().setGraphicalProperty("Polygon", polygon);
+		rhpLog.debug("Link to " + link.child().key + " -> " + polygon);
+	}
 
-    // Reflow siblings to fill space compactly
-    private void reflowFromParent(TreeNode selectedNode) {
-        if (selectedNode.parent == null) return;
+	// ======================================================================
+	// Interface et recherche du diagramme
+	// ======================================================================
 
-        TreeNode parent = selectedNode.parent;
-        double bandStart = 0;
+	/**
+	 * Demande l'orientation a l'utilisateur.
+	 *
+	 * @return l'orientation choisie, ou null si la boite est fermee
+	 */
+	private Orientation askOrientation(String elementName) {
+		try {
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		} catch (Exception ignore) {
+			// apparence par defaut si celle du systeme est indisponible
+		}
 
-        for (TreeNode sibling : parent.children) {
-            if (sibling == selectedNode) {
-                // Skip, already placed
-                bandStart += sibling.breadth + siblingSpacing();
-            } else {
-                placeNodeAndDescendants(sibling, bandStart, parent.depth + 1);
-                bandStart += sibling.breadth + siblingSpacing();
-            }
-        }
-    }
+		Object[] options = { "Vertical", "Horizontal" };
+		int choice = JOptionPane.showOptionDialog(null,
+				"Rearrange the children of '" + elementName + "':",
+				"Rearrange Tree Layout",
+				JOptionPane.DEFAULT_OPTION,
+				JOptionPane.QUESTION_MESSAGE,
+				null, options, options[0]);
 
-    // -------------------------------------------------------------------------
-    // Apply positions
-    // -------------------------------------------------------------------------
+		if (choice == 0) return Orientation.VERTICAL;
+		if (choice == 1) return Orientation.HORIZONTAL;
+		return null;
+	}
 
-    private void applyPositions(TreeNode node) {
-        int x, y;
-        if (horizontal) {
-            x = (int) (MARGIN_X + node.depth * (NODE_WIDTH + H_SPACING));
-            y = (int) (MARGIN_Y + node.secondary);
-        } else {
-            x = (int) (MARGIN_X + node.secondary);
-            y = (int) (MARGIN_Y + node.depth * (NODE_HEIGHT + V_SPACING));
-        }
-        rhpLog.info("apply " + node.element.getName() + ": (" + x + ", " + y + ")");
-        node.graphNode.setGraphicalProperty("Position", x + "," + y);
-        for (TreeNode child : node.children) applyPositions(child);
-    }
+	/**
+	 * Diagramme ou se trouve l'element : celui de la selection graphique en
+	 * priorite, sinon un diagramme rattache a l'element ou a un de ses
+	 * proprietaires par une dependance (cas des diagrammes Generate LBS/FBS).
+	 */
+	private IRPDiagram findDiagram(IRPModelElement element) {
+		try {
+			IRPDiagram active = rhApp.getDiagramOfSelectedElement();
+			if (active != null) return active;
+		} catch (Exception ignore) {
+			// pas de selection graphique : recherche par dependance
+		}
 
-    // -------------------------------------------------------------------------
-    // Helpers
-    // -------------------------------------------------------------------------
+		IRPModelElement current = element;
+		while (current != null) {
+			@SuppressWarnings("unchecked")
+			List<IRPModelElement> refs = current.getReferences().toList();
+			for (IRPModelElement ref : refs) {
+				if (ref instanceof IRPDependency) {
+					IRPModelElement dependent = ((IRPDependency) ref).getDependent();
+					if (dependent instanceof IRPDiagram) return (IRPDiagram) dependent;
+				}
+			}
+			current = current.getOwner();
+		}
+		return null;
+	}
 
-    private TreeNode findNode(TreeNode root, IRPModelElement element) {
-        if (root.element.equals(element)) return root;
-        for (TreeNode c : root.children) {
-            TreeNode found = findNode(c, element);
-            if (found != null) return found;
-        }
-        return null;
-    }
+	@Override
+	public String commandName() {
+		return COMMAND;
+	}
 
-    private boolean askOrientation() {
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (Exception ignore) {}
+	@Override
+	public boolean isUndoable() {
+		return true;
+	}
 
-        Object[] options = { "Vertical", "Horizontal" };
-        int choice = JOptionPane.showOptionDialog(null,
-                "Rearrange '" + selectedElement.getName() + "' children as:",
-                "Orientation",
-                JOptionPane.DEFAULT_OPTION,
-                JOptionPane.QUESTION_MESSAGE,
-                null, options, options[0]);
-        if (choice < 0) return false;
-        horizontal = (choice == 1);
-        return true;
-    }
-
-    private double nodeSecondarySize() {
-        return horizontal ? NODE_HEIGHT : NODE_WIDTH;
-    }
-
-    private double siblingSpacing() {
-        return horizontal ? V_SPACING : H_SPACING;
-    }
-
-    private IRPDiagram findDiagram(IRPModelElement element) {
-        try {
-            IRPDiagram active = rhApp.getDiagramOfSelectedElement();
-            if (active != null) return active;
-        } catch (Exception ignore) {}
-
-        @SuppressWarnings("unchecked")
-        List<IRPModelElement> refs = element.getReferences().toList();
-        for (IRPModelElement ref : refs) {
-            if (ref instanceof IRPDependency) {
-                IRPDependency dep = (IRPDependency) ref;
-                if (dep.getDependent() instanceof IRPDiagram) {
-                    return (IRPDiagram) dep.getDependent();
-                }
-            }
-        }
-        IRPModelElement owner = element.getOwner();
-        if (owner != null) return findDiagram(owner);
-        return null;
-    }
-
-    // -------------------------------------------------------------------------
-    // TreeNode
-    // -------------------------------------------------------------------------
-
-    private static class TreeNode {
-        final IRPModelElement element;
-        final IRPGraphNode    graphNode;
-        final List<TreeNode>  children = new ArrayList<>();
-
-        TreeNode parent;
-        double   breadth;
-        double   secondary;
-        int      depth;
-
-        TreeNode(IRPModelElement element, IRPGraphNode graphNode) {
-            this.element   = element;
-            this.graphNode = graphNode;
-        }
-    }
-
-    @Override
-    public String commandName() { return COMMAND; }
-
-    @Override
-    public boolean isUndoable() { return true; }
-
-    @Override
-    public boolean isInteractive() { return true; }
+	@Override
+	public boolean isInteractive() {
+		return true;
+	}
 }
