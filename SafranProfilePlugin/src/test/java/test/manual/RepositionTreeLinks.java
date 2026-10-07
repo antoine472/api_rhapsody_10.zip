@@ -16,6 +16,7 @@ import com.telelogic.rhapsody.core.IRPGraphElement;
 import com.telelogic.rhapsody.core.IRPGraphNode;
 import com.telelogic.rhapsody.core.IRPModelElement;
 import com.telelogic.rhapsody.core.RhapsodyAppServer;
+import com.telelogic.rhapsody.core.RhapsodyRuntimeException;
 
 /**
  * Programme de test : redessine les liens d'un diagramme d'arbre (LBS, FBS...)
@@ -232,12 +233,31 @@ public class RepositionTreeLinks {
 			}
 		} finally {
 			// La transaction est toujours fermee, meme en cas d'exception
-			if (!dryRun) app.endUndoTransaction();
+			if (!dryRun) closeUndoTransaction(app);
 		}
 
 		if (!dryRun) app.refreshAllViews();
 		System.out.println();
 		System.out.println("Termine : " + links.size() + " lien(s) trouve(s), " + done + " modifie(s).");
+	}
+
+	/**
+	 * Ferme la transaction d'annulation.
+	 * <p>
+	 * Rhapsody ne cree reellement la transaction qu'a la premiere modification
+	 * effective. Si toutes les valeurs ecrites etaient deja en place (programme
+	 * relance sans rien changer), il n'y a aucune transaction a fermer et
+	 * endUndoTransaction() leve "Transaction was not created" : ce n'est pas
+	 * une erreur, il n'y a simplement rien a annuler.
+	 * </p>
+	 */
+	private static void closeUndoTransaction(IRPApplication app) {
+		try {
+			app.endUndoTransaction();
+		} catch (RhapsodyRuntimeException e) {
+			System.out.println("Aucune modification effective : rien a annuler ("
+					+ e.getMessage() + ").");
+		}
 	}
 
 	// ======================================================================
