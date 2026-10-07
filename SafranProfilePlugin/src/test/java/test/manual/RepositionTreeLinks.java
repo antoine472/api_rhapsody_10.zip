@@ -44,7 +44,8 @@ import com.telelogic.rhapsody.core.RhapsodyRuntimeException;
  * <p><b>Arguments</b> (dans n'importe quel ordre) :</p>
  * <ul>
  *   <li>I, V ou H : style de trace ;</li>
- *   <li>LAYOUT : replace d'abord les blocs en arbre indente (style I seulement),
+ *   <li>LAYOUT (actif par defaut en style I, NOLAYOUT pour le couper) :
+ *       replace d'abord les blocs en arbre indente,
  *       a l'identique de GenerateLBS : blocs de 300 x 100, decalage de 100 par
  *       niveau, 20 d'ecart vertical, freres dans l'ordre du modele
  *       (getNestedElementsByMetaClass). Si l'element selectionne a des enfants
@@ -52,7 +53,7 @@ import com.telelogic.rhapsody.core.RhapsodyRuntimeException;
  *       position ; sinon tous les arbres du diagramme sont replaces ;</li>
  *   <li>DRY : affiche les calculs sans rien modifier.</li>
  * </ul>
- * <p>Exemple : "I LAYOUT DRY". Toutes les modifications sont dans UNE
+ * <p>Exemple : "DRY" (arbre indente, blocs et liens, a blanc). Toutes les modifications sont dans UNE
  * transaction : un seul Ctrl+Z dans Rhapsody les annule.</p>
  *
  * <p><b>Utilisation</b> : ouvrir le diagramme, cliquer sur un bloc DANS le
@@ -112,19 +113,19 @@ public class RepositionTreeLinks {
 		// ------------------------------------------------------------------
 		Style style = Style.INDENTED;
 		boolean dryRun = false;
-		boolean layout = false;
+		boolean noLayout = false;
 		for (String a : args) {
 			if ("I".equalsIgnoreCase(a)) style = Style.INDENTED;
 			if ("V".equalsIgnoreCase(a)) style = Style.VERTICAL;
 			if ("H".equalsIgnoreCase(a)) style = Style.HORIZONTAL;
 			if ("DRY".equalsIgnoreCase(a)) dryRun = true;
-			if ("LAYOUT".equalsIgnoreCase(a)) layout = true;
+			if ("NOLAYOUT".equalsIgnoreCase(a)) noLayout = true;
 		}
-		if (layout && style != Style.INDENTED) {
-			System.out.println("LAYOUT n'est disponible qu'avec le style I : option ignoree.");
-			layout = false;
-		}
+		// La mise en page des blocs n'existe que pour l'arbre indente ;
+		// elle y est active par defaut, sauf si NOLAYOUT est passe
+		boolean layout = (style == Style.INDENTED) && !noLayout;
 		boolean horizontal = (style == Style.HORIZONTAL);
+		System.out.println("Version : 2026-10-07 18h05 | arguments : " + String.join(" ", args));
 		System.out.println("Style : " + style
 				+ (layout ? " | LAYOUT" : "")
 				+ (dryRun ? " | DRY (aucune modification)" : ""));
@@ -194,9 +195,16 @@ public class RepositionTreeLinks {
 			if (layout && !dryRun) {
 				for (Node n : nodes.values()) {
 					if (!n.box.equals(n.original)) {
-						n.graph.setGraphicalProperty("Position", n.box.x() + "," + n.box.y());
+						// Taille d'abord, position ensuite : si Rhapsody redimensionne
+						// autour du centre, la position ecrite en dernier fait foi
 						n.graph.setGraphicalProperty("Width", String.valueOf(n.box.w()));
 						n.graph.setGraphicalProperty("Height", String.valueOf(n.box.h()));
+						n.graph.setGraphicalProperty("Position", n.box.x() + "," + n.box.y());
+
+						// Relecture : ce que Rhapsody a reellement enregistre
+						System.out.println("BLOC " + n.label
+								+ " | demande " + n.box.x() + "," + n.box.y() + " " + n.box.w() + "x" + n.box.h()
+								+ " | relu " + readBack(n.graph));
 					}
 				}
 			}
@@ -510,6 +518,17 @@ public class RepositionTreeLinks {
 	// ======================================================================
 	// Utilitaires
 	// ======================================================================
+
+	/** Position et taille relues dans Rhapsody, au format "x,y wxh". */
+	private static String readBack(IRPGraphElement ge) {
+		try {
+			return ge.getGraphicalProperty("Position").getValue() + " "
+					+ ge.getGraphicalProperty("Width").getValue() + "x"
+					+ ge.getGraphicalProperty("Height").getValue();
+		} catch (Exception e) {
+			return "illisible (" + e.getMessage() + ")";
+		}
+	}
 
 	/** Bloc connu correspondant a une extremite de lien, ou null. */
 	private static Node nodeOf(IRPGraphElement ge, Map<String, Node> nodes) {
