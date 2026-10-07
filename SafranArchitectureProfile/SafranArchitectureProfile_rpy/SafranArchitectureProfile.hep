@@ -1,7 +1,7 @@
 [Helpers]
 numberOfElements=100
 
-#prochainIndiceLibre = 47
+#prochainIndiceLibre = 54
 
 ##################################################################################
 Definition of the Safran Plugin - reacts to user actions through context menu
@@ -66,11 +66,18 @@ applicableTo43=Technical Component
 isVisible43=1
 
 # Rearrange Logical System tree
-name45=Safran Toolkit...\RearrangeTree
+name45=Safran Toolkit...\Rearrange Tree Layout
 isPlugInCommand45=1
 command45=SafranPlugin
-applicableTo45=Logical System
+applicableTo45=Logical System, Logical System With Reference, Function, Function With Reference
 isVisible45=1
+
+# Update redefined ports of derived references
+name51=Safran Toolkit...\Update Redefined Ports
+isPlugInCommand51=1
+command51=SafranPlugin
+applicableTo51=Function, Logical System, Technical Component, Function With Reference, Logical System With Reference
+isVisible51=1
 
 # Port propagation
 name7=Safran Toolkit...\Configure Propagate properties
@@ -150,13 +157,14 @@ isVisible22=1
 name29=Safran Toolkit...\Select Flow Item definition
 isPlugInCommand29=1
 command29=SafranPlugin
-applicableTo29=Message, Flow Port, Generic Flow, Logical Flow
+applicableTo29=Message, Flow Port, Generic Flow, Logical Flow, Functional Flow
 isVisible29=1
+
 
 name46=Safran Toolkit...\Locate Flow Item in Browser
 isPlugInCommand46=1
 command46=SafranPlugin
-applicableTo46= Generic Flow, Operational Flow, Functional Flow, Logical Flow, , Technical Flow
+applicableTo46=Generic Flow, Logical Flow, Functional Flow, Technical Flow, Operational Flow
 isVisible46=1
 
 name5=Safran Toolkit...\Select Function definition
@@ -202,6 +210,20 @@ isPlugInCommand44=1
 command44=SafranPlugin
 applicableTo44=Operational Flow, Functional Flow, Logical Flow, Technical Flow
 isVisible44=1
+
+# Clean redefined ports in the current diagram
+name52=Safran Toolkit...\Clean Redefined Ports in Diagram
+isPlugInCommand52=1
+command52=SafranPlugin
+applicableTo52=Context Diagram, Logical Architecture Diagram, Functional Behavior Diagram, System Functional Behavior
+isVisible52=1
+
+# Set Reference Definition
+name53=Safran Toolkit...\Set Reference Definition
+isPlugInCommand53=1
+command53=SafranPlugin
+applicableTo53=Function With Reference, Logical System With Reference
+isVisible53=1
 
 ############################################################
 Home Page diagram creation
@@ -255,5 +277,13 @@ isPlugInCommand40=1
 command40=RhapsodyPlugInForSafranArchitecture
 applicableTo40=CircuitDiagramTableViewHyperLink
 isVisible40=1
+
+#REM: Return home in toolbar
+name50=Return home
+isPlugInCommand50=1
+command50=SafranPlugin
+isToolbarButton50=1
+pluginIcon50=..\Icons\home16.png
+isVisible50=1
 
 # Note: Not required to declare Checkers in .hep file.
