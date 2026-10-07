@@ -1,0 +1,4398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RhapsodyArchive>
+	<MagicNumber>_7UBbwPkHEe-1cZpiPAJRoA</MagicNumber>
+	<CODE-PAGE>1252</CODE-PAGE>
+	<version>110.0.2</version>
+	<RMMIndexVersion>109.3</RMMIndexVersion>
+	<lang>C++</lang>
+	<BuildNo>202504251049</BuildNo>
+	<RMMMinimumClientVersion>100.0</RMMMinimumClientVersion>
+	
+	<RHAPSODY-MODEL>
+	<IProfile type="e">
+			<_id type="a">GUID cfb2a9aa-0a8d-494a-98f0-cb52ad635c58</_id>
+			<_myState type="a">8192</_myState>
+			<_rmmServerID type="a">1358185_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">deprecated</_name>
+			<_modifiedTimeWeak type="a">4.9.2025::7:42:6</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.2.2025::12:44:40</_modifiedTime>
+			<weakCGTime type="a">4.9.2025::7:42:6</weakCGTime>
+			<strongCGTime type="a">3.4.2025::14:44:8</strongCGTime>
+			<_defaultComposite type="s">GUID c986b6c1-72c0-49de-81b4-8d1eeec0179a</_defaultComposite>
+			<_eventsBaseID type="a">-1</_eventsBaseID>
+			<_configurationRelatedTime type="a">3.4.2025::15:23:16</_configurationRelatedTime>
+			<AggregatesList type="e">
+				<value>GUID a5c82c74-9f36-4617-8e97-ca2f2d5d2319</value>
+				<value>GUID dbb4e194-7022-43b6-9f08-31ddd2527196</value>
+				<value>GUID 30e948e6-9a11-4789-adf7-7e0bf602712d</value>
+				<value>GUID c986b6c1-72c0-49de-81b4-8d1eeec0179a</value>
+			</AggregatesList>
+		</IProfile>
+		<ISubsystem type="e">
+			<_id type="a">GUID a5c82c74-9f36-4617-8e97-ca2f2d5d2319</_id>
+			<_myState type="a">8192</_myState>
+			<_rmmServerID type="a">1358187_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">Deprecated</_name>
+			<_modifiedTimeWeak type="a">4.4.2025::12:25:52</_modifiedTimeWeak>
+			<_modifiedTime type="a">4.4.2025::12:25:52</_modifiedTime>
+			<_lastID type="a">2</_lastID>
+			<weakCGTime type="a">4.4.2025::12:25:52</weakCGTime>
+			<strongCGTime type="a">3.4.2025::14:44:8</strongCGTime>
+			<_defaultComposite type="s">GUID 612cc837-c211-4b23-b03c-b1914463d6c7</_defaultComposite>
+			<_eventsBaseID type="a">-1</_eventsBaseID>
+			<_configurationRelatedTime type="a">1.2.1990::0:0:0</_configurationRelatedTime>
+			<AggregatesList type="e">
+				<value>GUID 1877c79d-fbfc-49ce-b288-e8c312b08006</value>
+				<value>GUID b476b681-ea87-470e-b4c7-460d4ece7c63</value>
+				<value>GUID 6851d802-677a-46f5-97bd-4202571f8183</value>
+				<value>GUID 3800d794-0bf8-40b9-bc42-6fac4e5df65a</value>
+				<value>GUID cc5dc000-5a0e-4a31-8f13-81af6e43ab21</value>
+				<value>GUID 0ee31138-8e18-4425-b7ea-4d1fd59ab2e3</value>
+				<value>GUID 902add8c-e581-4079-b0ab-40d8a7187a32</value>
+				<value>GUID 56916399-1ee5-466f-b9b3-ebdb73b77bdd</value>
+				<value>GUID 40bccd9e-eeb7-48fb-80b4-af7bd1e34f64</value>
+				<value>GUID 4700b957-b72f-4e3d-9d54-eece04aa615b</value>
+				<value>GUID 07cf625b-109c-4916-90ae-b38cc999cf4d</value>
+				<value>GUID 421fd0bd-f62e-4789-9891-2b69efe95b99</value>
+				<value>GUID 743fc44d-bc74-42a8-bb37-d97a0154ca56</value>
+				<value>GUID bd916bd4-4ada-46d2-8657-d1261423f388</value>
+				<value>GUID 6fea0dda-511f-4dfd-adab-6098d927c703</value>
+				<value>GUID 23e0f81b-833c-45b7-b5c4-054feff0c07d</value>
+				<value>GUID bef41871-324c-421a-b0f9-38a4a57f6b6d</value>
+				<value>GUID 03413842-f2de-4da3-b92d-951880947758</value>
+				<value>GUID 569b442e-d521-4968-9613-adba10637210</value>
+				<value>GUID 25b55a77-d133-4c01-85b6-29c8f61c1d56</value>
+				<value>GUID b0cec476-df56-409a-b375-6d3237f47e13</value>
+				<value>GUID f9a26cda-5b72-4676-bcf4-7919c735eb8f</value>
+				<value>GUID 420205fe-c129-4754-8761-31569617bff0</value>
+				<value>GUID 6b28cc7a-461e-4a08-a715-fce40c6c7015</value>
+				<value>GUID c3013a5d-5517-4c77-9300-d8e3af52f3d4</value>
+				<value>GUID afc1805f-666c-446f-8cad-baf4fc01b653</value>
+				<value>GUID 6063def1-3707-4da0-997d-5e6668657d01</value>
+				<value>GUID b7a0d0f6-662a-46a9-979d-28796b0f09ac</value>
+				<value>GUID 8c508021-5406-44fe-8c5a-e3a0831aed14</value>
+				<value>GUID 3182ec67-7936-47d5-a5f0-b19cf15c245d</value>
+				<value>GUID c2f97e77-ca63-4750-b62e-3905fa91a314</value>
+				<value>GUID f10e45f6-a7b0-4e52-8ced-0484b23ffab5</value>
+				<value>GUID 3d01e74a-6465-473f-8f4a-78d1ba5fbcfc</value>
+				<value>GUID 7cd46724-f3bf-4c84-a49b-26e481e3395b</value>
+				<value>GUID a66806ff-8b11-484a-9d6d-b859f5894655</value>
+				<value>GUID 065f1220-a277-4767-bed8-60516b34cffc</value>
+				<value>GUID 5196c45a-8cad-4fbd-8a56-dc1009142697</value>
+				<value>GUID ad8472d8-ee69-47c8-83bf-0f18eb410239</value>
+				<value>GUID c3232e2d-3745-4b0b-89d9-97d371b592b7</value>
+				<value>GUID 612cc837-c211-4b23-b03c-b1914463d6c7</value>
+			</AggregatesList>
+		</ISubsystem>
+		<IStereotype type="e">
+			<_id type="a">GUID 1877c79d-fbfc-49ce-b288-e8c312b08006</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Context Diagram, Continuous Link, Dependency, Discrete Link, HyperLink, Link, Operational System Instance, Stakeholder Instance, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Value type="a">..\Icons\ContextGroupIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Value type="a">..\Icons\ContextSingleIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">Context</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Context</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Contexts</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358203_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">Context</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.17.2024::12:48:21</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</_m2Classes>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID b476b681-ea87-470e-b4c7-460d4ece7c63</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Attribute, Comment, Dependency, EnumerationLiteral, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Value type="a">..\Icons\FunctionalFlowGroupIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Value type="a">..\Icons\FunctionalFlowSingleIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">FunctionalFlow</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Functional Flow</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Functional Flows</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358202_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">FunctionalFlowOld</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.31.2024::14:55:58</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Type</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID 6851d802-677a-46f5-97bd-4202571f8183</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">ContinuousLink</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Continuous Link</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Continuous Links</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Sources</_Name>
+													<_Value type="a">Flow Port</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Targets</_Name>
+													<_Value type="a">Continuous Port,ProxyPort</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358232_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">ContinuousLink</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::15:34:45</_modifiedTimeWeak>
+			<_modifiedTime type="a">3.4.2025::15:34:45</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Link</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID 3800d794-0bf8-40b9-bc42-6fac4e5df65a</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">DiscreteInterface</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">DiscreteInterface</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">DiscreteInterfaces</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358189_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">DiscreteInterface</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.22.2024::15:34:14</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Class</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID cc5dc000-5a0e-4a31-8f13-81af6e43ab21</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">DiscreteLink</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Discrete Link</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Discrete Links</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Sources</_Name>
+													<_Value type="a">Discrete Port</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Targets</_Name>
+													<_Value type="a">Discrete Port</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358191_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">DiscreteLink</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.22.2024::15:34:24</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Link</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID 0ee31138-8e18-4425-b7ea-4d1fd59ab2e3</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">AllowedTypes</_Name>
+													<_Value type="a">Nothing</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Value type="a">..\Icons\DiscretePortGroupIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Value type="a">..\Icons\DiscretePortSingleIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">DiscretePort</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Discrete Port</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Discrete Ports</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358221_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">DiscretePort</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.22.2024::15:34:28</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Port</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID 902add8c-e581-4079-b0ab-40d8a7187a32</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">InOut</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">InOut</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">InOuts</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358227_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">InOut</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.22.2024::15:34:37</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Argument</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID 56916399-1ee5-466f-b9b3-ebdb73b77bdd</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">ContinuousAttribute</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Continuous Attribute</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Continuous Attributes</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358197_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">ContinuousAttribute</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.22.2024::15:34:47</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Attribute</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID 40bccd9e-eeb7-48fb-80b4-af7bd1e34f64</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Continuous Flow Package, Dependency, Functional Flow, HyperLink, Tag, FlowSpecification</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Value type="a">..\Icons\FunctionalFlowPackageGroupIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Value type="a">..\Icons\FunctionalFlowPackageSingleIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">ContinuousFlowPackage</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Continuous Flow Package</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Continuous Flow Packages</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358196_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">ContinuousFlowPackage</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.22.2024::15:34:55</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Package</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID 4700b957-b72f-4e3d-9d54-eece04aa615b</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, Discrete Flow Package, Event, HyperLink, Interface Contract, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Value type="a">..\Icons\FunctionalFlowPackageGroupIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Value type="a">..\Icons\FunctionalFlowPackageSingleIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">DiscreteFlowPackage</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Discrete Flow Package</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Discrete Flow Packages</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358237_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">DiscreteFlowPackage</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.22.2024::15:35:3</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Package</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID 07cf625b-109c-4916-90ae-b38cc999cf4d</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Reception, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Value type="a">..\Icons\DiscreteInterfaceGroupIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Value type="a">..\Icons\DiscreteInterfaceSingleIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">InterfaceContract</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Interface Contract</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Interface Contracts</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358190_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">InterfaceContract</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.22.2024::15:35:15</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Class</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID 421fd0bd-f62e-4789-9891-2b69efe95b99</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Value type="a">..\Icons\ConceptualSystemInstanceGroupIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Value type="a">..\Icons\ConceptualSystemInstanceSingleIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">LogicalSystemInstance</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Logical System Instance</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Logical System Instances</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358204_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">LogicalSystemInstance</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.22.2024::15:38:15</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Object</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+			<AggregatesList type="e">
+				<value>GUID 31656589-85b5-4ffa-b1dd-49cb472ae75a</value>
+			</AggregatesList>
+		</IStereotype>
+		<ITag type="e">
+			<_id type="a">GUID 31656589-85b5-4ffa-b1dd-49cb472ae75a</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Location</_name>
+			<_modifiedTimeWeak type="a">6.22.2021::7:39:11</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2021::7:39:11</_modifiedTime>
+			<_typeOf type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hsubsystem type="a">PredefinedTypes</_hsubsystem>
+					<_hname type="a">RhpString</_hname>
+					<_hid type="a">GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35</_hid>
+				</IHandle>
+			</_typeOf>
+			<_isOrdered type="a">0</_isOrdered>
+		</ITag>
+		<IStereotype type="e">
+			<_id type="a">GUID 743fc44d-bc74-42a8-bb37-d97a0154ca56</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Continuous Link, Dependency, Discrete Link, HyperLink, Link, Logical Interface Diagram, Logical System Instance, Operational System Instance, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Value type="a">..\Icons\ConceptualInter_faceContextGroupIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Value type="a">..\Icons\ConceptualInter_faceContextSingleIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">LogicalInter_faceContext</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Logica lInterface Context</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Logica lInterface Contexts</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358236_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">LogicalInter_faceContext</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.22.2024::15:40:40</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Class</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID bd916bd4-4ada-46d2-8657-d1261423f388</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Value type="a">..\Icons\OperationalSystemInstanceGroupIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Value type="a">..\Icons\OperationalSystemInstanceSingleIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">OperationalSystemInstance</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Operational System Instance</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Operational System Instances</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358194_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">OperationalSystemInstance</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.22.2024::15:45:14</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Object</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID 6fea0dda-511f-4dfd-adab-6098d927c703</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">AllowedTypes</_Name>
+													<_Value type="a">Stakeholder</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Value type="a">..\Icons\StakeholderInstanceGroupIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Value type="a">..\Icons\StakeholderInstanceSingleIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">StakeholderInstance</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Stakeholder Instance</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Stakeholder Instances</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358233_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">StakeholderInstance</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.22.2024::15:46:39</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Object</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID 23e0f81b-833c-45b7-b5c4-054feff0c07d</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Value type="a">..\icons\FunctionGroupIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Value type="a">..\icons\FunctionSingleIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">FunctionCall</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Function Call</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Function Calls</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358193_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">FunctionCall</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">deprecated</_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">10.31.2024::13:54:1</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Object</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID bef41871-324c-421a-b0f9-38a4a57f6b6d</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Value type="a">..\Icons\TechnicalSystemInstanceGroupIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Value type="a">..\Icons\TechnicalSystemInstanceSingleIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">TechnicalComponentInstance</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Technical Component Instance</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Technical Component Instances</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358206_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">TechnicalComponentInstance</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.22.2024::15:48:28</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Object</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+			<AggregatesList type="e">
+				<value>GUID 779bdf24-7318-491d-b778-bf32235aca51</value>
+			</AggregatesList>
+		</IStereotype>
+		<ITag type="e">
+			<_id type="a">GUID 779bdf24-7318-491d-b778-bf32235aca51</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Location</_name>
+			<_modifiedTimeWeak type="a">6.22.2021::7:40:35</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2021::7:40:35</_modifiedTime>
+			<_typeOf type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hsubsystem type="a">PredefinedTypes</_hsubsystem>
+					<_hname type="a">RhpString</_hname>
+					<_hid type="a">GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35</_hid>
+				</IHandle>
+			</_typeOf>
+			<_isOrdered type="a">0</_isOrdered>
+		</ITag>
+		<IStereotype type="e">
+			<_id type="a">GUID 03413842-f2de-4da3-b92d-951880947758</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">A - Operational Analysis Package, B - Functional View Package, C - Logical Architecture Package, Comment, D - Technical Analysis Package, Dependency, E - Interface Management Package, F - Flow Package, G - Analysis Package, H - Test Package, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Safran Architecture Project</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Safran Architecture Projects</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358214_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">test</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.25.2024::7:40:12</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</_m2Classes>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID 569b442e-d521-4968-9613-adba10637210</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">A - Operational Analysis Package, B - Functional View Package, C - Logical Architecture Package, Comment, D - Technical Analysis Package, Dependency, E - Interface Management Package, F - Flow Package, G - Analysis Package, H - Test Package, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Safran Architecture Project</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Safran Architecture Projects</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358235_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">test2</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.25.2024::7:40:12</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</_m2Classes>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID 25b55a77-d133-4c01-85b6-29c8f61c1d56</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">TestPackage</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">H - Test Package</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">H - Test Packages</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358224_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">TestPackage</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.28.2024::16:33:27</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Package</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID b0cec476-df56-409a-b375-6d3237f47e13</_id>
+			<_myState type="a">8192</_myState>
+			<_rmmServerID type="a">1358215_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">GenericAggregationForAllVirtualObjectType</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.28.2024::16:36:35</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</_m2Classes>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID f9a26cda-5b72-4676-bcf4-7919c735eb8f</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">AssociationEnd, AssociationEnd, Attribute, Attribute, Comment, Comment, Continuous Link, Continuous Port, Continuous Port, Dependency, Dependency, Directed composition, Discrete Link, Discrete Port, Discrete Port, Function, Function, Functional View, Functional View, HyperLink, HyperLink, Logical Architecture Diagram, Logical Breakdown Structure, Logical System Instance, Logical Taxonomy Diagram, Operating Mode Chart, Operating Mode Chart, Operating Mode Chart Diagram, Operating Mode Chart Diagram, Operation, Operation, Operational System Instance, Reception, Reception, Safran Specialization, Safran Specialization, Stakeholder Instance, System Functional Behavior, System Functional Behavior, System Functional Behavior, System Functional Behavior, Tag, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">LogicalCircuit</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Logical Circuit</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Logical Circuits</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358198_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">LogicalCircuit</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">replaced by a simple architecture diagram</_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">3.4.2025::14:44:3</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Class</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+			<AggregatesList type="e">
+				<value>GUID 31cdc442-3d5a-41c7-aa5d-1480686dd09f</value>
+			</AggregatesList>
+		</IStereotype>
+		<IGeneralization type="e">
+			<_id type="a">GUID 31cdc442-3d5a-41c7-aa5d-1480686dd09f</_id>
+			<_rmmServerID type="a">1358218_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">3.3.2023::10:56:32</_modifiedTime>
+			<_dependsOn type="r">
+				<INObjectHandle type="e">
+					<_hm2Class type="a">IStereotype</_hm2Class>
+					<_hfilename type="a">.\SafranArchitectureProfile.sbsx</_hfilename>
+					<_hsubsystem type="a">SafranArchitectureProfile::Logical</_hsubsystem>
+					<_hname type="a">LogicalSystem</_hname>
+					<_hid type="a">GUID 7108cad4-9a9f-42dd-8de9-6ff1ecc6a2dc</_hid>
+					<_hrmmServerID type="a">1350194_CmvNERkXEemjcZ7iaG_c3w</_hrmmServerID>
+				</INObjectHandle>
+			</_dependsOn>
+			<_inheritanceType type="a">iPublic</_inheritanceType>
+			<_isVirtual type="a">0</_isVirtual>
+		</IGeneralization>
+		<IStereotype type="e">
+			<_id type="a">GUID 420205fe-c129-4754-8761-31569617bff0</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Value type="a">..\Icons\DiscretePortGroupIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Value type="a">..\Icons\DiscretePortSingleIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">TechnicalDiscretePort</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Technical Discrete Port</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Technical Discrete Ports</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358229_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">TechnicalDiscretePort</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.28.2024::17:23:37</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Port</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID 6b28cc7a-461e-4a08-a715-fce40c6c7015</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Link, Tag, Technical Component Instance, Technical Interface Diagram</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Value type="a">..\Icons\TechnicalInter_faceContextGroupIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Value type="a">..\Icons\TechnicalInter_faceContextSingleIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">TechnicalInter_faceContext</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Technical Interface Context</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Technical Interface Contexts</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358223_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">TechnicalInter_faceContext</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.28.2024::17:23:37</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Class</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID c3013a5d-5517-4c77-9300-d8e3af52f3d4</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Value type="a">..\Icons\FunctionGroupIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Value type="a">..\Icons\FunctionSingleIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">FunctionalArchitecture</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Functional Architecture</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Functional Architectures</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358186_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">FunctionalArchitecture</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.29.2024::10:57:36</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>ActivityDiagram</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID afc1805f-666c-446f-8cad-baf4fc01b653</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Dialog</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">CommonProperties</_Name>
+													<_Value type="a">Model::Stereotype::BrowserIcon;Model::Stereotype::BrowserGroupIcon;Model::Stereotype::DrawingShape;Model::Stereotype::DrawingToolbar;Model::Stereotype::DrawingToolIcon;Model::Stereotype::Icon;Model::Stereotype::Name;Model::Stereotype::Owners;Model::Stereotype::PluralName;Model::Stereotype::PropertyFile;Model::Stereotype::Aggregates;Model::Stereotype::DefaultName</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">ArchitectureDiagram</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DrawingToolbar</_Name>
+													<_Value type="a">ProxyPort, Operational Flow,Functional Flow, Logical Flow</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Architecture Diagram</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Architecture Diagrams</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358192_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">ArchitectureDiagram</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.31.2024::8:28:53</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>StructureDiagram</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID 6063def1-3707-4da0-997d-5e6668657d01</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">TaxonomyDiagram</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DrawingToolbar</_Name>
+													<_Value type="a">Safran Specialization</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Taxonomy Diagram</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Taxonomy Diagrams</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358207_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">TaxonomyDiagram</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">abstarct stereotype to handle common taxonomy diagrams properties</_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">10.31.2024::9:47:28</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>ObjectModelDiagram</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID b7a0d0f6-662a-46a9-979d-28796b0f09ac</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Flow, ProxyPort, AssociationEnd, Attribute, Comment, Dependency, Function, Function Package, HyperLink, Operating Mode Chart, Operating Mode Chart Diagram, Safran Specialization, System Functional Behavior, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Value type="a">..\Icons\SystemGroupIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Value type="a">..\Icons\SystemSingleIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">System_</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">System_</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">System_s</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358211_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">System_</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.31.2024::14:22:40</_modifiedTime>
+			<_lastID type="a">1</_lastID>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</_m2Classes>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID 8c508021-5406-44fe-8c5a-e3a0831aed14</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Value type="a">..\Icons\InteractionDiagramGroupIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Value type="a">..\Icons\InteractionDiagramSingleIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">Sequence_Diagram</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DrawingToolbar</_Name>
+													<_Value type="a">CombinedFragment, Condition Mark, DataFlow, EventMessage, InteractionOccurrence, InteractionOperand, TimeIntervalMessage, TimeoutMessage</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Sequence Diagram</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Sequence Diagrams</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358226_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">Sequence_Diagram</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">remove _ ?</_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">10.31.2024::8:51:48</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>SequenceDiagram</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID 3182ec67-7936-47d5-a5f0-b19cf15c245d</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">BreakdownDiagram</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DrawingToolbar</_Name>
+													<_Value type="a">Directed Composition</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Breakdown Diagram</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Breakdown Diagrams</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358231_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">BreakdownDiagram</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.31.2024::8:52:55</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>ObjectModelDiagram</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID c2f97e77-ca63-4750-b62e-3905fa91a314</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Graphics</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AdditionalCompartments</_Name>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Model</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AddNewMenuStructure</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">OperationalBreakdownDiagram</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DrawingToolbar</_Name>
+													<_Value type="a">Directed Composition, Operational System, Stakeholder</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Operational Breakdown Diagram</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Operational Breakdown Diagrams</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358217_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">OperationalBreakdownDiagram</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">11.14.2024::17:18:18</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>ObjectModelDiagram</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID f10e45f6-a7b0-4e52-8ced-0484b23ffab5</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Graphics</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AdditionalCompartments</_Name>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Model</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AddNewMenuStructure</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Value type="a">..\Icons\OperationalTaxonomyDiagramGroupIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Value type="a">..\Icons\OperationalTaxonomyDiagramSingleIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">OperationalTaxonomyDiagram</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DrawingToolbar</_Name>
+													<_Value type="a">Safran Specialization, Operational system, Stakeholder</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">HideTabsInFeaturesDialog</_Name>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Operational Taxonomy Diagram</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Operational Taxonomy Diagrams</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358220_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">OperationalTaxonomyDiagram</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">11.14.2024::17:18:18</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>ObjectModelDiagram</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID 3d01e74a-6465-473f-8f4a-78d1ba5fbcfc</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Graphics</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AdditionalCompartments</_Name>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Model</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AddNewMenuStructure</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">StakeholderDiagram</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DrawingToolbar</_Name>
+													<_Value type="a">Responsible For, Safran Specialization, Stakeholder</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Stakeholder Diagram</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Stakeholder Diagrams</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358228_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">StakeholderDiagram</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">11.14.2024::17:18:18</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>ObjectModelDiagram</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID 7cd46724-f3bf-4c84-a49b-26e481e3395b</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Graphics</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AdditionalCompartments</_Name>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Model</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AddNewMenuStructure</_Name>
+													<_Value type="a">Function, Function Package, Annotation/Comment, Annotation/Dependency, Annotation/HyperLink, Annotation/Tag</_Value>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Function, Function Package, Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Value type="a">..\Icons\FunctionalViewGroupIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Value type="a">..\Icons\FunctionalViewSingleIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">Functionpackage</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">HideTabsInFeaturesDialog</_Name>
+													<_Value type="a">Attributes,Flow Properties, Operations, Ports, Flow Ports, Full Ports, Proxy Ports</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Function Package</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Function Packages</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358200_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">FunctionPackage</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">11.15.2024::16:22:34</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Class</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID a66806ff-8b11-484a-9d6d-b859f5894655</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Graphics</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AdditionalCompartments</_Name>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Model</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AddNewMenuStructure</_Name>
+													<_Value type="a">Comment, HyperLink, Tag</_Value>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">FunctionRealization</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Function Realization</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Function Realizations</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Sources</_Name>
+													<_Value type="a">Function</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Targets</_Name>
+													<_Value type="a">Function</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358210_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">FunctionRealization</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">12.20.2024::15:34:31</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Generalization</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID 065f1220-a277-4767-bed8-60516b34cffc</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Graphics</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AdditionalCompartments</_Name>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Model</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AddNewMenuStructure</_Name>
+													<_Value type="a">A - Operational Analysis Package, B - Functional View Package, C - Logical Architecture Package, Comment, D - Technical Analysis Package, Dependency, E - Interface Management Package, F - Flow Package, G - Analysis Package, Annotation/HyperLink, Annotation/Tag</_Value>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">EnumerationLiteral_</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">EnumerationLiteral</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">EnumerationLiterals</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358225_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">EnumerationLiteral_</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">3.4.2025::14:44:3</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+			<AggregatesList type="e">
+				<value>GUID fa67d3e8-13c4-4bea-8106-a370a19fea55</value>
+			</AggregatesList>
+		</IStereotype>
+		<IGeneralization type="e">
+			<_id type="a">GUID fa67d3e8-13c4-4bea-8106-a370a19fea55</_id>
+			<_rmmServerID type="a">1358201_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">11.14.2024::17:13:34</_modifiedTime>
+			<_dependsOn type="r">
+				<INObjectHandle type="e">
+					<_hm2Class type="a">IStereotype</_hm2Class>
+					<_hid type="a">GUID b7a0d0f6-662a-46a9-979d-28796b0f09ac</_hid>
+					<_hrmmServerID type="a">1358211_CmvNERkXEemjcZ7iaG_c3w</_hrmmServerID>
+				</INObjectHandle>
+			</_dependsOn>
+			<_inheritanceType type="a">iPublic</_inheritanceType>
+			<_isVirtual type="a">0</_isVirtual>
+		</IGeneralization>
+		<IStereotype type="e">
+			<_id type="a">GUID 5196c45a-8cad-4fbd-8a56-dc1009142697</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Graphics</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AdditionalCompartments</_Name>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Model</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AddNewMenuStructure</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Value type="a">..\icons\InvokeGroupIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Value type="a">..\icons\InvokeSingleIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">Invokes</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DrawingToolbar</_Name>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Invokes</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Invokes</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Sources</_Name>
+													<_Value type="a">Function, Functional View, System Functional Behavior</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Targets</_Name>
+													<_Value type="a">Function, Functional View, System Functional Behavior</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1350342_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">Invokes</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::16:13:59</_modifiedTimeWeak>
+			<_modifiedTime type="a">3.4.2025::16:13:59</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Dependency</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID ad8472d8-ee69-47c8-83bf-0f18eb410239</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">redefine</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">redefine</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">redefines</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Sources</_Name>
+													<_Value type="a">Function Reuse</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Targets</_Name>
+													<_Value type="a">Function</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1357546_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">Redefine</_name>
+			<_modifiedTimeWeak type="a">3.14.2025::10:40:23</_modifiedTimeWeak>
+			<_modifiedTime type="a">3.14.2025::10:40:23</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Generalization</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID c3232e2d-3745-4b0b-89d9-97d371b592b7</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Model</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AddNewMenuStructure</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Value type="a">..\Icons\InheritanceGroupIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Value type="a">..\Icons\InheritanceSingleIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">SafranSpecialization</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Safran Specialization</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Safran Specializations</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1350325_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">SafranSpecialization</_name>
+			<_modifiedTimeWeak type="a">4.4.2025::12:25:52</_modifiedTimeWeak>
+			<_modifiedTime type="a">4.4.2025::12:25:52</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Generalization</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IClass type="e">
+			<_id type="a">GUID 612cc837-c211-4b23-b03c-b1914463d6c7</_id>
+			<_myState type="a">40960</_myState>
+			<_rmmServerID type="a">1358230_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">TopLevel</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">11.14.2024::17:13:34</_modifiedTime>
+			<weakCGTime type="a">3.4.2025::14:44:8</weakCGTime>
+			<strongCGTime type="a">3.4.2025::14:44:8</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IClass>
+		<IStereotype type="e">
+			<_id type="a">GUID dbb4e194-7022-43b6-9f08-31ddd2527196</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Dialog</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">CommonProperties</_Name>
+													<_Value type="a">Model::Stereotype::BrowserIcon;Model::Stereotype::BrowserGroupIcon;Model::Stereotype::DrawingShape;Model::Stereotype::DrawingToolbar;Model::Stereotype::DrawingToolIcon;Model::Stereotype::Icon;Model::Stereotype::Name;Model::Stereotype::Owners;Model::Stereotype::PluralName;Model::Stereotype::PropertyFile;Model::Stereotype::Sources;Model::Stereotype::Targets</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Reuse</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Reuses</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Sources</_Name>
+													<_Value type="a">Function Reuse,Logical System Reuse, Technical Component Reuse</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Targets</_Name>
+													<_Value type="a">Function, Logical System, Technical Component</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1357792_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">Reuse</_name>
+			<_modifiedTimeWeak type="a">4.4.2025::12:59:18</_modifiedTimeWeak>
+			<_modifiedTime type="a">4.4.2025::12:59:18</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Dependency</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID 30e948e6-9a11-4789-adf7-7e0bf602712d</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">CG</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Operation</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Generate</_Name>
+													<_Value type="a">None</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">Full, Specification, None</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Model</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AddNewMenuStructure</_Name>
+													<_Value type="a">Flow Port, rpy_separator, Diagram/Functional Behavior Diagram, Annotation/Comment, Annotation/Dependency, Annotation/HyperLink, Annotation/Tag</_Value>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Flow Port, Comment, Dependency, Functional Behavior Diagram, HyperLink, Invokes, Satisfies, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Value type="a">..\Icons\FunctionalChainGroupIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Value type="a">..\Icons\FunctionalChainSingleIcon.ico</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Value type="a">FunctionalAnalysis</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DrawingShape</_Name>
+													<_Value type="a">RoundedBox</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">Default,BasicBox,RoundedBox</_ExtraTypeInfo>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Value type="a">Functional View</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Functional View</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1350359_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">FunctionalView</_name>
+			<_modifiedTimeWeak type="a">4.9.2025::7:42:6</_modifiedTimeWeak>
+			<_modifiedTime type="a">4.9.2025::7:42:6</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</_m2Classes>
+			<_newTerm type="a">1</_newTerm>
+			<AggregatesList type="e">
+				<value>GUID 38fe1020-0d3a-4bde-bf97-49833d2dc2f2</value>
+			</AggregatesList>
+		</IStereotype>
+		<IGeneralization type="e">
+			<_id type="a">GUID 38fe1020-0d3a-4bde-bf97-49833d2dc2f2</_id>
+			<_rmmServerID type="a">1350228_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.25.2023::9:55:40</_modifiedTime>
+			<_dependsOn type="r">
+				<INObjectHandle type="e">
+					<_hm2Class type="a">IStereotype</_hm2Class>
+					<_hfilename type="a">.\SafranArchitectureProfile.sbsx</_hfilename>
+					<_hsubsystem type="a">SafranArchitectureProfile::Functional</_hsubsystem>
+					<_hname type="a">Function_</_hname>
+					<_hid type="a">GUID 40737384-302d-4848-8215-ce805bc4cf89</_hid>
+					<_hrmmServerID type="a">1350330_CmvNERkXEemjcZ7iaG_c3w</_hrmmServerID>
+				</INObjectHandle>
+			</_dependsOn>
+			<_inheritanceType type="a">iPublic</_inheritanceType>
+			<_isVirtual type="a">0</_isVirtual>
+		</IGeneralization>
+		<IClass type="e">
+			<_id type="a">GUID c986b6c1-72c0-49de-81b4-8d1eeec0179a</_id>
+			<_myState type="a">40960</_myState>
+			<_rmmServerID type="a">1358234_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">TopLevel</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:44:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">11.14.2024::17:13:34</_modifiedTime>
+			<weakCGTime type="a">3.4.2025::14:44:8</weakCGTime>
+			<strongCGTime type="a">3.4.2025::14:44:8</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IClass>
+		
+	</RHAPSODY-MODEL>
+	<RHAPSODY-INDEX>
+		<ELEMENT>
+			<ID>1358185_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID cfb2a9aa-0a8d-494a-98f0-cb52ad635c58</RHP-ID>
+			<NAME>deprecated</NAME>
+			<TYPE>Profile</TYPE>
+			<TYPE-ID>GUID_3e019035-079b-41ef-b947-b9228dec7a0b_1620664094</TYPE-ID>
+			<DISPLAY-TYPE>Profile</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Profiles</DISPLAY-GROUP>
+			<BROWSER-ICON>Profile~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Profile~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/10/2 12:44:40</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES>I:1358187_CmvNERkXEemjcZ7iaG_c3w | I:1357792_CmvNERkXEemjcZ7iaG_c3w | I:1350359_CmvNERkXEemjcZ7iaG_c3w</AGGREGATES>
+			<REFERENCES></REFERENCES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358187_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID a5c82c74-9f36-4617-8e97-ca2f2d5d2319</RHP-ID>
+			<NAME>Deprecated</NAME>
+			<TYPE>Package</TYPE>
+			<TYPE-ID>GUID_e766f5b1-86fe-4a8a-a6d3-e4da609bde24_1615988135</TYPE-ID>
+			<DISPLAY-TYPE>Package</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Packages</DISPLAY-GROUP>
+			<BROWSER-ICON>Package~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Package~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/4/4 12:25:52</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES>I:1358203_CmvNERkXEemjcZ7iaG_c3w | I:1358202_CmvNERkXEemjcZ7iaG_c3w | I:1358232_CmvNERkXEemjcZ7iaG_c3w | I:1358189_CmvNERkXEemjcZ7iaG_c3w | I:1358191_CmvNERkXEemjcZ7iaG_c3w | I:1358221_CmvNERkXEemjcZ7iaG_c3w | I:1358227_CmvNERkXEemjcZ7iaG_c3w | I:1358197_CmvNERkXEemjcZ7iaG_c3w | I:1358196_CmvNERkXEemjcZ7iaG_c3w | I:1358237_CmvNERkXEemjcZ7iaG_c3w | I:1358190_CmvNERkXEemjcZ7iaG_c3w | I:1358204_CmvNERkXEemjcZ7iaG_c3w | I:1358236_CmvNERkXEemjcZ7iaG_c3w | I:1358194_CmvNERkXEemjcZ7iaG_c3w | I:1358233_CmvNERkXEemjcZ7iaG_c3w | I:1358193_CmvNERkXEemjcZ7iaG_c3w | I:1358206_CmvNERkXEemjcZ7iaG_c3w | I:1358214_CmvNERkXEemjcZ7iaG_c3w | I:1358235_CmvNERkXEemjcZ7iaG_c3w | I:1358224_CmvNERkXEemjcZ7iaG_c3w | I:1358215_CmvNERkXEemjcZ7iaG_c3w | I:1358198_CmvNERkXEemjcZ7iaG_c3w | I:1358229_CmvNERkXEemjcZ7iaG_c3w | I:1358223_CmvNERkXEemjcZ7iaG_c3w | I:1358186_CmvNERkXEemjcZ7iaG_c3w | I:1358192_CmvNERkXEemjcZ7iaG_c3w | I:1358207_CmvNERkXEemjcZ7iaG_c3w | I:1358211_CmvNERkXEemjcZ7iaG_c3w | I:1358226_CmvNERkXEemjcZ7iaG_c3w | I:1358231_CmvNERkXEemjcZ7iaG_c3w | I:1358217_CmvNERkXEemjcZ7iaG_c3w | I:1358220_CmvNERkXEemjcZ7iaG_c3w | I:1358228_CmvNERkXEemjcZ7iaG_c3w | I:1358200_CmvNERkXEemjcZ7iaG_c3w | I:1358210_CmvNERkXEemjcZ7iaG_c3w | I:1358225_CmvNERkXEemjcZ7iaG_c3w | I:1350342_CmvNERkXEemjcZ7iaG_c3w | I:1357546_CmvNERkXEemjcZ7iaG_c3w | I:1350325_CmvNERkXEemjcZ7iaG_c3w</AGGREGATES>
+			<REFERENCES></REFERENCES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358203_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 1877c79d-fbfc-49ce-b288-e8c312b08006</RHP-ID>
+			<NAME>Context</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/17 12:48:21</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES></ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358202_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID b476b681-ea87-470e-b4c7-460d4ece7c63</RHP-ID>
+			<NAME>FunctionalFlowOld</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/31 14:55:58</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES></ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358232_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 6851d802-677a-46f5-97bd-4202571f8183</RHP-ID>
+			<NAME>Continuous Link</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/3/4 15:34:45</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Continuous Links</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358189_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 3800d794-0bf8-40b9-bc42-6fac4e5df65a</RHP-ID>
+			<NAME>DiscreteInterface</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/22 15:34:14</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>DiscreteInterfaces</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358191_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID cc5dc000-5a0e-4a31-8f13-81af6e43ab21</RHP-ID>
+			<NAME>Discrete Link</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/22 15:34:24</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Discrete Links</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358221_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 0ee31138-8e18-4425-b7ea-4d1fd59ab2e3</RHP-ID>
+			<NAME>Discrete Port</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/22 15:34:28</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Discrete Ports</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358227_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 902add8c-e581-4079-b0ab-40d8a7187a32</RHP-ID>
+			<NAME>InOut</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/22 15:34:37</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>InOuts</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358197_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 56916399-1ee5-466f-b9b3-ebdb73b77bdd</RHP-ID>
+			<NAME>Continuous Attribute</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/22 15:34:47</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Continuous Attributes</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358196_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 40bccd9e-eeb7-48fb-80b4-af7bd1e34f64</RHP-ID>
+			<NAME>Continuous Flow Package</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/22 15:34:55</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Continuous Flow Packages</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358237_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 4700b957-b72f-4e3d-9d54-eece04aa615b</RHP-ID>
+			<NAME>Discrete Flow Package</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/22 15:35:3</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Discrete Flow Packages</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358190_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 07cf625b-109c-4916-90ae-b38cc999cf4d</RHP-ID>
+			<NAME>Interface Contract</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/22 15:35:15</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Interface Contracts</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358204_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 421fd0bd-f62e-4789-9891-2b69efe95b99</RHP-ID>
+			<NAME>Logical System Instance</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/22 15:38:15</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Logical System Instances</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+			<TAGS>
+				<TAG>
+					<RHP-ID>GUID 31656589-85b5-4ffa-b1dd-49cb472ae75a</RHP-ID>
+					<NAME>Location</NAME>
+				</TAG>
+			</TAGS>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358236_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 743fc44d-bc74-42a8-bb37-d97a0154ca56</RHP-ID>
+			<NAME>Logica lInterface Context</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/22 15:40:40</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Logica lInterface Contexts</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358194_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID bd916bd4-4ada-46d2-8657-d1261423f388</RHP-ID>
+			<NAME>Operational System Instance</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/22 15:45:14</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Operational System Instances</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358233_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 6fea0dda-511f-4dfd-adab-6098d927c703</RHP-ID>
+			<NAME>Stakeholder Instance</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/22 15:46:39</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Stakeholder Instances</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358193_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 23e0f81b-833c-45b7-b5c4-054feff0c07d</RHP-ID>
+			<NAME>Function Call</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/31 13:54:1</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Function Calls</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+			<DESCRIPTION>
+				<PLAIN-TEXT>deprecated</PLAIN-TEXT>
+			</DESCRIPTION>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358206_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID bef41871-324c-421a-b0f9-38a4a57f6b6d</RHP-ID>
+			<NAME>Technical Component Instance</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/22 15:48:28</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Technical Component Instances</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+			<TAGS>
+				<TAG>
+					<RHP-ID>GUID 779bdf24-7318-491d-b778-bf32235aca51</RHP-ID>
+					<NAME>Location</NAME>
+				</TAG>
+			</TAGS>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358214_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 03413842-f2de-4da3-b92d-951880947758</RHP-ID>
+			<NAME>test</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/25 7:40:12</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES></ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358235_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 569b442e-d521-4968-9613-adba10637210</RHP-ID>
+			<NAME>test2</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/25 7:40:12</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES></ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358224_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 25b55a77-d133-4c01-85b6-29c8f61c1d56</RHP-ID>
+			<NAME>H - Test Package</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/28 16:33:27</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>H - Test Packages</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358215_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID b0cec476-df56-409a-b375-6d3237f47e13</RHP-ID>
+			<NAME>GenericAggregationForAllVirtualObjectType</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/28 16:36:35</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES></ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358198_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID f9a26cda-5b72-4676-bcf4-7919c735eb8f</RHP-ID>
+			<NAME>Logical Circuit</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/3/4 14:44:3</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES>I:1358218_CmvNERkXEemjcZ7iaG_c3w</AGGREGATES>
+			<REFERENCES>
+				<BASE-STEREOTYPES>
+					<VALUE-IDS>1350194_CmvNERkXEemjcZ7iaG_c3w</VALUE-IDS>
+				</BASE-STEREOTYPES>
+			</REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Logical Circuits</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+			<DESCRIPTION>
+				<PLAIN-TEXT>replaced by a simple architecture diagram</PLAIN-TEXT>
+			</DESCRIPTION>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358218_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 31cdc442-3d5a-41c7-aa5d-1480686dd09f</RHP-ID>
+			<NAME>LogicalSystem</NAME>
+			<TYPE>Generalization</TYPE>
+			<TYPE-ID>GUID_268e79bd-2383-4b86-838d-98f0522e3043_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Generalization</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Generalizations</DISPLAY-GROUP>
+			<BROWSER-ICON>Generalization~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Generalization~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2023/3/3 10:56:32</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES>
+				<RELATION-SOURCE>
+					<VALUE-ID>1358198_CmvNERkXEemjcZ7iaG_c3w</VALUE-ID>
+				</RELATION-SOURCE>
+				<RELATION-TARGET>
+					<VALUE-ID>1350194_CmvNERkXEemjcZ7iaG_c3w</VALUE-ID>
+				</RELATION-TARGET>
+			</REFERENCES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358229_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 420205fe-c129-4754-8761-31569617bff0</RHP-ID>
+			<NAME>Technical Discrete Port</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/28 17:23:37</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Technical Discrete Ports</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358223_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 6b28cc7a-461e-4a08-a715-fce40c6c7015</RHP-ID>
+			<NAME>Technical Interface Context</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/28 17:23:37</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Technical Interface Contexts</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358186_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID c3013a5d-5517-4c77-9300-d8e3af52f3d4</RHP-ID>
+			<NAME>Functional Architecture</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/29 10:57:36</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Functional Architectures</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358192_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID afc1805f-666c-446f-8cad-baf4fc01b653</RHP-ID>
+			<NAME>ArchitectureDiagram</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/31 8:28:53</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES></ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358207_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 6063def1-3707-4da0-997d-5e6668657d01</RHP-ID>
+			<NAME>TaxonomyDiagram</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/31 9:47:28</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES></ADDITIONAL-PROPERTIES>
+			<DESCRIPTION>
+				<PLAIN-TEXT>abstarct stereotype to handle common taxonomy diagrams properties</PLAIN-TEXT>
+			</DESCRIPTION>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358211_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID b7a0d0f6-662a-46a9-979d-28796b0f09ac</RHP-ID>
+			<NAME>System_</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/31 14:22:40</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES></ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358226_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 8c508021-5406-44fe-8c5a-e3a0831aed14</RHP-ID>
+			<NAME>Sequence_Diagram</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/31 8:51:48</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES></ADDITIONAL-PROPERTIES>
+			<DESCRIPTION>
+				<PLAIN-TEXT>remove _ ?</PLAIN-TEXT>
+			</DESCRIPTION>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358231_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 3182ec67-7936-47d5-a5f0-b19cf15c245d</RHP-ID>
+			<NAME>BreakdownDiagram</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/10/31 8:52:55</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES></ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358217_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID c2f97e77-ca63-4750-b62e-3905fa91a314</RHP-ID>
+			<NAME>Operational Breakdown Diagram</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/11/14 17:18:18</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Operational Breakdown Diagrams</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358220_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID f10e45f6-a7b0-4e52-8ced-0484b23ffab5</RHP-ID>
+			<NAME>Operational Taxonomy Diagram</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/11/14 17:18:18</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Operational Taxonomy Diagrams</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358228_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 3d01e74a-6465-473f-8f4a-78d1ba5fbcfc</RHP-ID>
+			<NAME>Stakeholder Diagram</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/11/14 17:18:18</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Stakeholder Diagrams</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358200_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 7cd46724-f3bf-4c84-a49b-26e481e3395b</RHP-ID>
+			<NAME>Function Package</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/11/15 16:22:34</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Function Packages</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358210_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID a66806ff-8b11-484a-9d6d-b859f5894655</RHP-ID>
+			<NAME>Function Realization</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/12/20 15:34:31</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Function Realizations</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358225_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 065f1220-a277-4767-bed8-60516b34cffc</RHP-ID>
+			<NAME>EnumerationLiteral_</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/3/4 14:44:3</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES>I:1358201_CmvNERkXEemjcZ7iaG_c3w</AGGREGATES>
+			<REFERENCES>
+				<BASE-STEREOTYPES>
+					<VALUE-IDS>1358211_CmvNERkXEemjcZ7iaG_c3w</VALUE-IDS>
+				</BASE-STEREOTYPES>
+			</REFERENCES>
+			<ADDITIONAL-PROPERTIES></ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358201_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID fa67d3e8-13c4-4bea-8106-a370a19fea55</RHP-ID>
+			<NAME>System_</NAME>
+			<TYPE>Generalization</TYPE>
+			<TYPE-ID>GUID_268e79bd-2383-4b86-838d-98f0522e3043_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Generalization</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Generalizations</DISPLAY-GROUP>
+			<BROWSER-ICON>Generalization~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Generalization~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/11/14 17:13:34</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES>
+				<RELATION-SOURCE>
+					<VALUE-ID>1358225_CmvNERkXEemjcZ7iaG_c3w</VALUE-ID>
+				</RELATION-SOURCE>
+				<RELATION-TARGET>
+					<VALUE-ID>1358211_CmvNERkXEemjcZ7iaG_c3w</VALUE-ID>
+				</RELATION-TARGET>
+			</REFERENCES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1350342_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 5196c45a-8cad-4fbd-8a56-dc1009142697</RHP-ID>
+			<NAME>Invokes</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/3/4 16:13:59</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Invokes</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1357546_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID ad8472d8-ee69-47c8-83bf-0f18eb410239</RHP-ID>
+			<NAME>redefine</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/3/14 10:40:23</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>redefines</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1350325_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID c3232e2d-3745-4b0b-89d9-97d371b592b7</RHP-ID>
+			<NAME>Safran Specialization</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/4/4 12:25:52</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Safran Specializations</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1357792_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID dbb4e194-7022-43b6-9f08-31ddd2527196</RHP-ID>
+			<NAME>Reuse</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/4/4 12:59:18</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Reuses</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1350359_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 30e948e6-9a11-4789-adf7-7e0bf602712d</RHP-ID>
+			<NAME>Functional View</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/4/9 7:42:6</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES>I:1350228_CmvNERkXEemjcZ7iaG_c3w</AGGREGATES>
+			<REFERENCES>
+				<BASE-STEREOTYPES>
+					<VALUE-IDS>1350330_CmvNERkXEemjcZ7iaG_c3w</VALUE-IDS>
+				</BASE-STEREOTYPES>
+			</REFERENCES>
+			<ADDITIONAL-PROPERTIES>
+				<TYPE-GROUP-LABEL>Functional View</TYPE-GROUP-LABEL>
+			</ADDITIONAL-PROPERTIES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1350228_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 38fe1020-0d3a-4bde-bf97-49833d2dc2f2</RHP-ID>
+			<NAME>Function_</NAME>
+			<TYPE>Generalization</TYPE>
+			<TYPE-ID>GUID_268e79bd-2383-4b86-838d-98f0522e3043_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Generalization</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Generalizations</DISPLAY-GROUP>
+			<BROWSER-ICON>Generalization~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Generalization~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2023/10/25 9:55:40</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES>
+				<RELATION-SOURCE>
+					<VALUE-ID>1350359_CmvNERkXEemjcZ7iaG_c3w</VALUE-ID>
+				</RELATION-SOURCE>
+				<RELATION-TARGET>
+					<VALUE-ID>1350330_CmvNERkXEemjcZ7iaG_c3w</VALUE-ID>
+				</RELATION-TARGET>
+			</REFERENCES>
+		</ELEMENT>
+	</RHAPSODY-INDEX>
+
+	<OslcLinks type="c">
+		<IRPYRawContainer type="e">
+		</IRPYRawContainer>
+	</OslcLinks>
+
+<RHAPSODY-INDEX-START>126702</RHAPSODY-INDEX-START>
+<RHAPSODY-INDEX-END>165818</RHAPSODY-INDEX-END>
+<OSLC-LINKS-START>165819</OSLC-LINKS-START>
+<OSLC-LINKS-END>165908</OSLC-LINKS-END>
+<INCLUDES-RHAPSODY-INDEX>true</INCLUDES-RHAPSODY-INDEX>
+</RhapsodyArchive>
+

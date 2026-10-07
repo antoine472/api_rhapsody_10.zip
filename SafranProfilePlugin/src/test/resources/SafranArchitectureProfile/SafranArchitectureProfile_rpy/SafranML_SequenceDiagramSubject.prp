@@ -1,0 +1,50 @@
+Subject SequenceDiagram
+	Metaclass Animation
+		Property DisplayTimeStamp Bool "False"
+	end
+	Metaclass Condition_Mark
+		Property AlignConditionMarksLeft Bool "False"
+	end
+	Metaclass General
+		Property RealizeMessages Bool "False"
+		Property ShowSequenceNumbers Bool "False"
+		Property ShowArguments Enum "None,Names,NamesAndTypes" "Names"
+		Property CleanupRealized Bool "False"
+		Property ClassCentricMode Bool "False"
+		Property ConfirmCreation Bool "True"
+		Property AutoCreateExecutionOccurrence Bool "False"
+		Property SlantMessageType Enum "Default, PrimitiveOperation, TriggeredOperation, Event" "Default"
+		Property HorizontalMessageType Enum "Default, PrimitiveOperation, TriggeredOperation, Event" "Default"
+		Property SelfMessageType Enum "Default, PrimitiveOperation, TriggeredOperation, Event" "Default"
+		Property MaxNumberOfAnimMessages Int "1000"
+		Property OnReachedMaxAnimMessages Enum "KeepLast,Stop" "KeepLast"
+		Property DefaultLifelineType Enum "Class, File" "Class"
+		Property AutoLaunchAnimation Enum "Never, If_Open, Always" "If_Open"
+		Property ShowAnimCreateArrow Bool "True"
+		Property ShowAnimDestroyArrow Bool "True"
+		Property ShowAnimTimeoutArrow Bool "True"
+		Property ShowAnimCancelTimeoutArrow Bool "False"
+		Property ShowAnimDataFlowArrow Bool "True"
+		Property ShowAnimStateMark Bool "True"
+		Property ShowDynamicAnimInstanceName Bool "False"
+		Property SysMLDiagramKindTitle String ""
+	end
+	Metaclass DestructionEvent
+		Property ShowName Bool "True"
+	end
+	Metaclass DiagramFrame
+		Property ShowName Enum "Name,Label" "Name"
+		Property ShowStereotype Enum "Label,None" "None"
+		Property DefaultSize String "20,20,590,500"
+	end
+	Metaclass InteractionOperator
+		Property ShowOperandsGuards Bool "True"
+	end
+	Metaclass InstanceLine
+		Property ShowStereotype Bool "False"
+		Property BottomMargin Int "50"
+	end
+	Metaclass SequenceDiagram
+		Property Fill.Transparent_Fill Int "1"
+	end
+end

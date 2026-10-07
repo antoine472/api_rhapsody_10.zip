@@ -1,0 +1,13 @@
+# Classes compilees par Eclipse (regenerees a chaque build)
+SafranProfilePlugin/target/
+SafranProfilePlugin/bin/
+
+# Traces d'execution du plugin
+SafranProfilePlugin/logs/
+*.log
+
+# Fichiers de travail generes par Rhapsody
+*.ehl
+*.save
+*_auto_rpy/
+*.bak

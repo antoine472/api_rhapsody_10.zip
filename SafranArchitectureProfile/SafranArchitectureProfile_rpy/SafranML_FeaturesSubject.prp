@@ -1,0 +1,5 @@
+Subject Features
+	Metaclass General                                                  
+		Property UsablePredefinedPackagesForShowingStereotypes String "ManualStereotype"
+	end
+end

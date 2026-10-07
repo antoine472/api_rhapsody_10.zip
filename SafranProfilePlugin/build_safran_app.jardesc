@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
+<jardesc>
+    <jar path="./SafranArchitectureProfile/SafranArchitectureProfile_EXE/safran_app.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/SafranProfilePlugin/build_safran_app.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="false" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <javaElement handleIdentifier="=SafranProfilePlugin/src\/main\/java=/org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY=/C:\/Program Files\/IBM\/Rhapsody\/10.0.2\/Share\/JavaAPI=/=/optional=/true=/=/maven.pomderived=/true=/"/>
+    </selectedElements>
+</jardesc>

@@ -1,0 +1,51 @@
+Subject StatechartDiagram
+	Metaclass AcceptEventAction
+		Property ShowNotation Enum "Name,Label,Event" "Event"
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+	end
+	Metaclass AcceptTimeEvent
+		Property ShowName Enum "Name,Duration,Label,None" "Duration"		
+	end
+	Metaclass AutoPopulate
+		Property ArrowDirection Enum "Top-Bottom,Bottom-Top" "Bottom-Top"
+	end
+	Metaclass Complete
+		Property Complete_Relation Bool "False"
+	end 
+	Metaclass DefaultTransition
+		Property line_style Enum "straight_arrows,rectilinear_arrows,spline_arrows,rounded_rectilinear_arrows" "rounded_rectilinear_arrows"
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+		Property ShowName Enum  "Name,Label,None" "None"
+	end
+	Metaclass DiagramFrame
+		Property ShowName Enum "Name,Label" "Name"
+		Property ShowStereotype Enum "Label,None" "None"
+		Property DefaultSize String "20,20,590,500"
+	end
+	Metaclass General
+		Property DeleteConfirmation  Enum  "Never,WhenNeeded,Always" "Never"
+		Property SysMLDiagramKindTitle String ""
+		Property ShowTransitionNumbers Bool "False"
+	end
+	Metaclass HistoryConnector
+		Property UseUMLNotation Bool "True"
+	end
+	Metaclass SendAction
+		Property ShowNotation Enum "Name,Label,FullNotation,Event" "Event"
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+	end
+	Metaclass State
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+		Property ShowReactions Bool "False"
+		Property ShowDescription Bool "False"
+		Property ShowName Enum "Name_only,Label" "Name_only"
+		Property InheritedStateColor Color "191,191,191"
+		Property InheritedStateFontColor Color "128,128,128"
+	end
+	Metaclass Transition
+		Property line_style Enum "straight_arrows,rectilinear_arrows,spline_arrows,rounded_rectilinear_arrows" "rounded_rectilinear_arrows"
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+		Property ShowName Enum  "Name,Label,None" "Name"
+		Property ArrowHead Enum "ClosedArrow,OpenArrow" "OpenArrow"
+	end
+end

@@ -1,0 +1,1968 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RhapsodyArchive>
+	<MagicNumber>_Yi6loDo0EfCEQufE2PIcFA</MagicNumber>
+	<CODE-PAGE>1252</CODE-PAGE>
+	<version>110.0.2</version>
+	<RMMIndexVersion>109.3</RMMIndexVersion>
+	<lang>C++</lang>
+	<BuildNo>202504251049</BuildNo>
+	<RMMMinimumClientVersion>100.0</RMMMinimumClientVersion>
+	
+	<RHAPSODY-MODEL>
+	<IProfile type="e">
+			<_id type="a">GUID 804c23de-76a9-4f40-96bc-34d22335c64b</_id>
+			<_myState type="a">8192</_myState>
+			<_rmmServerID type="a">1441498_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">SafranStereotypes</_name>
+			<_modifiedTimeWeak type="a">10.23.2025::14:22:52</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.11.2026::12:15:57</_modifiedTime>
+			<_lastID type="a">8</_lastID>
+			<weakCGTime type="a">10.23.2025::14:22:52</weakCGTime>
+			<strongCGTime type="a">3.11.2025::15:18:31</strongCGTime>
+			<_defaultComposite type="s">GUID 1747edf8-9464-4a67-995a-6a1af81d637a</_defaultComposite>
+			<_eventsBaseID type="a">-1</_eventsBaseID>
+			<_configurationRelatedTime type="a">1.2.1990::0:0:0</_configurationRelatedTime>
+			<AggregatesList type="e">
+				<value>GUID 207553c8-87c5-44f2-8e28-f7b15abb8f34</value>
+				<value>GUID 4faf30d3-1c34-4ccb-a89a-7729449be01f</value>
+				<value>GUID 67741e57-873c-4969-a0b8-6582156c7541</value>
+				<value>GUID 998e08c5-eb96-4de1-895d-ff386c967714</value>
+				<value>GUID 7705bd74-9ef0-4ae5-a24b-88c014074bf1</value>
+				<value>GUID 3672ec55-6a86-46f8-907d-3b7a91e07ba0</value>
+				<value>GUID 31c4ea5d-161f-4be9-8ea7-5726a4dc9cff</value>
+				<value>GUID 1747edf8-9464-4a67-995a-6a1af81d637a</value>
+			</AggregatesList>
+		</IProfile>
+		<IStereotype type="e">
+			<_id type="a">GUID 207553c8-87c5-44f2-8e28-f7b15abb8f34</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ActionPin</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">210,202,191</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">116,101,82</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ActivityParameter</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">210,202,191</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">116,101,82</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">DataFlow</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">116,101,82</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Flow</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">116,101,82</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Link</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">116,101,82</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Message</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">116,101,82</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ObjectFlow</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">116,101,82</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Port</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">210,202,191</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">116,101,82</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">210,202,191</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">116,101,82</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">SysMLPort</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">210,202,191</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">116,101,82</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Type</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">210,202,191</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">116,101,82</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Graphics</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AdditionalCompartments</_Name>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Model</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AddNewMenuStructure</_Name>
+													<_Value type="a">A - Operational Analysis Package, B - Functional View Package, C - Logical Architecture Package, Comment, D - Technical Analysis Package, Dependency, E - Interface Management Package, F - Flow Package, G - Analysis Package, Annotation/HyperLink, Annotation/Tag</_Value>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1441500_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">Mechanical</_name>
+			<_modifiedTimeWeak type="a">5.26.2025::13:22:8</_modifiedTimeWeak>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">additional stereotype used to characterise the nature of any kind of flows</_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">5.26.2025::13:22:8</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Message</value>
+					<value>SysMLPort</value>
+					<value>Flow</value>
+					<value>Class</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<AggregatesList type="e">
+				<value>GUID edcc7eb6-406f-4f02-8ec7-66f31a28bafc</value>
+			</AggregatesList>
+		</IStereotype>
+		<ITag type="e">
+			<_id type="a">GUID edcc7eb6-406f-4f02-8ec7-66f31a28bafc</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Exclusive</_name>
+			<_modifiedTimeWeak type="a">4.14.2023::14:57:17</_modifiedTimeWeak>
+			<_modifiedTime type="a">4.14.2023::14:59:45</_modifiedTime>
+			<_typeOf type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hsubsystem type="a">PredefinedTypes</_hsubsystem>
+					<_hname type="a">RhpString</_hname>
+					<_hid type="a">GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35</_hid>
+				</IHandle>
+			</_typeOf>
+			<_isOrdered type="a">0</_isOrdered>
+			<AggregatesList type="e">
+				<value>GUID b27da6d3-dc38-4ad2-9419-e0256ca2bc4c</value>
+			</AggregatesList>
+		</ITag>
+		<ILiteralSpecification type="e">
+			<_id type="a">GUID b27da6d3-dc38-4ad2-9419-e0256ca2bc4c</_id>
+			<_modifiedTimeWeak type="a">4.14.2023::14:57:17</_modifiedTimeWeak>
+			<_modifiedTime type="a">4.14.2023::14:57:17</_modifiedTime>
+			<_value type="a">Yes</_value>
+		</ILiteralSpecification>
+		<IStereotype type="e">
+			<_id type="a">GUID 4faf30d3-1c34-4ccb-a89a-7729449be01f</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ActionPin</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.BackgroundColor</_Name>
+													<_Value type="a">251,233,13</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Fill.BackgroundMode</_Name>
+													<_Value type="a">2</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">254,250,197</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Fill.FillHatch</_Name>
+													<_Value type="a">1</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Fill.FillStyle</_Name>
+													<_Value type="a">0</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Fill.Transparent_Fill</_Name>
+													<_Value type="a">0</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">240,204,0</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.Transparent</_Name>
+													<_Value type="a">0</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ActivityParameter</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">254,250,197</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">240,204,0</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">DataFlow</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">240,204,0</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Flow</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">240,204,0</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Link</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">251,233,13</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Message</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">251,233,13</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ObjectFlow</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">240,204,0</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Port</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">254,252,222</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">251,233,13</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">254,250,197</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">240,204,0</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">SysMLPort</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">254,250,197</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">240,204,0</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Transition</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">251,233,13</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Type</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">254,252,222</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">251,233,13</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Graphics</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AdditionalCompartments</_Name>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Model</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AddNewMenuStructure</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1441495_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">Electrical</_name>
+			<_modifiedTimeWeak type="a">10.23.2025::14:22:52</_modifiedTimeWeak>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">additional stereotype used to characterise the nature of any kind of flows</_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">10.23.2025::14:22:52</_modifiedTime>
+			<_lastID type="a">1</_lastID>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Message</value>
+					<value>SysMLPort</value>
+					<value>Flow</value>
+					<value>Class</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<AggregatesList type="e">
+				<value>GUID 55a8f63a-0197-4242-9548-9fe6dc219259</value>
+			</AggregatesList>
+		</IStereotype>
+		<ITag type="e">
+			<_id type="a">GUID 55a8f63a-0197-4242-9548-9fe6dc219259</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Exclusive</_name>
+			<_modifiedTimeWeak type="a">4.14.2023::14:57:17</_modifiedTimeWeak>
+			<_modifiedTime type="a">4.14.2023::14:57:17</_modifiedTime>
+			<_typeOf type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hsubsystem type="a">PredefinedTypes</_hsubsystem>
+					<_hname type="a">RhpString</_hname>
+					<_hid type="a">GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35</_hid>
+				</IHandle>
+			</_typeOf>
+			<_isOrdered type="a">0</_isOrdered>
+			<AggregatesList type="e">
+				<value>GUID 14eec9ec-8e20-476e-b49e-aae422f74f41</value>
+			</AggregatesList>
+		</ITag>
+		<ILiteralSpecification type="e">
+			<_id type="a">GUID 14eec9ec-8e20-476e-b49e-aae422f74f41</_id>
+			<_modifiedTimeWeak type="a">4.14.2023::14:57:17</_modifiedTimeWeak>
+			<_modifiedTime type="a">4.14.2023::14:57:17</_modifiedTime>
+			<_value type="a">Yes</_value>
+		</ILiteralSpecification>
+		<IStereotype type="e">
+			<_id type="a">GUID 67741e57-873c-4969-a0b8-6582156c7541</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ActionPin</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">204,204,255</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">0,0,255</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ActivityParameter</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">204,204,255</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">0,0,255</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">DataFlow</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">0,0,255</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Flow</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">0,0,255</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Link</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">0,0,255</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Message</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">0,0,255</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ObjectFlow</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">0,0,255</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Port</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">223,223,255</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">0,0,255</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">204,204,255</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">0,0,255</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">SysMLPort</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">204,204,255</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">0,0,255</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Transition</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">0,0,255</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Type</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">223,223,255</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">0,0,255</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Graphics</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AdditionalCompartments</_Name>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Model</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AddNewMenuStructure</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Aggregates</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserGroupIcon</_Name>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">BrowserIcon</_Name>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DefaultName</_Name>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Name</_Name>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">PluralName</_Name>
+													<_Value type="a">Safran Architecture Projects</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1441497_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">Hydraulic</_name>
+			<_modifiedTimeWeak type="a">5.26.2025::13:22:8</_modifiedTimeWeak>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">additional stereotype used to characterise the nature of any kind of flows</_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">5.26.2025::13:22:8</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Message</value>
+					<value>SysMLPort</value>
+					<value>Class</value>
+					<value>Flow</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<AggregatesList type="e">
+				<value>GUID 6c647fc0-27a4-432f-aee0-a2b275ef6160</value>
+			</AggregatesList>
+		</IStereotype>
+		<ITag type="e">
+			<_id type="a">GUID 6c647fc0-27a4-432f-aee0-a2b275ef6160</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Exclusive</_name>
+			<_modifiedTimeWeak type="a">4.14.2023::14:57:17</_modifiedTimeWeak>
+			<_modifiedTime type="a">4.14.2023::14:59:42</_modifiedTime>
+			<_typeOf type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hsubsystem type="a">PredefinedTypes</_hsubsystem>
+					<_hname type="a">RhpString</_hname>
+					<_hid type="a">GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35</_hid>
+				</IHandle>
+			</_typeOf>
+			<_isOrdered type="a">0</_isOrdered>
+			<AggregatesList type="e">
+				<value>GUID 0370d390-68ef-474c-aa2e-2e61fdb68e68</value>
+			</AggregatesList>
+		</ITag>
+		<ILiteralSpecification type="e">
+			<_id type="a">GUID 0370d390-68ef-474c-aa2e-2e61fdb68e68</_id>
+			<_modifiedTimeWeak type="a">4.14.2023::14:57:17</_modifiedTimeWeak>
+			<_modifiedTime type="a">4.14.2023::14:57:17</_modifiedTime>
+			<_value type="a">Yes</_value>
+		</ILiteralSpecification>
+		<IStereotype type="e">
+			<_id type="a">GUID 998e08c5-eb96-4de1-895d-ff386c967714</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ActionPin</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">255,204,204</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">255,0,0</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ActivityParameter</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">255,204,204</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">255,0,0</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">DataFlow</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">255,0,0</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Flow</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">255,0,0</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Link</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">255,0,0</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Message</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">255,0,0</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ObjectFlow</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">255,0,0</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Port</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">255,210,210</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">255,0,0</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">255,204,204</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">255,0,0</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">SysMLPort</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">255,202,202</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">255,0,0</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Transition</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">255,0,0</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Type</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">255,210,210</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">255,0,0</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Graphics</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AdditionalCompartments</_Name>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Model</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AddNewMenuStructure</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1441499_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">Information</_name>
+			<_modifiedTimeWeak type="a">5.26.2025::13:22:8</_modifiedTimeWeak>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">additional stereotype used to characterise the nature of any kind of flows</_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">5.26.2025::13:22:8</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Message</value>
+					<value>SysMLPort</value>
+					<value>Flow</value>
+					<value>Class</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<AggregatesList type="e">
+				<value>GUID 6d0ee2fd-4a78-46bd-9283-072720a39fe8</value>
+			</AggregatesList>
+		</IStereotype>
+		<ITag type="e">
+			<_id type="a">GUID 6d0ee2fd-4a78-46bd-9283-072720a39fe8</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Exclusive</_name>
+			<_modifiedTimeWeak type="a">4.14.2023::14:57:17</_modifiedTimeWeak>
+			<_modifiedTime type="a">4.14.2023::14:59:44</_modifiedTime>
+			<_typeOf type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hsubsystem type="a">PredefinedTypes</_hsubsystem>
+					<_hname type="a">RhpString</_hname>
+					<_hid type="a">GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35</_hid>
+				</IHandle>
+			</_typeOf>
+			<_isOrdered type="a">0</_isOrdered>
+			<AggregatesList type="e">
+				<value>GUID 53d74bff-0f26-459f-b2e4-d4157a016e63</value>
+			</AggregatesList>
+		</ITag>
+		<ILiteralSpecification type="e">
+			<_id type="a">GUID 53d74bff-0f26-459f-b2e4-d4157a016e63</_id>
+			<_modifiedTimeWeak type="a">4.14.2023::14:57:17</_modifiedTimeWeak>
+			<_modifiedTime type="a">4.14.2023::14:57:17</_modifiedTime>
+			<_value type="a">Yes</_value>
+		</ILiteralSpecification>
+		<IStereotype type="e">
+			<_id type="a">GUID 7705bd74-9ef0-4ae5-a24b-88c014074bf1</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ActionPin</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">210,247,239</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">38,206,172</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ActivityParameter</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">210,247,239</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">38,206,172</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">DataFlow</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">38,206,172</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Flow</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">38,206,172</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Link</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">38,206,172</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Message</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">38,206,172</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ObjectFlow</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">38,206,172</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Port</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">210,247,239</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">38,206,172</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">210,247,239</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">38,206,172</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">SysMLPort</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">210,247,239</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">38,206,172</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Transition</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">38,206,172</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Type</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">210,247,239</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">38,206,172</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Graphics</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AdditionalCompartments</_Name>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Model</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AddNewMenuStructure</_Name>
+													<_Value type="a">Comment, Dependency, HyperLink, Tag</_Value>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1441494_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">Pneumatic</_name>
+			<_modifiedTimeWeak type="a">5.26.2025::13:22:8</_modifiedTimeWeak>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">additional stereotype used to characterise the nature of any kind of flows</_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">5.26.2025::13:22:8</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Message</value>
+					<value>SysMLPort</value>
+					<value>Class</value>
+					<value>Flow</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+			<AggregatesList type="e">
+				<value>GUID 66121f3d-2ae8-4903-bb61-c24422d8d091</value>
+			</AggregatesList>
+		</IStereotype>
+		<ITag type="e">
+			<_id type="a">GUID 66121f3d-2ae8-4903-bb61-c24422d8d091</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Exclusive</_name>
+			<_modifiedTimeWeak type="a">4.14.2023::14:57:17</_modifiedTimeWeak>
+			<_modifiedTime type="a">4.14.2023::14:59:47</_modifiedTime>
+			<_typeOf type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hsubsystem type="a">PredefinedTypes</_hsubsystem>
+					<_hname type="a">RhpString</_hname>
+					<_hid type="a">GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35</_hid>
+				</IHandle>
+			</_typeOf>
+			<_isOrdered type="a">0</_isOrdered>
+			<AggregatesList type="e">
+				<value>GUID c6f6fa27-82fb-4d5f-98e6-b7d21b26d8e7</value>
+			</AggregatesList>
+		</ITag>
+		<ILiteralSpecification type="e">
+			<_id type="a">GUID c6f6fa27-82fb-4d5f-98e6-b7d21b26d8e7</_id>
+			<_modifiedTimeWeak type="a">4.14.2023::14:57:17</_modifiedTimeWeak>
+			<_modifiedTime type="a">4.14.2023::14:57:17</_modifiedTime>
+			<_value type="a">Yes</_value>
+		</ILiteralSpecification>
+		<IStereotype type="e">
+			<_id type="a">GUID 3672ec55-6a86-46f8-907d-3b7a91e07ba0</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Graphics</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AdditionalCompartments</_Name>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Model</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AddNewMenuStructure</_Name>
+													<_Value type="a">A - Operational Analysis Package, B - Functional View Package, C - Logical Architecture Package, Comment, D - Technical Analysis Package, Dependency, E - Interface Management Package, F - Flow Package, G - Analysis Package, Annotation/HyperLink, Annotation/Tag</_Value>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1441496_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">FirstLevel</_name>
+			<_modifiedTimeWeak type="a">5.26.2025::13:22:8</_modifiedTimeWeak>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">additional stereotype used to identify a Top level function aka Service Function that will be decomposed</_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">5.26.2025::13:22:8</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Class</value>
+					<value>Operation</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+		</IStereotype>
+		<IStereotype type="e">
+			<_id type="a">GUID 31c4ea5d-161f-4be9-8ea7-5726a4dc9cff</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Graphics</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AdditionalCompartments</_Name>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Model</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AddNewMenuStructure</_Name>
+													<_Value type="a">Comment, HyperLink, Tag</_Value>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1441493_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">SystemOfInterest</_name>
+			<_displayName type="a">System Of Interest</_displayName>
+			<_modifiedTimeWeak type="a">5.26.2025::13:22:8</_modifiedTimeWeak>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">Manual stereotype to identify the system designed as System Of Interest</_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">5.26.2025::13:22:8</_modifiedTime>
+			<_m2Classes type="c">
+				<IRPYRawContainer type="e">
+					<value>Class</value>
+				</IRPYRawContainer>
+			</_m2Classes>
+		</IStereotype>
+		<IClass type="e">
+			<_id type="a">GUID 1747edf8-9464-4a67-995a-6a1af81d637a</_id>
+			<_myState type="a">40960</_myState>
+			<_rmmServerID type="a">1369668_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">TopLevel</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
+			<weakCGTime type="a">1.2.1990::0:0:0</weakCGTime>
+			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IClass>
+		
+	</RHAPSODY-MODEL>
+	<RHAPSODY-INDEX>
+		<ELEMENT>
+			<ID>1441498_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 804c23de-76a9-4f40-96bc-34d22335c64b</RHP-ID>
+			<NAME>SafranStereotypes</NAME>
+			<TYPE>Profile</TYPE>
+			<TYPE-ID>GUID_3e019035-079b-41ef-b947-b9228dec7a0b_1620664094</TYPE-ID>
+			<DISPLAY-TYPE>Profile</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Profiles</DISPLAY-GROUP>
+			<BROWSER-ICON>Profile~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Profile~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2026/5/11 12:15:57</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES>I:1441500_CmvNERkXEemjcZ7iaG_c3w | I:1441495_CmvNERkXEemjcZ7iaG_c3w | I:1441497_CmvNERkXEemjcZ7iaG_c3w | I:1441499_CmvNERkXEemjcZ7iaG_c3w | I:1441494_CmvNERkXEemjcZ7iaG_c3w | I:1441496_CmvNERkXEemjcZ7iaG_c3w | I:1441493_CmvNERkXEemjcZ7iaG_c3w</AGGREGATES>
+			<REFERENCES></REFERENCES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1441500_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 207553c8-87c5-44f2-8e28-f7b15abb8f34</RHP-ID>
+			<NAME>Mechanical</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/5/26 13:22:8</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES></ADDITIONAL-PROPERTIES>
+			<DESCRIPTION>
+				<PLAIN-TEXT>additional stereotype used to characterise the nature of any kind of flows</PLAIN-TEXT>
+			</DESCRIPTION>
+			<TAGS>
+				<TAG>
+					<RHP-ID>GUID edcc7eb6-406f-4f02-8ec7-66f31a28bafc</RHP-ID>
+					<NAME>Exclusive</NAME>
+					<VALUE-STRING>Yes</VALUE-STRING>
+				</TAG>
+			</TAGS>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1441495_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 4faf30d3-1c34-4ccb-a89a-7729449be01f</RHP-ID>
+			<NAME>Electrical</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/10/23 14:22:52</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES></ADDITIONAL-PROPERTIES>
+			<DESCRIPTION>
+				<PLAIN-TEXT>additional stereotype used to characterise the nature of any kind of flows</PLAIN-TEXT>
+			</DESCRIPTION>
+			<TAGS>
+				<TAG>
+					<RHP-ID>GUID 55a8f63a-0197-4242-9548-9fe6dc219259</RHP-ID>
+					<NAME>Exclusive</NAME>
+					<VALUE-STRING>Yes</VALUE-STRING>
+				</TAG>
+			</TAGS>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1441497_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 67741e57-873c-4969-a0b8-6582156c7541</RHP-ID>
+			<NAME>Hydraulic</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/5/26 13:22:8</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES></ADDITIONAL-PROPERTIES>
+			<DESCRIPTION>
+				<PLAIN-TEXT>additional stereotype used to characterise the nature of any kind of flows</PLAIN-TEXT>
+			</DESCRIPTION>
+			<TAGS>
+				<TAG>
+					<RHP-ID>GUID 6c647fc0-27a4-432f-aee0-a2b275ef6160</RHP-ID>
+					<NAME>Exclusive</NAME>
+					<VALUE-STRING>Yes</VALUE-STRING>
+				</TAG>
+			</TAGS>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1441499_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 998e08c5-eb96-4de1-895d-ff386c967714</RHP-ID>
+			<NAME>Information</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/5/26 13:22:8</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES></ADDITIONAL-PROPERTIES>
+			<DESCRIPTION>
+				<PLAIN-TEXT>additional stereotype used to characterise the nature of any kind of flows</PLAIN-TEXT>
+			</DESCRIPTION>
+			<TAGS>
+				<TAG>
+					<RHP-ID>GUID 6d0ee2fd-4a78-46bd-9283-072720a39fe8</RHP-ID>
+					<NAME>Exclusive</NAME>
+					<VALUE-STRING>Yes</VALUE-STRING>
+				</TAG>
+			</TAGS>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1441494_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 7705bd74-9ef0-4ae5-a24b-88c014074bf1</RHP-ID>
+			<NAME>Pneumatic</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/5/26 13:22:8</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES></ADDITIONAL-PROPERTIES>
+			<DESCRIPTION>
+				<PLAIN-TEXT>additional stereotype used to characterise the nature of any kind of flows</PLAIN-TEXT>
+			</DESCRIPTION>
+			<TAGS>
+				<TAG>
+					<RHP-ID>GUID 66121f3d-2ae8-4903-bb61-c24422d8d091</RHP-ID>
+					<NAME>Exclusive</NAME>
+					<VALUE-STRING>Yes</VALUE-STRING>
+				</TAG>
+			</TAGS>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1441496_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 3672ec55-6a86-46f8-907d-3b7a91e07ba0</RHP-ID>
+			<NAME>FirstLevel</NAME>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/5/26 13:22:8</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES></ADDITIONAL-PROPERTIES>
+			<DESCRIPTION>
+				<PLAIN-TEXT>additional stereotype used to identify a Top level function aka Service Function that will be decomposed</PLAIN-TEXT>
+			</DESCRIPTION>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1441493_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 31c4ea5d-161f-4be9-8ea7-5726a4dc9cff</RHP-ID>
+			<NAME>SystemOfInterest</NAME>
+			<LABEL>System Of Interest</LABEL>
+			<TYPE>Stereotype</TYPE>
+			<TYPE-ID>GUID_8e474b0d-df37-464a-90d9-88a054f5ec8a_1615988136</TYPE-ID>
+			<DISPLAY-TYPE>Stereotype</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Stereotypes</DISPLAY-GROUP>
+			<BROWSER-ICON>Stereotype~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Stereotype~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/5/26 13:22:8</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<ADDITIONAL-PROPERTIES></ADDITIONAL-PROPERTIES>
+			<DESCRIPTION>
+				<PLAIN-TEXT>Manual stereotype to identify the system designed as System Of Interest</PLAIN-TEXT>
+			</DESCRIPTION>
+		</ELEMENT>
+	</RHAPSODY-INDEX>
+
+	<OslcLinks type="c">
+		<IRPYRawContainer type="e">
+		</IRPYRawContainer>
+	</OslcLinks>
+
+<RHAPSODY-INDEX-START>61102</RHAPSODY-INDEX-START>
+<RHAPSODY-INDEX-END>69107</RHAPSODY-INDEX-END>
+<OSLC-LINKS-START>69108</OSLC-LINKS-START>
+<OSLC-LINKS-END>69197</OSLC-LINKS-END>
+<INCLUDES-RHAPSODY-INDEX>true</INCLUDES-RHAPSODY-INDEX>
+</RhapsodyArchive>
+

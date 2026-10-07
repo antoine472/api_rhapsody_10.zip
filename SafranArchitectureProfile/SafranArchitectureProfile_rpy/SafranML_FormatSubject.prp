@@ -1,0 +1,299 @@
+Subject Format
+	Metaclass ActivityFinal
+		Property DefaultSize String "0,0,25,26"
+		Property Line.LineWidth Int "2"
+		Property Fill.FillColor Color "255,255,255"
+		Property Line.LineColor Color "128,128,128"
+		Property Fill.FillColor@Child.InnerSymbol Color "$<asParent>LineColor"
+	end
+	Metaclass Association
+		Property Font.Font String "Arial"
+		Property Font.Size Int "12"
+		Property Line.LineColor Color "255,128,0"
+		Property Line.LineWidth Int "1"
+	end
+	Metaclass AcceptTimeEvent
+		Property DefaultSize String "0,0,30,40"
+		Property Fill.FillColor Color "225,235,245"
+		Property Font.Font String "Arial"
+		Property Font.Size Int "12"
+		Property Line.LineColor Color "128,128,128"
+		Property Line.LineWidth Int "1"
+	end
+	Metaclass CombinedFragment
+		Property DefaultSize String "0,0,250,150"
+		Property Fill.FillColor Color "255,255,255"
+		Property Font.Font String "Arial"
+		Property Font.FontColor Color "0,0,0"
+		Property Font.Size Int "12"
+		Property Font.Weight@Child.NameCompartment@Name Int "700"
+		Property Line.LineColor Color "255,128,0"
+		Property Line.LineWidth Int "1"
+	end
+	Metaclass Condition_Mark
+		Property DefaultSize String "0,0,67,39"
+		Property Fill.FillColor Color "255,255,255"
+		Property Font.Font String "Arial"
+		Property Font.FontColor Color "0,0,0"
+		Property Font.Size Int "14"
+		Property Font.Weight@Child.NameCompartment@Name Int "700"
+		Property Line.LineColor Color "255,128,0"
+		Property Line.LineWidth Int "1"
+	end
+	Metaclass ControlFlow
+		Property Font.Font String "Arial"
+		Property Font.Size Int "12"
+		Property Line.LineColor Color "128,128,128"
+		Property Line.LineWidth Int "2"
+		Property Font.FontColor Color "0,0,0"	
+	end
+	Metaclass DataFlow
+		Property Font.Font String "Arial"
+		Property Font.Size Int "12"
+	end
+	Metaclass DefaultTransition
+		Property Font.Font String "Arial"
+		Property Font.Size Int "12"
+		Property Line.LineColor Color "128,128,128"
+		Property Line.LineWidth Int "1"
+		Property Font.FontColor Color "0,0,0"
+	end
+	Metaclass Depends
+		Property Font.Font String "Arial"
+		Property Font.Size Int "12"
+		Property Font.FontColor Color "0,0,0"
+		Property Line.LineColor Color "255,128,0"
+		Property Line.LineStyle Int "2"
+		Property Line.LineWidth Int "0"
+	end
+	Metaclass DiagramFrame
+		Property Fill.Transparent_Fill Int "1"
+		Property Font.Font String "Arial"
+		Property Font.Size Int "16"
+		Property Font.FontColor Color "0,0,0"
+		Property Line.LineColor Color "128,128,128"
+		Property Line.LineStyle Int "0"
+		Property Line.LineWidth Int "1"
+	end
+	Metaclass ForkConnector
+		Property DefaultSize String "0,0,108,10"
+		Property Fill.FillColor Color "128,128,128"
+		Property Line.LineColor Color "128,128,128"
+		Property Line.LineWidth Int "0"
+	end
+	Metaclass Function_
+		Property DefaultSize String "0,0,100,60"
+		Property Font.Font String "Arial"
+		Property Font.Size Int "14"
+		Property Font.Weight@Child.NameCompartment@Name Int "700"
+		Property Line.LineStyle Int "0"
+		Property Line.LineWidth Int "1"
+	end
+	Metaclass FunctionalSystem
+		Property DefaultSize String "0,0,100,60"
+		Property Font.Font String "Arial"
+		Property Font.Size Int "14"
+		Property Font.Weight@Child.NameCompartment@Name Int "700"
+		Property Line.LineStyle Int "0"
+		Property Line.LineWidth Int "1"
+	end
+	Metaclass FunctionWithReference
+		Property DefaultSize String "0,0,100,60"
+		Property Font.Font String "Arial"
+		Property Font.Size Int "14"
+		Property Font.Weight@Child.NameCompartment@Name Int "700"
+		Property Line.LineStyle Int "1"
+		Property Line.LineWidth Int "0"
+	end
+	Metaclass HistoryConnector
+		Property DefaultSize String "0,0,25,23"
+		Property Line.LineWidth Int "1"
+		Property Fill.FillColor Color "170,206,242"
+		Property Line.LineColor Color "128,128,128"
+		Property Line.LineColor@Child.InnerSymbol Color "0,0,0"
+	end
+	Metaclass InstanceLine
+		Property DefaultSize String "0,0,96,437"
+		Property Fill.FillColor Color "255,255,255"
+		Property Font.Font String "Arial"
+		Property Font.Size Int "14"
+		Property Font.FontColor Color "0,0,0"
+		Property Font.Weight@Child.NameCompartment@Name Int "700"
+		Property Line.LineColor Color "0,0,0"
+		Property Line.LineWidth Int "0"
+	end
+	Metaclass InteractionOccurrence
+		Property DefaultSize String "0,0,216,134"
+		Property Fill.FillColor Color "255,255,255"
+		Property Font.Font String "Arial"
+		Property Font.Size Int "12"
+		Property Font.Weight@Child.NameCompartment@Name Int "700"
+		Property Line.LineColor Color "255,128,0"
+		Property Line.LineWidth Int "1"
+	end
+	Metaclass InteractionOperand
+		Property DefaultSize String "0,0,100,150"
+		Property Fill.FillColor Color "255,255,255"
+		Property Fill.Transparent_Fill Int "1"
+		Property Font.Font String "Arial"
+		Property Font.Size Int "12"
+		Property Font.Weight@Child.NameCompartment@Name Int "700"
+		Property Line.LineColor Color "255,128,0"
+		Property Line.LineWidth Int "1"
+	end
+	Metaclass JoinConnector
+		Property DefaultSize String "0,0,108,10"
+		Property Fill.FillColor Color "170,206,242"
+		Property Line.LineColor Color "128,128,128"
+		Property Line.LineWidth Int "0"
+	end
+	Metaclass JunctionConnector
+		Property DefaultSize String "0,0,12,12"
+		Property Fill.FillColor Color "170,206,242"
+		Property Line.LineColor Color "128,128,128"
+		Property Line.LineWidth Int "1"
+	end
+	Metaclass Lifecycle
+		Property Font.Font String "Arial"
+		Property Font.Size Int "14"
+		Property Fill.FillColor Color "255,255,255"
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+		Property ShowDescription Bool "False"
+		Property ShowName Enum "Name_only,Label" "Name_only"
+		Property Line.LineColor Color "255,128,0"
+	end
+	Metaclass LifecyclePhase
+		Property Font.Font String "Arial"
+		Property Font.Size Int "14"
+		Property Fill.FillColor Color "255,255,255"
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+		Property ShowDescription Bool "False"
+		Property ShowName Enum "Name_only,Label" "Name_only"
+		Property Line.LineColor Color "255,128,0"
+	end
+	Metaclass LifecyclePhaseTransition
+		Property Line.LineColor Color "160,160,164"
+		Property Line.LineStyle Int "0"
+		Property Line.LineWidth Int "2"
+	end
+	Metaclass LogicalSystem
+		Property DefaultSize String "0,0,150,60"
+		Property Font.Font String "Arial"
+		Property Font.Size Int "12"
+		Property Font.Weight@Child.NameCompartment@Name Int "700"
+	end
+	Metaclass LogicalSystemWithReference
+		Property DefaultSize String "0,0,150,60"
+		Property Font.Font String "Arial"
+		Property Font.Size Int "12"
+		Property Font.Weight@Child.NameCompartment@Name Int "700"
+		Property Line.LineStyle Int "1"
+		Property Line.LineWidth Int "0"
+	end
+	Metaclass Message
+		Property Font.Font String "Arial"
+		Property Font.Size Int "12"
+	end
+	Metaclass Mode
+		Property DefaultSize String "0,0,96,60"
+		Property Fill.FillColor Color "255,255,255"
+		Property Font.Font String "Arial"
+		Property Font.Size Int "12"
+		Property Line.LineColor Color "0,0,0"
+		Property Line.LineStyle Int "0"
+		Property Line.LineWidth Int "1"
+	end
+	Metaclass OperatingMode
+		Property DefaultSize String "0,0,96,60"
+		Property Fill.FillColor Color "255,255,255"
+		Property Font.Font String "Arial"
+		Property Font.Size Int "14"
+		Property Line.LineColor Color "160,160,160"
+		Property Line.LineStyle Int "0"
+		Property Line.LineWidth Int "1"
+	end
+	Metaclass OperationalSystem
+		Property DefaultSize String "0,0,150,60"
+		Property Fill.FillColor Color "255,255,255"
+		Property Font.Font String "Arial"
+		Property Font.Size Int "12"
+		Property Font.Weight@Child.NameCompartment@Name Int "700"
+		Property Line.LineColor Color "0,0,0"
+		Property Line.LineStyle Int "0"
+		Property Line.LineWidth Int "2"
+	end
+	Metaclass Responsibility
+		Property Line.LineColor Color "160,160,164"
+		Property Line.LineStyle Int "0"
+		Property Line.LineWidth Int "2"
+	end
+	Metaclass Satisfies
+		Property Font.Font String "Arial"
+		Property Font.Size Int "12"
+		Property Line.LineColor Color "255,0,0"
+		Property Line.LineStyle Int "2"
+		Property Line.LineWidth Int "0"
+	end
+	Metaclass Stakeholder
+		Property DefaultSize String "0,0,150,60"
+		Property Fill.FillColor Color "255,255,255"
+		Property Font.Font String "Arial"
+		Property Font.Size Int "14"
+		Property Font.Weight@Child.NameCompartment@Name Int "700"
+		Property Line.LineColor Color "0,0,0"
+		Property Line.LineStyle Int "0"
+		Property Line.LineWidth Int "2"
+	end
+	Metaclass SystemFunctionalBehavior
+		Property Fill.FillColor Color "255,255,255"
+		Property Font.Font String "Arial"
+		Property Font.Size Int "14"
+		Property Font.Weight@Child.NameCompartment@Name Int "700"
+		Property Line.LineColor Color "255,0,0"
+		Property Line.LineStyle Int "0"
+		Property Line.LineWidth Int "1"
+	end
+	Metaclass TechnicalComponent
+		Property DefaultSize String "0,0,150,60"
+		Property Fill.FillColor Color "255,255,255"
+		Property Font.Font String "Arial"
+		Property Font.Size Int "12"
+		Property Font.Weight@Child.NameCompartment@Name Int "700"
+		Property Line.LineColor Color "34,177,76"
+		Property Line.LineStyle Int "0"
+		Property Line.LineWidth Int "1"
+	end
+	Metaclass TechnicalComponentWithReference
+		Property DefaultSize String "0,0,150,60"
+		Property Fill.FillColor Color "255,255,255"
+		Property Font.Font String "Arial"
+		Property Font.Size Int "12"
+		Property Font.Weight@Child.NameCompartment@Name Int "700"
+		Property Line.LineColor Color "34,177,76"
+		Property Line.LineStyle Int "1"
+		Property Line.LineWidth Int "0"
+	end
+	Metaclass TerminationState
+		Property DefaultSize String "0,0,25,26"
+		Property Line.LineWidth Int "2"
+		Property Fill.FillColor Color "255,255,255"
+		Property Line.LineColor Color "128,128,128"
+		Property Fill.FillColor@Child.InnerSymbol Color "$<asParent>LineColor"
+	end
+	Metaclass Transition
+		Property Font.Font String "Arial"
+		Property Font.Size Int "12"
+		Property Line.LineColor Color "128,128,128"
+		Property Line.LineWidth Int "1"
+		Property Font.FontColor Color "0,0,0"	
+	end
+	Metaclass Use_Case
+		Property Font.Font String "Arial"
+		Property Font.Size Int "14"
+		Property Fill.FillColor Color "255,255,255"
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+		Property ShowDescription Bool "False"
+		Property ShowName Enum "Name_only,Label" "Name_only"
+		Property Line.LineColor Color "255,128,0"
+	end
+end

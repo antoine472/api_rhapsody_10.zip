@@ -1,0 +1,6 @@
+Subject Activity
+	Metaclass General
+		Property AutoSelectControlOrObjectFlow Bool "True"
+		Property SimulationMode	Enum "TokenOriented, StateOriented" "TokenOriented"
+	end
+end

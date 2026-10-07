@@ -1,0 +1,28 @@
+### Jazz Ignore 0
+# Les fichiers et les dossiers ignorés ne seront pas validés mais peuvent être modifié pendant 
+# l'acceptation ou la mise à jour.
+# - Les propriétés ignore doivent contenir une liste de patterns de noms de fichier séparés par un espace.  
+# - Chaque pattern applique la distinction majuscules/minuscules et figure entre accolades ('{' et '}').  
+# - "*" correspond à zéro caractère ou à plusieurs caractères.  
+# - "?" correspond à un seul caractère.  
+# - La liste des patterns peut être divisée en plusieurs lignes, chaque ligne devant se terminer par une 
+#     barre oblique inversée et la ligne suivante devant commencer par une tabulation.  
+# - Les patterns compris dans core.ignore empêchent les ressources correspondantes du même 
+#     répertoire d'être validées.  
+# - Les patterns compris dans core.ignore.recursive empêchent les ressources correspondantes du répertoire 
+#     et de tous les sous-répertoires en cours d'être validées.  
+# - La valeur par défaut de core.ignore.recursive est *.class 
+# - La valeur par défaut de core.ignore est bin 
+# 
+# Pour ignorer des scripts de shell et des fichiers cachés dans la sous-arborescence : 
+#     e.g: core.ignore.recursive = {*.sh} {\.*} 
+# 
+# Pour ignorer des ressources nommées 'bin' dans le répertoire en cours (mais les autoriser 
+#  dans tous les autres sous-répertoires ci-dessous) :
+#    par exemple : core.ignore = {bin} 
+# 
+# REMARQUE : la modification des fichiers ignore ne change pas le statut ignore des 
+#     ressources dérivées Eclipse.
+# 
+core.ignore.recursive= {*.ehl} {*.save} {*.rpwx} {*.rplx} {*.dmp} {*.log} 
+core.ignore= \{.project} {*_auto_rpy}

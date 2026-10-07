@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RhapsodyArchive>
+	<MagicNumber>_PV7SMwTtEfCpIYqDj-2a_w</MagicNumber>
+	<CODE-PAGE>1252</CODE-PAGE>
+	<version>110.0.2</version>
+	<RMMIndexVersion>109.3</RMMIndexVersion>
+	<lang>C++</lang>
+	<BuildNo>202504251049</BuildNo>
+	<RMMMinimumClientVersion>100.0</RMMMinimumClientVersion>
+	
+	<RHAPSODY-MODEL>
+	<ISubsystem type="e">
+			<_id type="a">GUID 1a8dda54-45c5-4cbe-b18d-02eab17261ad</_id>
+			<_myState type="a">8192</_myState>
+			<_rmmServerID type="a">1366057_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">reuselib</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hfilename type="a">.\SafranArchitectureProfile.sbsx</_hfilename>
+							<_hsubsystem type="a">SafranArchitectureProfile::ReuseArtefacts</_hsubsystem>
+							<_hname type="a">ImportPackage</_hname>
+							<_hid type="a">GUID 7a1a9fae-4f74-4ec5-8eb8-459d9e126429</_hid>
+							<_hrmmServerID type="a">1350188_CmvNERkXEemjcZ7iaG_c3w</_hrmmServerID>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">4.4.2025::15:6:20</_modifiedTimeWeak>
+			<_modifiedTime type="a">10.2.2025::12:44:41</_modifiedTime>
+			<weakCGTime type="a">4.4.2025::15:6:20</weakCGTime>
+			<strongCGTime type="a">3.17.2025::9:46:6</strongCGTime>
+			<_defaultComposite type="s">GUID d08e5452-5118-43fc-ab9d-fccb06146ee2</_defaultComposite>
+			<_eventsBaseID type="a">-1</_eventsBaseID>
+			<_configurationRelatedTime type="a">1.2.1990::0:0:0</_configurationRelatedTime>
+			<AggregatesList type="e">
+				<value>GUID 34d22745-a91c-49dc-8362-8606919d9b70</value>
+				<value>GUID fbdb29ee-c971-4f05-a9aa-879eb6a6d6fe</value>
+				<value>GUID d08e5452-5118-43fc-ab9d-fccb06146ee2</value>
+				<value>GUID c6ce96cd-d009-4e55-b0e1-759442c036e0</value>
+			</AggregatesList>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">MySystemLogLib</fileName>
+			<_id type="a">GUID 34d22745-a91c-49dc-8362-8606919d9b70</_id>
+			<_rmmServerID type="a">1367086_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">Flowpackage</fileName>
+			<_id type="a">GUID fbdb29ee-c971-4f05-a9aa-879eb6a6d6fe</_id>
+			<_rmmServerID type="a">1367075_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+		</ISubsystem>
+		<IClass type="e">
+			<_id type="a">GUID d08e5452-5118-43fc-ab9d-fccb06146ee2</_id>
+			<_myState type="a">40960</_myState>
+			<_rmmServerID type="a">1366058_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">TopLevel</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">3.28.2025::8:32:39</_modifiedTime>
+			<weakCGTime type="a">1.2.1990::0:0:0</weakCGTime>
+			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IClass>
+		<ITableInstance type="e">
+			<_id type="a">GUID c6ce96cd-d009-4e55-b0e1-759442c036e0</_id>
+			<_myState type="a">10240</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableView</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">UseOwnerScope</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1358296_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">reuse artefacts table_0</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hfilename type="a">.\SafranArchitectureProfile.sbsx</_hfilename>
+							<_hsubsystem type="a">SafranArchitectureProfile::ReuseArtefacts</_hsubsystem>
+							<_hname type="a">ReuseArtefactsTable</_hname>
+							<_hid type="a">GUID c331be80-f4f5-410b-a6bd-efa7c834b376</_hid>
+							<_hrmmServerID type="a">1357807_CmvNERkXEemjcZ7iaG_c3w</_hrmmServerID>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">4.4.2025::15:6:20</_modifiedTimeWeak>
+			<_modifiedTime type="a">4.4.2025::15:6:20</_modifiedTime>
+			<LayoutHandle type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">ITableLayout</_hm2Class>
+					<_hfilename type="a">.\SafranArchitectureProfile.sbsx</_hfilename>
+					<_hsubsystem type="a">SafranArchitectureProfile::ReuseArtefacts</_hsubsystem>
+					<_hname type="a">Reuseartefacts_tablelayout</_hname>
+					<_hid type="a">GUID f3453e60-bb72-4d02-b96c-fd255325b9df</_hid>
+				</IHandle>
+			</LayoutHandle>
+			<ScopeHandles type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">ISubsystem</_hm2Class>
+							<_hfilename type="a">.\testpackage.sbsx</_hfilename>
+							<_hname type="a">testpackage</_hname>
+							<_hid type="a">GUID 95300296-4c4a-485f-9209-267e6d1d9f40</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</ScopeHandles>
+		</ITableInstance>
+		
+	</RHAPSODY-MODEL>
+	<RHAPSODY-INDEX>
+		<ELEMENT>
+			<ID>1366057_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 1a8dda54-45c5-4cbe-b18d-02eab17261ad</RHP-ID>
+			<NAME>reuselib</NAME>
+			<TYPE>Package</TYPE>
+			<TYPE-ID>1350188_CmvNERkXEemjcZ7iaG_c3w</TYPE-ID>
+			<DISPLAY-TYPE>_Import package</DISPLAY-TYPE>
+			<DISPLAY-GROUP>_Import packages</DISPLAY-GROUP>
+			<BROWSER-ICON>GUID 7a1a9fae-4f74-4ec5-8eb8-459d9e126429~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>GUID 7a1a9fae-4f74-4ec5-8eb8-459d9e126429~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/10/2 12:44:41</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES>I:1358296_CmvNERkXEemjcZ7iaG_c3w | L:1367086_CmvNERkXEemjcZ7iaG_c3w | L:1367075_CmvNERkXEemjcZ7iaG_c3w</AGGREGATES>
+			<REFERENCES>
+				<APPLIED-STEREOTYPES>
+					<FIRST-IS-NEW-TERM>TRUE</FIRST-IS-NEW-TERM>
+					<VALUE-REFERENCES>
+						<VALUE-ID>1350188_CmvNERkXEemjcZ7iaG_c3w</VALUE-ID>
+					</VALUE-REFERENCES>
+				</APPLIED-STEREOTYPES>
+			</REFERENCES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1358296_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID c6ce96cd-d009-4e55-b0e1-759442c036e0</RHP-ID>
+			<NAME>reuse artefacts table_0</NAME>
+			<TYPE>TableView</TYPE>
+			<TYPE-ID>1357807_CmvNERkXEemjcZ7iaG_c3w</TYPE-ID>
+			<DISPLAY-TYPE>Reuse Artefacts Table</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Reuse Artefacts Table</DISPLAY-GROUP>
+			<BROWSER-ICON>GUID c331be80-f4f5-410b-a6bd-efa7c834b376~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>GUID c331be80-f4f5-410b-a6bd-efa7c834b376~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/4/4 15:6:20</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES>
+				<APPLIED-STEREOTYPES>
+					<FIRST-IS-NEW-TERM>TRUE</FIRST-IS-NEW-TERM>
+					<VALUE-REFERENCES>
+						<VALUE-ID>1357807_CmvNERkXEemjcZ7iaG_c3w</VALUE-ID>
+					</VALUE-REFERENCES>
+				</APPLIED-STEREOTYPES>
+			</REFERENCES>
+			<PRESENTATION-TYPE>T:1358296_CmvNERkXEemjcZ7iaG_c3w</PRESENTATION-TYPE>
+		</ELEMENT>
+	</RHAPSODY-INDEX>
+
+	<OslcLinks type="c">
+		<IRPYRawContainer type="e">
+		</IRPYRawContainer>
+	</OslcLinks>
+
+<RHAPSODY-INDEX-START>5649</RHAPSODY-INDEX-START>
+<RHAPSODY-INDEX-END>7775</RHAPSODY-INDEX-END>
+<OSLC-LINKS-START>7776</OSLC-LINKS-START>
+<OSLC-LINKS-END>7865</OSLC-LINKS-END>
+<INCLUDES-RHAPSODY-INDEX>true</INCLUDES-RHAPSODY-INDEX>
+</RhapsodyArchive>
+

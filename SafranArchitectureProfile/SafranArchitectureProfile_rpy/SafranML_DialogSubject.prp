@@ -1,0 +1,9 @@
+Subject Dialog
+	Metaclass Class
+		Property ShowInheritedAttributes Bool "True"
+		Property ShowInheritedFlowPorts Bool "True"
+		Property ShowInheritedFlowProperties Bool "True"
+		Property ShowInheritedOperations Bool "True"
+		Property ShowInheritedPorts Bool "True"
+	end
+end

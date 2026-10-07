@@ -1,0 +1,148 @@
+Subject General
+	Metaclass Graphics
+		Property DiagramFrameMargin Int "100"
+	end
+	Metaclass Model
+		Property ThresholdLevel Enum  "DEBUG,INFO,WARN,ERROR" "INFO"
+	end
+end
+
+Subject ObjectModelGe
+	Metaclass ClassDiagram
+		Property TreeContainmentStyle Bool "True"
+	end
+	
+	Metaclass StartPhase
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+	end
+	
+	Metaclass EndPhase
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+	end
+
+	Metaclass Function_
+		Property DrawingShape Enum "Default,BasicBox,RoundedBox" "RoundedBox"
+		
+	end
+	
+	Metaclass FunctionalSystem
+		Property DrawingShape Enum "Default,BasicBox,RoundedBox" "RoundedBox"
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+		Property ShowPorts Bool "True"
+		Property ShowPortsInterfaces Bool "True"
+	end
+
+	Metaclass OperationalFlow
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+		Property ShowConveyed "Name,Label,None" "Label"
+		Property flowKeyword Bool "False"
+	end
+	
+	Metaclass FunctionalFlow
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+		Property ShowConveyed "Name,Label,None" "Label"
+		Property flowKeyword Bool "False"
+	end
+	
+	Metaclass LogicalFlow
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+		Property ShowConveyed "Name,Label,None" "Label"
+		Property flowKeyword Bool "False"
+	end
+	
+	Metaclass TechnicalFlow
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+		Property ShowConveyed "Name,Label,None" "Label"
+		Property flowKeyword Bool "False"
+	end
+	
+	Metaclass LogicalSystemWithReference
+		Property DrawingShape Enum "Default,BasicBox,RoundedBox" "RoundedBox"
+		Property ShowAttributes Enum "All,None,Public,Explicit" "None"
+		Property ShowOperations Enum "All,None,Public,Explicit" "None"
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+		Property ShowName Enum  "Full_path,Relative,Name_only,Label" "Name_only"
+		Property ShowPorts Bool "True"
+		Property ShowPortsInterfaces Bool "True"
+		Property PortsSingleLabelLayout Enum "Off,Internal,External" "Internal"
+		Property Compartments MultiLine ""
+		Property ShowInheritedAttributes Bool "False"
+		Property ShowInheritedOperations Bool "False"
+		Property QuickNavigationCategories String "MainBehavior,Diagrams,DiagramReferences"
+		Property ShowType Bool "False"
+	end
+	Metaclass FunctionWithReference
+		Property DrawingShape Enum "Default,BasicBox,RoundedBox" "RoundedBox"
+		Property ShowAttributes Enum "All,None,Public,Explicit" "None"
+		Property ShowOperations Enum "All,None,Public,Explicit" "None"
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+		Property ShowName Enum  "Full_path,Relative,Name_only,Label" "Name_only"
+		Property ShowPorts Bool "True"
+		Property ShowPortsInterfaces Bool "True"
+		Property PortsSingleLabelLayout Enum "Off,Internal,External" "Internal"
+		Property Compartments MultiLine ""
+		Property ShowInheritedAttributes Bool "False"
+		Property ShowInheritedOperations Bool "False"
+		Property QuickNavigationCategories String "MainBehavior,Diagrams,DiagramReferences"
+		Property ShowType Bool "False"
+	end	
+	Metaclass TechnicalComponentWithReference
+		Property DrawingShape Enum "Default,BasicBox,RoundedBox" "RoundedBox"
+		Property ShowAttributes Enum "All,None,Public,Explicit" "None"
+		Property ShowOperations Enum "All,None,Public,Explicit" "None"
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+		Property ShowName Enum  "Full_path,Relative,Name_only,Label" "Name_only"
+		Property ShowPorts Bool "True"
+		Property ShowPortsInterfaces Bool "True"
+		Property PortsSingleLabelLayout Enum "Off,Internal,External" "Internal"
+		Property Compartments MultiLine ""
+		Property ShowInheritedAttributes Bool "False"
+		Property ShowInheritedOperations Bool "False"
+		Property QuickNavigationCategories String "MainBehavior,Diagrams,DiagramReferences"
+		Property ShowType Bool "False"
+	end	
+end
+
+Subject Format
+
+	Metaclass StartPhase
+		Property DefaultSize String "0,0,16,16"
+	end
+	
+	Metaclass EndPhase
+		Property DefaultSize String "0,0,16,16"
+	end
+	
+	Metaclass LogicalSystemWithReference
+		Property Line.LineStyle Int "1"
+		Property Line.LineWidth Int "0"
+	end
+	Metaclass FunctionWithReference
+		Property Line.LineStyle Int "1"
+		Property Line.LineWidth Int "0"
+	end
+	Metaclass TechnicalComponentWithReference
+		Property Line.LineStyle Int "1"
+		Property Line.LineWidth Int "0"
+	end
+	Metaclass SDActionBlock
+		Property Line.LineColor Color "255,0,0"
+		Property Line.LineWidth Int "1"
+		Property Font.Size Int "11"
+	end
+	
+	Metaclass Condition_Mark
+		Property Line.LineColor Color "160,160,160"
+		Property Font.Size Int "11"
+	end
+	
+	Metaclass System_Border
+		Property Line.LineColor Color "255,128,0"
+	end
+end
+
+Subject Features
+	Metaclass General                                                  
+		Property UsablePredefinedPackagesForShowingStereotypes String "SafranStereotypes"
+	end
+end

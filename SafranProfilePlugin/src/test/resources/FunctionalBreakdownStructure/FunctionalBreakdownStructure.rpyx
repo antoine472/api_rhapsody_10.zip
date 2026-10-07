@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RhapsodyArchive>
+	<MagicNumber></MagicNumber>
+	<CODE-PAGE>1252</CODE-PAGE>
+	<version>109.0.1</version>
+	<lang>C++</lang>
+	<BuildNo>202301021733</BuildNo>
+	<RMMMinimumClientVersion>100.0</RMMMinimumClientVersion>
+	
+	<RHAPSODY-MODEL>
+	<IProject type="e">
+			<_id type="a">GUID 47a0477f-1e5d-4718-a8be-451b5439b943</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">FunctionalBreakdownStructure</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hsubsystem type="a">SafranArchitectureProfile</_hsubsystem>
+							<_hname type="a">SafranArchitectureProject</_hname>
+							<_hid type="a">GUID 18f700cb-431e-41b9-942d-6cc94b4380d7</_hid>
+							<_hrmmServerID type="a">1350341_CmvNERkXEemjcZ7iaG_c3w</_hrmmServerID>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">8.7.2025::10:10:38</_modifiedTimeWeak>
+			<_modifiedTime type="a">8.7.2025::10:10:38</_modifiedTime>
+			<_lastID type="a">4</_lastID>
+			<_UserColors type="w">
+				<IRPYRawContainer type="e">
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+				</IRPYRawContainer>
+			</_UserColors>
+			<_defaultSubsystem type="r">
+				<ISubsystemHandle type="e">
+					<_hm2Class type="a">ISubsystem</_hm2Class>
+					<_hname type="a">Default</_hname>
+					<_hid type="a">GUID 1b7cbe08-6d6c-42ec-b5d5-1cd774afe2ec</_hid>
+				</ISubsystemHandle>
+			</_defaultSubsystem>
+			<_component type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IComponent</_hm2Class>
+					<_hname type="a">DefaultComponent</_hname>
+					<_hid type="a">GUID 6b57ccba-6afa-4fd6-9371-061bf1baddb8</_hid>
+				</IHandle>
+			</_component>
+			<Multiplicities type="c">
+				<IRPYRawContainer type="e">
+					<IMultiplicityItem type="e">
+						<_name type="a">1</_name>
+						<_count type="a">-1</_count>
+					</IMultiplicityItem>
+					
+					<IMultiplicityItem type="e">
+						<_name type="a">*</_name>
+						<_count type="a">-1</_count>
+					</IMultiplicityItem>
+					
+					<IMultiplicityItem type="e">
+						<_name type="a">0,1</_name>
+						<_count type="a">-1</_count>
+					</IMultiplicityItem>
+					
+					<IMultiplicityItem type="e">
+						<_name type="a">1..*</_name>
+						<_count type="a">-1</_count>
+					</IMultiplicityItem>
+					
+				</IRPYRawContainer>
+			</Multiplicities>
+			<_isImportedFromDM type="a">0</_isImportedFromDM>
+			<Diagrams type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Diagrams>
+			<mapOslcAddedCollections type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</mapOslcAddedCollections>
+			<mapAssociationsToRemove type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</mapAssociationsToRemove>
+			<AggregatesList type="e">
+				<value>GUID aadf7785-de23-4435-b8ac-521003c516f3</value>
+				<value>GUID 1b7cbe08-6d6c-42ec-b5d5-1cd774afe2ec</value>
+				<value>GUID 5b6f74dc-3d46-460d-be9c-f2ecca2f0c0c</value>
+				<value>GUID 369df89c-18a0-4f37-8ff7-e5afe516b5cf</value>
+				<value>GUID 6b57ccba-6afa-4fd6-9371-061bf1baddb8</value>
+			</AggregatesList>
+		</IProject>
+		<IProfile type="e">
+			<fileName type="a">SafranArchitectureProfile</fileName>
+			<_persistAs type="a">..\..\SafranArchitectureProfile\SafranArchitectureProfile_rpy</_persistAs>
+			<_id type="a">GUID aadf7785-de23-4435-b8ac-521003c516f3</_id>
+			<_partOfTheModelKind type="a">referenceunit</_partOfTheModelKind>
+			<_rmmServerID type="a">1350224_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+		</IProfile>
+		<ISubsystem type="e">
+			<fileName type="a">Default</fileName>
+			<_id type="a">GUID 1b7cbe08-6d6c-42ec-b5d5-1cd774afe2ec</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<_id type="a">GUID 5b6f74dc-3d46-460d-be9c-f2ecca2f0c0c</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">functionalanalysispackage_0</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hsubsystem type="a">SafranArchitectureProfile::Functional</_hsubsystem>
+							<_hname type="a">FunctionalAnalysisPackage</_hname>
+							<_hid type="a">GUID 47a46147-5f28-4daa-a4c2-b1200532a2cb</_hid>
+							<_hrmmServerID type="a">1350237_CmvNERkXEemjcZ7iaG_c3w</_hrmmServerID>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">8.7.2025::10:9:58</_modifiedTimeWeak>
+			<_modifiedTime type="a">8.7.2025::10:9:58</_modifiedTime>
+			<_lastID type="a">4</_lastID>
+			<weakCGTime type="a">8.7.2025::10:9:58</weakCGTime>
+			<strongCGTime type="a">3.26.2025::9:48:7</strongCGTime>
+			<_defaultComposite type="s">GUID 568db4bf-554b-402f-adc2-7924d998f010</_defaultComposite>
+			<_eventsBaseID type="a">-1</_eventsBaseID>
+			<_configurationRelatedTime type="a">8.7.2025::10:9:39</_configurationRelatedTime>
+			<AggregatesList type="e">
+				<value>GUID 568db4bf-554b-402f-adc2-7924d998f010</value>
+				<value>GUID 143b3942-4985-4fb1-b791-e69c986ccc37</value>
+			</AggregatesList>
+		</ISubsystem>
+		<IClass type="e">
+			<_id type="a">GUID 568db4bf-554b-402f-adc2-7924d998f010</_id>
+			<_myState type="a">40960</_myState>
+			<_name type="a">TopLevel</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
+			<weakCGTime type="a">1.2.1990::0:0:0</weakCGTime>
+			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IClass>
+		<IClass type="e">
+			<_id type="a">GUID 143b3942-4985-4fb1-b791-e69c986ccc37</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Functional System</_name>
+			<_displayName type="a">Functional System</_displayName>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hsubsystem type="a">SafranArchitectureProfile::Functional</_hsubsystem>
+							<_hname type="a">Function_</_hname>
+							<_hid type="a">GUID 40737384-302d-4848-8215-ce805bc4cf89</_hid>
+							<_hrmmServerID type="a">1350330_CmvNERkXEemjcZ7iaG_c3w</_hrmmServerID>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">8.7.2025::10:11:9</_modifiedTimeWeak>
+			<_modifiedTime type="a">8.7.2025::10:10:25</_modifiedTime>
+			<_lastID type="a">2</_lastID>
+			<weakCGTime type="a">8.7.2025::10:11:9</weakCGTime>
+			<strongCGTime type="a">8.7.2025::10:10:16</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID 15f23466-1718-47f2-bd3e-927a8ee0de9a</value>
+				<value>GUID 6ce4adbb-adfb-45b0-a03e-3cbd8cde7417</value>
+			</AggregatesList>
+		</IClass>
+		<IClass type="e">
+			<_id type="a">GUID 15f23466-1718-47f2-bd3e-927a8ee0de9a</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">function</_name>
+			<_displayName type="a">function</_displayName>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hsubsystem type="a">SafranArchitectureProfile::Functional</_hsubsystem>
+							<_hname type="a">Function_</_hname>
+							<_hid type="a">GUID 40737384-302d-4848-8215-ce805bc4cf89</_hid>
+							<_hrmmServerID type="a">1350330_CmvNERkXEemjcZ7iaG_c3w</_hrmmServerID>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">8.7.2025::10:10:22</_modifiedTimeWeak>
+			<_modifiedTime type="a">8.7.2025::10:10:22</_modifiedTime>
+			<weakCGTime type="a">8.7.2025::10:10:22</weakCGTime>
+			<strongCGTime type="a">8.7.2025::10:10:22</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IClass>
+		<IClass type="e">
+			<_id type="a">GUID 6ce4adbb-adfb-45b0-a03e-3cbd8cde7417</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">main_function</_name>
+			<_displayName type="a">main function</_displayName>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hsubsystem type="a">SafranArchitectureProfile::ReuseArtefacts</_hsubsystem>
+							<_hname type="a">FunctionReference</_hname>
+							<_hid type="a">GUID b6e4feb6-5a6e-417c-a6ca-aef9b9109813</_hid>
+							<_hrmmServerID type="a">1350260_CmvNERkXEemjcZ7iaG_c3w</_hrmmServerID>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">8.7.2025::10:11:9</_modifiedTimeWeak>
+			<_modifiedTime type="a">8.7.2025::10:11:9</_modifiedTime>
+			<weakCGTime type="a">8.7.2025::10:11:9</weakCGTime>
+			<strongCGTime type="a">8.7.2025::10:11:9</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID 884d1c72-ac17-41a9-b372-5dabbaef8e0a</value>
+			</AggregatesList>
+		</IClass>
+		<IGeneralization type="e">
+			<_id type="a">GUID 884d1c72-ac17-41a9-b372-5dabbaef8e0a</_id>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hsubsystem type="a">SafranArchitectureProfile::ReuseArtefacts</_hsubsystem>
+							<_hname type="a">ReferencesFunction</_hname>
+							<_hid type="a">GUID 33d8930c-eb78-48c8-bb70-0a76eec71123</_hid>
+							<_hrmmServerID type="a">1367206_CmvNERkXEemjcZ7iaG_c3w</_hrmmServerID>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">8.7.2025::10:10:59</_modifiedTimeWeak>
+			<_modifiedTime type="a">8.7.2025::10:10:59</_modifiedTime>
+			<_dependsOn type="r">
+				<INObjectHandle type="e">
+					<_hm2Class type="a">IClass</_hm2Class>
+					<_hsubsystem type="a">importpackage_3::functionalanalysispackage_2</_hsubsystem>
+					<_hname type="a">main function</_hname>
+					<_hid type="a">GUID ddec6cc3-00f5-4c16-a227-b5ff95f9d0ec</_hid>
+				</INObjectHandle>
+			</_dependsOn>
+			<_inheritanceType type="a">iPublic</_inheritanceType>
+			<_isVirtual type="a">0</_isVirtual>
+		</IGeneralization>
+		<ISubsystem type="e">
+			<_id type="a">GUID 369df89c-18a0-4f37-8ff7-e5afe516b5cf</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">importpackage_3</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hsubsystem type="a">SafranArchitectureProfile::ReuseArtefacts</_hsubsystem>
+							<_hname type="a">ImportPackage</_hname>
+							<_hid type="a">GUID 7a1a9fae-4f74-4ec5-8eb8-459d9e126429</_hid>
+							<_hrmmServerID type="a">1350188_CmvNERkXEemjcZ7iaG_c3w</_hrmmServerID>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">8.7.2025::10:10:38</_modifiedTimeWeak>
+			<_modifiedTime type="a">8.7.2025::10:10:38</_modifiedTime>
+			<weakCGTime type="a">8.7.2025::10:10:38</weakCGTime>
+			<strongCGTime type="a">8.7.2025::10:10:34</strongCGTime>
+			<_defaultComposite type="s">GUID 21a7ba27-865d-4979-b7dc-f1eaee5d839c</_defaultComposite>
+			<_eventsBaseID type="a">-1</_eventsBaseID>
+			<_configurationRelatedTime type="a">1.1.1970::1:0:0</_configurationRelatedTime>
+			<AggregatesList type="e">
+				<value>GUID 78dc1c1a-ba17-4730-ad34-cd5a85a66ff6</value>
+				<value>GUID 21a7ba27-865d-4979-b7dc-f1eaee5d839c</value>
+			</AggregatesList>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<_id type="a">GUID 78dc1c1a-ba17-4730-ad34-cd5a85a66ff6</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">functionalanalysispackage_2</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hsubsystem type="a">SafranArchitectureProfile::Functional</_hsubsystem>
+							<_hname type="a">FunctionalAnalysisPackage</_hname>
+							<_hid type="a">GUID 47a46147-5f28-4daa-a4c2-b1200532a2cb</_hid>
+							<_hrmmServerID type="a">1350237_CmvNERkXEemjcZ7iaG_c3w</_hrmmServerID>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">8.7.2025::10:10:41</_modifiedTimeWeak>
+			<_modifiedTime type="a">8.7.2025::10:10:41</_modifiedTime>
+			<_lastID type="a">1</_lastID>
+			<weakCGTime type="a">8.7.2025::10:10:41</weakCGTime>
+			<strongCGTime type="a">8.7.2025::10:10:38</strongCGTime>
+			<_defaultComposite type="s">GUID 85c5c47e-14da-48ec-8dec-f42260edc171</_defaultComposite>
+			<_eventsBaseID type="a">-1</_eventsBaseID>
+			<_configurationRelatedTime type="a">1.1.1970::1:0:0</_configurationRelatedTime>
+			<AggregatesList type="e">
+				<value>GUID 85c5c47e-14da-48ec-8dec-f42260edc171</value>
+				<value>GUID ddec6cc3-00f5-4c16-a227-b5ff95f9d0ec</value>
+			</AggregatesList>
+		</ISubsystem>
+		<IClass type="e">
+			<_id type="a">GUID 85c5c47e-14da-48ec-8dec-f42260edc171</_id>
+			<_myState type="a">40960</_myState>
+			<_name type="a">TopLevel</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<weakCGTime type="a">1.2.1990::0:0:0</weakCGTime>
+			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IClass>
+		<IClass type="e">
+			<_id type="a">GUID ddec6cc3-00f5-4c16-a227-b5ff95f9d0ec</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">main function</_name>
+			<_displayName type="a">main function</_displayName>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hsubsystem type="a">SafranArchitectureProfile::Functional</_hsubsystem>
+							<_hname type="a">Function_</_hname>
+							<_hid type="a">GUID 40737384-302d-4848-8215-ce805bc4cf89</_hid>
+							<_hrmmServerID type="a">1350330_CmvNERkXEemjcZ7iaG_c3w</_hrmmServerID>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">8.7.2025::10:10:49</_modifiedTimeWeak>
+			<_modifiedTime type="a">8.7.2025::10:10:49</_modifiedTime>
+			<weakCGTime type="a">8.7.2025::10:10:49</weakCGTime>
+			<strongCGTime type="a">8.7.2025::10:10:49</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IClass>
+		<IClass type="e">
+			<_id type="a">GUID 21a7ba27-865d-4979-b7dc-f1eaee5d839c</_id>
+			<_myState type="a">40960</_myState>
+			<_name type="a">TopLevel</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<weakCGTime type="a">1.2.1990::0:0:0</weakCGTime>
+			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IClass>
+		<IComponent type="e">
+			<fileName type="a">DefaultComponent</fileName>
+			<_id type="a">GUID 6b57ccba-6afa-4fd6-9371-061bf1baddb8</_id>
+		</IComponent>
+		
+	</RHAPSODY-MODEL>
+	<OslcLinks type="c">
+		<IRPYRawContainer type="e">
+		</IRPYRawContainer>
+	</OslcLinks>
+
+<INCLUDES-RHAPSODY-INDEX>false</INCLUDES-RHAPSODY-INDEX>
+</RhapsodyArchive>
+

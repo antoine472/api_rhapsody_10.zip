@@ -1,0 +1,14 @@
+Include SafranML_Activity_DiagramSubject.prp
+Include SafranML_ActivitySubject.prp
+Include SafranML_DialogSubject.prp
+Include SafranML_FeaturesSubject.prp
+Include SafranML_FormatSubject.prp
+Include SafranML_GeneralSubject.prp
+Include SafranML_ModelSubject.prp
+Include SafranML_ObjectModelGeSubject.prp
+Include SafranML_SequenceDiagramSubject.prp
+Include SafranML_StatechartDiagramSubject.prp
+Include SafranML_UseCaseGeSubject.prp
+Include SimplifiedSafranML_FormatSubject.prp
+Include SimplifiedSafranML_ToolsSettings.prp
+end

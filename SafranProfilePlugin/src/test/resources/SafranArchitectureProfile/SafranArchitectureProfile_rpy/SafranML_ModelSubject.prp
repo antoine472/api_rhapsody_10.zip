@@ -1,0 +1,8 @@
+Subject Model
+	Metaclass Class
+		Property CommonList String ""
+	end
+	Metaclass Stereotype
+		Property DrawingShape Enum "Default,BasicBox,RoundedBox" "Default" 
+	end
+end
