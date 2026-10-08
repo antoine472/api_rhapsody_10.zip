@@ -279,7 +279,7 @@ Pour obtenir le détail lien par lien (tracé calculé, liens ignorés), mettre 
    Le texte après `name54=` doit être identique à la constante `RearrangeTreeLayout.TOOLBAR_COMMAND`, et l'icône `RearrangeTree16.png` (PNG 16 x 16) doit être présente dans `SafranArchitectureProfile/Icons/`.
 
 6. Fermer complètement Rhapsody et le relancer : le jar et le `.hep` ne sont relus qu'au chargement du profil.
-7. Contrôler dans le journal la ligne `Build version used: 20261008_20-45`, qui confirme que le nouveau jar est chargé.
+7. Contrôler dans le journal la ligne `Build version used: 20261008_20-50`, qui confirme que le nouveau jar est chargé.
 
 ---
 

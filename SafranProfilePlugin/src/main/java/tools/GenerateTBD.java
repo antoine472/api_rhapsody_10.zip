@@ -43,6 +43,13 @@ public class GenerateTBD extends RhapsodyTool {
 
 	public static final String COMMAND = "Safran Toolkit...\\Generate TBS";
 
+	/**
+	 * Type (new term) du diagramme cree : doit etre identique au nom defini dans
+	 * le profil SafranArchitectureProfile. L'ancienne valeur "Technical Breakdown
+	 * Diagram" ne correspondait a aucun type de diagramme du profil.
+	 */
+	public static final String DIAGRAM_TYPE = "Technical Breakdown Structure";
+
 	private static final int TECHNICAL_HEIGHT = 100;
 	private static final int TECHNICAL_WIDTH = 300;
 	private static final int VERTICAL_SPACING = 20;
@@ -126,7 +133,7 @@ public class GenerateTBD extends RhapsodyTool {
 			return;
 		}
 
-		attachedDiagram = (IRPDiagram) parentPackage.addNewAggr("Technical Breakdown Diagram", startPoint.getName());
+		attachedDiagram = (IRPDiagram) parentPackage.addNewAggr(DIAGRAM_TYPE, startPoint.getName());
 		attachedDiagram.setDisplayName(startPoint.getDisplayName());
 		rhpLog.info("Created new TBD diagram: " + attachedDiagram.getName());
 		createDiagram();
