@@ -166,7 +166,7 @@ public final class TreeLayoutOrientationDialog {
 
 		// -- Centre : les deux cartes d'orientation ------------------------------
 		final OptionCard vertical = new OptionCard(Orientation.VERTICAL,
-				"Vertical", "Indented list, as in Generate LBS");
+				"Vertical", "Indented list, as in Generate LBS / FBS / TBS");
 		final OptionCard horizontal = new OptionCard(Orientation.HORIZONTAL,
 				"Horizontal", "Organization chart, children in a row");
 

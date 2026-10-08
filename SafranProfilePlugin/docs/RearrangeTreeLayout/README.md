@@ -1,6 +1,6 @@
 # Rearrange Tree Layout
 
-Commande du plugin Safran (`SafranProfilePlugin`) qui remet en ordre un arbre dans un diagramme Rhapsody (LBS, FBS, TBS...). Les descendants de l'élément sélectionné sont replacés en **liste indentée** (Vertical) ou en **organigramme** (Horizontal), et les liens qui les relient sont redessinés en équerre.
+Commande du plugin Safran (`SafranProfilePlugin`) qui remet en ordre un arbre dans un diagramme Rhapsody : Logical Breakdown Structure (LBS), Functional Breakdown Structure (FBS) ou Technical Breakdown Structure (TBS). Les descendants de l'élément sélectionné sont replacés en **liste indentée** (Vertical) ou en **organigramme** (Horizontal), et les liens qui les relient sont redessinés en équerre.
 
 En bref :
 
@@ -22,12 +22,13 @@ Deux accès, qui lancent la même commande :
 
 Le menu contextuel est proposé sur les éléments suivants (entrée `name45` du fichier `.hep`) :
 
-| Métaclasse |
-|---|
-| Logical System |
-| Logical System With Reference |
-| Function |
-| Function With Reference |
+| Diagramme | Métaclasses |
+|---|---|
+| LBS | Logical System, Logical System With Reference |
+| FBS | Functional System, Function, Function With Reference |
+| TBS | Technical Component, Technical Component With Reference |
+
+Le bouton de la barre d'outils fonctionne sur les trois types de diagrammes. La commande ne dépend pas du type de diagramme : elle reconnaît l'arbre à ses liens de composition, que Generate LBS, Generate FBS et Generate TBS créent de la même façon.
 
 Si l'élément est sélectionné dans le browser plutôt que dans le diagramme, la commande cherche le diagramme rattaché à l'élément, ou à l'un de ses propriétaires, par une dépendance. C'est le cas des diagrammes créés par Generate LBS / FBS / TBS.
 
@@ -127,7 +128,15 @@ Quand la case **Fit width to the displayed name** (ligne **BLOCK SIZE**) est coc
 - **Blocs concernés** : ceux des niveaux réorganisés (1 à N). Le bloc sélectionné et les blocs plus profonds, qui suivent leur ancêtre sans changer de forme, gardent leur taille.
 - **Seule la largeur change** : la hauteur est conservée. Un nom court peut aussi réduire un bloc trop large.
 - **Texte mesuré** : le libellé (label) de l'élément s'il en a un, sinon son nom.
-- **Police** : celle des propriétés de format du profil pour la métaclasse du bloc, par exemple `Format.LogicalSystem.Font.Font` (Arial), `Font.Size` (12) et `Font.Weight@Child.NameCompartment@Name` (700, c'est-à-dire gras). Un format local posé sur le bloc dans le diagramme est prioritaire. À défaut : Arial 12 gras.
+- **Police** : celle des propriétés de format du profil pour la métaclasse du bloc, par exemple `Format.LogicalSystem.Font.Font` (Arial), `Font.Size` (12) et `Font.Weight@Child.NameCompartment@Name` (700, c'est-à-dire gras). Un format local posé sur le bloc dans le diagramme est prioritaire. À défaut : Arial 12 gras. Polices définies par le profil :
+
+  | Diagramme | Blocs | Police du nom |
+  |---|---|---|
+  | LBS | Logical System, Logical System With Reference | Arial 12 gras |
+  | FBS | Function (`Function_` dans le profil), Function With Reference, Functional System | Arial 14 gras |
+  | TBS | Technical Component, Technical Component With Reference | Arial 12 gras |
+
+  Les noms des blocs FBS, écrits plus gros, donnent donc des blocs plus larges à texte égal.
 - **Calcul** : largeur du texte + 10 de marge de chaque côté + 24 pour l'icône du coin, arrondie à la dizaine supérieure, entre **100** et **1000**. Exemple : `logicalsystem_10` en Arial 12 gras donne **180**.
 - **Mise en page** : les positions, l'épine (`x + largeur / 8`) et la largeur des bandes en Horizontal sont calculées avec les nouvelles largeurs.
 
@@ -250,7 +259,7 @@ Pour obtenir le détail lien par lien (tracé calculé, liens ignorés), mettre 
    name45=Safran Toolkit...\Rearrange Tree Layout
    isPlugInCommand45=1
    command45=SafranPlugin
-   applicableTo45=Logical System, Logical System With Reference, Function, Function With Reference
+   applicableTo45=Logical System, Logical System With Reference, Function, Function With Reference, Functional System, Technical Component, Technical Component With Reference
    isVisible45=1
    ```
 
@@ -270,7 +279,7 @@ Pour obtenir le détail lien par lien (tracé calculé, liens ignorés), mettre 
    Le texte après `name54=` doit être identique à la constante `RearrangeTreeLayout.TOOLBAR_COMMAND`, et l'icône `RearrangeTree16.png` (PNG 16 x 16) doit être présente dans `SafranArchitectureProfile/Icons/`.
 
 6. Fermer complètement Rhapsody et le relancer : le jar et le `.hep` ne sont relus qu'au chargement du profil.
-7. Contrôler dans le journal la ligne `Build version used: 20261008_19-00`, qui confirme que le nouveau jar est chargé.
+7. Contrôler dans le journal la ligne `Build version used: 20261008_20-45`, qui confirme que le nouveau jar est chargé.
 
 ---
 
@@ -285,7 +294,7 @@ Pour obtenir le détail lien par lien (tracé calculé, liens ignorés), mettre 
 | `src/main/java/main/SafranProfilePlugin.java` | Enregistrement de la commande dans `RhpPluginInit`, sous ses deux noms (`COMMAND` pour le menu, `TOOLBAR_COMMAND` pour le bouton). |
 | `SafranArchitectureProfile/Icons/RearrangeTree16.png` | Icône du bouton de la barre d'outils (16 x 16). |
 | `src/test/java/test/unittest/TreeDiagramLayoutTest.java` | 16 tests JUnit 5 de la géométrie. |
-| `src/test/java/test/unittest/BlockTextFitTest.java` | 5 tests JUnit 5 du calcul de largeur, dont le calibrage sur un diagramme réel. |
+| `src/test/java/test/unittest/BlockTextFitTest.java` | 8 tests JUnit 5 du calcul de largeur, dont le calibrage sur un diagramme réel et la présence d'une police dans le profil pour chaque type de bloc LBS, FBS et TBS. |
 | `src/test/java/test/manual/DumpDiagramGraphicalProperties.java` | Programme de diagnostic (`main`) : affiche les propriétés graphiques des blocs et des liens du diagramme ouvert. |
 | `src/test/java/test/manual/RepositionTreeLinks.java` | Programme de test (`main`) ayant servi à valider l'écriture des tracés de liens. |
 
@@ -337,6 +346,7 @@ Toutes les méthodes de l'API utilisées existent dans Rhapsody 10.0.2 et 10.0.3
 - la profondeur limitée dans les deux dispositions (sous-arbres déplacés d'un bloc) ;
 - les espacements personnalisés, l'indentation minimale sous l'épine et les bornes des valeurs ;
 - la largeur ajustée au nom : calibrage (entre 150 et 204 pour `logicalsystem_10`), arrondi, bornes et valeurs par défaut de la police ;
+- la police de chaque type de bloc LBS, FBS et TBS : le test lit le vrai fichier de format du profil (`SafranML_FormatSubject.prp` des ressources de test) ;
 - la lecture, l'écriture et le décalage des valeurs `Polygon`.
 
 ---

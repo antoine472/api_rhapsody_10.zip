@@ -69,7 +69,7 @@ isVisible43=1
 name45=Safran Toolkit...\Rearrange Tree Layout
 isPlugInCommand45=1
 command45=SafranPlugin
-applicableTo45=Logical System, Logical System With Reference, Function, Function With Reference
+applicableTo45=Logical System, Logical System With Reference, Function, Function With Reference, Functional System, Technical Component, Technical Component With Reference
 isVisible45=1
 
 # Update redefined ports of derived references

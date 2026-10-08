@@ -31,14 +31,15 @@ import utils.TreeDiagramLayout.Spacing;
 
 /**
  * Rearrange Tree Layout : reorganise les descendants de l'element selectionne
- * dans un diagramme d'arbre (LBS, FBS...), verticalement ou horizontalement.
+ * dans un diagramme d'arbre (Logical, Functional ou Technical Breakdown
+ * Structure), verticalement ou horizontalement.
  *
  * <p><b>Comportement</b> :</p>
  * <ul>
  *   <li>l'element selectionne garde sa position, ainsi que tout ce qui n'est pas
  *       dans son sous-arbre (son parent, ses freres, les autres arbres) ;</li>
  *   <li>Vertical : les descendants sont empiles en arbre indente, comme les
- *       diagrammes produits par Generate LBS ;</li>
+ *       diagrammes produits par Generate LBS / FBS / TBS ;</li>
  *   <li>Horizontal : les descendants sont disposes en organigramme, chaque
  *       rangee d'enfants etant centree sous son parent ;</li>
  *   <li>les liens du sous-arbre sont redessines (proprietes graphiques
@@ -459,13 +460,7 @@ public class RearrangeTreeLayout extends RhapsodyTool {
 		IRPModelElement mo = gn.getModelObject();
 		List<String> keys = new ArrayList<>();
 		try {
-			String udm = mo.getUserDefinedMetaClass();
-			if (udm != null && !udm.isBlank()) {
-				String compact = udm.replace(" ", "");
-				keys.add(compact);
-				keys.add(compact + "_");
-			}
-			keys.add(mo.getMetaClass());
+			keys = BlockTextFit.formatMetaclassKeys(mo.getUserDefinedMetaClass(), mo.getMetaClass());
 		} catch (Exception ignore) {
 			// metaclasse illisible : valeurs par defaut
 		}
@@ -597,7 +592,7 @@ public class RearrangeTreeLayout extends RhapsodyTool {
 	/**
 	 * Diagramme ou se trouve l'element : celui de la selection graphique en
 	 * priorite, sinon un diagramme rattache a l'element ou a un de ses
-	 * proprietaires par une dependance (cas des diagrammes Generate LBS/FBS).
+	 * proprietaires par une dependance (cas des diagrammes Generate LBS / FBS / TBS).
 	 */
 	private IRPDiagram findDiagram(IRPModelElement element) {
 		try {

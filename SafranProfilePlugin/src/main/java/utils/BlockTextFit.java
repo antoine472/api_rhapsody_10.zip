@@ -2,6 +2,8 @@ package utils;
 
 import java.awt.Font;
 import java.awt.font.FontRenderContext;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Calcule la largeur d'un bloc de diagramme pour que son nom tienne sur une
@@ -69,6 +71,33 @@ public final class BlockTextFit {
 			if (fontName == null || fontName.isBlank()) fontName = DEFAULT_FONT;
 			if (sizePt <= 0) sizePt = DEFAULT_SIZE;
 		}
+	}
+
+	/**
+	 * Noms de metaclasse a essayer, dans l'ordre, pour lire la police d'un bloc
+	 * dans les proprietes "Format.&lt;metaclasse&gt;.Font.*" du profil :
+	 * <ol>
+	 *   <li>le new term sans espaces : "Logical System" donne "LogicalSystem",
+	 *       "Technical Component" donne "TechnicalComponent" ;</li>
+	 *   <li>le meme suivi de "_" : "Function" donne "Function_" (nom utilise
+	 *       par le profil, "Function" etant reserve) ;</li>
+	 *   <li>la metaclasse Rhapsody, par exemple "Class".</li>
+	 * </ol>
+	 *
+	 * @param userDefinedMetaClass new term du bloc (peut etre vide)
+	 * @param metaClass            metaclasse Rhapsody du bloc (peut etre vide)
+	 */
+	public static List<String> formatMetaclassKeys(String userDefinedMetaClass, String metaClass) {
+		List<String> keys = new ArrayList<>();
+		if (userDefinedMetaClass != null && !userDefinedMetaClass.isBlank()) {
+			String compact = userDefinedMetaClass.replace(" ", "");
+			keys.add(compact);
+			keys.add(compact + "_");
+		}
+		if (metaClass != null && !metaClass.isBlank() && !keys.contains(metaClass)) {
+			keys.add(metaClass);
+		}
+		return keys;
 	}
 
 	/** Largeur du texte en pixels (unites du diagramme a 100 %). */
