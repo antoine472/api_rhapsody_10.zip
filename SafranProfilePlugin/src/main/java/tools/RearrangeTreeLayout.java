@@ -2,8 +2,8 @@ package tools;
 
 import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.EnumMap;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.IdentityHashMap;
 import java.util.LinkedHashMap;
@@ -22,6 +22,7 @@ import com.telelogic.rhapsody.core.IRPModelElement;
 import main.constants.RhpMetaClassConstants;
 import main.gui.tools.Toast;
 import main.gui.tools.TreeLayoutOrientationDialog;
+import utils.BlockTextFit;
 import utils.TreeDiagramLayout;
 import utils.TreeDiagramLayout.Box;
 import utils.TreeDiagramLayout.Node;
@@ -48,7 +49,9 @@ import utils.TreeDiagramLayout.Spacing;
  *       liens etant decales du meme vecteur ;</li>
  *   <li>les espacements (horizontal et vertical) sont reglables dans la
  *       boite de dialogue, et memorises par orientation pendant la session ;</li>
- *   <li>la taille des blocs n'est pas modifiee ;</li>
+ *   <li>en option (case a cocher), la largeur des blocs reorganises est
+ *       ajustee a leur nom affiche, pour qu'il tienne sur une ligne ; sinon
+ *       la taille des blocs n'est pas modifiee ;</li>
  *   <li>les freres sont ranges dans l'ordre du modele
  *       (getNestedElementsByMetaClass), comme dans Generate LBS.</li>
  * </ul>
@@ -81,6 +84,8 @@ public class RearrangeTreeLayout extends RhapsodyTool {
 	private static int lastDepth = TreeDiagramLayout.ALL_LEVELS;
 	/** Derniers espacements, par orientation (mis a jour par la boite de dialogue sur Apply). */
 	private static final Map<Orientation, Spacing> lastSpacings = new EnumMap<>(Orientation.class);
+	/** Dernier etat de la case "Fit width to the displayed name". */
+	private static boolean lastFitWidth = false;
 
 	/** Type graphique d'un lien de composition : sa source est l'enfant. */
 	private static final String CONTAIN_ARROW = "ContainArrow";
@@ -151,9 +156,14 @@ public class RearrangeTreeLayout extends RhapsodyTool {
 		Spacing spacing = choice.spacing();
 
 		// ------------------------------------------------------------------
-		// 4) Calcul : ordre du modele, puis mise en page du sous-arbre
+		// 4) Calcul : ordre du modele, largeur des blocs, puis mise en page
 		// ------------------------------------------------------------------
 		sortSubtreeByModelOrder(start, graphNodes, new HashSet<>());
+
+		// Largeur ajustee au nom AVANT la mise en page : les positions, l'epine
+		// et les bandes sont calculees avec les nouvelles largeurs
+		int resized = choice.fitWidth() ? fitWidthsToNames(start, depth, graphNodes) : 0;
+
 		List<Node> placed = TreeDiagramLayout.layout(start, orientation, depth, spacing);
 		Set<Node> subtree = new HashSet<>(placed);
 		warnOverlaps(nodes, start, subtree);
@@ -173,7 +183,14 @@ public class RearrangeTreeLayout extends RhapsodyTool {
 		int movedCount = 0;
 		for (Node n : placed) {
 			if (!n.moved()) continue;
-			graphNodes.get(n.key).setGraphicalProperty("Position", n.box.x() + "," + n.box.y());
+			IRPGraphNode gn = graphNodes.get(n.key);
+			// Largeur d'abord (si ajustee), position ensuite : la position ecrite
+			// en dernier fixe le coin haut gauche, quelle que soit la facon dont
+			// Rhapsody applique le changement de largeur
+			if (n.box.w() != n.original.w()) {
+				gn.setGraphicalProperty("Width", String.valueOf(n.box.w()));
+			}
+			gn.setGraphicalProperty("Position", n.box.x() + "," + n.box.y());
 			movedCount++;
 		}
 
@@ -197,9 +214,11 @@ public class RearrangeTreeLayout extends RhapsodyTool {
 
 		rhpLog.info("End - " + COMMAND + " (" + orientation + ", depth "
 				+ (depth == TreeDiagramLayout.ALL_LEVELS ? "*" : String.valueOf(depth))
-				+ ", spacing " + spacing.horizontal() + "/" + spacing.vertical() + "): "
+				+ ", spacing " + spacing.horizontal() + "/" + spacing.vertical()
+				+ (choice.fitWidth() ? ", fit width" : "") + "): "
 				+ movedCount + " block(s) moved, " + redrawn + " link(s) redrawn, "
-				+ shifted + " link(s) shifted.");
+				+ shifted + " link(s) shifted"
+				+ (choice.fitWidth() ? ", " + resized + " block(s) resized." : "."));
 	}
 
 	// ======================================================================
@@ -385,6 +404,113 @@ public class RearrangeTreeLayout extends RhapsodyTool {
 		for (Node child : parent.children) sortSubtreeByModelOrder(child, graphNodes, visited);
 	}
 
+	/**
+	 * Ajuste la largeur des blocs reorganises a leur nom affiche (niveaux 1 a
+	 * maxDepth sous start). Le bloc selectionne et les blocs plus profonds, qui
+	 * suivent leur ancetre sans changer de forme, gardent leur taille. La hauteur
+	 * n'est jamais modifiee.
+	 *
+	 * @return le nombre de blocs dont la largeur change
+	 */
+	private int fitWidthsToNames(Node start, int maxDepth, Map<String, IRPGraphNode> graphNodes) {
+		int resized = 0;
+		Set<Node> seen = new HashSet<>();
+		seen.add(start);
+		List<Node> level = new ArrayList<>(start.children);
+		for (int depth = 1; !level.isEmpty()
+				&& (maxDepth == TreeDiagramLayout.ALL_LEVELS || depth <= maxDepth); depth++) {
+			List<Node> next = new ArrayList<>();
+			for (Node n : level) {
+				if (!seen.add(n)) continue; // protection contre un cycle
+				IRPGraphNode gn = graphNodes.get(n.key);
+				String text = displayedName(gn.getModelObject());
+				BlockTextFit.TextStyle style = readTextStyle(gn);
+				int width = BlockTextFit.fittedWidth(text, style);
+				if (width != n.box.w()) {
+					n.box = new Box(n.box.x(), n.box.y(), width, n.box.h());
+					resized++;
+				}
+				rhpLog.debug("Fit width: '" + text + "' -> " + width + " (" + style.fontName() + " "
+						+ style.sizePt() + (style.bold() ? " bold" : "") + ")");
+				next.addAll(n.children);
+			}
+			level = next;
+		}
+		return resized;
+	}
+
+	/** Texte affiche dans le bloc : le libelle (label) s'il existe, sinon le nom. */
+	private static String displayedName(IRPModelElement element) {
+		if (element == null) return "";
+		String label = null;
+		try { label = element.getDisplayName(); } catch (Exception ignore) { /* nom par defaut */ }
+		return (label != null && !label.isBlank()) ? label : element.getName();
+	}
+
+	/**
+	 * Police du nom d'un bloc, lue dans les proprietes de format du profil :
+	 * Format.&lt;Metaclasse&gt;.Font.Font, .Font.Size et
+	 * .Font.Weight@Child.NameCompartment@Name (700 = gras). La metaclasse est
+	 * celle du new term sans espaces (ex. "LogicalSystem"), ou suivie de "_"
+	 * comme "Function_", puis la metaclasse Rhapsody (ex. "Class").
+	 * A defaut : Arial 12 gras, valeur du profil Safran pour les blocs.
+	 */
+	private BlockTextFit.TextStyle readTextStyle(IRPGraphNode gn) {
+		IRPModelElement mo = gn.getModelObject();
+		List<String> keys = new ArrayList<>();
+		try {
+			String udm = mo.getUserDefinedMetaClass();
+			if (udm != null && !udm.isBlank()) {
+				String compact = udm.replace(" ", "");
+				keys.add(compact);
+				keys.add(compact + "_");
+			}
+			keys.add(mo.getMetaClass());
+		} catch (Exception ignore) {
+			// metaclasse illisible : valeurs par defaut
+		}
+
+		for (String key : keys) {
+			String font = readFormat(gn, mo, "Format." + key + ".Font.Font");
+			if (font == null || font.isBlank()) continue;
+			int size = parseIntOr(readFormat(gn, mo, "Format." + key + ".Font.Size"),
+					BlockTextFit.TextStyle.DEFAULT.sizePt());
+			String weight = readFormat(gn, mo, "Format." + key + ".Font.Weight@Child.NameCompartment@Name");
+			boolean bold = (weight == null || weight.isBlank())
+					? BlockTextFit.TextStyle.DEFAULT.bold()
+					: parseIntOr(weight, 400) >= 700;
+			return new BlockTextFit.TextStyle(font, size, bold);
+		}
+		return BlockTextFit.TextStyle.DEFAULT;
+	}
+
+	/**
+	 * Valeur d'une propriete de format : d'abord sur l'element graphique (qui
+	 * porte un eventuel format local), sinon sur l'element de modele.
+	 * Null si la propriete n'existe pas.
+	 */
+	private static String readFormat(IRPGraphNode gn, IRPModelElement mo, String key) {
+		try {
+			String v = gn.getPropertyValue(key);
+			if (v != null && !v.isBlank()) return v;
+		} catch (Exception ignore) {
+			// propriete absente sur l'element graphique
+		}
+		try {
+			return mo.getPropertyValue(key);
+		} catch (Exception e) {
+			return null;
+		}
+	}
+
+	private static int parseIntOr(String value, int fallback) {
+		try {
+			return Integer.parseInt(value.trim());
+		} catch (Exception e) {
+			return fallback;
+		}
+	}
+
 	/** Ecrit dans le log les blocs hors sous-arbre que la nouvelle mise en page chevauche. */
 	private void warnOverlaps(Map<String, Node> nodes, Node start, Set<Node> subtree) {
 		for (Node inside : subtree) {
@@ -458,10 +584,12 @@ public class RearrangeTreeLayout extends RhapsodyTool {
 	 */
 	private TreeLayoutOrientationDialog.Choice askChoice(String elementName, int maxDepth) {
 		TreeLayoutOrientationDialog.Choice choice =
-				TreeLayoutOrientationDialog.ask(elementName, lastOrientation, maxDepth, lastDepth, lastSpacings);
+				TreeLayoutOrientationDialog.ask(elementName, lastOrientation, maxDepth, lastDepth,
+						lastSpacings, lastFitWidth);
 		if (choice != null) {
 			lastOrientation = choice.orientation();
 			lastDepth = choice.depth();
+			lastFitWidth = choice.fitWidth();
 		}
 		return choice;
 	}

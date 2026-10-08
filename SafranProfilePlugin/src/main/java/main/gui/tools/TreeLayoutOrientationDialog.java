@@ -27,6 +27,7 @@ import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JComponent;
 import javax.swing.JDialog;
@@ -37,6 +38,7 @@ import javax.swing.KeyStroke;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.WindowConstants;
 
+import utils.BlockTextFit;
 import utils.DialogPlacement;
 import utils.TreeDiagramLayout;
 import utils.TreeDiagramLayout.Orientation;
@@ -66,6 +68,10 @@ import utils.TreeDiagramLayout.Spacing;
  * Horizontal : ecart entre freres et ecart entre niveaux). Chaque orientation
  * garde ses propres valeurs ; le lien "Reset" remet les valeurs par defaut.</p>
  *
+ * <p><b>Taille des blocs</b> : case a cocher "Fit width to the displayed name" :
+ * la largeur des blocs reorganises est ajustee pour que leur nom tienne sur
+ * une ligne (voir {@link utils.BlockTextFit}).</p>
+ *
  * <p><b>Clavier</b> : fleches gauche / droite ou touches V / H pour choisir,
  * Entree pour appliquer, Echap pour annuler. Un double-clic sur une carte
  * applique directement.</p>
@@ -86,8 +92,9 @@ public final class TreeLayoutOrientationDialog {
 	 * @param orientation orientation de la mise en page
 	 * @param depth       nombre de niveaux reorganises, ou TreeDiagramLayout.ALL_LEVELS
 	 * @param spacing     espacements choisis pour cette orientation
+	 * @param fitWidth    vrai si la largeur des blocs doit etre ajustee a leur nom
 	 */
-	public record Choice(Orientation orientation, int depth, Spacing spacing) {}
+	public record Choice(Orientation orientation, int depth, Spacing spacing, boolean fitWidth) {}
 
 	/** Element de la liste des profondeurs : valeur et libelle affiche. */
 	private record DepthItem(int depth, String label) {
@@ -118,6 +125,16 @@ public final class TreeLayoutOrientationDialog {
 	 */
 	public static Choice ask(String elementName, Orientation initial, int maxDepth, int initialDepth,
 			Map<Orientation, Spacing> spacings) {
+		return ask(elementName, initial, maxDepth, initialDepth, spacings, false);
+	}
+
+	/**
+	 * Version complete.
+	 *
+	 * @param initialFitWidth etat initial de la case "Fit width to the displayed name"
+	 */
+	public static Choice ask(String elementName, Orientation initial, int maxDepth, int initialDepth,
+			Map<Orientation, Spacing> spacings, boolean initialFitWidth) {
 		final JDialog dialog = new JDialog((Frame) null, "Rearrange Tree Layout", true);
 		dialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 		dialog.setAlwaysOnTop(true);   // devant Rhapsody, dont la fenetre est native
@@ -182,6 +199,14 @@ public final class TreeLayoutOrientationDialog {
 		// n'etant pas redimensionnable, changer d'orientation ne doit rien decaler
 		final JLabel hLabel = fixedWidthLabel("Indent", "Between siblings");
 		final JLabel vLabel = fixedWidthLabel("Between blocks", "Between levels");
+		// Ajustement de la largeur des blocs au nom affiche
+		final JCheckBox fitWidthBox = new JCheckBox("Fit width to the displayed name", initialFitWidth);
+		fitWidthBox.setOpaque(false);
+		fitWidthBox.setForeground(UiKit.INK);
+		fitWidthBox.setFocusPainted(false);
+		fitWidthBox.setToolTipText("Width of each rearranged block set so that its name fits on one line"
+				+ " (" + BlockTextFit.MIN_WIDTH + " to " + BlockTextFit.MAX_WIDTH + ")");
+
 		// Orientation dont les valeurs sont actuellement affichees dans les champs
 		final Orientation[] shown = { null };
 
@@ -216,7 +241,7 @@ public final class TreeLayoutOrientationDialog {
 			Spacing s = readSpacing(hSpin, vSpin);
 			working.put(chosen[0].orientation, s);
 			spacings.putAll(working);
-			result[0] = new Choice(chosen[0].orientation, selectedDepth(depthBox), s);
+			result[0] = new Choice(chosen[0].orientation, selectedDepth(depthBox), s, fitWidthBox.isSelected());
 			dialog.dispose();
 		};
 
@@ -242,6 +267,7 @@ public final class TreeLayoutOrientationDialog {
 		// Reglages sous les cartes, sur une grille pour aligner les controles :
 		//   LEVELS TO REARRANGE  [liste.................]  aide
 		//   SPACING              libelle [n]  libelle [n]  Reset
+		//   BLOCK SIZE           [x] Fit width to the displayed name   aide
 		JPanel settings = new JPanel(new GridBagLayout());
 		settings.setOpaque(false);
 
@@ -259,6 +285,10 @@ public final class TreeLayoutOrientationDialog {
 			hSpin.setValue(d.horizontal());
 			vSpin.setValue(d.vertical());
 		}), 5, 1, 1, 8, 0);
+
+		cell(settings, UiKit.sectionTitle("BLOCK SIZE", UiKit.INK2), 0, 2, 1, 8, 14);
+		cell(settings, fitWidthBox, 1, 2, 4, 8, 10);
+		cell(settings, UiKit.muted("Height and selected block unchanged."), 5, 2, 1, 8, 0);
 
 		JPanel center = new JPanel(new BorderLayout(0, 12));
 		center.setOpaque(false);

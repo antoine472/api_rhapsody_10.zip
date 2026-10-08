@@ -8,7 +8,7 @@ En bref :
 - deux dispositions au choix : Vertical ou Horizontal ;
 - le nombre de niveaux réorganisés est choisi par l'utilisateur, comme la profondeur de Generate LBS / FBS / TBS ;
 - les espacements horizontal et vertical sont réglables dans la même boîte ;
-- la taille des blocs est conservée ;
+- en option, la largeur des blocs est ajustée à leur nom pour qu'il tienne sur une ligne ; sinon la taille des blocs est conservée ;
 - un seul Ctrl+Z annule toute l'opération.
 
 ---
@@ -41,6 +41,7 @@ Si l'élément est sélectionné dans le browser plutôt que dans le diagramme, 
    - choisir la disposition en cliquant sur une carte (ou avec les flèches gauche / droite, ou les touches **V** / **H**) ;
    - choisir le nombre de niveaux dans **LEVELS TO REARRANGE** ;
    - si besoin, régler les deux espacements dans **SPACING** (voir chapitre 3, « Espacements ») ;
+   - si besoin, cocher **Fit width to the displayed name** dans **BLOCK SIZE** (voir chapitre 3, « Largeur des blocs ») ;
    - cliquer sur **Apply** (ou appuyer sur **Entrée**). Un double-clic sur une carte applique directement.
 4. Le diagramme est mis à jour immédiatement.
 
@@ -48,7 +49,7 @@ Si l'élément est sélectionné dans le browser plutôt que dans le diagramme, 
 
 ![Boîte de dialogue Rearrange Tree Layout](dialog.png)
 
-La boîte s'ouvre au centre de l'écran où se trouve la souris, c'est-à-dire celui où Rhapsody est utilisé, et reste au premier plan. Les derniers choix (disposition, nombre de niveaux et espacements de chaque disposition) sont présélectionnés jusqu'à la fermeture de Rhapsody.
+La boîte s'ouvre au centre de l'écran où se trouve la souris, c'est-à-dire celui où Rhapsody est utilisé, et reste au premier plan. Les derniers choix (disposition, nombre de niveaux, espacements de chaque disposition et case **Fit width**) sont présélectionnés jusqu'à la fermeture de Rhapsody.
 
 ---
 
@@ -119,6 +120,19 @@ La ligne **SPACING** de la boîte de dialogue règle deux valeurs, en unités du
 - En Vertical, l'indentation n'est jamais inférieure à la position de l'épine du parent plus 10 (`largeur / 8 + 10`), pour que les enfants restent à droite de l'épine et que les liens restent lisibles.
 - Les valeurs par défaut sont les constantes `INDENT`, `V_GAP`, `H_GAP` et `LEVEL_GAP` de `utils.TreeDiagramLayout` ; les bornes sont `MIN_SPACING` et `MAX_SPACING`.
 
+### Largeur des blocs
+
+Quand la case **Fit width to the displayed name** (ligne **BLOCK SIZE**) est cochée, la largeur de chaque bloc réorganisé est recalculée pour que son nom tienne sur une seule ligne, comme si on l'élargissait à la main.
+
+- **Blocs concernés** : ceux des niveaux réorganisés (1 à N). Le bloc sélectionné et les blocs plus profonds, qui suivent leur ancêtre sans changer de forme, gardent leur taille.
+- **Seule la largeur change** : la hauteur est conservée. Un nom court peut aussi réduire un bloc trop large.
+- **Texte mesuré** : le libellé (label) de l'élément s'il en a un, sinon son nom.
+- **Police** : celle des propriétés de format du profil pour la métaclasse du bloc, par exemple `Format.LogicalSystem.Font.Font` (Arial), `Font.Size` (12) et `Font.Weight@Child.NameCompartment@Name` (700, c'est-à-dire gras). Un format local posé sur le bloc dans le diagramme est prioritaire. À défaut : Arial 12 gras.
+- **Calcul** : largeur du texte + 10 de marge de chaque côté + 24 pour l'icône du coin, arrondie à la dizaine supérieure, entre **100** et **1000**. Exemple : `logicalsystem_10` en Arial 12 gras donne **180**.
+- **Mise en page** : les positions, l'épine (`x + largeur / 8`) et la largeur des bandes en Horizontal sont calculées avec les nouvelles largeurs.
+
+Ce calcul a été calibré sur un diagramme LBS réel : un bloc de 150 coupait `logicalsystem_10` sur deux lignes, un bloc de 204 l'affichait sur une ligne. Les constantes (`SIDE_PADDING`, `ICON_SPACE`, `MIN_WIDTH`, `MAX_WIDTH`) sont dans `utils.BlockTextFit`.
+
 ---
 
 ## 4. Nombre de niveaux à réorganiser
@@ -146,10 +160,10 @@ Avec N niveaux :
 
 | Modifié | Inchangé |
 |---|---|
-| Position des descendants du bloc sélectionné | Le bloc sélectionné |
+| Position des descendants du bloc sélectionné | Le bloc sélectionné (position et taille) |
 | Tracé des liens entre ces descendants et leur parent | Le lien entre le bloc sélectionné et son propre parent |
-| | Les frères, le parent et les autres arbres du diagramme |
-| | La taille des blocs |
+| Largeur des blocs réorganisés, seulement si **Fit width** est coché | Les frères, le parent et les autres arbres du diagramme |
+| | La hauteur des blocs |
 | | Les liens qui ne sont pas des compositions (associations, dépendances...) |
 | | La position des libellés des liens |
 | | Le modèle : aucun élément n'est créé, supprimé ou renommé |
@@ -199,13 +213,16 @@ Le plugin écrit dans la fenêtre **Output** de Rhapsody, onglet **Log**. Une ex
 ```
 [ INFO] ... - Start - Safran Toolkit...\Rearrange Tree Layout
 [ INFO] ... - Selected: logicalsystem_1 | diagram: logicalbreakdownstructure_14
-[ INFO] ... - End - Safran Toolkit...\Rearrange Tree Layout (VERTICAL, depth *, spacing 100/20): 6 block(s) moved, 6 link(s) redrawn, 0 link(s) shifted.
+[ INFO] ... - End - Safran Toolkit...\Rearrange Tree Layout (VERTICAL, depth *, spacing 100/20, fit width): 6 block(s) moved, 6 link(s) redrawn, 0 link(s) shifted, 6 block(s) resized.
 ```
 
 - `block(s) moved` : nombre de blocs déplacés.
 - `link(s) redrawn` : nombre de liens redessinés dans la nouvelle disposition.
 - `link(s) shifted` : nombre de liens au-delà de la profondeur choisie, décalés sans changer de forme.
 - `spacing 100/20` : espacements utilisés, horizontal puis vertical.
+- `fit width` et `block(s) resized` : présents seulement si la case **Fit width** est cochée ; nombre de blocs dont la largeur a changé.
+
+En `DEBUG`, une ligne `Fit width: '<nom>' -> <largeur> (<police>)` est écrite pour chaque bloc mesuré.
 
 Pour obtenir le détail lien par lien (tracé calculé, liens ignorés), mettre la propriété de projet `General.Model.ThresholdLevel` à `DEBUG`.
 
@@ -215,7 +232,8 @@ Pour obtenir le détail lien par lien (tracé calculé, liens ignorés), mettre 
 
 - **Seuls les blocs présents dans le diagramme sont réorganisés.** Un élément du modèle qui n'est pas dessiné n'est pas ajouté : pour reconstruire le diagramme à partir du modèle, utiliser Generate LBS / FBS / TBS.
 - **Les blocs hors du sous-arbre ne sont jamais déplacés.** Si le sous-arbre réorganisé les recouvre, un avertissement `Rearranged block overlaps a block outside the subtree` est écrit dans le journal, et il faut les déplacer à la main.
-- **La taille des blocs n'est pas uniformisée.** Les blocs gardent leur largeur et leur hauteur actuelles.
+- **La taille des blocs n'est pas uniformisée.** Sans la case **Fit width**, les blocs gardent leur largeur et leur hauteur actuelles ; avec elle, chaque bloc reçoit la largeur de son propre nom, pas une largeur commune.
+- **Ajustement de largeur : une seule ligne de texte.** Le calcul suppose que le nom tient sur une ligne et que le bloc est affiché sans compartiment plus large que le nom. Un format local de police que Rhapsody n'exposerait pas sous forme de propriété ne serait pas pris en compte.
 - **Les libellés des liens ne sont pas repositionnés.**
 
 ---
@@ -252,7 +270,7 @@ Pour obtenir le détail lien par lien (tracé calculé, liens ignorés), mettre 
    Le texte après `name54=` doit être identique à la constante `RearrangeTreeLayout.TOOLBAR_COMMAND`, et l'icône `RearrangeTree16.png` (PNG 16 x 16) doit être présente dans `SafranArchitectureProfile/Icons/`.
 
 6. Fermer complètement Rhapsody et le relancer : le jar et le `.hep` ne sont relus qu'au chargement du profil.
-7. Contrôler dans le journal la ligne `Build version used: 20261008_16-15`, qui confirme que le nouveau jar est chargé.
+7. Contrôler dans le journal la ligne `Build version used: 20261008_19-00`, qui confirme que le nouveau jar est chargé.
 
 ---
 
@@ -263,9 +281,11 @@ Pour obtenir le détail lien par lien (tracé calculé, liens ignorés), mettre 
 | `src/main/java/tools/RearrangeTreeLayout.java` | La commande : lit le diagramme, construit l'arbre, demande les choix, applique la géométrie et écrit le résultat dans Rhapsody. |
 | `src/main/java/utils/TreeDiagramLayout.java` | La géométrie pure : positions des blocs et tracés des liens. N'utilise pas l'API Rhapsody, donc testable sans Rhapsody. |
 | `src/main/java/main/gui/tools/TreeLayoutOrientationDialog.java` | La boîte de dialogue (style `UiKit`, placement `utils.DialogPlacement`). |
+| `src/main/java/utils/BlockTextFit.java` | Calcul de la largeur d'un bloc à partir de son nom et de sa police. Pur Java, testable sans Rhapsody. |
 | `src/main/java/main/SafranProfilePlugin.java` | Enregistrement de la commande dans `RhpPluginInit`, sous ses deux noms (`COMMAND` pour le menu, `TOOLBAR_COMMAND` pour le bouton). |
 | `SafranArchitectureProfile/Icons/RearrangeTree16.png` | Icône du bouton de la barre d'outils (16 x 16). |
 | `src/test/java/test/unittest/TreeDiagramLayoutTest.java` | 16 tests JUnit 5 de la géométrie. |
+| `src/test/java/test/unittest/BlockTextFitTest.java` | 5 tests JUnit 5 du calcul de largeur, dont le calibrage sur un diagramme réel. |
 | `src/test/java/test/manual/DumpDiagramGraphicalProperties.java` | Programme de diagnostic (`main`) : affiche les propriétés graphiques des blocs et des liens du diagramme ouvert. |
 | `src/test/java/test/manual/RepositionTreeLinks.java` | Programme de test (`main`) ayant servi à valider l'écriture des tracés de liens. |
 
@@ -308,7 +328,7 @@ Toutes les méthodes de l'API utilisées existent dans Rhapsody 10.0.2 et 10.0.3
 
 ## 13. Tests
 
-`TreeDiagramLayoutTest` se lance sans Rhapsody : clic droit, puis **Run As > JUnit Test**. Les tests couvrent :
+`TreeDiagramLayoutTest` et `BlockTextFitTest` se lancent sans Rhapsody : clic droit, puis **Run As > JUnit Test**. Les tests couvrent :
 
 - la reproduction exacte de la disposition de Generate LBS (coordonnées attendues bloc par bloc) ;
 - l'immobilité du bloc sélectionné et la conservation de la taille des blocs ;
@@ -316,6 +336,7 @@ Toutes les méthodes de l'API utilisées existent dans Rhapsody 10.0.2 et 10.0.3
 - le centrage de la rangée et la largeur des bandes en Horizontal ;
 - la profondeur limitée dans les deux dispositions (sous-arbres déplacés d'un bloc) ;
 - les espacements personnalisés, l'indentation minimale sous l'épine et les bornes des valeurs ;
+- la largeur ajustée au nom : calibrage (entre 150 et 204 pour `logicalsystem_10`), arrondi, bornes et valeurs par défaut de la police ;
 - la lecture, l'écriture et le décalage des valeurs `Polygon`.
 
 ---
