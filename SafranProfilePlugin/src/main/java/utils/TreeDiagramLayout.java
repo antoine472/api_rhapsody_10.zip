@@ -19,7 +19,7 @@ import java.util.Set;
  * <ul>
  *   <li>{@link Orientation#VERTICAL} : arbre indente, comme les diagrammes de
  *       GenerateLBS. Les enfants sont empiles sous le parent, decales de
- *       {@link #INDENT} vers la droite. Le lien part du milieu du bord gauche
+ *       l'indentation (par defaut {@link #INDENT}) vers la droite. Le lien part du milieu du bord gauche
  *       de l'enfant et rejoint une "epine" verticale placee a x + largeur/8
  *       du parent (meme regle que {@link D2Rectangle}) ;</li>
  *   <li>{@link Orientation#HORIZONTAL} : organigramme. Les enfants sont alignes
@@ -33,6 +33,15 @@ import java.util.Set;
  * garde sa disposition et se deplace d'un bloc avec son ancetre de niveau N ;
  * son encombrement est pris en compte pour eviter les chevauchements.</p>
  *
+ * <p><b>Espacements</b> : reglables par l'utilisateur ({@link Spacing}). Leur
+ * sens depend de l'orientation :</p>
+ * <ul>
+ *   <li>Vertical : horizontal = decalage d'un niveau (indentation),
+ *       vertical = ecart entre deux blocs empiles ;</li>
+ *   <li>Horizontal : horizontal = ecart entre deux freres,
+ *       vertical = ecart entre un parent et la rangee de ses enfants.</li>
+ * </ul>
+ *
  * <p>La taille des blocs n'est jamais modifiee : seule leur position change.</p>
  */
 public final class TreeDiagramLayout {
@@ -43,17 +52,49 @@ public final class TreeDiagramLayout {
 	/** Profondeur illimitee : tous les niveaux sont reorganises (le "*" de Generate LBS). */
 	public static final int ALL_LEVELS = -1;
 
-	/** Decalage horizontal d'un niveau en mode vertical (HORIZONTAL_OFFSET de GenerateLBS). */
+	/** Decalage horizontal d'un niveau en mode vertical, par defaut (HORIZONTAL_OFFSET de GenerateLBS). */
 	public static final int INDENT = 100;
 
-	/** Ecart vertical entre deux blocs empiles en mode vertical (VERTICAL_SPACING de GenerateLBS). */
+	/** Ecart vertical entre deux blocs empiles en mode vertical, par defaut (VERTICAL_SPACING de GenerateLBS). */
 	public static final int V_GAP = 20;
 
-	/** Ecart horizontal entre deux freres en mode horizontal. */
+	/** Ecart horizontal entre deux freres en mode horizontal, par defaut. */
 	public static final int H_GAP = 40;
 
-	/** Ecart vertical entre un parent et la rangee de ses enfants en mode horizontal. */
+	/** Ecart vertical entre un parent et la rangee de ses enfants en mode horizontal, par defaut. */
 	public static final int LEVEL_GAP = 60;
+
+	/** Plus petit espacement accepte, pour que les liens restent lisibles. */
+	public static final int MIN_SPACING = 10;
+
+	/** Plus grand espacement accepte. */
+	public static final int MAX_SPACING = 1000;
+
+	/**
+	 * Espacements d'une mise en page, en unites du diagramme Rhapsody.
+	 *
+	 * @param horizontal Vertical : decalage d'un niveau ; Horizontal : ecart entre freres
+	 * @param vertical   Vertical : ecart entre blocs empiles ; Horizontal : ecart entre niveaux
+	 */
+	public record Spacing(int horizontal, int vertical) {
+
+		/** Les valeurs sont ramenees entre MIN_SPACING et MAX_SPACING. */
+		public Spacing {
+			horizontal = clamp(horizontal);
+			vertical = clamp(vertical);
+		}
+
+		/** Espacements par defaut d'une orientation (ceux de Generate LBS en vertical). */
+		public static Spacing defaults(Orientation orientation) {
+			return orientation == Orientation.VERTICAL
+					? new Spacing(INDENT, V_GAP)
+					: new Spacing(H_GAP, LEVEL_GAP);
+		}
+
+		private static int clamp(int value) {
+			return Math.max(MIN_SPACING, Math.min(MAX_SPACING, value));
+		}
+	}
 
 	private TreeDiagramLayout() {
 		// classe utilitaire : pas d'instance
@@ -125,9 +166,14 @@ public final class TreeDiagramLayout {
 	// Mise en page
 	// ======================================================================
 
-	/** Mise en page sur tous les niveaux. Voir {@link #layout(Node, Orientation, int)}. */
+	/** Mise en page sur tous les niveaux, espacements par defaut. */
 	public static List<Node> layout(Node start, Orientation orientation) {
 		return layout(start, orientation, ALL_LEVELS);
+	}
+
+	/** Mise en page avec les espacements par defaut. Voir {@link #layout(Node, Orientation, int, Spacing)}. */
+	public static List<Node> layout(Node start, Orientation orientation, int maxDepth) {
+		return layout(start, orientation, maxDepth, Spacing.defaults(orientation));
 	}
 
 	/**
@@ -136,19 +182,21 @@ public final class TreeDiagramLayout {
 	 *
 	 * @param maxDepth nombre de niveaux reorganises sous start (1 = enfants
 	 *                 directs seulement), ou {@link #ALL_LEVELS}
+	 * @param spacing  espacements (voir {@link Spacing}) ; null = valeurs par defaut
 	 * @return tous les descendants de start (reorganises ou deplaces en bloc),
 	 *         dans l'ordre de parcours, sans start
 	 */
-	public static List<Node> layout(Node start, Orientation orientation, int maxDepth) {
+	public static List<Node> layout(Node start, Orientation orientation, int maxDepth, Spacing spacing) {
+		Spacing sp = (spacing != null) ? spacing : Spacing.defaults(orientation);
 		List<Node> placed = new ArrayList<>();
 		Set<Node> visited = new HashSet<>();
 		visited.add(start);
 		start.depth = 0;
 
 		if (orientation == Orientation.VERTICAL) {
-			placeVertical(start, start.box.bottom() + V_GAP, 1, maxDepth, visited, placed);
+			placeVertical(start, start.box.bottom() + sp.vertical(), 1, maxDepth, sp, visited, placed);
 		} else {
-			placeHorizontalChildren(start, 1, maxDepth, visited, placed);
+			placeHorizontalChildren(start, 1, maxDepth, sp, visited, placed);
 		}
 		return placed;
 	}
@@ -183,18 +231,18 @@ public final class TreeDiagramLayout {
 
 	/**
 	 * Mode vertical : chaque enfant est place sous le precedent (ou sous le
-	 * parent pour le premier), decale de INDENT, puis ses descendants sont
+	 * parent pour le premier), decale de l'indentation, puis ses descendants sont
 	 * places dessous avant de passer au frere suivant. Au dernier niveau
 	 * reorganise, le sous-arbre de l'enfant est deplace en bloc.
 	 *
 	 * @return la prochaine ordonnee libre sous le sous-arbre
 	 */
 	private static int placeVertical(Node parent, int cursorY, int level, int maxDepth,
-			Set<Node> visited, List<Node> placed) {
+			Spacing sp, Set<Node> visited, List<Node> placed) {
+		int x = parent.box.x() + indentFor(parent, sp);
 		for (Node child : parent.children) {
 			if (!visited.add(child)) continue; // protection contre un cycle
 			child.depth = level;
-			int x = parent.box.x() + INDENT;
 
 			if (isLastArrangedLevel(level, maxDepth)) {
 				// Le bloc entier (enfant + descendants) doit commencer a droite
@@ -204,12 +252,12 @@ public final class TreeDiagramLayout {
 				int newX = x + (child.box.x() - bounds.x());
 				int newY = cursorY + (child.box.y() - bounds.y());
 				moveWithDescendants(child, newX, newY, level, visited, placed);
-				cursorY = bounds.bottom() + child.dy() + V_GAP;
+				cursorY = bounds.bottom() + child.dy() + sp.vertical();
 			} else {
 				child.box = child.box.moveTo(x, cursorY);
 				placed.add(child);
-				cursorY = child.box.bottom() + V_GAP;
-				cursorY = placeVertical(child, cursorY, level + 1, maxDepth, visited, placed);
+				cursorY = child.box.bottom() + sp.vertical();
+				cursorY = placeVertical(child, cursorY, level + 1, maxDepth, sp, visited, placed);
 			}
 		}
 		return cursorY;
@@ -222,7 +270,7 @@ public final class TreeDiagramLayout {
 	 * (enfant + descendants) est centre dans la bande et deplace d'un seul tenant.
 	 */
 	private static void placeHorizontalChildren(Node parent, int level, int maxDepth,
-			Set<Node> visited, List<Node> placed) {
+			Spacing sp, Set<Node> visited, List<Node> placed) {
 		List<Node> row = new ArrayList<>();
 		for (Node child : parent.children) {
 			if (visited.add(child)) row.add(child); // protection contre un cycle
@@ -230,14 +278,14 @@ public final class TreeDiagramLayout {
 		if (row.isEmpty()) return;
 
 		// Largeur totale de la rangee : bandes des enfants + ecarts
-		int total = H_GAP * (row.size() - 1);
-		for (Node child : row) total += bandWidth(child, level, maxDepth, new HashSet<>());
+		int total = sp.horizontal() * (row.size() - 1);
+		for (Node child : row) total += bandWidth(child, level, maxDepth, sp, new HashSet<>());
 
 		int left = parent.box.centerX() - total / 2;
-		int top = parent.box.bottom() + LEVEL_GAP;
+		int top = parent.box.bottom() + sp.vertical();
 		for (Node child : row) {
 			child.depth = level;
-			int band = bandWidth(child, level, maxDepth, new HashSet<>());
+			int band = bandWidth(child, level, maxDepth, sp, new HashSet<>());
 
 			if (isLastArrangedLevel(level, maxDepth)) {
 				// Bloc centre dans sa bande, son bord haut aligne sur la rangee
@@ -249,22 +297,32 @@ public final class TreeDiagramLayout {
 			} else {
 				child.box = child.box.moveTo(left + (band - child.box.w()) / 2, top);
 				placed.add(child);
-				placeHorizontalChildren(child, level + 1, maxDepth, visited, placed);
+				placeHorizontalChildren(child, level + 1, maxDepth, sp, visited, placed);
 			}
-			left += band + H_GAP;
+			left += band + sp.horizontal();
 		}
 	}
 
 	/** Largeur de la bande d'un enfant en mode horizontal. */
-	private static int bandWidth(Node node, int level, int maxDepth, Set<Node> seen) {
+	private static int bandWidth(Node node, int level, int maxDepth, Spacing sp, Set<Node> seen) {
 		if (!seen.add(node)) return node.box.w();
 		// Dernier niveau reorganise : le bloc garde sa forme, sa largeur est son encombrement
 		if (isLastArrangedLevel(level, maxDepth)) return subtreeBounds(node).w();
 		if (node.children.isEmpty()) return node.box.w();
 
-		int total = H_GAP * (node.children.size() - 1);
-		for (Node child : node.children) total += bandWidth(child, level + 1, maxDepth, seen);
+		int total = sp.horizontal() * (node.children.size() - 1);
+		for (Node child : node.children) total += bandWidth(child, level + 1, maxDepth, sp, seen);
 		return Math.max(node.box.w(), total);
+	}
+
+	/**
+	 * Indentation effective sous un parent en mode vertical : la valeur demandee,
+	 * mais jamais moins que l'epine du parent + MIN_SPACING, pour que les
+	 * enfants restent a droite de l'epine et que les liens soient lisibles.
+	 */
+	public static int indentFor(Node parent, Spacing sp) {
+		int spineOffset = spineX(parent.box) - parent.box.x();
+		return Math.max(sp.horizontal(), spineOffset + MIN_SPACING);
 	}
 
 	/** Encombrement d'un bloc et de tous ses descendants, a leur position actuelle. */

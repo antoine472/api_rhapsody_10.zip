@@ -14,6 +14,7 @@ import utils.TreeDiagramLayout;
 import utils.TreeDiagramLayout.Box;
 import utils.TreeDiagramLayout.Node;
 import utils.TreeDiagramLayout.Orientation;
+import utils.TreeDiagramLayout.Spacing;
 
 /**
  * Tests de la geometrie de Rearrange Tree Layout ({@link TreeDiagramLayout}).
@@ -258,5 +259,61 @@ public class TreeDiagramLayoutTest {
 				TreeDiagramLayout.toPolygon(TreeDiagramLayout.translated(points, 10, 20)));
 		assertNull(TreeDiagramLayout.parsePolygon("3,1,2"), "Valeur mal formee");
 		assertNull(TreeDiagramLayout.parsePolygon(""), "Valeur vide");
+	}
+
+	// ======================================================================
+	// Espacements reglables
+	// ======================================================================
+
+	@Test
+	void vertical_customSpacing() {
+		Node root = referenceTree();
+
+		List<Node> placed = TreeDiagramLayout.layout(root, Orientation.VERTICAL,
+				TreeDiagramLayout.ALL_LEVELS, new Spacing(150, 40));
+
+		// Indentation 150, ecart 40 : ls_11 en (25 + 150, 32 + 100 + 40)
+		assertEquals(175, placed.get(0).box.x());
+		assertEquals(172, placed.get(0).box.y());
+		assertEquals(312, placed.get(1).box.y());   // ls_12
+		assertEquals(452, placed.get(2).box.y());   // ls_7
+		assertEquals(325, placed.get(3).box.x());   // ls_8 : un niveau de plus
+		assertEquals(592, placed.get(3).box.y());
+	}
+
+	@Test
+	void vertical_indentNeverLeftOfTheSpine() {
+		Node root = block("root", 25, 32);
+		Node child = block("child", 0, 0);
+		root.addChild(child);
+
+		// Indentation demandee 10 : l'epine est a 300 / 8 = 37 du bord gauche,
+		// l'indentation effective est donc 37 + 10 = 47
+		TreeDiagramLayout.layout(root, Orientation.VERTICAL, TreeDiagramLayout.ALL_LEVELS, new Spacing(10, 20));
+		assertEquals(72, child.box.x());
+	}
+
+	@Test
+	void horizontal_customSpacing() {
+		Node root = new Node("root", new Box(500, 0, 300, 100));
+		Node a = block("a", 0, 0);
+		Node b = block("b", 0, 0);
+		root.addChild(a);
+		root.addChild(b);
+
+		TreeDiagramLayout.layout(root, Orientation.HORIZONTAL, TreeDiagramLayout.ALL_LEVELS, new Spacing(100, 80));
+
+		// Rangee : 300 + 100 + 300 = 700, centree sous 650 -> commence a 300 ; 80 sous le parent
+		assertEquals(300, a.box.x());
+		assertEquals(700, b.box.x());
+		assertEquals(180, a.box.y());
+	}
+
+	@Test
+	void spacingDefaultsAndBounds() {
+		assertEquals(new Spacing(100, 20), Spacing.defaults(Orientation.VERTICAL));
+		assertEquals(new Spacing(40, 60), Spacing.defaults(Orientation.HORIZONTAL));
+		// Valeurs hors bornes ramenees entre MIN_SPACING et MAX_SPACING
+		assertEquals(new Spacing(TreeDiagramLayout.MIN_SPACING, TreeDiagramLayout.MAX_SPACING), new Spacing(0, 5000));
 	}
 }

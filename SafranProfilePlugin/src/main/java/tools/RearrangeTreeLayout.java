@@ -3,6 +3,7 @@ package tools;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.EnumMap;
 import java.util.HashSet;
 import java.util.IdentityHashMap;
 import java.util.LinkedHashMap;
@@ -25,6 +26,7 @@ import utils.TreeDiagramLayout;
 import utils.TreeDiagramLayout.Box;
 import utils.TreeDiagramLayout.Node;
 import utils.TreeDiagramLayout.Orientation;
+import utils.TreeDiagramLayout.Spacing;
 
 /**
  * Rearrange Tree Layout : reorganise les descendants de l'element selectionne
@@ -44,6 +46,8 @@ import utils.TreeDiagramLayout.Orientation;
  *       ("*" pour tous, comme dans Generate LBS) ; au-dela, chaque sous-arbre
  *       garde sa disposition et se deplace d'un bloc avec son ancetre, ses
  *       liens etant decales du meme vecteur ;</li>
+ *   <li>les espacements (horizontal et vertical) sont reglables dans la
+ *       boite de dialogue, et memorises par orientation pendant la session ;</li>
  *   <li>la taille des blocs n'est pas modifiee ;</li>
  *   <li>les freres sont ranges dans l'ordre du modele
  *       (getNestedElementsByMetaClass), comme dans Generate LBS.</li>
@@ -75,6 +79,8 @@ public class RearrangeTreeLayout extends RhapsodyTool {
 	/** Derniers choix, preselectionnes a l'ouverture suivante (session Rhapsody). */
 	private static Orientation lastOrientation = Orientation.VERTICAL;
 	private static int lastDepth = TreeDiagramLayout.ALL_LEVELS;
+	/** Derniers espacements, par orientation (mis a jour par la boite de dialogue sur Apply). */
+	private static final Map<Orientation, Spacing> lastSpacings = new EnumMap<>(Orientation.class);
 
 	/** Type graphique d'un lien de composition : sa source est l'enfant. */
 	private static final String CONTAIN_ARROW = "ContainArrow";
@@ -142,12 +148,13 @@ public class RearrangeTreeLayout extends RhapsodyTool {
 		}
 		Orientation orientation = choice.orientation();
 		int depth = choice.depth();
+		Spacing spacing = choice.spacing();
 
 		// ------------------------------------------------------------------
 		// 4) Calcul : ordre du modele, puis mise en page du sous-arbre
 		// ------------------------------------------------------------------
 		sortSubtreeByModelOrder(start, graphNodes, new HashSet<>());
-		List<Node> placed = TreeDiagramLayout.layout(start, orientation, depth);
+		List<Node> placed = TreeDiagramLayout.layout(start, orientation, depth, spacing);
 		Set<Node> subtree = new HashSet<>(placed);
 		warnOverlaps(nodes, start, subtree);
 
@@ -189,7 +196,8 @@ public class RearrangeTreeLayout extends RhapsodyTool {
 		}
 
 		rhpLog.info("End - " + COMMAND + " (" + orientation + ", depth "
-				+ (depth == TreeDiagramLayout.ALL_LEVELS ? "*" : String.valueOf(depth)) + "): "
+				+ (depth == TreeDiagramLayout.ALL_LEVELS ? "*" : String.valueOf(depth))
+				+ ", spacing " + spacing.horizontal() + "/" + spacing.vertical() + "): "
 				+ movedCount + " block(s) moved, " + redrawn + " link(s) redrawn, "
 				+ shifted + " link(s) shifted.");
 	}
@@ -441,7 +449,7 @@ public class RearrangeTreeLayout extends RhapsodyTool {
 	// ======================================================================
 
 	/**
-	 * Demande l'orientation et le nombre de niveaux dans la boite du plugin,
+	 * Demande l'orientation, le nombre de niveaux et les espacements dans la boite du plugin,
 	 * affichee sur l'ecran de Rhapsody et au premier plan. Les derniers choix
 	 * sont preselectionnes.
 	 *
@@ -450,7 +458,7 @@ public class RearrangeTreeLayout extends RhapsodyTool {
 	 */
 	private TreeLayoutOrientationDialog.Choice askChoice(String elementName, int maxDepth) {
 		TreeLayoutOrientationDialog.Choice choice =
-				TreeLayoutOrientationDialog.ask(elementName, lastOrientation, maxDepth, lastDepth);
+				TreeLayoutOrientationDialog.ask(elementName, lastOrientation, maxDepth, lastDepth, lastSpacings);
 		if (choice != null) {
 			lastOrientation = choice.orientation();
 			lastDepth = choice.depth();

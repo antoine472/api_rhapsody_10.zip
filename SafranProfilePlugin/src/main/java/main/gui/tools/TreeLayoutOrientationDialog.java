@@ -9,13 +9,19 @@ import java.awt.Font;
 import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.Insets;
 import java.awt.RenderingHints;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.text.ParseException;
+import java.util.EnumMap;
+import java.util.Map;
 
 import javax.swing.BorderFactory;
 import javax.swing.Box;
@@ -26,12 +32,15 @@ import javax.swing.JComponent;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JSpinner;
 import javax.swing.KeyStroke;
+import javax.swing.SpinnerNumberModel;
 import javax.swing.WindowConstants;
 
 import utils.DialogPlacement;
 import utils.TreeDiagramLayout;
 import utils.TreeDiagramLayout.Orientation;
+import utils.TreeDiagramLayout.Spacing;
 
 /**
  * Boite de dialogue de "Rearrange Tree Layout" : choix de l'orientation et
@@ -52,6 +61,11 @@ import utils.TreeDiagramLayout.Orientation;
  * limitee a la profondeur reelle de l'arbre. Les blocs plus profonds gardent
  * leur disposition et suivent leur ancetre.</p>
  *
+ * <p><b>Espacements</b> : deux champs numeriques, dont le libelle suit
+ * l'orientation choisie (Vertical : indentation et ecart entre blocs ;
+ * Horizontal : ecart entre freres et ecart entre niveaux). Chaque orientation
+ * garde ses propres valeurs ; le lien "Reset" remet les valeurs par defaut.</p>
+ *
  * <p><b>Clavier</b> : fleches gauche / droite ou touches V / H pour choisir,
  * Entree pour appliquer, Echap pour annuler. Un double-clic sur une carte
  * applique directement.</p>
@@ -71,8 +85,9 @@ public final class TreeLayoutOrientationDialog {
 	 *
 	 * @param orientation orientation de la mise en page
 	 * @param depth       nombre de niveaux reorganises, ou TreeDiagramLayout.ALL_LEVELS
+	 * @param spacing     espacements choisis pour cette orientation
 	 */
-	public record Choice(Orientation orientation, int depth) {}
+	public record Choice(Orientation orientation, int depth, Spacing spacing) {}
 
 	/** Element de la liste des profondeurs : valeur et libelle affiche. */
 	private record DepthItem(int depth, String label) {
@@ -90,6 +105,19 @@ public final class TreeLayoutOrientationDialog {
 	 * @return le choix, ou null si l'utilisateur annule
 	 */
 	public static Choice ask(String elementName, Orientation initial, int maxDepth, int initialDepth) {
+		return ask(elementName, initial, maxDepth, initialDepth, new EnumMap<>(Orientation.class));
+	}
+
+	/**
+	 * Comme {@link #ask(String, Orientation, int, int)}, avec les espacements
+	 * memorises par orientation.
+	 *
+	 * @param spacings espacements par orientation (une orientation absente prend
+	 *                 les valeurs par defaut). Mis a jour sur Apply avec les
+	 *                 valeurs affichees pour chaque orientation ; inchange sur Cancel.
+	 */
+	public static Choice ask(String elementName, Orientation initial, int maxDepth, int initialDepth,
+			Map<Orientation, Spacing> spacings) {
 		final JDialog dialog = new JDialog((Frame) null, "Rearrange Tree Layout", true);
 		dialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 		dialog.setAlwaysOnTop(true);   // devant Rhapsody, dont la fenetre est native
@@ -141,9 +169,55 @@ public final class TreeLayoutOrientationDialog {
 		}
 		depthBox.setToolTipText("Number of levels rearranged below the selected block");
 
+		// Espacements : copie de travail par orientation (le parametre n'est
+		// modifie que sur Apply), et deux champs numeriques partages
+		final Map<Orientation, Spacing> working = new EnumMap<>(Orientation.class);
+		for (Orientation o : Orientation.values()) {
+			Spacing s = spacings.get(o);
+			working.put(o, s != null ? s : Spacing.defaults(o));
+		}
+		final JSpinner hSpin = spacingSpinner();
+		final JSpinner vSpin = spacingSpinner();
+		// Largeur fixe = la plus longue des deux valeurs possibles : la boite
+		// n'etant pas redimensionnable, changer d'orientation ne doit rien decaler
+		final JLabel hLabel = fixedWidthLabel("Indent", "Between siblings");
+		final JLabel vLabel = fixedWidthLabel("Between blocks", "Between levels");
+		// Orientation dont les valeurs sont actuellement affichees dans les champs
+		final Orientation[] shown = { null };
+
 		final Runnable refresh = () -> {
 			vertical.setSelected(chosen[0] == vertical);
 			horizontal.setSelected(chosen[0] == horizontal);
+
+			Orientation target = chosen[0].orientation;
+			if (shown[0] != target) {
+				// Memorise les valeurs de l'orientation quittee, affiche celles de la nouvelle
+				if (shown[0] != null) working.put(shown[0], readSpacing(hSpin, vSpin));
+				Spacing s = working.get(target);
+				hSpin.setValue(s.horizontal());
+				vSpin.setValue(s.vertical());
+				shown[0] = target;
+			}
+			if (target == Orientation.VERTICAL) {
+				hLabel.setText("Indent");
+				vLabel.setText("Between blocks");
+				hSpin.setToolTipText("Horizontal shift of each level (default " + TreeDiagramLayout.INDENT + RANGE);
+				vSpin.setToolTipText("Vertical gap between two stacked blocks (default " + TreeDiagramLayout.V_GAP + RANGE);
+			} else {
+				hLabel.setText("Between siblings");
+				vLabel.setText("Between levels");
+				hSpin.setToolTipText("Horizontal gap between two siblings (default " + TreeDiagramLayout.H_GAP + RANGE);
+				vSpin.setToolTipText("Vertical gap between a parent and its children (default " + TreeDiagramLayout.LEVEL_GAP + RANGE);
+			}
+		};
+
+		// Validation commune a Apply et au double-clic : choix + espacements memorises
+		final Runnable accept = () -> {
+			Spacing s = readSpacing(hSpin, vSpin);
+			working.put(chosen[0].orientation, s);
+			spacings.putAll(working);
+			result[0] = new Choice(chosen[0].orientation, selectedDepth(depthBox), s);
+			dialog.dispose();
 		};
 
 		for (final OptionCard card : new OptionCard[] { vertical, horizontal }) {
@@ -154,8 +228,7 @@ public final class TreeLayoutOrientationDialog {
 					refresh.run();
 					// Double-clic : choix et validation en un geste
 					if (e.getClickCount() >= 2) {
-						result[0] = new Choice(card.orientation, selectedDepth(depthBox));
-						dialog.dispose();
+						accept.run();
 					}
 				}
 			});
@@ -166,32 +239,37 @@ public final class TreeLayoutOrientationDialog {
 		cards.add(vertical);
 		cards.add(horizontal);
 
-		// Ligne de profondeur sous les cartes
-		JPanel depthRow = new JPanel();
-		depthRow.setOpaque(false);
-		depthRow.setLayout(new BoxLayout(depthRow, BoxLayout.X_AXIS));
-		JLabel depthLabel = UiKit.sectionTitle("LEVELS TO REARRANGE", UiKit.INK2);
-		depthRow.add(depthLabel);
-		depthRow.add(Box.createHorizontalStrut(10));
-		depthBox.setMaximumSize(depthBox.getPreferredSize());
-		depthRow.add(depthBox);
-		depthRow.add(Box.createHorizontalStrut(10));
-		depthRow.add(UiKit.muted("Deeper blocks keep their layout and follow their parent."));
-		depthRow.add(Box.createHorizontalGlue());
+		// Reglages sous les cartes, sur une grille pour aligner les controles :
+		//   LEVELS TO REARRANGE  [liste.................]  aide
+		//   SPACING              libelle [n]  libelle [n]  Reset
+		JPanel settings = new JPanel(new GridBagLayout());
+		settings.setOpaque(false);
+
+		cell(settings, UiKit.sectionTitle("LEVELS TO REARRANGE", UiKit.INK2), 0, 0, 1, 0, 14);
+		cell(settings, depthBox, 1, 0, 4, 0, 10);
+		cell(settings, UiKit.muted("Deeper blocks follow their parent."), 5, 0, 1, 0, 0);
+
+		cell(settings, UiKit.sectionTitle("SPACING", UiKit.INK2), 0, 1, 1, 8, 14);
+		cell(settings, hLabel, 1, 1, 1, 8, 6);
+		cell(settings, hSpin, 2, 1, 1, 8, 14);
+		cell(settings, vLabel, 3, 1, 1, 8, 6);
+		cell(settings, vSpin, 4, 1, 1, 8, 10);
+		cell(settings, UiKit.link("Reset", e -> {
+			Spacing d = Spacing.defaults(chosen[0].orientation);
+			hSpin.setValue(d.horizontal());
+			vSpin.setValue(d.vertical());
+		}), 5, 1, 1, 8, 0);
 
 		JPanel center = new JPanel(new BorderLayout(0, 12));
 		center.setOpaque(false);
 		center.add(cards, BorderLayout.CENTER);
-		center.add(depthRow, BorderLayout.SOUTH);
+		center.add(settings, BorderLayout.SOUTH);
 		root.add(center, BorderLayout.CENTER);
 
 		// -- Sud : rappel clavier + Apply (par defaut) + Cancel -----------------
 		JButton btnApply = UiKit.primary("Apply");
 		JButton btnCancel = UiKit.neutral("Cancel");
-		btnApply.addActionListener(e -> {
-			result[0] = new Choice(chosen[0].orientation, selectedDepth(depthBox));
-			dialog.dispose();
-		});
+		btnApply.addActionListener(e -> accept.run());
 		btnCancel.addActionListener(e -> dialog.dispose());
 		// Meme hauteur pour les deux boutons
 		btnCancel.setPreferredSize(new Dimension(btnCancel.getPreferredSize().width,
@@ -230,6 +308,65 @@ public final class TreeLayoutOrientationDialog {
 		dialog.setVisible(true);   // bloque jusqu'a Apply, Cancel, Echap ou fermeture
 
 		return result[0];
+	}
+
+	/** Champ numerique d'espacement : pas de 10, bornes MIN_SPACING a MAX_SPACING. */
+	private static JSpinner spacingSpinner() {
+		JSpinner spinner = new JSpinner(new SpinnerNumberModel(
+				TreeDiagramLayout.MIN_SPACING, TreeDiagramLayout.MIN_SPACING,
+				TreeDiagramLayout.MAX_SPACING, 10));
+		((JSpinner.DefaultEditor) spinner.getEditor()).getTextField().setColumns(4);
+		spinner.setMaximumSize(spinner.getPreferredSize());
+		return spinner;
+	}
+
+	/**
+	 * Lit les deux champs. Une saisie en cours (tapee mais pas encore validee)
+	 * est d'abord prise en compte ; une saisie invalide garde la derniere valeur correcte.
+	 */
+	private static Spacing readSpacing(JSpinner hSpin, JSpinner vSpin) {
+		return new Spacing(spinnerValue(hSpin), spinnerValue(vSpin));
+	}
+
+	private static int spinnerValue(JSpinner spinner) {
+		try {
+			spinner.commitEdit();
+		} catch (ParseException e) {
+			// saisie invalide : on garde la valeur precedente du champ
+		}
+		return ((Number) spinner.getValue()).intValue();
+	}
+
+	/** Plage autorisee, rappelee dans les infobulles des champs. */
+	private static final String RANGE = ", from " + TreeDiagramLayout.MIN_SPACING
+			+ " to " + TreeDiagramLayout.MAX_SPACING + ")";
+
+	/**
+	 * Place un composant dans la grille des reglages, aligne a gauche.
+	 *
+	 * @param top   marge au-dessus (separe les lignes)
+	 * @param right marge a droite (separe les colonnes)
+	 */
+	private static void cell(JPanel grid, JComponent comp, int x, int y, int width, int top, int right) {
+		GridBagConstraints c = new GridBagConstraints();
+		c.gridx = x;
+		c.gridy = y;
+		c.gridwidth = width;
+		c.anchor = GridBagConstraints.WEST;
+		c.fill = (width > 1) ? GridBagConstraints.HORIZONTAL : GridBagConstraints.NONE;
+		c.insets = new Insets(top, 0, 0, right);
+		grid.add(comp, c);
+	}
+
+	/** Libelle dont la largeur est celle du plus long des textes donnes. */
+	private static JLabel fixedWidthLabel(String... texts) {
+		JLabel label = new JLabel(texts[0]);
+		label.setForeground(UiKit.INK);
+		int width = 0;
+		for (String s : texts) width = Math.max(width, label.getFontMetrics(label.getFont()).stringWidth(s));
+		Dimension d = label.getPreferredSize();
+		label.setPreferredSize(new Dimension(width + 2, d.height));
+		return label;
 	}
 
 	/** Profondeur choisie dans la liste. */

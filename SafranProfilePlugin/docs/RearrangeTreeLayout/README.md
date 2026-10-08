@@ -7,6 +7,7 @@ En bref :
 - le bloc sélectionné ne bouge pas, ni le reste du diagramme ;
 - deux dispositions au choix : Vertical ou Horizontal ;
 - le nombre de niveaux réorganisés est choisi par l'utilisateur, comme la profondeur de Generate LBS / FBS / TBS ;
+- les espacements horizontal et vertical sont réglables dans la même boîte ;
 - la taille des blocs est conservée ;
 - un seul Ctrl+Z annule toute l'opération.
 
@@ -39,6 +40,7 @@ Si l'élément est sélectionné dans le browser plutôt que dans le diagramme, 
 3. Dans la boîte de dialogue :
    - choisir la disposition en cliquant sur une carte (ou avec les flèches gauche / droite, ou les touches **V** / **H**) ;
    - choisir le nombre de niveaux dans **LEVELS TO REARRANGE** ;
+   - si besoin, régler les deux espacements dans **SPACING** (voir chapitre 3, « Espacements ») ;
    - cliquer sur **Apply** (ou appuyer sur **Entrée**). Un double-clic sur une carte applique directement.
 4. Le diagramme est mis à jour immédiatement.
 
@@ -46,7 +48,7 @@ Si l'élément est sélectionné dans le browser plutôt que dans le diagramme, 
 
 ![Boîte de dialogue Rearrange Tree Layout](dialog.png)
 
-La boîte s'ouvre au centre de l'écran où se trouve la souris, c'est-à-dire celui où Rhapsody est utilisé, et reste au premier plan. Les derniers choix (disposition et nombre de niveaux) sont présélectionnés jusqu'à la fermeture de Rhapsody.
+La boîte s'ouvre au centre de l'écran où se trouve la souris, c'est-à-dire celui où Rhapsody est utilisé, et reste au premier plan. Les derniers choix (disposition, nombre de niveaux et espacements de chaque disposition) sont présélectionnés jusqu'à la fermeture de Rhapsody.
 
 ---
 
@@ -77,8 +79,8 @@ Même rendu que les diagrammes produits par Generate LBS.
                     +-------------------+
 ```
 
-- Chaque enfant est décalé de **100** vers la droite par rapport à son parent.
-- Les blocs sont empilés avec **20** d'écart vertical. Un enfant est placé sous le sous-arbre complet de son frère précédent.
+- Chaque enfant est décalé vers la droite par rapport à son parent (**100** par défaut).
+- Les blocs sont empilés avec un écart vertical (**20** par défaut). Un enfant est placé sous le sous-arbre complet de son frère précédent.
 - Le lien part du milieu du bord gauche de l'enfant, rejoint une ligne verticale (« épine ») placée à `x + largeur / 8` du parent, puis monte jusqu'au bas du parent. C'est la règle de `utils.D2Rectangle` utilisée par Generate LBS.
 
 ### Horizontal : organigramme
@@ -95,21 +97,27 @@ Même rendu que les diagrammes produits par Generate LBS.
 +---------------+   +---------------+   +---------------+
 ```
 
-- Les enfants sont alignés sur une rangée placée **60** sous le parent et centrée sous lui.
-- Deux frères sont séparés de **40**.
+- Les enfants sont alignés sur une rangée placée sous le parent (**60** par défaut) et centrée sous lui.
+- Deux frères sont séparés d'un écart horizontal (**40** par défaut).
 - Chaque enfant dispose d'une bande aussi large que son propre sous-arbre, ce qui évite les chevauchements entre cousins.
 - Le lien part du milieu du haut de l'enfant, monte jusqu'à une ligne horizontale commune aux frères (le « bus », à mi-distance entre le parent et ses enfants), puis rejoint le milieu du bas du parent.
 
-### Dimensions
+### Espacements
 
-Toutes les valeurs sont des constantes de `utils.TreeDiagramLayout` :
+La ligne **SPACING** de la boîte de dialogue règle deux valeurs, en unités du diagramme Rhapsody. Leurs libellés changent avec la disposition choisie :
 
-| Constante | Valeur | Rôle |
-|---|---|---|
-| `INDENT` | 100 | décalage d'un niveau (Vertical), identique à Generate LBS |
-| `V_GAP` | 20 | écart entre deux blocs empilés (Vertical), identique à Generate LBS |
-| `H_GAP` | 40 | écart entre deux frères (Horizontal) |
-| `LEVEL_GAP` | 60 | écart entre un parent et la rangée de ses enfants (Horizontal) |
+| Disposition | Champ | Rôle | Défaut |
+|---|---|---|---|
+| Vertical | **Indent** | décalage d'un niveau vers la droite | 100 (comme Generate LBS) |
+| Vertical | **Between blocks** | écart vertical entre deux blocs empilés | 20 (comme Generate LBS) |
+| Horizontal | **Between siblings** | écart horizontal entre deux frères | 40 |
+| Horizontal | **Between levels** | écart vertical entre un parent et la rangée de ses enfants | 60 |
+
+- Les valeurs vont de **10** à **1000**, par pas de 10 avec les flèches. Une valeur tapée hors de ces bornes est ramenée dans la plage.
+- Chaque disposition garde ses propres valeurs : passer de Vertical à Horizontal dans la boîte affiche les valeurs de Horizontal, puis revenir à Vertical retrouve celles de Vertical.
+- Le lien **Reset** remet les valeurs par défaut de la disposition affichée.
+- En Vertical, l'indentation n'est jamais inférieure à la position de l'épine du parent plus 10 (`largeur / 8 + 10`), pour que les enfants restent à droite de l'épine et que les liens restent lisibles.
+- Les valeurs par défaut sont les constantes `INDENT`, `V_GAP`, `H_GAP` et `LEVEL_GAP` de `utils.TreeDiagramLayout` ; les bornes sont `MIN_SPACING` et `MAX_SPACING`.
 
 ---
 
@@ -191,12 +199,13 @@ Le plugin écrit dans la fenêtre **Output** de Rhapsody, onglet **Log**. Une ex
 ```
 [ INFO] ... - Start - Safran Toolkit...\Rearrange Tree Layout
 [ INFO] ... - Selected: logicalsystem_1 | diagram: logicalbreakdownstructure_14
-[ INFO] ... - End - Safran Toolkit...\Rearrange Tree Layout (VERTICAL, depth *): 6 block(s) moved, 6 link(s) redrawn, 0 link(s) shifted.
+[ INFO] ... - End - Safran Toolkit...\Rearrange Tree Layout (VERTICAL, depth *, spacing 100/20): 6 block(s) moved, 6 link(s) redrawn, 0 link(s) shifted.
 ```
 
 - `block(s) moved` : nombre de blocs déplacés.
 - `link(s) redrawn` : nombre de liens redessinés dans la nouvelle disposition.
 - `link(s) shifted` : nombre de liens au-delà de la profondeur choisie, décalés sans changer de forme.
+- `spacing 100/20` : espacements utilisés, horizontal puis vertical.
 
 Pour obtenir le détail lien par lien (tracé calculé, liens ignorés), mettre la propriété de projet `General.Model.ThresholdLevel` à `DEBUG`.
 
@@ -243,7 +252,7 @@ Pour obtenir le détail lien par lien (tracé calculé, liens ignorés), mettre 
    Le texte après `name54=` doit être identique à la constante `RearrangeTreeLayout.TOOLBAR_COMMAND`, et l'icône `RearrangeTree16.png` (PNG 16 x 16) doit être présente dans `SafranArchitectureProfile/Icons/`.
 
 6. Fermer complètement Rhapsody et le relancer : le jar et le `.hep` ne sont relus qu'au chargement du profil.
-7. Contrôler dans le journal la ligne `Build version used: 20261008_15-20`, qui confirme que le nouveau jar est chargé.
+7. Contrôler dans le journal la ligne `Build version used: 20261008_16-15`, qui confirme que le nouveau jar est chargé.
 
 ---
 
@@ -256,7 +265,7 @@ Pour obtenir le détail lien par lien (tracé calculé, liens ignorés), mettre 
 | `src/main/java/main/gui/tools/TreeLayoutOrientationDialog.java` | La boîte de dialogue (style `UiKit`, placement `utils.DialogPlacement`). |
 | `src/main/java/main/SafranProfilePlugin.java` | Enregistrement de la commande dans `RhpPluginInit`, sous ses deux noms (`COMMAND` pour le menu, `TOOLBAR_COMMAND` pour le bouton). |
 | `SafranArchitectureProfile/Icons/RearrangeTree16.png` | Icône du bouton de la barre d'outils (16 x 16). |
-| `src/test/java/test/unittest/TreeDiagramLayoutTest.java` | 12 tests JUnit 5 de la géométrie. |
+| `src/test/java/test/unittest/TreeDiagramLayoutTest.java` | 16 tests JUnit 5 de la géométrie. |
 | `src/test/java/test/manual/DumpDiagramGraphicalProperties.java` | Programme de diagnostic (`main`) : affiche les propriétés graphiques des blocs et des liens du diagramme ouvert. |
 | `src/test/java/test/manual/RepositionTreeLinks.java` | Programme de test (`main`) ayant servi à valider l'écriture des tracés de liens. |
 
@@ -306,6 +315,7 @@ Toutes les méthodes de l'API utilisées existent dans Rhapsody 10.0.2 et 10.0.3
 - le tracé des liens en Vertical (épine) et en Horizontal (bus) ;
 - le centrage de la rangée et la largeur des bandes en Horizontal ;
 - la profondeur limitée dans les deux dispositions (sous-arbres déplacés d'un bloc) ;
+- les espacements personnalisés, l'indentation minimale sous l'épine et les bornes des valeurs ;
 - la lecture, l'écriture et le décalage des valeurs `Polygon`.
 
 ---
