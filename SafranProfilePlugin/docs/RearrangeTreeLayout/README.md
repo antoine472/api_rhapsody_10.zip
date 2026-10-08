@@ -14,9 +14,12 @@ En bref :
 
 ## 1. Où trouver la commande
 
-Clic droit sur un bloc **dans le diagramme**, puis **Safran Toolkit... > Rearrange Tree Layout**.
+Deux accès, qui lancent la même commande :
 
-Le menu est proposé sur les éléments suivants (entrée `name45` du fichier `.hep`) :
+- **Menu contextuel** : clic droit sur un bloc **dans le diagramme**, puis **Safran Toolkit... > Rearrange Tree Layout** ;
+- **Barre d'outils Rhapsody** : sélectionner le bloc dans le diagramme, puis cliquer sur le bouton ![icône Rearrange Tree Layout](../../../SafranArchitectureProfile/Icons/RearrangeTree16.png). Le bouton agit sur l'élément sélectionné ; sans sélection valide, la commande affiche un message et ne modifie rien.
+
+Le menu contextuel est proposé sur les éléments suivants (entrée `name45` du fichier `.hep`) :
 
 | Métaclasse |
 |---|
@@ -226,8 +229,21 @@ Pour obtenir le détail lien par lien (tracé calculé, liens ignorés), mettre 
 
    Le texte après `name45=` doit être identique à la constante `RearrangeTreeLayout.COMMAND`, sinon le menu affiche « No existing tool for ».
 
+   Et l'entrée du bouton de la barre d'outils :
+
+   ```
+   name54=Rearrange Tree Layout
+   isPlugInCommand54=1
+   command54=SafranPlugin
+   isToolbarButton54=1
+   pluginIcon54=..\Icons\RearrangeTree16.png
+   isVisible54=1
+   ```
+
+   Le texte après `name54=` doit être identique à la constante `RearrangeTreeLayout.TOOLBAR_COMMAND`, et l'icône `RearrangeTree16.png` (PNG 16 x 16) doit être présente dans `SafranArchitectureProfile/Icons/`.
+
 6. Fermer complètement Rhapsody et le relancer : le jar et le `.hep` ne sont relus qu'au chargement du profil.
-7. Contrôler dans le journal la ligne `Build version used: 20261007_19-10`, qui confirme que le nouveau jar est chargé.
+7. Contrôler dans le journal la ligne `Build version used: 20261008_15-20`, qui confirme que le nouveau jar est chargé.
 
 ---
 
@@ -238,7 +254,8 @@ Pour obtenir le détail lien par lien (tracé calculé, liens ignorés), mettre 
 | `src/main/java/tools/RearrangeTreeLayout.java` | La commande : lit le diagramme, construit l'arbre, demande les choix, applique la géométrie et écrit le résultat dans Rhapsody. |
 | `src/main/java/utils/TreeDiagramLayout.java` | La géométrie pure : positions des blocs et tracés des liens. N'utilise pas l'API Rhapsody, donc testable sans Rhapsody. |
 | `src/main/java/main/gui/tools/TreeLayoutOrientationDialog.java` | La boîte de dialogue (style `UiKit`, placement `utils.DialogPlacement`). |
-| `src/main/java/main/SafranProfilePlugin.java` | Enregistrement de la commande dans `RhpPluginInit`. |
+| `src/main/java/main/SafranProfilePlugin.java` | Enregistrement de la commande dans `RhpPluginInit`, sous ses deux noms (`COMMAND` pour le menu, `TOOLBAR_COMMAND` pour le bouton). |
+| `SafranArchitectureProfile/Icons/RearrangeTree16.png` | Icône du bouton de la barre d'outils (16 x 16). |
 | `src/test/java/test/unittest/TreeDiagramLayoutTest.java` | 12 tests JUnit 5 de la géométrie. |
 | `src/test/java/test/manual/DumpDiagramGraphicalProperties.java` | Programme de diagnostic (`main`) : affiche les propriétés graphiques des blocs et des liens du diagramme ouvert. |
 | `src/test/java/test/manual/RepositionTreeLinks.java` | Programme de test (`main`) ayant servi à valider l'écriture des tracés de liens. |
@@ -298,6 +315,9 @@ Toutes les méthodes de l'API utilisées existent dans Rhapsody 10.0.2 et 10.0.3
 | Symptôme | Cause probable | Solution |
 |---|---|---|
 | Le menu affiche « No existing tool for » | Le nom dans le `.hep` ne correspond pas à la commande | Corriger `name45` (chapitre 11, étape 5). |
+| Le bouton affiche « No existing tool for: Rearrange Tree Layout » | Ancien `safran_app.jar`, sans l'alias `TOOLBAR_COMMAND` | Régénérer et recopier le jar (chapitre 11). |
+| Le bouton n'apparaît pas dans la barre d'outils | Entrée `name54` absente du `.hep` chargé, ou Rhapsody non redémarré | Vérifier le `.hep` (chapitre 11, étape 5), puis relancer Rhapsody. |
+| Le bouton apparaît sans image | `RearrangeTree16.png` absente de `SafranArchitectureProfile/Icons/` | Copier l'icône. |
 | Le journal affiche `Start - RearrangeTreeLayout (partial layout)` | L'ancien `safran_app.jar` est encore chargé | Régénérer le jar, le copier, relancer Rhapsody (chapitre 11). |
 | `End - ... 0 block(s) moved` | Diagramme déjà rangé, ou enfants non reliés par des compositions | Vérifier les liens. Passer le journal en `DEBUG` pour voir les liens ignorés. |
 | `endUndoTransaction failed: ... Transaction was not created` | Aucune modification effective : tout était déjà en place | Sans conséquence. |

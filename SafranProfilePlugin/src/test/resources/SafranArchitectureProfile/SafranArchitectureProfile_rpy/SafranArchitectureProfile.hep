@@ -1,7 +1,7 @@
 [Helpers]
 numberOfElements=100
 
-#prochainIndiceLibre = 54
+#prochainIndiceLibre = 55
 
 ##################################################################################
 Definition of the Safran Plugin - reacts to user actions through context menu
@@ -285,5 +285,13 @@ command50=SafranPlugin
 isToolbarButton50=1
 pluginIcon50=..\Icons\home16.png
 isVisible50=1
+
+#REM: Rearrange Tree Layout in toolbar (acts on the element selected in the diagram)
+name54=Rearrange Tree Layout
+isPlugInCommand54=1
+command54=SafranPlugin
+isToolbarButton54=1
+pluginIcon54=..\Icons\RearrangeTree16.png
+isVisible54=1
 
 # Note: Not required to declare Checkers in .hep file.

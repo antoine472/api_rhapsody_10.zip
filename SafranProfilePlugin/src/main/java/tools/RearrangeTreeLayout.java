@@ -65,6 +65,13 @@ public class RearrangeTreeLayout extends RhapsodyTool {
 
 	public static final String COMMAND = "Safran Toolkit...\\Rearrange Tree Layout";
 
+	/**
+	 * Nom du bouton de la barre d'outils Rhapsody (entree name54 du .hep). Rhapsody
+	 * transmet ce nom au plugin quand on clique sur le bouton : il est donc
+	 * enregistre comme alias de la meme commande dans SafranProfilePlugin.
+	 */
+	public static final String TOOLBAR_COMMAND = "Rearrange Tree Layout";
+
 	/** Derniers choix, preselectionnes a l'ouverture suivante (session Rhapsody). */
 	private static Orientation lastOrientation = Orientation.VERTICAL;
 	private static int lastDepth = TreeDiagramLayout.ALL_LEVELS;

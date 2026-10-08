@@ -46,7 +46,7 @@ import tools.UpdateRedefinedPorts;
 
 public class SafranProfilePlugin extends RPUserPlugin {
 
-	private static final String BUILD_VERSION = "20261007_19-10";
+	private static final String BUILD_VERSION = "20261008_15-20";
 
 	private static RhapsodyLogger rhpLog = RhapsodyLogger.getInstance();
 
@@ -111,7 +111,11 @@ public class SafranProfilePlugin extends RPUserPlugin {
 		tools.put(DefineDirection.COMMAND_BIDIRECTIONAL, new DefineDirection(rhpApp, Direction.InOut));
 		tools.put(DuplicateServiceFunction.COMMAND, new DuplicateServiceFunction(rhpApp));
 		tools.put(ReverseFlowDirection.COMMAND, new ReverseFlowDirection(rhpApp));
-		tools.put(RearrangeTreeLayout.COMMAND, new RearrangeTreeLayout(rhpApp));
+		// Rearrange Tree Layout : menu contextuel ET bouton de la barre d'outils.
+		// Le bouton transmet son propre nom (TOOLBAR_COMMAND) : meme instance pour les deux.
+		RearrangeTreeLayout rearrangeTreeLayout = new RearrangeTreeLayout(rhpApp);
+		tools.put(RearrangeTreeLayout.COMMAND, rearrangeTreeLayout);
+		tools.put(RearrangeTreeLayout.TOOLBAR_COMMAND, rearrangeTreeLayout);
 		tools.put(UpdateRedefinedPorts.COMMAND, new UpdateRedefinedPorts(rhpApp));
 		tools.put(LocateFlowItemInBrowser.COMMAND, new LocateFlowItemInBrowser(rhpApp));
 		tools.put(CleanRedefinedPortsInDiagram.COMMAND, new CleanRedefinedPortsInDiagram(rhpApp));
