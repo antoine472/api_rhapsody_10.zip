@@ -11181,8 +11181,15 @@ Update properties on DrawingTools for Architecture diagrams\par%0D
 	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
 	&lt;RETURN-TYPE&gt;Model element&lt;/RETURN-TYPE&gt;
 	&lt;GETTER&gt;
-		&lt;CODE&gt;IRPSysMLPort port = ((IRPFlow) cellElement).getEnd1SysMLPort();
-return port.getType();&lt;/CODE&gt;
+		&lt;CODE&gt;// Type du port cote From (end1) du flux de la ligne
+if (cellElement instanceof IRPFlow) {
+    IRPSysMLPort port = ((IRPFlow) cellElement).getEnd1SysMLPort();
+    // Flux sans port SysML a cette extremite : cellule vide
+    if (port != null) {
+        return port.getType();
+    }
+}
+return null;&lt;/CODE&gt;
 	&lt;/GETTER&gt;
 	&lt;SETTER&gt;
 		&lt;CODE&gt;&lt;/CODE&gt;
@@ -11209,8 +11216,15 @@ return port.getType();&lt;/CODE&gt;
 	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
 	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
 	&lt;GETTER&gt;
-		&lt;CODE&gt;IRPSysMLPort port = ((IRPFlow) cellElement).getEnd1SysMLPort();
-return port.getPortDirection();&lt;/CODE&gt;
+		&lt;CODE&gt;// Direction du port cote From (end1) du flux de la ligne
+if (cellElement instanceof IRPFlow) {
+    IRPSysMLPort port = ((IRPFlow) cellElement).getEnd1SysMLPort();
+    // Flux sans port SysML a cette extremite : cellule vide
+    if (port != null) {
+        return port.getPortDirection();
+    }
+}
+return null;&lt;/CODE&gt;
 	&lt;/GETTER&gt;
 	&lt;SETTER&gt;
 		&lt;CODE&gt;&lt;/CODE&gt;
@@ -11237,9 +11251,10 @@ return port.getPortDirection();&lt;/CODE&gt;
 	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
 	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
 	&lt;GETTER&gt;
-		&lt;CODE&gt;// Cote arrivee du flux : port de l&amp;apos;extremite 2 (end2)
+		&lt;CODE&gt;// Direction du port cote To (end2) du flux de la ligne
 if (cellElement instanceof IRPFlow) {
     IRPSysMLPort port = ((IRPFlow) cellElement).getEnd2SysMLPort();
+    // Flux sans port SysML a cette extremite : cellule vide
     if (port != null) {
         return port.getPortDirection();
     }
@@ -11271,8 +11286,15 @@ return null;&lt;/CODE&gt;
 	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
 	&lt;RETURN-TYPE&gt;Model element&lt;/RETURN-TYPE&gt;
 	&lt;GETTER&gt;
-		&lt;CODE&gt;IRPSysMLPort port = ((IRPFlow) cellElement).getEnd1SysMLPort();
-return port.getType();&lt;/CODE&gt;
+		&lt;CODE&gt;// Type du port cote To (end2) du flux de la ligne
+if (cellElement instanceof IRPFlow) {
+    IRPSysMLPort port = ((IRPFlow) cellElement).getEnd2SysMLPort();
+    // Flux sans port SysML a cette extremite : cellule vide
+    if (port != null) {
+        return port.getType();
+    }
+}
+return null;&lt;/CODE&gt;
 	&lt;/GETTER&gt;
 	&lt;SETTER&gt;
 		&lt;CODE&gt;&lt;/CODE&gt;
@@ -11315,8 +11337,8 @@ return port.getType();&lt;/CODE&gt;
 			</_properties>
 			<_rmmServerID type="a">1435366_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
 			<_name type="a">Functional ICD Layout</_name>
-			<_modifiedTimeWeak type="a">10.12.2026::14:40:31</_modifiedTimeWeak>
-			<_modifiedTime type="a">10.12.2026::14:40:31</_modifiedTime>
+			<_modifiedTimeWeak type="a">11.4.2026::15:8:45</_modifiedTimeWeak>
+			<_modifiedTime type="a">11.4.2026::15:8:45</_modifiedTime>
 			<TableElementTypes type="c">
 				<IRPYRawContainer type="e">
 					<TableDataDefinition type="e">
@@ -12368,8 +12390,15 @@ return allocatedTo;&lt;/CODE&gt;
 	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
 	&lt;RETURN-TYPE&gt;Model element&lt;/RETURN-TYPE&gt;
 	&lt;GETTER&gt;
-		&lt;CODE&gt;IRPSysMLPort port = ((IRPFlow) cellElement).getEnd1SysMLPort();
-return port.getType();&lt;/CODE&gt;
+		&lt;CODE&gt;// Type du port cote From (end1) du flux de la ligne
+if (cellElement instanceof IRPFlow) {
+    IRPSysMLPort port = ((IRPFlow) cellElement).getEnd1SysMLPort();
+    // Flux sans port SysML a cette extremite : cellule vide
+    if (port != null) {
+        return port.getType();
+    }
+}
+return null;&lt;/CODE&gt;
 	&lt;/GETTER&gt;
 	&lt;SETTER&gt;
 		&lt;CODE&gt;&lt;/CODE&gt;
@@ -12396,8 +12425,15 @@ return port.getType();&lt;/CODE&gt;
 	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
 	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
 	&lt;GETTER&gt;
-		&lt;CODE&gt;IRPSysMLPort port = ((IRPFlow) cellElement).getEnd1SysMLPort();
-return port.getPortDirection();&lt;/CODE&gt;
+		&lt;CODE&gt;// Direction du port cote From (end1) du flux de la ligne
+if (cellElement instanceof IRPFlow) {
+    IRPSysMLPort port = ((IRPFlow) cellElement).getEnd1SysMLPort();
+    // Flux sans port SysML a cette extremite : cellule vide
+    if (port != null) {
+        return port.getPortDirection();
+    }
+}
+return null;&lt;/CODE&gt;
 	&lt;/GETTER&gt;
 	&lt;SETTER&gt;
 		&lt;CODE&gt;&lt;/CODE&gt;
@@ -12424,8 +12460,15 @@ return port.getPortDirection();&lt;/CODE&gt;
 	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
 	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
 	&lt;GETTER&gt;
-		&lt;CODE&gt;IRPSysMLPort port = ((IRPFlow) cellElement).getEnd1SysMLPort();
-return port.getPortDirection();&lt;/CODE&gt;
+		&lt;CODE&gt;// Direction du port cote To (end2) du flux de la ligne
+if (cellElement instanceof IRPFlow) {
+    IRPSysMLPort port = ((IRPFlow) cellElement).getEnd2SysMLPort();
+    // Flux sans port SysML a cette extremite : cellule vide
+    if (port != null) {
+        return port.getPortDirection();
+    }
+}
+return null;&lt;/CODE&gt;
 	&lt;/GETTER&gt;
 	&lt;SETTER&gt;
 		&lt;CODE&gt;&lt;/CODE&gt;
@@ -12452,8 +12495,15 @@ return port.getPortDirection();&lt;/CODE&gt;
 	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
 	&lt;RETURN-TYPE&gt;Model element&lt;/RETURN-TYPE&gt;
 	&lt;GETTER&gt;
-		&lt;CODE&gt;IRPSysMLPort port = ((IRPFlow) cellElement).getEnd1SysMLPort();
-return port.getType();&lt;/CODE&gt;
+		&lt;CODE&gt;// Type du port cote To (end2) du flux de la ligne
+if (cellElement instanceof IRPFlow) {
+    IRPSysMLPort port = ((IRPFlow) cellElement).getEnd2SysMLPort();
+    // Flux sans port SysML a cette extremite : cellule vide
+    if (port != null) {
+        return port.getType();
+    }
+}
+return null;&lt;/CODE&gt;
 	&lt;/GETTER&gt;
 	&lt;SETTER&gt;
 		&lt;CODE&gt;&lt;/CODE&gt;
@@ -12496,8 +12546,8 @@ return port.getType();&lt;/CODE&gt;
 			</_properties>
 			<_rmmServerID type="a">1435373_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
 			<_name type="a">Logical ICD Layout</_name>
-			<_modifiedTimeWeak type="a">3.19.2026::9:20:49</_modifiedTimeWeak>
-			<_modifiedTime type="a">3.19.2026::9:20:49</_modifiedTime>
+			<_modifiedTimeWeak type="a">11.4.2026::15:8:45</_modifiedTimeWeak>
+			<_modifiedTime type="a">11.4.2026::15:8:45</_modifiedTime>
 			<TableElementTypes type="c">
 				<IRPYRawContainer type="e">
 					<TableDataDefinition type="e">
@@ -12736,8 +12786,15 @@ return port.getType();&lt;/CODE&gt;
 	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
 	&lt;RETURN-TYPE&gt;Model element&lt;/RETURN-TYPE&gt;
 	&lt;GETTER&gt;
-		&lt;CODE&gt;IRPSysMLPort port = ((IRPFlow) cellElement).getEnd1SysMLPort();
-return port.getType();&lt;/CODE&gt;
+		&lt;CODE&gt;// Type du port cote From (end1) du flux de la ligne
+if (cellElement instanceof IRPFlow) {
+    IRPSysMLPort port = ((IRPFlow) cellElement).getEnd1SysMLPort();
+    // Flux sans port SysML a cette extremite : cellule vide
+    if (port != null) {
+        return port.getType();
+    }
+}
+return null;&lt;/CODE&gt;
 	&lt;/GETTER&gt;
 	&lt;SETTER&gt;
 		&lt;CODE&gt;&lt;/CODE&gt;
@@ -12764,8 +12821,15 @@ return port.getType();&lt;/CODE&gt;
 	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
 	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
 	&lt;GETTER&gt;
-		&lt;CODE&gt;IRPSysMLPort port = ((IRPFlow) cellElement).getEnd1SysMLPort();
-return port.getPortDirection();&lt;/CODE&gt;
+		&lt;CODE&gt;// Direction du port cote From (end1) du flux de la ligne
+if (cellElement instanceof IRPFlow) {
+    IRPSysMLPort port = ((IRPFlow) cellElement).getEnd1SysMLPort();
+    // Flux sans port SysML a cette extremite : cellule vide
+    if (port != null) {
+        return port.getPortDirection();
+    }
+}
+return null;&lt;/CODE&gt;
 	&lt;/GETTER&gt;
 	&lt;SETTER&gt;
 		&lt;CODE&gt;&lt;/CODE&gt;
@@ -12792,8 +12856,15 @@ return port.getPortDirection();&lt;/CODE&gt;
 	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
 	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
 	&lt;GETTER&gt;
-		&lt;CODE&gt;IRPSysMLPort port = ((IRPFlow) cellElement).getEnd1SysMLPort();
-return port.getPortDirection();&lt;/CODE&gt;
+		&lt;CODE&gt;// Direction du port cote To (end2) du flux de la ligne
+if (cellElement instanceof IRPFlow) {
+    IRPSysMLPort port = ((IRPFlow) cellElement).getEnd2SysMLPort();
+    // Flux sans port SysML a cette extremite : cellule vide
+    if (port != null) {
+        return port.getPortDirection();
+    }
+}
+return null;&lt;/CODE&gt;
 	&lt;/GETTER&gt;
 	&lt;SETTER&gt;
 		&lt;CODE&gt;&lt;/CODE&gt;
@@ -12820,8 +12891,15 @@ return port.getPortDirection();&lt;/CODE&gt;
 	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
 	&lt;RETURN-TYPE&gt;Model element&lt;/RETURN-TYPE&gt;
 	&lt;GETTER&gt;
-		&lt;CODE&gt;IRPSysMLPort port = ((IRPFlow) cellElement).getEnd1SysMLPort();
-return port.getType();&lt;/CODE&gt;
+		&lt;CODE&gt;// Type du port cote To (end2) du flux de la ligne
+if (cellElement instanceof IRPFlow) {
+    IRPSysMLPort port = ((IRPFlow) cellElement).getEnd2SysMLPort();
+    // Flux sans port SysML a cette extremite : cellule vide
+    if (port != null) {
+        return port.getType();
+    }
+}
+return null;&lt;/CODE&gt;
 	&lt;/GETTER&gt;
 	&lt;SETTER&gt;
 		&lt;CODE&gt;&lt;/CODE&gt;
@@ -12864,8 +12942,8 @@ return port.getType();&lt;/CODE&gt;
 			</_properties>
 			<_rmmServerID type="a">1435370_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
 			<_name type="a">Operational ICD Layout</_name>
-			<_modifiedTimeWeak type="a">5.11.2026::13:25:41</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.11.2026::13:25:41</_modifiedTime>
+			<_modifiedTimeWeak type="a">11.4.2026::15:8:45</_modifiedTimeWeak>
+			<_modifiedTime type="a">11.4.2026::15:8:45</_modifiedTime>
 			<TableElementTypes type="c">
 				<IRPYRawContainer type="e">
 					<TableDataDefinition type="e">
@@ -13084,6 +13162,12 @@ return port.getType();&lt;/CODE&gt;
 												</IProperty>
 												
 												<IProperty type="e">
+													<_Name type="a">ContextPattern</_Name>
+													<_Value type="a">Package*,{FS}FunctionalSystem,{fct}Function+</_Value>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
 													<_Name type="a">ContextTableColumnNameFormat</_Name>
 													<_Value type="a">$(Property) in $(Context)</_Value>
 													<_Type type="a">String</_Type>
@@ -13097,6 +13181,57 @@ return port.getType();&lt;/CODE&gt;
 												
 												<IProperty type="e">
 													<_Name type="a">QueryContextPattern</_Name>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">UserDefinedImplementationXML</_Name>
+													<_Value type="a">&lt;COLUMN id=&quot;1&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.*&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPDependency&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.*&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;List of model elements&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;// Systemes qui allouent la fonction de la ligne (dependance &amp;quot;Function Allocation&amp;quot;)
+ArrayList&amp;lt;IRPModelElement&amp;gt; allocatedTo = new ArrayList&amp;lt;IRPModelElement&amp;gt;();
+if (cellElement == null) {
+    return allocatedTo;
+}
+// getReferences() : tous les elements qui pointent vers cette fonction
+for (Object o : cellElement.getReferences().toList()) {
+    if (o instanceof IRPDependency) {
+        IRPDependency dependency = (IRPDependency) o;
+        IRPModelElement target = dependency.getDependsOn();
+        // On garde seulement les allocations dont la cible est cette fonction
+        if (&amp;quot;Function Allocation&amp;quot;.equals(dependency.getUserDefinedMetaClass())
+                &amp;amp;&amp;amp; target != null
+                &amp;amp;&amp;amp; cellElement.getGUID().equals(target.getGUID())) {
+            allocatedTo.add(dependency.getDependent());
+        }
+    }
+}
+return allocatedTo;&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+</_Value>
 													<_Type type="a">MultiLine</_Type>
 												</IProperty>
 												
@@ -13129,27 +13264,8 @@ return port.getType();&lt;/CODE&gt;
 			</_properties>
 			<_rmmServerID type="a">1435377_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
 			<_name type="a">Layout Functions Components allocation</_name>
-			<_modifiedTimeWeak type="a">3.19.2026::9:23:58</_modifiedTimeWeak>
-			<_modifiedTime type="a">3.19.2026::9:23:58</_modifiedTime>
-			<TableElementTypes type="c">
-				<IRPYRawContainer type="e">
-					<TableDataDefinition type="e">
-						<_myTable type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">ITableLayout</_hm2Class>
-								<_hid type="a">GUID f3fe57cd-f4e5-4017-a42c-562d0d659c30</_hid>
-							</IHandle>
-						</_myTable>
-						<_modelElement type="r">
-							<IHandle type="e">
-							</IHandle>
-						</_modelElement>
-						<TableDataDefinitionName type="a">Function</TableDataDefinitionName>
-						<_DataType type="a">0</_DataType>
-					</TableDataDefinition>
-					
-				</IRPYRawContainer>
-			</TableElementTypes>
+			<_modifiedTimeWeak type="a">11.4.2026::15:8:45</_modifiedTimeWeak>
+			<_modifiedTime type="a">11.4.2026::15:8:45</_modifiedTime>
 			<DataColumns type="c">
 				<IRPYRawContainer type="e">
 					<TableDataDefinition type="e">
@@ -13165,6 +13281,7 @@ return port.getType();&lt;/CODE&gt;
 						</_modelElement>
 						<TableDataDefinitionName type="a">General.Name</TableDataDefinitionName>
 						<_columnName type="a">Function</_columnName>
+						<_contextPatternLabel type="a">fct</_contextPatternLabel>
 					</TableDataDefinition>
 					
 					<TableDataDefinition type="e">
@@ -13178,8 +13295,9 @@ return port.getType();&lt;/CODE&gt;
 							<IHandle type="e">
 							</IHandle>
 						</_modelElement>
-						<TableDataDefinitionName type="a">General.Owner</TableDataDefinitionName>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
 						<_columnName type="a">Allocated to</_columnName>
+						<_contextPatternLabel type="a">fct</_contextPatternLabel>
 					</TableDataDefinition>
 					
 				</IRPYRawContainer>
@@ -13190,15 +13308,12 @@ return port.getType();&lt;/CODE&gt;
 			<_myState type="a">8192</_myState>
 			<_rmmServerID type="a">1435379_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
 			<_name type="a">Table Functions components allocation</_name>
-			<_modifiedTimeWeak type="a">3.19.2026::9:23:58</_modifiedTimeWeak>
-			<_modifiedTime type="a">3.19.2026::9:23:58</_modifiedTime>
+			<_modifiedTimeWeak type="a">11.4.2026::15:8:45</_modifiedTimeWeak>
+			<_modifiedTime type="a">11.4.2026::15:8:45</_modifiedTime>
 			<LayoutHandle type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">ITableLayout</_hm2Class>
-					<_hfilename type="a">.\SafranArchitectureProfile_v1.sbsx</_hfilename>
-					<_hsubsystem type="a">SaeArchitectureProfile::SAE Analysis package::SafranArchitectureProfile_v1::package_0</_hsubsystem>
-					<_hname type="a">Layout Functions Components allocation</_hname>
-					<_hid type="a">GUID 7dfe703c-46cb-4aa5-8211-db01f5cf5b7b</_hid>
+					<_hid type="a">GUID f3fe57cd-f4e5-4017-a42c-562d0d659c30</_hid>
 				</IHandle>
 			</LayoutHandle>
 			<ScopeHandles type="c">
@@ -13806,46 +13921,26 @@ return port.getType();&lt;/CODE&gt;
 	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
 	&lt;RETURN-TYPE&gt;Model element&lt;/RETURN-TYPE&gt;
 	&lt;GETTER&gt;
-		&lt;CODE&gt;IRPStereotype currentIRPDiagramOwnerStereotype = null;
-IRPStereotype currentLifecycleStereotype = null;
-IRPStructureDiagram currentIRPStructureDiagram = null;
-IRPModelElement currentDiagramOwner = null;
-IRPModelElement currentLifecycle = null;
-if(cellElement instanceof IRPStructureDiagram){
-	currentIRPStructureDiagram = (IRPStructureDiagram) cellElement;
-	currentDiagramOwner = currentIRPStructureDiagram.getOwner();
-	currentIRPDiagramOwnerStereotype = currentDiagramOwner.getNewTermStereotype();
-	if (currentIRPDiagramOwnerStereotype != null) {
-		if ((currentIRPDiagramOwnerStereotype.getName()).compareTo(&amp;quot;Context&amp;quot;)==0){
-			currentLifecycle = currentDiagramOwner.getOwner();
-			if(currentLifecycle!=null){
-				currentLifecycleStereotype = currentLifecycle.getNewTermStereotype();
-				if(currentLifecycleStereotype!=null){
-					if ((currentLifecycleStereotype.getName()).compareTo(&amp;quot;LifecyclePhase&amp;quot;)==0){
-						return currentLifecycle;
-					}
-					else{
-						return null;
-					}
-				}
-				else{
-					return null;
-				}
-			}
-			else{
-				return null;
-			}	
-		}
-	}
-	else{
-		return null;
-	}
-	return null;
+		&lt;CODE&gt;// Lifecycle Phase qui contient le Context Diagram de la ligne.
+// Profil actuel : le diagramme est cree directement sous la Lifecycle Phase.
+// Ancien profil : il etait sous un element &amp;quot;Context&amp;quot;, lui-meme sous la Lifecycle Phase.
+if (!(cellElement instanceof IRPStructureDiagram)) {
+    return null;
 }
-else{
-	return null;
+IRPModelElement owner = cellElement.getOwner();
+// Deux niveaux au plus : la phase elle-meme, ou la phase au-dessus de l'ancien &amp;quot;Context&amp;quot;
+for (int level = 0; level &amp;lt; 2 &amp;amp;&amp;amp; owner != null; level++) {
+    IRPStereotype newTerm = owner.getNewTermStereotype();
+    if (newTerm != null &amp;amp;&amp;amp; &amp;quot;LifecyclePhase&amp;quot;.equals(newTerm.getName())) {
+        return owner;
+    }
+    // On ne remonte que depuis l'ancien niveau intermediaire &amp;quot;Context&amp;quot;
+    if (newTerm == null || !&amp;quot;Context&amp;quot;.equals(newTerm.getName())) {
+        return null;
+    }
+    owner = owner.getOwner();
 }
-&lt;/CODE&gt;
+return null;&lt;/CODE&gt;
 	&lt;/GETTER&gt;
 	&lt;SETTER&gt;
 		&lt;CODE&gt;&lt;/CODE&gt;
@@ -13888,8 +13983,8 @@ else{
 			</_properties>
 			<_rmmServerID type="a">1350369_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
 			<_name type="a">ContextDiagramLayout</_name>
-			<_modifiedTimeWeak type="a">12.1.2021::16:28:5</_modifiedTimeWeak>
-			<_modifiedTime type="a">12.1.2021::16:28:5</_modifiedTime>
+			<_modifiedTimeWeak type="a">11.4.2026::15:8:45</_modifiedTimeWeak>
+			<_modifiedTime type="a">11.4.2026::15:8:45</_modifiedTime>
 			<TableElementTypes type="c">
 				<IRPYRawContainer type="e">
 					<TableDataDefinition type="e">
@@ -14624,8 +14719,8 @@ return null;%0D
 			</_properties>
 			<_rmmServerID type="a">1350300_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
 			<_name type="a">TechnicalBreakdownStructureLayout</_name>
-			<_modifiedTimeWeak type="a">9.10.2020::9:43:39</_modifiedTimeWeak>
-			<_modifiedTime type="a">9.2.2020::13:22:34</_modifiedTime>
+			<_modifiedTimeWeak type="a">11.4.2026::15:8:45</_modifiedTimeWeak>
+			<_modifiedTime type="a">11.4.2026::15:8:45</_modifiedTime>
 			<TableElementTypes type="c">
 				<IRPYRawContainer type="e">
 					<TableDataDefinition type="e">
@@ -14639,7 +14734,7 @@ return null;%0D
 							<IHandle type="e">
 							</IHandle>
 						</_modelElement>
-						<TableDataDefinitionName type="a">Technical Breakdown Diagram</TableDataDefinitionName>
+						<TableDataDefinitionName type="a">Technical Breakdown Structure</TableDataDefinitionName>
 						<_DataType type="a">1352029424</_DataType>
 					</TableDataDefinition>
 					
@@ -17345,8 +17440,8 @@ return null;
 			</_properties>
 			<_rmmServerID type="a">1350252_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
 			<_name type="a">FunctionLayout</_name>
-			<_modifiedTimeWeak type="a">9.10.2020::9:56:22</_modifiedTimeWeak>
-			<_modifiedTime type="a">9.10.2020::9:56:22</_modifiedTime>
+			<_modifiedTimeWeak type="a">11.4.2026::15:8:45</_modifiedTimeWeak>
+			<_modifiedTime type="a">11.4.2026::15:8:45</_modifiedTime>
 			<TableElementTypes type="c">
 				<IRPYRawContainer type="e">
 					<TableDataDefinition type="e">
@@ -17363,22 +17458,6 @@ return null;
 						<TableDataDefinitionName type="a">Function</TableDataDefinitionName>
 						<_DataType type="a">2</_DataType>
 					</TableDataDefinition>
-					
-					<TableDataDefinition type="e">
-						<_myTable type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">ITableLayout</_hm2Class>
-								<_hid type="a">GUID 57d59c3c-0c8f-46a1-9490-d8eec6111c35</_hid>
-							</IHandle>
-						</_myTable>
-						<_modelElement type="r">
-							<IHandle type="e">
-							</IHandle>
-						</_modelElement>
-						<TableDataDefinitionName type="a">Functional Architecture</TableDataDefinitionName>
-						<_DataType type="a">0</_DataType>
-					</TableDataDefinition>
-					
 				</IRPYRawContainer>
 			</TableElementTypes>
 			<DataColumns type="c">
@@ -18504,8 +18583,8 @@ else{
 			</_properties>
 			<_rmmServerID type="a">1350166_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
 			<_name type="a">Logical Technical Systems Realization</_name>
-			<_modifiedTimeWeak type="a">2.10.2023::13:58:41</_modifiedTimeWeak>
-			<_modifiedTime type="a">2.10.2023::13:58:41</_modifiedTime>
+			<_modifiedTimeWeak type="a">11.4.2026::15:8:45</_modifiedTimeWeak>
+			<_modifiedTime type="a">11.4.2026::15:8:45</_modifiedTime>
 			<TableElementTypes type="c">
 				<IRPYRawContainer type="e">
 					<TableDataDefinition type="e">
@@ -18519,7 +18598,7 @@ else{
 							<IHandle type="e">
 							</IHandle>
 						</_modelElement>
-						<TableDataDefinitionName type="a">System Realization</TableDataDefinitionName>
+						<TableDataDefinitionName type="a">Logical System Realization</TableDataDefinitionName>
 						<_DataType type="a">7209057</_DataType>
 					</TableDataDefinition>
 					
@@ -19416,7 +19495,7 @@ else{
 												
 												<IProperty type="e">
 													<_Name type="a">ContextPattern</_Name>
-													<_Value type="a">Package*,{Sys}OperationalSystem|Stakeholder,OperatingModeChartDiagram,{State}State,{dep}Dependency</_Value>
+													<_Value type="a">Package*,{Sys}OperationalSystem|Stakeholder,OperatingModeChart,{State}State,{dep}Dependency</_Value>
 													<_Type type="a">MultiLine</_Type>
 												</IProperty>
 												
@@ -19455,8 +19534,8 @@ else{
 			</_properties>
 			<_rmmServerID type="a">1350247_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
 			<_name type="a">ModeAndFunctionTraceabilityLayout</_name>
-			<_modifiedTimeWeak type="a">7.21.2023::13:13:7</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.21.2023::13:13:7</_modifiedTime>
+			<_modifiedTimeWeak type="a">11.4.2026::15:8:45</_modifiedTimeWeak>
+			<_modifiedTime type="a">11.4.2026::15:8:45</_modifiedTime>
 			<DataColumns type="c">
 				<IRPYRawContainer type="e">
 					<TableDataDefinition type="e">
@@ -22161,19 +22240,15 @@ if( cellElement instanceof IRPLink ){
 	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
 	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
 	&lt;GETTER&gt;
-		&lt;CODE&gt;IRPFlow myflow = (IRPFlow) cellElement;
-
-IRPSysMLPort mysysmlport = myflow.getEnd1SysMLPort();
-
-if(mysysmlport instanceof IRPSysMLPort){
-
-	String currentPortDirection = mysysmlport.getPortDirection();
-
-	return currentPortDirection;
-}	
-else{
-	return null;
-}&lt;/CODE&gt;
+		&lt;CODE&gt;// Direction du port cote From (end1) du flux de la ligne
+if (cellElement instanceof IRPFlow) {
+    IRPSysMLPort port = ((IRPFlow) cellElement).getEnd1SysMLPort();
+    // Flux sans port SysML a cette extremite : cellule vide
+    if (port != null) {
+        return port.getPortDirection();
+    }
+}
+return null;&lt;/CODE&gt;
 	&lt;/GETTER&gt;
 	&lt;SETTER&gt;
 		&lt;CODE&gt;&lt;/CODE&gt;
@@ -22247,30 +22322,22 @@ else{
 	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
 	&lt;RETURN-TYPE&gt;List of model elements&lt;/RETURN-TYPE&gt;
 	&lt;GETTER&gt;
-		&lt;CODE&gt;ArrayList&amp;lt;IRPModelElement&amp;gt; StereotypeList = new ArrayList&amp;lt;IRPModelElement&amp;gt;();
-
-IRPFlow myflow = (IRPFlow) cellElement;
-
-IRPSysMLPort mysysmlport = myflow.getEnd1SysMLPort();
-
-if(mysysmlport instanceof IRPSysMLPort){
-	
-	for(Object o : mysysmlport.getStereotypes().toList()){
-		if(o instanceof IRPStereotype){
-			IRPStereotype currentIRPStereotype = (IRPStereotype) o;
-
-			if( currentIRPStereotype.getIsNewTerm() == 0 &amp;amp;&amp;amp; currentIRPStereotype != null ){
-				StereotypeList.add(currentIRPStereotype);
-			}
-		}
-	}
-	
-	return StereotypeList;
+		&lt;CODE&gt;// Stereotypes ajoutes (hors New Term) du port A (extremite end1) du flux
+if (!(cellElement instanceof IRPFlow)) {
+    return null;
 }
-else
-{
-	return null;
-}&lt;/CODE&gt;
+IRPSysMLPort port = ((IRPFlow) cellElement).getEnd1SysMLPort();
+if (port == null) {
+    return null;
+}
+ArrayList&amp;lt;IRPModelElement&amp;gt; stereotypeList = new ArrayList&amp;lt;IRPModelElement&amp;gt;();
+for (Object o : port.getStereotypes().toList()) {
+    // Le New Term du port (Flow Port...) est deja visible : on ne garde que les autres
+    if (o instanceof IRPStereotype &amp;amp;&amp;amp; ((IRPStereotype) o).getIsNewTerm() == 0) {
+        stereotypeList.add((IRPStereotype) o);
+    }
+}
+return stereotypeList;&lt;/CODE&gt;
 	&lt;/GETTER&gt;
 	&lt;SETTER&gt;
 		&lt;CODE&gt;&lt;/CODE&gt;
@@ -22298,20 +22365,18 @@ else
 	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
 	&lt;RETURN-TYPE&gt;List of model elements&lt;/RETURN-TYPE&gt;
 	&lt;GETTER&gt;
-		&lt;CODE&gt;
-IRPFlow myflow = (IRPFlow) cellElement; 
-
-IRPCollection mycollection = myflow.getConveyed();
-
-if( mycollection!= null )
-{     
-      @SuppressWarnings(&amp;quot;unchecked&amp;quot;)
-       List&amp;lt;IRPModelElement&amp;gt; ConveyedList = (List&amp;lt;IRPModelElement&amp;gt;) mycollection.toList();
-       return ConveyedList;
-
-}else{
-       return null;
-}&lt;/CODE&gt;
+		&lt;CODE&gt;// Elements vehicules (conveyed) par le flux de la ligne
+if (!(cellElement instanceof IRPFlow)) {
+    return null;
+}
+IRPCollection conveyed = ((IRPFlow) cellElement).getConveyed();
+if (conveyed == null) {
+    return null;
+}
+// toList() renvoie une liste brute : conversion vers la liste attendue par la colonne
+@SuppressWarnings(&amp;quot;unchecked&amp;quot;)
+List&amp;lt;IRPModelElement&amp;gt; conveyedList = (List&amp;lt;IRPModelElement&amp;gt;) conveyed.toList();
+return conveyedList;&lt;/CODE&gt;
 	&lt;/GETTER&gt;
 	&lt;SETTER&gt;
 		&lt;CODE&gt;&lt;/CODE&gt;
@@ -22339,30 +22404,22 @@ if( mycollection!= null )
 	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
 	&lt;RETURN-TYPE&gt;List of model elements&lt;/RETURN-TYPE&gt;
 	&lt;GETTER&gt;
-		&lt;CODE&gt;ArrayList&amp;lt;IRPModelElement&amp;gt; StereotypeList = new ArrayList&amp;lt;IRPModelElement&amp;gt;();
-
-IRPFlow myflow = (IRPFlow) cellElement;
-
-IRPSysMLPort mysysmlport = myflow.getEnd2SysMLPort();
-
-if(mysysmlport instanceof IRPSysMLPort){
-	
-	for(Object o : mysysmlport.getStereotypes().toList()){
-		if(o instanceof IRPStereotype){
-			IRPStereotype currentIRPStereotype = (IRPStereotype) o;
-
-			if( currentIRPStereotype.getIsNewTerm() == 0 &amp;amp;&amp;amp; currentIRPStereotype != null ){
-				StereotypeList.add(currentIRPStereotype);
-			}
-		}
-	}
-	
-	return StereotypeList;
+		&lt;CODE&gt;// Stereotypes ajoutes (hors New Term) du port B (extremite end2) du flux
+if (!(cellElement instanceof IRPFlow)) {
+    return null;
 }
-else
-{
-	return null;
-}&lt;/CODE&gt;
+IRPSysMLPort port = ((IRPFlow) cellElement).getEnd2SysMLPort();
+if (port == null) {
+    return null;
+}
+ArrayList&amp;lt;IRPModelElement&amp;gt; stereotypeList = new ArrayList&amp;lt;IRPModelElement&amp;gt;();
+for (Object o : port.getStereotypes().toList()) {
+    // Le New Term du port (Flow Port...) est deja visible : on ne garde que les autres
+    if (o instanceof IRPStereotype &amp;amp;&amp;amp; ((IRPStereotype) o).getIsNewTerm() == 0) {
+        stereotypeList.add((IRPStereotype) o);
+    }
+}
+return stereotypeList;&lt;/CODE&gt;
 	&lt;/GETTER&gt;
 	&lt;SETTER&gt;
 		&lt;CODE&gt;&lt;/CODE&gt;
@@ -22436,19 +22493,15 @@ else
 	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
 	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
 	&lt;GETTER&gt;
-		&lt;CODE&gt;IRPFlow myflow = (IRPFlow) cellElement;
-
-IRPSysMLPort mysysmlport = myflow.getEnd2SysMLPort();
-
-if(mysysmlport instanceof IRPSysMLPort){
-
-	String currentPortDirection = mysysmlport.getPortDirection();
-
-	return currentPortDirection;
-}	
-else{
-	return null;
-}&lt;/CODE&gt;
+		&lt;CODE&gt;// Direction du port cote To (end2) du flux de la ligne
+if (cellElement instanceof IRPFlow) {
+    IRPSysMLPort port = ((IRPFlow) cellElement).getEnd2SysMLPort();
+    // Flux sans port SysML a cette extremite : cellule vide
+    if (port != null) {
+        return port.getPortDirection();
+    }
+}
+return null;&lt;/CODE&gt;
 	&lt;/GETTER&gt;
 	&lt;SETTER&gt;
 		&lt;CODE&gt;&lt;/CODE&gt;
@@ -22491,8 +22544,8 @@ else{
 			</_properties>
 			<_rmmServerID type="a">1380470_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
 			<_name type="a">OperationalICDNewProfile_Layout</_name>
-			<_modifiedTimeWeak type="a">7.3.2025::12:42:4</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.3.2025::12:42:4</_modifiedTime>
+			<_modifiedTimeWeak type="a">11.4.2026::15:8:45</_modifiedTimeWeak>
+			<_modifiedTime type="a">11.4.2026::15:8:45</_modifiedTime>
 			<DataColumns type="c">
 				<IRPYRawContainer type="e">
 					<TableDataDefinition type="e">
@@ -39034,7 +39087,7 @@ if( cellElement instanceof IRPLink ){
 			<BROWSER-ICON>TableLayout~ALL~BrowserIcon</BROWSER-ICON>
 			<GROUP-ICON>TableLayout~ALL~GroupIcon</GROUP-ICON>
 			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
-			<MODIFIED-TIME-UTC>2026/10/12 14:40:31</MODIFIED-TIME-UTC>
+			<MODIFIED-TIME-UTC>2026/11/4 15:8:45</MODIFIED-TIME-UTC>
 			<VIEW-PARENTS></VIEW-PARENTS>
 			<VIEW-CHILDREN></VIEW-CHILDREN>
 			<AGGREGATES></AGGREGATES>
@@ -39156,7 +39209,7 @@ if( cellElement instanceof IRPLink ){
 			<BROWSER-ICON>TableLayout~ALL~BrowserIcon</BROWSER-ICON>
 			<GROUP-ICON>TableLayout~ALL~GroupIcon</GROUP-ICON>
 			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
-			<MODIFIED-TIME-UTC>2026/3/19 9:20:49</MODIFIED-TIME-UTC>
+			<MODIFIED-TIME-UTC>2026/11/4 15:8:45</MODIFIED-TIME-UTC>
 			<VIEW-PARENTS></VIEW-PARENTS>
 			<VIEW-CHILDREN></VIEW-CHILDREN>
 			<AGGREGATES></AGGREGATES>
@@ -39173,7 +39226,7 @@ if( cellElement instanceof IRPLink ){
 			<BROWSER-ICON>TableLayout~ALL~BrowserIcon</BROWSER-ICON>
 			<GROUP-ICON>TableLayout~ALL~GroupIcon</GROUP-ICON>
 			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
-			<MODIFIED-TIME-UTC>2026/5/11 13:25:41</MODIFIED-TIME-UTC>
+			<MODIFIED-TIME-UTC>2026/11/4 15:8:45</MODIFIED-TIME-UTC>
 			<VIEW-PARENTS></VIEW-PARENTS>
 			<VIEW-CHILDREN></VIEW-CHILDREN>
 			<AGGREGATES></AGGREGATES>
@@ -39190,7 +39243,7 @@ if( cellElement instanceof IRPLink ){
 			<BROWSER-ICON>TableLayout~ALL~BrowserIcon</BROWSER-ICON>
 			<GROUP-ICON>TableLayout~ALL~GroupIcon</GROUP-ICON>
 			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
-			<MODIFIED-TIME-UTC>2026/3/19 9:23:58</MODIFIED-TIME-UTC>
+			<MODIFIED-TIME-UTC>2026/11/4 15:8:45</MODIFIED-TIME-UTC>
 			<VIEW-PARENTS></VIEW-PARENTS>
 			<VIEW-CHILDREN></VIEW-CHILDREN>
 			<AGGREGATES></AGGREGATES>
@@ -39207,7 +39260,7 @@ if( cellElement instanceof IRPLink ){
 			<BROWSER-ICON>TableView~ALL~BrowserIcon</BROWSER-ICON>
 			<GROUP-ICON>TableView~ALL~GroupIcon</GROUP-ICON>
 			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
-			<MODIFIED-TIME-UTC>2026/3/19 9:23:58</MODIFIED-TIME-UTC>
+			<MODIFIED-TIME-UTC>2026/11/4 15:8:45</MODIFIED-TIME-UTC>
 			<VIEW-PARENTS></VIEW-PARENTS>
 			<VIEW-CHILDREN></VIEW-CHILDREN>
 			<AGGREGATES></AGGREGATES>
@@ -39312,7 +39365,7 @@ if( cellElement instanceof IRPLink ){
 			<BROWSER-ICON>TableLayout~ALL~BrowserIcon</BROWSER-ICON>
 			<GROUP-ICON>TableLayout~ALL~GroupIcon</GROUP-ICON>
 			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
-			<MODIFIED-TIME-UTC>2021/12/1 16:28:5</MODIFIED-TIME-UTC>
+			<MODIFIED-TIME-UTC>2026/11/4 15:8:45</MODIFIED-TIME-UTC>
 			<VIEW-PARENTS></VIEW-PARENTS>
 			<VIEW-CHILDREN></VIEW-CHILDREN>
 			<AGGREGATES></AGGREGATES>
@@ -39393,7 +39446,7 @@ if( cellElement instanceof IRPLink ){
 			<BROWSER-ICON>TableLayout~ALL~BrowserIcon</BROWSER-ICON>
 			<GROUP-ICON>TableLayout~ALL~GroupIcon</GROUP-ICON>
 			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
-			<MODIFIED-TIME-UTC>2020/9/2 13:22:34</MODIFIED-TIME-UTC>
+			<MODIFIED-TIME-UTC>2026/11/4 15:8:45</MODIFIED-TIME-UTC>
 			<VIEW-PARENTS></VIEW-PARENTS>
 			<VIEW-CHILDREN></VIEW-CHILDREN>
 			<AGGREGATES></AGGREGATES>
@@ -39627,7 +39680,7 @@ if( cellElement instanceof IRPLink ){
 			<BROWSER-ICON>TableLayout~ALL~BrowserIcon</BROWSER-ICON>
 			<GROUP-ICON>TableLayout~ALL~GroupIcon</GROUP-ICON>
 			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
-			<MODIFIED-TIME-UTC>2020/9/10 9:56:22</MODIFIED-TIME-UTC>
+			<MODIFIED-TIME-UTC>2026/11/4 15:8:45</MODIFIED-TIME-UTC>
 			<VIEW-PARENTS></VIEW-PARENTS>
 			<VIEW-CHILDREN></VIEW-CHILDREN>
 			<AGGREGATES></AGGREGATES>
@@ -39720,7 +39773,7 @@ if( cellElement instanceof IRPLink ){
 			<BROWSER-ICON>TableLayout~ALL~BrowserIcon</BROWSER-ICON>
 			<GROUP-ICON>TableLayout~ALL~GroupIcon</GROUP-ICON>
 			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
-			<MODIFIED-TIME-UTC>2023/2/10 13:58:41</MODIFIED-TIME-UTC>
+			<MODIFIED-TIME-UTC>2026/11/4 15:8:45</MODIFIED-TIME-UTC>
 			<VIEW-PARENTS></VIEW-PARENTS>
 			<VIEW-CHILDREN></VIEW-CHILDREN>
 			<AGGREGATES></AGGREGATES>
@@ -39807,7 +39860,7 @@ if( cellElement instanceof IRPLink ){
 			<BROWSER-ICON>TableLayout~ALL~BrowserIcon</BROWSER-ICON>
 			<GROUP-ICON>TableLayout~ALL~GroupIcon</GROUP-ICON>
 			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
-			<MODIFIED-TIME-UTC>2023/7/21 13:13:7</MODIFIED-TIME-UTC>
+			<MODIFIED-TIME-UTC>2026/11/4 15:8:45</MODIFIED-TIME-UTC>
 			<VIEW-PARENTS></VIEW-PARENTS>
 			<VIEW-CHILDREN></VIEW-CHILDREN>
 			<AGGREGATES></AGGREGATES>
@@ -39945,7 +39998,7 @@ if( cellElement instanceof IRPLink ){
 			<BROWSER-ICON>TableLayout~ALL~BrowserIcon</BROWSER-ICON>
 			<GROUP-ICON>TableLayout~ALL~GroupIcon</GROUP-ICON>
 			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
-			<MODIFIED-TIME-UTC>2025/7/3 12:42:4</MODIFIED-TIME-UTC>
+			<MODIFIED-TIME-UTC>2026/11/4 15:8:45</MODIFIED-TIME-UTC>
 			<VIEW-PARENTS></VIEW-PARENTS>
 			<VIEW-CHILDREN></VIEW-CHILDREN>
 			<AGGREGATES></AGGREGATES>
