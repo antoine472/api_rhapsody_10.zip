@@ -1,0 +1,289 @@
+[Helpers]
+numberOfElements=100
+
+#prochainIndiceLibre = 54
+
+##################################################################################
+Definition of the Safran Plugin - reacts to user actions through context menu
+##################################################################################
+
+name1=SafranPlugin
+JavaMainClass1=main.SafranProfilePlugin
+JavaClassPath1=".\..\SafranArchitectureProfile\SafranArchitectureProfile_EXE\safran_app.jar"
+isPlugin1=1
+DLLServerCompatible1=1
+
+# Declaration of plug-in.
+name20=SafranListener
+JavaMainClass20=main.SafranListenerPlugin
+JavaClassPath20=".\..\SafranArchitectureProfile\SafranArchitectureProfile_EXE\safran_listener.jar"
+isPlugin20=1
+DLLServerCompatible20=1
+
+name41=SafranChecker
+JavaMainClass41=com.safran.checker.plugin.SafranCheckerPlugin
+JavaClassPath41=".\..\SafranArchitectureProfile\SafranArchitectureProfile_EXE\safran_checker.jar"
+isPlugin41=1
+DLLServerCompatible41=1
+
+##################################################################################
+Helpers definition
+##################################################################################
+
+# Improves user navigation
+name2=Open parent diagram
+isPlugInCommand2=1
+command2=SafranPlugin
+applicableTo2=Functional Behavior Diagram
+isVisible2=1
+
+# Creates functions for functional system
+# name3=Safran Toolkit...\Initialize service functions
+# isPlugInCommand3=1
+# command3=SafranPlugin
+# applicableTo3=Functional System
+# isVisible3=1
+
+# Generate a Functional Structure Diagram
+name6=Safran Toolkit...\Generate FBS
+isPlugInCommand6=1
+command6=SafranPlugin
+applicableTo6=Function, Functional System
+isVisible6=1
+
+# Generate a Logical Structure Diagram
+name42=Safran Toolkit...\Generate LBS
+isPlugInCommand42=1
+command42=SafranPlugin
+applicableTo42=Logical System
+isVisible42=1
+
+# Generate a Technical Breakdown Diagram
+name43=Safran Toolkit...\Generate TBS
+isPlugInCommand43=1
+command43=SafranPlugin
+applicableTo43=Technical Component
+isVisible43=1
+
+# Rearrange Logical System tree
+name45=Safran Toolkit...\Rearrange Tree Layout
+isPlugInCommand45=1
+command45=SafranPlugin
+applicableTo45=Logical System
+isVisible45=1
+
+# Update redefined ports of derived references
+name51=Safran Toolkit...\Update Redefined Ports
+isPlugInCommand51=1
+command51=SafranPlugin
+applicableTo51=Function, Logical System, Technical Component, Function With Reference, Logical System With Reference
+isVisible51=1
+
+# Port propagation
+name7=Safran Toolkit...\Configure Propagate properties
+isPlugInCommand7=1
+command7=SafranPlugin
+applicableTo7=Flow Port
+isVisible7=1
+
+name31=Safran Toolkit...\Propagate properties
+isPlugInCommand31=1
+command31=SafranPlugin
+applicableTo31=Flow Port
+isVisible31=1
+
+name32=Safran Toolkit...\Propagate stereotype to all
+isPlugInCommand32=1
+command32=SafranPlugin
+applicableTo32=Flow Item
+isVisible32=1
+
+#REM: Declaration of Generate Integration Date Table pop-up menu command for RhapsodyPlugInForSafranArchitecture plug-in
+name11=Safran Toolkit...\Update function allocation
+isPlugInCommand11=1
+command11=SafranPlugin
+applicableTo11=Logical System, Technical Component
+isVisible11=1
+
+#REM: Declaration of Generate Integration Date Table pop-up menu command for RhapsodyPlugInForSafranArchitecture plug-in
+name13=Safran Toolkit...\Send to definition
+isPlugInCommand13=1
+command13=SafranPlugin
+applicableTo13=Operational Port, Functional Port, Logical Port, Technical Port, Function
+isVisible13=1
+
+#REM: Declaration of Generate Integration Date Table pop-up menu command for RhapsodyPlugInForSafranArchitecture plug-in
+name14=Safran Toolkit...\Update functional realization
+isPlugInCommand14=1
+command14=SafranPlugin
+applicableTo14=Technical Component
+isVisible14=1
+
+#REM: Declaration of Generate Integration Date Table pop-up menu command for RhapsodyPlugInForSafranArchitecture plug-in
+name15=Safran Toolkit...\Export to library
+isPlugInCommand15=1
+command15=SafranPlugin
+applicableTo15=Technical Component, Logical System, Operational System
+isVisible15=1
+
+#REM: Declaration of Generate Integration Date Table pop-up menu command for RhapsodyPlugInForSafranArchitecture plug-in
+name16=Safran Toolkit...\Generic Flow Update
+isPlugInCommand16=1
+command16=SafranPlugin
+applicableTo16=Generic Flow
+isVisible16=1
+
+#REM: Declaration of Generate Integration Date Table pop-up menu command for RhapsodyPlugInForSafranArchitecture plug-in
+name17=Safran Toolkit...\Update logical realization
+isPlugInCommand17=1
+command17=SafranPlugin
+applicableTo17=Technical Component
+isVisible17=1
+
+name18=Safran Toolkit...\Get function definition
+isPlugInCommand18=1
+command18=SafranPlugin
+applicableTo18=Logical System, Technical Component, Function, Functional System
+isVisible18=1
+
+#REM: Declaration of Generate Integration Date Table pop-up menu command for SafranPlugin plug-in
+name22=Return home
+isPlugInCommand22=1
+command22=SafranPlugin
+applicableTo22=G - Analysis Package, ArchitectureDiagram, BreakdownDiagram, Context, Context Diagram, Continuous Link, Continuous Port, Discrete Link, Discrete Port, Domain Diagram, Domain Package, Environment Element, Environment Element Instance, F - Flow Package, Function, Functional Behavior Diagram, Functional Breakdown Structure, Functional Flow, B - Functional View Package, Function Call, InOut, E - Interface Management Package, Interface Contract, Invokes, Lifecycle, Lifecycle Diagram, Lifecycle Phase, Lifecycle Phase Transition, Logical Architecture Diagram, C - Logical Architecture Package, Logical Breakdown Structure, Logical Circuit, Logical Interface Context, Logical Interface Diagram, Logical Interface Package, Logical Sequence Diagram, Logical System, Logical System Instance, Logical Taxonomy Diagram, Operating Mode, Operating Mode Chart Diagram, A - Operational Analysis Package, Operational Breakdown Diagram, Operational Flowchart Diagram, Operational Sequence Diagram, Operational System, Operational System Instance, Operational Taxonomy Diagram, Realization_, Responsibility, Safran Architecture Project, SafranSpecialization, Satisfies, Sequence_Diagram, Stakeholder, Stakeholder Diagram, Stakeholder Instance, System_, TaxonomyDiagram, D - Technical Analysis Package, Technical Architecture Diagram, Technical Breakdown Diagram, Technical Component, Technical Component Instance, Technical Discrete Port, Technical Interface Context, Technical Interface Diagram, Technical Interface Package, Technical Port, H - Test Package, Use_Case, Use_Case Diagram, Dimension, Test Component, TestSequenceDiagram, Use_Case, Use_Case Diagram, Dependency, HyperLink, Tag, CallOperation, Pin, Link,Environment Diagram
+isVisible22=1
+
+#REM: Declaration of Generate Integration Date Table pop-up menu command for RhapsodyPlugInForSafranArchitecture plug-in
+name29=Safran Toolkit...\Select Flow Item definition
+isPlugInCommand29=1
+command29=SafranPlugin
+applicableTo29=Message, Flow Port, Generic Flow, Logical Flow, Functional Flow
+isVisible29=1
+
+
+name46=Safran Toolkit...\Locate Flow Item in Browser
+isPlugInCommand46=1
+command46=SafranPlugin
+applicableTo46=Generic Flow, Logical Flow, Functional Flow, Technical Flow, Operational Flow
+isVisible46=1
+
+name5=Safran Toolkit...\Select Function definition
+isPlugInCommand5=1
+command5=SafranPlugin
+applicableTo5=ActionBlock
+isVisible5=1
+
+name10=Safran Toolkit...\Select Mode definition
+isPlugInCommand10=1
+command10=SafranPlugin
+applicableTo10=ConditionMark
+isVisible10=1
+
+name30=Safran Toolkit...\Initialize Functional Analysis
+isPlugInCommand30=1
+command30=SafranPlugin
+applicableTo30=B - Functional View Package
+isVisible30=1
+
+# Flow Port direction
+name33=Safran Toolkit...\Define Direction...\As input
+isPlugInCommand33=1
+command33=SafranPlugin
+applicableTo33=Flow Port
+isVisible33=1
+
+name34=Safran Toolkit...\Define Direction...\As output
+isPlugInCommand34=1
+command34=SafranPlugin
+applicableTo34=Flow Port
+isVisible34=1
+
+name35=Safran Toolkit...\Define Direction...\As bidirectional
+isPlugInCommand35=1
+command35=SafranPlugin
+applicableTo35=Flow Port
+isVisible35=1
+
+# Reverse flow direction
+name44=Safran Toolkit...\Reverse flow direction
+isPlugInCommand44=1
+command44=SafranPlugin
+applicableTo44=Operational Flow, Functional Flow, Logical Flow, Technical Flow
+isVisible44=1
+
+# Clean redefined ports in the current diagram
+name52=Safran Toolkit...\Clean Redefined Ports in Diagram
+isPlugInCommand52=1
+command52=SafranPlugin
+applicableTo52=Context Diagram, Logical Architecture Diagram, Functional Behavior Diagram, System Functional Behavior
+isVisible52=1
+
+# Set Reference Definition
+name53=Safran Toolkit...\Set Reference Definition
+isPlugInCommand53=1
+command53=SafranPlugin
+applicableTo53=Function With Reference, Logical System With Reference
+isVisible53=1
+
+############################################################
+Home Page diagram creation
+############################################################
+
+#REM: Declaration of Generate Integration Date Table pop-up menu command for RhapsodyPlugInForSafranArchitecture plug-in
+name23=Create a new Use Case diagram
+isPlugInCommand23=1
+command23=RhapsodyPlugInForSafranArchitecture
+applicableTo23=UseCaseDiagramTableViewHyperLink
+isVisible23=1
+
+#REM: Declaration of Generate Integration Date Table pop-up menu command for RhapsodyPlugInForSafranArchitecture plug-in
+name24=Create a new Context diagram
+isPlugInCommand24=1
+command24=RhapsodyPlugInForSafranArchitecture
+applicableTo24=ContextDiagramTableViewHyperLink
+isVisible24=1
+
+#REM: Declaration of Generate Integration Date Table pop-up menu command for RhapsodyPlugInForSafranArchitecture plug-in
+name25=Create a new Operational Sequence diagram
+isPlugInCommand25=1
+command25=RhapsodyPlugInForSafranArchitecture
+applicableTo25=OperationalSequenceDiagramTableViewHyperLink
+isVisible25=1
+
+#REM: Declaration of Generate Integration Date Table pop-up menu command for RhapsodyPlugInForSafranArchitecture plug-in
+name26=Create a new Logical Architecture diagram
+isPlugInCommand26=1
+command26=RhapsodyPlugInForSafranArchitecture
+applicableTo26=LogicalArchitectureDiagramTableViewHyperLink
+isVisible26=1
+
+#REM: Declaration of Generate Integration Date Table pop-up menu command for RhapsodyPlugInForSafranArchitecture plug-in
+name27=Create a new Technical Architecture diagram
+isPlugInCommand27=1
+command27=RhapsodyPlugInForSafranArchitecture
+applicableTo27=TechnicalArchitectureDiagramTableViewHyperLink
+isVisible27=1
+
+#REM: Declaration of Generate Integration Date Table pop-up menu command for RhapsodyPlugInForSafranArchitecture plug-in
+name28=Create a new Functional Behavior diagram
+isPlugInCommand28=1
+command28=RhapsodyPlugInForSafranArchitecture
+applicableTo28=FunctionalBehaviorDiagramTableViewHyperLink
+isVisible28=1
+
+#REM: Declaration of Generate Integration Date Table pop-up menu command for RhapsodyPlugInForSafranArchitecture plug-in
+name40=Create a new Logical Circuit diagram
+isPlugInCommand40=1
+command40=RhapsodyPlugInForSafranArchitecture
+applicableTo40=CircuitDiagramTableViewHyperLink
+isVisible40=1
+
+#REM: Return home in toolbar
+name50=Return home
+isPlugInCommand50=1
+command50=SafranPlugin
+isToolbarButton50=1
+pluginIcon50=..\Icons\home16.png
+isVisible50=1
+
+# Note: Not required to declare Checkers in .hep file.

@@ -11,3 +11,8 @@ SafranProfilePlugin/logs/
 *.save
 *_auto_rpy/
 *.bak
+
+# Classes compilees des projets Listener et Checker (regenerees a chaque build)
+SafranProfileListener/bin/
+SafranProfileListener/target/
+SafranProfileChecker/bin/

@@ -21,11 +21,9 @@ public class Toast {
 		label.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
 		toastWindow.add(label, BorderLayout.CENTER);
 
-		// Position the toast at the bottom-right of the screen
-		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		int x = screenSize.width - 300; // Adjust the width as needed
-		int y = screenSize.height - 100; // Adjust the height as needed
-		toastWindow.setBounds(x, y, 250, 50);
+		// Bottom-right of the screen the user works on (where Rhapsody is)
+		Point at = bottomRightOfActiveScreen(250, 50);
+		toastWindow.setBounds(at.x, at.y, 250, 50);
 
 		// Display the toast
 		toastWindow.setVisible(true);
@@ -40,7 +38,8 @@ public class Toast {
 		}).start();
 	}
 	/**
-	 * Displays a toast message at the bottom-right of the screen.
+	 * Displays an information toast at the bottom-right of the screen the user
+	 * works on (the one under the mouse, where Rhapsody is).
 	 * @param message The message to display.
 	 * @param duration The duration (in milliseconds) for which the toast is visible.
 	 */
@@ -51,7 +50,7 @@ public class Toast {
 
 		// Create a label with an icon and multi-line support
 		JLabel label = new JLabel("<html><div style='text-align: center;'>" + message.replaceAll("\n", "<br>") + "</div></html>", SwingConstants.CENTER);
-		label.setIcon(UIManager.getIcon("OptionPane.errorIcon")); // Add an icon (change to desired icon)
+		label.setIcon(UIManager.getIcon("OptionPane.informationIcon"));
 		label.setOpaque(true);
 		label.setBackground(new Color(0, 0, 0, 200)); // Semi-transparent background
 		label.setForeground(Color.WHITE);
@@ -71,11 +70,9 @@ public class Toast {
 		toastWindow.add(progressBar, BorderLayout.SOUTH);
 
 
-		// Position the toast at the bottom-right of the screen
-		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-		int x = screenSize.width - 350; // Adjust the width as needed
-		int y = screenSize.height - 125; // Adjust the height as needed
-		toastWindow.setBounds(x, y, 350, 75);  // Adjust size to accommodate layout
+		// Bottom-right of the screen the user works on (where Rhapsody is)
+		Point at = bottomRightOfActiveScreen(350, 75);
+		toastWindow.setBounds(at.x, at.y, 350, 75);
 
 		// Display the toast
 		toastWindow.setVisible(true);
@@ -97,6 +94,47 @@ public class Toast {
 			}
 		});
 		timer.start();
+	}
+
+	/** Gap between the toast and the screen edges (taskbar excluded). */
+	private static final int MARGIN = 16;
+
+	/**
+	 * Top-left corner for a {@code width} x {@code height} toast in the
+	 * bottom-right corner of the screen under the mouse (Rhapsody's main window
+	 * is native, so the mouse is the reliable hint of the screen in use), above
+	 * its taskbar. Falls back to the primary screen.
+	 */
+	private static Point bottomRightOfActiveScreen(int width, int height) {
+		GraphicsConfiguration screen = null;
+		try {
+			PointerInfo pointer = MouseInfo.getPointerInfo();
+			if (pointer != null) {
+				Point mouse = pointer.getLocation();
+				for (GraphicsDevice device : GraphicsEnvironment.getLocalGraphicsEnvironment().getScreenDevices()) {
+					GraphicsConfiguration gc = device.getDefaultConfiguration();
+					if (gc.getBounds().contains(mouse)) {
+						screen = gc;
+						break;
+					}
+				}
+			}
+		} catch (Exception ignore) {
+		}
+		if (screen == null) {
+			screen = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice().getDefaultConfiguration();
+		}
+
+		Rectangle area = screen.getBounds();
+		try {
+			Insets taskbar = Toolkit.getDefaultToolkit().getScreenInsets(screen);
+			area = new Rectangle(area.x + taskbar.left, area.y + taskbar.top,
+					area.width - taskbar.left - taskbar.right,
+					area.height - taskbar.top - taskbar.bottom);
+		} catch (Exception ignore) {
+		}
+		return new Point(area.x + area.width - width - MARGIN,
+				area.y + area.height - height - MARGIN);
 	}
 
 

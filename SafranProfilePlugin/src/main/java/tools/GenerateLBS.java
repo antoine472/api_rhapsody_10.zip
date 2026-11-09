@@ -1,15 +1,20 @@
 package tools;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
 import com.telelogic.rhapsody.core.IRPApplication;
+import com.telelogic.rhapsody.core.IRPClass;
 import com.telelogic.rhapsody.core.IRPCollection;
 import com.telelogic.rhapsody.core.IRPDependency;
 import com.telelogic.rhapsody.core.IRPDiagram;
+import com.telelogic.rhapsody.core.IRPGeneralization;
 import com.telelogic.rhapsody.core.IRPGraphEdge;
 import com.telelogic.rhapsody.core.IRPGraphElement;
 import com.telelogic.rhapsody.core.IRPGraphNode;
@@ -47,11 +52,15 @@ public class GenerateLBS extends RhapsodyTool {
 	private static final int LOGICAL_WIDTH = 300;
 	private static final int VERTICAL_SPACING = 20;
 	private static final int HORIZONTAL_OFFSET = 100;
+	private static final String NODE_TYPE = "Logical System";
+	private static final String REFERENCE_TYPE = "Logical System With Reference";
+	private static final String REFERENCE_LINK = "References Logical System";
              
 	private IRPDiagram attachedDiagram = null;
 	private IRPModelElement startPoint = null;
 	private int currentYPosition = 0;
 	private IRPCollection graphElements;
+	private final List<IRPGraphNode[]> virtualContainments = new ArrayList<IRPGraphNode[]>();
 
 	public GenerateLBS(IRPApplication rpyApp) {
 		super(rpyApp);
@@ -68,6 +77,7 @@ public class GenerateLBS extends RhapsodyTool {
 		startPoint = rhApp.getSelectedElement();                      
 		currentYPosition = 0;                                                                   
 		graphElements = rhApp.createNewCollection();
+		virtualContainments.clear();
 
 		if (startPoint == null) {
 			rhpLog.error("No model element selected.");
@@ -93,11 +103,14 @@ public class GenerateLBS extends RhapsodyTool {
 			}
 		}
 
-		// Update or create diagram
+		// Ask for depth before clearing an existing diagram.
+		Integer maxDepth = selectMaxDepthInJavaWindow();
+		if (maxDepth == null) return;
+
 		if (attachedDiagram != null) {
-			updatedExistingDiagram();
+			updatedExistingDiagram(maxDepth);
 		} else {
-			createNewDiagram();
+			createNewDiagram(maxDepth);
 		}
 
 		rhpLog.debug("Completed execution of: " + COMMAND);
@@ -106,11 +119,11 @@ public class GenerateLBS extends RhapsodyTool {
 	/**
 	 * Updates an existing diagram after user confirmation.
 	 */
-	private void updatedExistingDiagram() {
+	private void updatedExistingDiagram(int maxDepth) {
 		if (alertUser()) {
 			rhpLog.info("User confirmed diagram update.");
 			attachedDiagram.removeGraphElements(attachedDiagram.getGraphicalElements());
-			createDiagram();
+			createDiagram(maxDepth);
 		} else {
 			rhpLog.info("User cancelled diagram update.");
 		}
@@ -122,7 +135,7 @@ public class GenerateLBS extends RhapsodyTool {
 	 * FIX: replaced findEnclosingPackage(startPoint) with direct getOwner() cast,
 	 * to avoid climbing up to the project root when the owner is an IRPPackage.
 	 */
-	private void createNewDiagram() {
+	private void createNewDiagram(int maxDepth) {
 
 	    // FIX : on prend le owner DIRECT de startPoint, pas le premier ancêtre IRPPackage
 	    IRPModelElement ownerElement = startPoint.getOwner();
@@ -147,7 +160,7 @@ public class GenerateLBS extends RhapsodyTool {
 	    attachedDiagram.setDisplayName(startPoint.getDisplayName());
 	    rhpLog.info("Created new LBS diagram: " + attachedDiagram.getName());
 
-	    createDiagram();
+	    createDiagram(maxDepth);
 	    attachedDiagram.addDependencyTo(startPoint);
 	}
 	
@@ -165,7 +178,7 @@ public class GenerateLBS extends RhapsodyTool {
 //		attachedDiagram = (IRPDiagram) parentPackage.addNewAggr("Logical Breakdown Structure", startPoint.getName());
 //		attachedDiagram.setDisplayName(startPoint.getDisplayName());
 //		rhpLog.info("Created new LBS diagram: " + attachedDiagram.getName());
-//		createDiagram();
+//		createDiagram(maxDepth);
 //		attachedDiagram.addDependencyTo(startPoint);
 //	}
 
@@ -224,48 +237,146 @@ public class GenerateLBS extends RhapsodyTool {
 	/**
 	 * Entry point for recursive diagram creation.
 	 */
-	private void createDiagram() {
-		Integer maxDepth = selectMaxDepthInJavaWindow();
-		if (maxDepth == null) return;
-
+	private void createDiagram(int maxDepth) {
 		rhpLog.debug("Starting diagram creation with max depth: " + maxDepth);
 
-		addLogicalSystemToDiagram(startPoint, 50, currentYPosition + 80, 1, maxDepth);
-		
-		attachedDiagram.completeRelations(graphElements, 1);
-		rhpLog.debug("Completed containment relations.");
+		addLogicalSystemToDiagram(startPoint, 50, currentYPosition + 80, maxDepth,
+				new HashSet<String>(), null);
+
+		// The LBS is a pure breakdown view: do not complete all model
+		// relations, which would also introduce flows and port connectors.
+		removePortRepresentations();
+		createVirtualContainments();
 		repositionRelations();
 		attachedDiagram.openDiagram();
 		rhpLog.debug("Diagram creation completed.");
 	}
 
 	/**
-	 * Recursively adds logical  to the diagram.
+	 * Adds the visible logical system or reference, then recursively expands its children.
+	 * A Logical System With Reference displays its base class's children under the
+	 * reference node itself: the referenced base class is never drawn.
+	 *
+	 * The visited GUIDs are path-local, so the same target may legitimately be
+	 * expanded in multiple independent branches without a false cycle warning.
 	 */
-	private int addLogicalSystemToDiagram(IRPModelElement element, int x, int y, int level, int maxDepth) {
-		if (maxDepth == 0) return 0;
+	private void addLogicalSystemToDiagram(IRPModelElement element, int x, int y,
+			int remainingDepth, Set<String> ancestors, IRPGraphNode virtualParent) {
+		if (remainingDepth == 0 || element == null) return;
 
-		rhpLog.debug("Adding function: " + element.getName() + " at level " + level + ", position: (" + x + "," + y + ")");
+		String elementGuid = element.getGUID();
+		if (ancestors.contains(elementGuid)) {
+			rhpLog.warn("LBS cycle detected at " + element.getName() + "; branch skipped.");
+			return;
+		}
+		Set<String> path = new HashSet<String>(ancestors);
+		path.add(elementGuid);
 
-		IRPGraphNode node = attachedDiagram.addNewNodeForElement(element, x, y, LOGICAL_WIDTH, LOGICAL_HEIGHT);
+		rhpLog.debug("Adding logical system: " + element.getName()
+				+ " at position: (" + x + "," + y + ")");
+		IRPGraphNode node = attachedDiagram.addNewNodeForElement(
+				element, x, y, LOGICAL_WIDTH, LOGICAL_HEIGHT);
 		graphElements.addGraphicalItem(node);
+		if (virtualParent != null) {
+			virtualContainments.add(new IRPGraphNode[] { virtualParent, node });
+		}
 
-		int nextX = x + HORIZONTAL_OFFSET;
-		int nextY = y + LOGICAL_HEIGHT + VERTICAL_SPACING;
-		currentYPosition = nextY;
+		currentYPosition = y + LOGICAL_HEIGHT + VERTICAL_SPACING;
+		if (remainingDepth == 1) return;
+
+		IRPModelElement container = element;
+		if (REFERENCE_TYPE.equals(element.getUserDefinedMetaClass())) {
+			IRPClass base = findReferencedLogicalSystem(element);
+			if (base == null) {
+				rhpLog.warn("LBS reference has no References Logical System target: "
+						+ element.getName());
+				return;
+			}
+			if (path.contains(base.getGUID())) {
+				rhpLog.warn("LBS reference cycle detected: " + element.getName()
+						+ " -> " + base.getName() + "; branch skipped.");
+				return;
+			}
+			path.add(base.getGUID());
+			container = base;
+		}
 
 		@SuppressWarnings("unchecked")
-		List<IRPModelElement> nested = element.getNestedElementsByMetaClass(RhpMetaClassConstants.CLASS, 0).toList();
-
+		List<IRPModelElement> nested = container
+				.getNestedElementsByMetaClass(RhpMetaClassConstants.CLASS, 0).toList();
 		for (IRPModelElement child : nested) {
-			if ("Logical System".equals(child.getUserDefinedMetaClass())) {
-				addLogicalSystemToDiagram(child, nextX, currentYPosition, level + 1, maxDepth == -1 ? -1 : maxDepth - 1);
-			}
-			else if ("Logical System With Reference".equals(child.getUserDefinedMetaClass())) {
-				addLogicalSystemToDiagram(child, nextX, currentYPosition, level + 1, maxDepth == -1 ? -1 : maxDepth - 1);
+			String metaClass = child.getUserDefinedMetaClass();
+			if (NODE_TYPE.equals(metaClass) || REFERENCE_TYPE.equals(metaClass)) {
+				addLogicalSystemToDiagram(child, x + HORIZONTAL_OFFSET,
+						currentYPosition, remainingDepth == -1 ? -1 : remainingDepth - 1,
+						path, node);
 			}
 		}
-		return LOGICAL_HEIGHT;
+	}
+
+	/**
+	 * Draw only hierarchical containment arrows, including ordinary model
+	 * containment and virtual reference expansion. Never draw model flows.
+	 */
+	/**
+	 * Remove port graphics automatically exposed when an existing Logical System
+	 * is dropped into a diagram. Removing their graphical representation does not
+	 * delete the underlying Flow Port or change the Safran model.
+	 */
+	private void removePortRepresentations() {
+		IRPCollection toRemove = rhApp.createNewCollection();
+		int count = 0;
+
+		@SuppressWarnings("unchecked")
+		List<IRPGraphElement> elements = attachedDiagram.getGraphicalElements().toList();
+		for (IRPGraphElement graphical : elements) {
+			IRPModelElement model = graphical.getModelObject();
+			if (model == null) continue;
+			String udm = model.getUserDefinedMetaClass();
+			String meta = model.getMetaClass();
+			if ("Flow Port".equals(udm) || "SysMLPort".equals(meta)
+					|| "Port".equals(meta)) {
+				toRemove.addGraphicalItem(graphical);
+				count++;
+			}
+		}
+		if (count > 0) {
+			attachedDiagram.removeGraphElements(toRemove);
+		}
+		rhpLog.info("LBS: removed " + count + " port graphical representations.");
+	}
+
+	private void createVirtualContainments() {
+		for (IRPGraphNode[] relation : virtualContainments) {
+			IRPGraphNode parent = relation[0];
+			IRPGraphNode child = relation[1];
+			// Match the direction of Rhapsody's native containment edges:
+			// source = child (left/middle), target = parent (bottom).
+			// Reversing these ends makes repositionRelations() route the
+			// connector along the hierarchy gutter, not through other nodes.
+			attachedDiagram.addNewEdgeByType("Containment Arrow",
+					child, 0, LOGICAL_HEIGHT / 2,
+					parent, LOGICAL_WIDTH / 8, LOGICAL_HEIGHT);
+		}
+		rhpLog.debug("Created " + virtualContainments.size()
+				+ " graphical containment arrows for referenced logical systems.");
+	}
+
+	/** Resolve only the Safran "References Logical System" generalization. */
+	private IRPClass findReferencedLogicalSystem(IRPModelElement reference) {
+		if (!(reference instanceof IRPClass)) return null;
+
+		IRPCollection generalizations = ((IRPClass) reference).getGeneralizations();
+		if (generalizations == null) return null;
+
+		for (Object item : generalizations.toList()) {
+			if (!(item instanceof IRPGeneralization)) continue;
+			IRPGeneralization generalization = (IRPGeneralization) item;
+			if (REFERENCE_LINK.equals(generalization.getUserDefinedMetaClass())) {
+				return (IRPClass) generalization.getBaseClass();
+			}
+		}
+		return null;
 	}
 
 	/**

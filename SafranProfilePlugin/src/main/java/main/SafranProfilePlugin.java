@@ -23,7 +23,7 @@ import tools.ExportSystem;
 import tools.FlowItemStereotypePropagation;
 import tools.GenerateFBS;
 import tools.GenerateLBS;
-import tools.GenerateTBD;
+import tools.GenerateTBS;
 import tools.GenericFlow;
 import tools.LocateFlowItemInBrowser;
 import tools.OpenParentDiagram;
@@ -104,7 +104,7 @@ public class SafranProfilePlugin extends RPUserPlugin {
 		tools.put(ConfigurePropagateProperties.COMMAND, new ConfigurePropagateProperties(rhpApp));
 		tools.put(GenerateFBS.COMMAND, new GenerateFBS(rhpApp));
 		tools.put(GenerateLBS.COMMAND, new GenerateLBS(rhpApp));
-		tools.put(GenerateTBD.COMMAND, new GenerateTBD(rhpApp));
+		tools.put(GenerateTBS.COMMAND, new GenerateTBS(rhpApp));
 		tools.put(FlowItemStereotypePropagation.COMMAND, new FlowItemStereotypePropagation(rhpApp));
 		tools.put(DefineDirection.COMMAND_INPUT, new DefineDirection(rhpApp, Direction.In));
 		tools.put(DefineDirection.COMMAND_OUTPUT, new DefineDirection(rhpApp, Direction.Out));

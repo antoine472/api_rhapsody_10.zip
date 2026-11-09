@@ -1,0 +1,33 @@
+Subject Activity_diagram
+	Metaclass ActionPin
+		Property ShowName Enum "Name, NameAndType, Type, Label" "Name"
+		Property ShowStereotype Enum "Label, Bitmap, None" "None"
+	end
+	Metaclass CallOperation
+		Property ShowAction Enum "Action, Description, Label" "Description"
+		Property ShowName Enum "Name, Label, Operation, FullNotation, None" "Operation"
+		Property ShowStereotype Enum "Label, Bitmap, None" "None"
+	end
+	Metaclass ControlFlow
+		Property line_style Enum "straight_arrows,rectilinear_arrows,spline_arrows,rounded_rectilinear_arrows" "rounded_rectilinear_arrows"
+	end
+	Metaclass DefaultTransition
+		Property line_style Enum "straight_arrows,rectilinear_arrows,spline_arrows,rounded_rectilinear_arrows" "rounded_rectilinear_arrows"
+	end
+	Metaclass DiagramFrame
+		Property ShowName Enum "Name,Label" "Name"
+		Property ShowStereotype Enum "Label,None" "None"
+		Property DefaultSize String "20,20,590,500"
+	end
+	Metaclass FunctionCall
+		Property ShowAction Enum "Action, Description, Label" "Description"
+		Property ShowName Enum "Name, Label, Operation, FullNotation, None" "Operation"
+		Property ShowStereotype Enum "Label, Bitmap, None" "None"
+	end
+	Metaclass ObjectFlow
+		Property line_style Enum "straight_arrows,rectilinear_arrows,spline_arrows,rounded_rectilinear_arrows" "rounded_rectilinear_arrows"
+	end
+	Metaclass General
+		Property SysMLDiagramKindTitle String "AD"
+	end
+end

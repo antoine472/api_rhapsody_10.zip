@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+encoding//src/main/java/metamodel/Flow.java=UTF-8
+encoding//src/main/java/metamodel/ModelElement.java=UTF-8
+encoding//src/test/java/metamodel/FunctionWithReferenceTest.java=UTF-8
+encoding//src/test/java/metamodel/RedefinedPortsServiceTest.java=UTF-8
+encoding//src/test/java/metamodel/ReferencesFunctionTest.java=UTF-8
+encoding//src/test/java/metamodel/FlowTest.java=UTF-8

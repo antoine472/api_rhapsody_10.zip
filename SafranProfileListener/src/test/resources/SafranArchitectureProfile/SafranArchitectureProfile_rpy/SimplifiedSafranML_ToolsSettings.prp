@@ -1,0 +1,12 @@
+Subject SafranToolsSettings
+	Metaclass PortPropagation
+		Property NamePropagation Bool "True"
+		Property LabelPropagation Bool "True"
+		Property DescriptionPropagation Bool "True"
+		Property StereotypesPropagation Bool "True"
+		Property TypePropagation Bool "True"
+		Property DirectionPropagation Bool "True"
+		Property ConveysFlowUpdate Bool "True"
+	end	
+end
+end

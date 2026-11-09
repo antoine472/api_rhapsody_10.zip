@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Program Files/IBM/Rhapsody/10.0.3/Share/JavaAPI"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src/test/java">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Program Files/IBM/Rhapsody/10.0.3/Share/JavaAPI"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Program Files/IBM/Rhapsody/10.0.3/Share/JavaAPI"/>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Program Files/IBM/Rhapsody/10.0.3/Share/JavaAPI/rhapsody.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Program Files/IBM/Rhapsody/10.0.3/Share/JavaAPI"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="lib/mockito/mockito-core-4.11.0.jar"/>
+	<classpathentry kind="lib" path="lib/mockito/byte-buddy-1.12.19.jar"/>
+	<classpathentry kind="lib" path="lib/mockito/byte-buddy-agent-1.12.19.jar"/>
+	<classpathentry kind="lib" path="lib/mockito/objenesis-3.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,4022 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RhapsodyArchive>
+	<MagicNumber>_tYAeoKKpEe-OJJreGkrGPA</MagicNumber>
+	<CODE-PAGE>1252</CODE-PAGE>
+	<version>110.0.2</version>
+	<RMMIndexVersion>109.3</RMMIndexVersion>
+	<lang>C++</lang>
+	<BuildNo>202504251049</BuildNo>
+	<RMMMinimumClientVersion>100.0</RMMMinimumClientVersion>
+	
+	<RHAPSODY-MODEL>
+	<IProject type="e">
+			<_id type="a">GUID 4a8f5d90-0c84-46fc-98d9-e2e63ba9cf47</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">CG</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Configuration</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Environment</_Name>
+													<_Value type="a">Cygwin</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">MSVC,MSVCDLL,MSVCStandardLibrary,VxWorks,VxWorks6diab,VxWorks6gnu,VxWorks6diab_RTP,VxWorks6gnu_RTP,Solaris2,Cygwin,MicrosoftWinCE600,OseSfk,Linux,Solaris2GNU,QNXNeutrinoGCC, QNXNeutrinoMomentics,NucleusPLUS-PPC,WorkbenchManaged,WorkbenchManaged653,WorkbenchManaged_RTP</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">ConfigurationManagement</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">EngineeringWorkflowManagement</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AssociateWorkItemOnCheckIn</_Name>
+													<_Value type="a">None</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">None,CurrentWorkItem,AssociateWorkItemURL</_ExtraTypeInfo>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">UnitAutomaticOperationOnSave</_Name>
+													<_Value type="a">CheckIn</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">None, CheckIn, CheckInAndDeliver</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Association</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Font.Font</_Name>
+													<_Value type="a">Arial</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Height</_Name>
+													<_Value type="a">11</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Size</_Name>
+													<_Value type="a">8</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">128,128,128</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineWidth</_Name>
+													<_Value type="a">1</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">DefaultSize</_Name>
+													<_Value type="a">0,0,108,73</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">255,255,255</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Font</_Name>
+													<_Value type="a">Tahoma</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Size</_Name>
+													<_Value type="a">8</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Size@Child.NameCompartment@Stereotype</_Name>
+													<_Value type="a">6</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Weight@Child.NameCompartment@Name</_Name>
+													<_Value type="a">700</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">109,163,217</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineWidth</_Name>
+													<_Value type="a">1</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Model</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">BlockIsSavedUnit</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ClassIsSavedUnit</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">DiagramIsSavedUnit</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">FileIsSavedUnit</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ObjectIsSavedUnit</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">ObjectModelGe</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Association</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ShowName</_Name>
+													<_Value type="a">Name</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">Name,Label,None</_ExtraTypeInfo>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ShowSourceMultiplicity</_Name>
+													<_Value type="a">True</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ShowSourceQualifier</_Name>
+													<_Value type="a">True</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ShowSourceRole</_Name>
+													<_Value type="a">True</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ShowStereotype</_Name>
+													<_Value type="a">None</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">Label,Bitmap,None</_ExtraTypeInfo>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ShowTargetMultiplicity</_Name>
+													<_Value type="a">True</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ShowTargetQualifier</_Name>
+													<_Value type="a">True</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ShowTargetRole</_Name>
+													<_Value type="a">True</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">line_style</_Name>
+													<_Value type="a">rectilinear_arrows</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">straight_arrows,rectilinear_arrows,spline_arrows,rounded_rectilinear_arrows</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Class</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Compartments</_Name>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ShowLabels</_Name>
+													<_Value type="a">NameOrLabel</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">Name,Label,NameOrLabel</_ExtraTypeInfo>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ShowName</_Name>
+													<_Value type="a">Name_only</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">Full_path,Relative,Name_only,Label</_ExtraTypeInfo>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ShowStereotype</_Name>
+													<_Value type="a">Label</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">Label,Bitmap,None</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Composite Class</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">HyperLinkShortCutsCompartmentDisplayOption</_Name>
+													<_Value type="a">All</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">HyperLinkShortCutsCompartmentShowInherited</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ShowAttributes</_Name>
+													<_Value type="a">Explicit</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">All,None,Public,Explicit</_ExtraTypeInfo>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ShowInheritedAttributes</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ShowInheritedOperations</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ShowOperations</_Name>
+													<_Value type="a">Explicit</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">All,None,Public,Explicit</_ExtraTypeInfo>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ShowPorts</_Name>
+													<_Value type="a">True</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ShowPortsInterfaces</_Name>
+													<_Value type="a">True</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Stereotype</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Compartments</_Name>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">HyperLinkShortCutsCompartmentDisplayOption</_Name>
+													<_Value type="a">All</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">HyperLinkShortCutsCompartmentShowInherited</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ShowLabels</_Name>
+													<_Value type="a">NameOrLabel</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">Name,Label,NameOrLabel</_ExtraTypeInfo>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ShowName</_Name>
+													<_Value type="a">Name_only</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">Full_path,Relative,Name_only,Label</_ExtraTypeInfo>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ShowStereotype</_Name>
+													<_Value type="a">Label</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">Label,None</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1350430_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">SafranArchitectureProfile</_name>
+			<_modifiedTimeWeak type="a">6.10.2026::9:42:9</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.10.2026::9:42:9</_modifiedTime>
+			<_lastID type="a">17</_lastID>
+			<_UserColors type="w">
+				<IRPYRawContainer type="e">
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+					<value>16777215</value>
+				</IRPYRawContainer>
+			</_UserColors>
+			<_defaultSubsystem type="r">
+				<ISubsystemHandle type="e">
+					<_hm2Class type="a">ISubsystem</_hm2Class>
+					<_hid type="a">GUID 031170fd-2cce-4fac-aa6e-284ac973bf88</_hid>
+				</ISubsystemHandle>
+			</_defaultSubsystem>
+			<_component type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IComponent</_hm2Class>
+					<_hid type="a">GUID 6b9d3c9f-7ad5-4b46-9d2e-49d3a43e13b9</_hid>
+				</IHandle>
+			</_component>
+			<Multiplicities type="c">
+				<IRPYRawContainer type="e">
+					<IMultiplicityItem type="e">
+						<_name type="a">1</_name>
+						<_count type="a">5</_count>
+					</IMultiplicityItem>
+					
+					<IMultiplicityItem type="e">
+						<_name type="a">*</_name>
+						<_count type="a">-1</_count>
+					</IMultiplicityItem>
+					
+					<IMultiplicityItem type="e">
+						<_name type="a">0,1</_name>
+						<_count type="a">-1</_count>
+					</IMultiplicityItem>
+					
+					<IMultiplicityItem type="e">
+						<_name type="a">1..*</_name>
+						<_count type="a">-1</_count>
+					</IMultiplicityItem>
+					
+				</IRPYRawContainer>
+			</Multiplicities>
+			<_isImportedFromDM type="a">0</_isImportedFromDM>
+			<Diagrams type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Diagrams>
+			<Components type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Components>
+			<mapOslcAddedCollections type="c">
+				<IRPYRawContainer type="e">
+					<value>$$$KEYhttps://safranls.clm.ibmcloud.com/rm/process/project-areas/_rMJ8UO9vEe-FhvQxBrld_w$$$VALUEhttps://safranls.clm.ibmcloud.com/rm/resources/MD_JguuEO9wEe-FhvQxBrld_w</value>
+					
+				</IRPYRawContainer>
+			</mapOslcAddedCollections>
+			<mapAssociationsToRemove type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</mapAssociationsToRemove>
+			<AggregatesList type="e">
+				<value>GUID dc21324f-d803-466a-aec4-c5bcc76018b7</value>
+				<value>GUID aadf7785-de23-4435-b8ac-521003c516f3</value>
+				<value>GUID 89ec06db-ee00-4a4d-a0d4-b6229ae13a04</value>
+				<value>GUID 804c23de-76a9-4f40-96bc-34d22335c64b</value>
+				<value>GUID c1fc8ecc-d0bd-436a-8ba1-1fe11d31ccf8</value>
+				<value>GUID 031170fd-2cce-4fac-aa6e-284ac973bf88</value>
+				<value>GUID 4ef05f31-0291-495a-aa0a-7805f3c564c6</value>
+			</AggregatesList>
+		</IProject>
+		<IProfile type="e">
+			<fileName type="a">RhapsodyModelManager</fileName>
+			<_persistAs type="a">$OMROOT\Profiles\RhapsodyModelManager</_persistAs>
+			<_id type="a">GUID dc21324f-d803-466a-aec4-c5bcc76018b7</_id>
+			<_partOfTheModelKind type="a">referenceunit</_partOfTheModelKind>
+		</IProfile>
+		<IProfile type="e">
+			<fileName type="a">SafranArchitectureProfile</fileName>
+			<_id type="a">GUID aadf7785-de23-4435-b8ac-521003c516f3</_id>
+			<_rmmServerID type="a">1350224_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+		</IProfile>
+		<IProfile type="e">
+			<fileName type="a">SafranArchitectureTemplate</fileName>
+			<_id type="a">GUID 89ec06db-ee00-4a4d-a0d4-b6229ae13a04</_id>
+			<_rmmServerID type="a">1350392_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+		</IProfile>
+		<IProfile type="e">
+			<fileName type="a">SafranStereotypes</fileName>
+			<_id type="a">GUID 804c23de-76a9-4f40-96bc-34d22335c64b</_id>
+			<_rmmServerID type="a">1441498_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+		</IProfile>
+		<IProfile type="e">
+			<fileName type="a">RHPToolkit</fileName>
+			<_persistAs type="a">..\..\RHPToolkitProfile\RHPToolkitProfile_rpy</_persistAs>
+			<_id type="a">GUID c1fc8ecc-d0bd-436a-8ba1-1fe11d31ccf8</_id>
+			<_partOfTheModelKind type="a">referenceunit</_partOfTheModelKind>
+			<_rmmServerID type="a">1251301_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+		</IProfile>
+		<ISubsystem type="e">
+			<_id type="a">GUID 031170fd-2cce-4fac-aa6e-284ac973bf88</_id>
+			<_myState type="a">8192</_myState>
+			<_rmmServerID type="a">1350427_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">Default</_name>
+			<_modifiedTimeWeak type="a">7.25.2025::11:54:13</_modifiedTimeWeak>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">d</_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">5.11.2026::12:15:57</_modifiedTime>
+			<weakCGTime type="a">7.25.2025::11:54:13</weakCGTime>
+			<strongCGTime type="a">4.9.2025::7:56:46</strongCGTime>
+			<_defaultComposite type="s">GUID f912e036-01c1-4965-8bb9-bbb3e2b65b04</_defaultComposite>
+			<_eventsBaseID type="a">-1</_eventsBaseID>
+			<_configurationRelatedTime type="a">1.2.1990::0:0:0</_configurationRelatedTime>
+			<AggregatesList type="e">
+				<value>GUID 6b9d3c9f-7ad5-4b46-9d2e-49d3a43e13b9</value>
+				<value>GUID f912e036-01c1-4965-8bb9-bbb3e2b65b04</value>
+			</AggregatesList>
+		</ISubsystem>
+		<IComponent type="e">
+			<_id type="a">GUID 6b9d3c9f-7ad5-4b46-9d2e-49d3a43e13b9</_id>
+			<_myState type="a">139264</_myState>
+			<_rmmServerID type="a">1350431_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">DefaultComponent</_name>
+			<_modifiedTimeWeak type="a">3.6.2023::8:19:54</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.11.2026::12:15:57</_modifiedTime>
+			<m_buildType type="a">Executable</m_buildType>
+			<m_configActive type="r">
+				<ICodeGenConfigInfoHandle type="e">
+					<_hm2Class type="a">ICodeGenConfigInfo</_hm2Class>
+					<_hsubsystem type="a">Default</_hsubsystem>
+					<_hname type="a">DefaultComponent\DefaultConfig</_hname>
+					<_hid type="a">GUID f2a843a7-7e48-4ada-90e3-dfb6bb4bb7cd</_hid>
+				</ICodeGenConfigInfoHandle>
+			</m_configActive>
+			<HandlesInMe type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IProfile</_hm2Class>
+							<_hname type="a">RhapsodyModelManager</_hname>
+							<_hid type="a">GUID dc21324f-d803-466a-aec4-c5bcc76018b7</_hid>
+						</IHandle>
+					
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IProfile</_hm2Class>
+							<_hname type="a">SafranArchitectureProfile</_hname>
+							<_hid type="a">GUID aadf7785-de23-4435-b8ac-521003c516f3</_hid>
+						</IHandle>
+					
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IProfile</_hm2Class>
+							<_hname type="a">SafranArchitectureTemplate</_hname>
+							<_hid type="a">GUID 89ec06db-ee00-4a4d-a0d4-b6229ae13a04</_hid>
+						</IHandle>
+					
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IProfile</_hm2Class>
+							<_hname type="a">SafranStereotypes</_hname>
+							<_hid type="a">GUID 804c23de-76a9-4f40-96bc-34d22335c64b</_hid>
+						</IHandle>
+					
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IProfile</_hm2Class>
+							<_hname type="a">RHPToolkit</_hname>
+							<_hid type="a">GUID c1fc8ecc-d0bd-436a-8ba1-1fe11d31ccf8</_hid>
+						</IHandle>
+					
+					
+						<IHandle type="e">
+							<_hm2Class type="a">ISubsystem</_hm2Class>
+							<_hsubsystem type="a">RHPToolkit</_hsubsystem>
+							<_hname type="a">TablesLayoutWithPluginSample</_hname>
+							<_hid type="a">GUID ca564b58-3798-4be8-a6fb-6ba8b5a21f74</_hid>
+						</IHandle>
+					
+					
+						<IHandle type="e">
+							<_hm2Class type="a">ISubsystem</_hm2Class>
+							<_hsubsystem type="a">RHPToolkit</_hsubsystem>
+							<_hname type="a">CsvImportersAddons</_hname>
+							<_hid type="a">GUID 463d117a-045c-440b-9ba1-8b63a4767fe4</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</HandlesInMe>
+			<VariationPoints type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</VariationPoints>
+			<SelectedVariants type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</SelectedVariants>
+			<weakCGTime type="a">3.6.2023::8:19:54</weakCGTime>
+			<strongCGTime type="a">3.6.2023::8:19:54</strongCGTime>
+			<AggregatesList type="e">
+				<value>GUID fa976cc9-34f6-40e1-90ed-930a9e4a5c0c</value>
+				<value>GUID f2a843a7-7e48-4ada-90e3-dfb6bb4bb7cd</value>
+			</AggregatesList>
+		</IComponent>
+		<IFolder type="e">
+			<_id type="a">GUID fa976cc9-34f6-40e1-90ed-930a9e4a5c0c</_id>
+			<_myState type="a">73728</_myState>
+			<_rmmServerID type="a">1350432_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">Files</_name>
+			<_modifiedTimeWeak type="a">12.14.2021::15:35:6</_modifiedTimeWeak>
+			<_modifiedTime type="a">12.14.2021::15:35:6</_modifiedTime>
+			<Elements type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Elements>
+			<Files type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Files>
+		</IFolder>
+		<ICodeGenConfigInfo type="e">
+			<_id type="a">GUID f2a843a7-7e48-4ada-90e3-dfb6bb4bb7cd</_id>
+			<_myState type="a">8192</_myState>
+			<_rmmServerID type="a">1350428_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">DefaultConfig</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.11.2026::12:15:57</_modifiedTime>
+			<_scopeType type="a">Explicit</_scopeType>
+			<_instrumentation type="a">Animation</_instrumentation>
+			<_timeModel type="a">RealTime</_timeModel>
+			<m_generateActors type="a">1</m_generateActors>
+			<_statechartImplementation type="a">Flat</_statechartImplementation>
+			<_checksList type="a">0 ,</_checksList>
+			<_checksList_Default type="a">1</_checksList_Default>
+			<ScopeElements type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</ScopeElements>
+			<InitialInstances type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</InitialInstances>
+			<weakCGTime type="a">1.2.1990::0:0:0</weakCGTime>
+			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
+			<AnimScopeElements type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</AnimScopeElements>
+			<m_allInAnimScope type="a">1</m_allInAnimScope>
+			<m_generateUsecases type="a">0</m_generateUsecases>
+			<AggregatesList type="e">
+				<value>GUID 6ba4a4b5-90ac-4724-b447-ff909113c065</value>
+			</AggregatesList>
+		</ICodeGenConfigInfo>
+		<IFolder type="e">
+			<_id type="a">GUID 6ba4a4b5-90ac-4724-b447-ff909113c065</_id>
+			<_myState type="a">8192</_myState>
+			<_rmmServerID type="a">1350429_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">DefaultConfig</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">12.14.2021::15:35:6</_modifiedTime>
+			<Elements type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Elements>
+			<Files type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Files>
+		</IFolder>
+		<IClass type="e">
+			<_id type="a">GUID f912e036-01c1-4965-8bb9-bbb3e2b65b04</_id>
+			<_myState type="a">40960</_myState>
+			<_rmmServerID type="a">1350433_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">TopLevel</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">3.6.2023::8:21:33</_modifiedTime>
+			<weakCGTime type="a">1.2.1990::0:0:0</weakCGTime>
+			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IClass>
+		<ISubsystem type="e">
+			<_id type="a">GUID 4ef05f31-0291-495a-aa0a-7805f3c564c6</_id>
+			<_myState type="a">8192</_myState>
+			<_rmmServerID type="a">1441481_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">_ProfileManagement</_name>
+			<_modifiedTimeWeak type="a">6.10.2026::9:26:30</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.10.2026::9:26:30</_modifiedTime>
+			<_lastID type="a">3</_lastID>
+			<weakCGTime type="a">6.10.2026::9:26:30</weakCGTime>
+			<strongCGTime type="a">3.24.2026::16:28:59</strongCGTime>
+			<_defaultComposite type="s">GUID b872f748-1e85-4a14-b7a4-d2530f263640</_defaultComposite>
+			<_eventsBaseID type="a">-1</_eventsBaseID>
+			<_configurationRelatedTime type="a">1.2.1990::0:0:0</_configurationRelatedTime>
+			<AggregatesList type="e">
+				<value>GUID 466aea5b-ff74-4fcc-8378-e7739e24628c</value>
+				<value>GUID b872f748-1e85-4a14-b7a4-d2530f263640</value>
+				<value>GUID 90236db7-02a9-413d-a979-a66eb7efd83a</value>
+				<value>GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</value>
+				<value>GUID 3c0e8b39-73ab-4d44-9a9d-2a0e3bbce11b</value>
+				<value>GUID 1ac7582f-2bb6-4b81-a19f-f93f71d34cfe</value>
+				<value>GUID ba47705c-9e62-4bfd-a7bc-d9588e0fc28e</value>
+				<value>GUID fa205eea-c687-4c9e-98c0-1981dbb08687</value>
+				<value>GUID ee2810fd-64f2-48dc-8237-845303da6c86</value>
+				<value>GUID 22072410-1501-4f48-bd7c-4d6062fb800c</value>
+				<value>GUID 32e026db-6123-4b52-9cbb-87f2c0e7594a</value>
+				<value>GUID c93281a4-58e5-4710-ab0d-bb85605e6647</value>
+				<value>GUID 5845d996-e94e-4dae-a3f3-9d8f43f54f85</value>
+			</AggregatesList>
+		</ISubsystem>
+		<IEmbededFile type="e">
+			<_id type="a">GUID 466aea5b-ff74-4fcc-8378-e7739e24628c</_id>
+			<_rmmServerID type="a">1441486_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">profileDefinition.xlsx</_name>
+			<_modifiedTimeWeak type="a">3.24.2026::16:28:59</_modifiedTimeWeak>
+			<_modifiedTime type="a">3.24.2026::16:28:59</_modifiedTime>
+			<_MayNeedToRelocate type="a">0</_MayNeedToRelocate>
+			<_LastKnownFullPath type="a">C:\RTC_WORKSPACES\SafranArchitectureProfileV2\SafranArchitectureProfile\profileDefinition.xlsx</_LastKnownFullPath>
+		</IEmbededFile>
+		<IClass type="e">
+			<_id type="a">GUID b872f748-1e85-4a14-b7a4-d2530f263640</_id>
+			<_myState type="a">40960</_myState>
+			<_rmmServerID type="a">1441492_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">TopLevel</_name>
+			<_modifiedTimeWeak type="a">3.11.2025::15:18:31</_modifiedTimeWeak>
+			<_modifiedTime type="a">2.4.2025::16:6:49</_modifiedTime>
+			<weakCGTime type="a">3.11.2025::15:18:31</weakCGTime>
+			<strongCGTime type="a">3.11.2025::15:18:31</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IClass>
+		<ITableLayout type="e">
+			<_id type="a">GUID 90236db7-02a9-413d-a979-a66eb7efd83a</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Graphics</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">TableHeaderMenuAlignment</_Name>
+													<_Value type="a">Right</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">Left,Right</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableLayout</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">CollapseFirstColumn</_Name>
+													<_Value type="a">True</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ContextTableColumnNameFormat</_Name>
+													<_Value type="a">$(Property) in $(Context)</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">EnableCriteriaCheck</_Name>
+													<_Value type="a">True</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">QueryContextPattern</_Name>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">UserDefinedImplementationXML</_Name>
+													<_Value type="a">&lt;COLUMN id=&quot;2&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.*&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.Name&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;3&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.PluralName&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;4&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.*&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;IRPStereotype myst = (IRPStereotype) cellElement;
+return myst.getOfMetaClass();&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;5&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.*&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;IRPStereotype myst = (IRPStereotype) cellElement;
+if ( myst.getIsNewTerm() == 1){
+return &amp;quot;New Term&amp;quot;;
+}else{
+return &amp;quot;&amp;quot;;
+}&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;6&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.*&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;List of model elements&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;IRPStereotype myst = (IRPStereotype) cellElement;
+return myst.getGeneralizations().toList();&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;7&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.Aggregates&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;8&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.HideTabsInFeaturesDialog&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;10&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return  cellElement.getGUID();&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+</_Value>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableView</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ChangeSelectionOnEnterTo</_Name>
+													<_Value type="a">down</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">left, right, up, down</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1441483_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">profile_analysis_layout</_name>
+			<_modifiedTimeWeak type="a">12.20.2024::15:38:38</_modifiedTimeWeak>
+			<_modifiedTime type="a">12.20.2024::15:38:38</_modifiedTime>
+			<TableElementTypes type="c">
+				<IRPYRawContainer type="e">
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_analysis_layout</_hname>
+								<_hid type="a">GUID 90236db7-02a9-413d-a979-a66eb7efd83a</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">Stereotype</TableDataDefinitionName>
+						<_DataType type="a">53181160</_DataType>
+					</TableDataDefinition>
+					
+				</IRPYRawContainer>
+			</TableElementTypes>
+			<DataColumns type="c">
+				<IRPYRawContainer type="e">
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_analysis_layout</_hname>
+								<_hid type="a">GUID 90236db7-02a9-413d-a979-a66eb7efd83a</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">General.Owner</TableDataDefinitionName>
+						<_columnName type="a">Owner</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_analysis_layout</_hname>
+								<_hid type="a">GUID 90236db7-02a9-413d-a979-a66eb7efd83a</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">General.Name</TableDataDefinitionName>
+						<_columnName type="a">Name</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_analysis_layout</_hname>
+								<_hid type="a">GUID 90236db7-02a9-413d-a979-a66eb7efd83a</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Stereotype Name</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_analysis_layout</_hname>
+								<_hid type="a">GUID 90236db7-02a9-413d-a979-a66eb7efd83a</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Stereotype Plural Name</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_analysis_layout</_hname>
+								<_hid type="a">GUID 90236db7-02a9-413d-a979-a66eb7efd83a</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Base Metaclass</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_analysis_layout</_hname>
+								<_hid type="a">GUID 90236db7-02a9-413d-a979-a66eb7efd83a</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Is New term</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_analysis_layout</_hname>
+								<_hid type="a">GUID 90236db7-02a9-413d-a979-a66eb7efd83a</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Inherit of ...</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_analysis_layout</_hname>
+								<_hid type="a">GUID 90236db7-02a9-413d-a979-a66eb7efd83a</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Aggregates</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_analysis_layout</_hname>
+								<_hid type="a">GUID 90236db7-02a9-413d-a979-a66eb7efd83a</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">HideTabsInFeaturesDialog</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_analysis_layout</_hname>
+								<_hid type="a">GUID 90236db7-02a9-413d-a979-a66eb7efd83a</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">General.Description</TableDataDefinitionName>
+						<_columnName type="a">Description Comment</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_analysis_layout</_hname>
+								<_hid type="a">GUID 90236db7-02a9-413d-a979-a66eb7efd83a</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">GUID</_columnName>
+					</TableDataDefinition>
+					
+				</IRPYRawContainer>
+			</DataColumns>
+		</ITableLayout>
+		<ITableLayout type="e">
+			<_id type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Graphics</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">TableHeaderMenuAlignment</_Name>
+													<_Value type="a">Right</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">Left,Right</_ExtraTypeInfo>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">TableMatrixColWidth</_Name>
+													<_Value type="a">;;10;;;;;;;10;10;;;;10;;;;10;;;;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableLayout</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">CollapseFirstColumn</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ContextTableColumnNameFormat</_Name>
+													<_Value type="a">$(Property) in $(Context)</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">EnableCriteriaCheck</_Name>
+													<_Value type="a">True</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">QueryContextPattern</_Name>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">UserDefinedImplementationXML</_Name>
+													<_Value type="a">&lt;COLUMN id=&quot;3&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.*&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.Name&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;4&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.DefaultName&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;5&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.PluralName&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;6&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.*&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;IRPStereotype myst = (IRPStereotype) cellElement;
+return myst.getOfMetaClass();&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;7&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.*&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;IRPStereotype myst = (IRPStereotype) cellElement;
+if ( myst.getIsNewTerm() == 1){
+return &amp;quot;New Term&amp;quot;;
+}else{
+return &amp;quot;&amp;quot;;
+}&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;8&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.*&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;List of model elements&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;IRPStereotype myst = (IRPStereotype) cellElement;
+return myst.getGeneralizations().toList();&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;9&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.Aggregates&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;10&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;General.Model.AddNewMenuStructure&amp;quot;);
+&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;11&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.HideTabsInFeaturesDialog&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;12&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.Sources&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;13&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.Targets&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;14&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.DrawingToolbar&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;15&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.DrawingToolLabel&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;16&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.DrawingShape&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;17&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;General.Graphics.AdditionalCompartments&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;18&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Dialog.Stereotype.CommonProperties&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;19&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.BrowserIcon&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;20&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.BrowserGroupIcon&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;21&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getGUID();&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+</_Value>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableView</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ChangeSelectionOnEnterTo</_Name>
+													<_Value type="a">down</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">left, right, up, down</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1441489_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">profile_update_layout</_name>
+			<_modifiedTimeWeak type="a">3.7.2025::9:16:26</_modifiedTimeWeak>
+			<_modifiedTime type="a">3.7.2025::9:16:26</_modifiedTime>
+			<TableElementTypes type="c">
+				<IRPYRawContainer type="e">
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">Stereotype</TableDataDefinitionName>
+						<_DataType type="a">53181160</_DataType>
+					</TableDataDefinition>
+					
+				</IRPYRawContainer>
+			</TableElementTypes>
+			<DataColumns type="c">
+				<IRPYRawContainer type="e">
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">General.Owner</TableDataDefinitionName>
+						<_columnName type="a">Category</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">General.Name</TableDataDefinitionName>
+						<_columnName type="a">Name</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">General.Description</TableDataDefinitionName>
+						<_columnName type="a">Description</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Model.Stereotype.Name</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Model.Stereotype.DefaultName</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Model.Stereotype.PluralName</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Base Metaclass</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Is New term</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Inherit of ...</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Model.Stereotype.Aggregates</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">General.Model.AddNewMenuStructure</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Model.Stereotype.HideTabsInFeaturesDialog</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Model.Stereotype.Sources</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Model.Stereotype.Targets</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Model.Stereotype.DrawingToolbar</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Model.Stereotype.DrawingToolLabel</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Model.Stereotype.DrawingShape</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">General.Graphics.AdditionalCompartments</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Dialog.Stereotype.CommonProperties</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Model.Stereotype.BrowserIcon</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Model.Stereotype.BrowserGroupIcon</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_layout</_hname>
+								<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">GUID</_columnName>
+					</TableDataDefinition>
+					
+				</IRPYRawContainer>
+			</DataColumns>
+		</ITableLayout>
+		<ITableLayout type="e">
+			<_id type="a">GUID 3c0e8b39-73ab-4d44-9a9d-2a0e3bbce11b</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Graphics</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">TableHeaderMenuAlignment</_Name>
+													<_Value type="a">Right</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">Left,Right</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableLayout</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">CollapseFirstColumn</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ContextTableColumnNameFormat</_Name>
+													<_Value type="a">$(Property) in $(Context)</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">EnableCriteriaCheck</_Name>
+													<_Value type="a">True</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">QueryContextPattern</_Name>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">UserDefinedImplementationXML</_Name>
+													<_Value type="a">&lt;COLUMN id=&quot;1&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.*&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.Name&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;2&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.Aggregates&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;3&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;General.Model.AddNewMenuStructure&amp;quot;);
+&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+</_Value>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableView</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ChangeSelectionOnEnterTo</_Name>
+													<_Value type="a">down</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">left, right, up, down</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1441487_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">profile_update_aggregates_layout</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:52:48</_modifiedTimeWeak>
+			<_modifiedTime type="a">3.4.2025::14:52:48</_modifiedTime>
+			<TableElementTypes type="c">
+				<IRPYRawContainer type="e">
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_aggregates_layout</_hname>
+								<_hid type="a">GUID 3c0e8b39-73ab-4d44-9a9d-2a0e3bbce11b</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">Stereotype</TableDataDefinitionName>
+						<_DataType type="a">53181160</_DataType>
+					</TableDataDefinition>
+					
+				</IRPYRawContainer>
+			</TableElementTypes>
+			<DataColumns type="c">
+				<IRPYRawContainer type="e">
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_aggregates_layout</_hname>
+								<_hid type="a">GUID 3c0e8b39-73ab-4d44-9a9d-2a0e3bbce11b</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">General.Name</TableDataDefinitionName>
+						<_columnName type="a">Name</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_aggregates_layout</_hname>
+								<_hid type="a">GUID 3c0e8b39-73ab-4d44-9a9d-2a0e3bbce11b</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Model.Stereotype.Name</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_aggregates_layout</_hname>
+								<_hid type="a">GUID 3c0e8b39-73ab-4d44-9a9d-2a0e3bbce11b</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Model.Stereotype.Aggregates</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_aggregates_layout</_hname>
+								<_hid type="a">GUID 3c0e8b39-73ab-4d44-9a9d-2a0e3bbce11b</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">General.Model.AddNewMenuStructure</_columnName>
+					</TableDataDefinition>
+					
+				</IRPYRawContainer>
+			</DataColumns>
+		</ITableLayout>
+		<ITableLayout type="e">
+			<_id type="a">GUID 1ac7582f-2bb6-4b81-a19f-f93f71d34cfe</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Graphics</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">TableHeaderMenuAlignment</_Name>
+													<_Value type="a">Right</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">Left,Right</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableLayout</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">CollapseFirstColumn</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ContextTableColumnNameFormat</_Name>
+													<_Value type="a">$(Property) in $(Context)</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">EnableCriteriaCheck</_Name>
+													<_Value type="a">True</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">QueryContextPattern</_Name>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">UserDefinedImplementationXML</_Name>
+													<_Value type="a">&lt;COLUMN id=&quot;1&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.*&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.Name&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;2&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.DefaultName&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;3&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.DrawingToolbar&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;4&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.DrawingToolLabel&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+</_Value>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableView</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ChangeSelectionOnEnterTo</_Name>
+													<_Value type="a">down</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">left, right, up, down</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1441482_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">profile_update_toolbars_layout</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::15:25:31</_modifiedTimeWeak>
+			<_modifiedTime type="a">3.4.2025::15:25:31</_modifiedTime>
+			<TableElementTypes type="c">
+				<IRPYRawContainer type="e">
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_toolbars_layout</_hname>
+								<_hid type="a">GUID 1ac7582f-2bb6-4b81-a19f-f93f71d34cfe</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">Stereotype</TableDataDefinitionName>
+						<_DataType type="a">53181160</_DataType>
+					</TableDataDefinition>
+					
+				</IRPYRawContainer>
+			</TableElementTypes>
+			<DataColumns type="c">
+				<IRPYRawContainer type="e">
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_toolbars_layout</_hname>
+								<_hid type="a">GUID 1ac7582f-2bb6-4b81-a19f-f93f71d34cfe</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">General.Name</TableDataDefinitionName>
+						<_columnName type="a">Name</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_toolbars_layout</_hname>
+								<_hid type="a">GUID 1ac7582f-2bb6-4b81-a19f-f93f71d34cfe</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Model.Stereotype.Name</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_toolbars_layout</_hname>
+								<_hid type="a">GUID 1ac7582f-2bb6-4b81-a19f-f93f71d34cfe</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Model.Stereotype.DefaultName</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_toolbars_layout</_hname>
+								<_hid type="a">GUID 1ac7582f-2bb6-4b81-a19f-f93f71d34cfe</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Model.Stereotype.DrawingToolbar</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_toolbars_layout</_hname>
+								<_hid type="a">GUID 1ac7582f-2bb6-4b81-a19f-f93f71d34cfe</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Model.Stereotype.DrawingToolLabel</_columnName>
+					</TableDataDefinition>
+					
+				</IRPYRawContainer>
+			</DataColumns>
+		</ITableLayout>
+		<ITableLayout type="e">
+			<_id type="a">GUID ba47705c-9e62-4bfd-a7bc-d9588e0fc28e</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Graphics</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">TableHeaderMenuAlignment</_Name>
+													<_Value type="a">Right</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">Left,Right</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableLayout</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">CollapseFirstColumn</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">ContextTableColumnNameFormat</_Name>
+													<_Value type="a">$(Property) in $(Context)</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">EnableCriteriaCheck</_Name>
+													<_Value type="a">True</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">QueryContextPattern</_Name>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">UserDefinedImplementationXML</_Name>
+													<_Value type="a">&lt;COLUMN id=&quot;1&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.*&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.Name&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;2&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.*&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;IRPStereotype myst = (IRPStereotype) cellElement;
+return myst.getOfMetaClass();&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;3&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.Sources&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+&lt;COLUMN id=&quot;4&quot;&gt;
+&lt;IMPLEMENTATION&gt;
+	&lt;CLASSPATH&gt;
+	&lt;/CLASSPATH&gt;
+	&lt;IMPORTS&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPApplication&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPModelElement&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;com.telelogic.rhapsody.core.IRPTableView&lt;/IMPORT&gt;
+		&lt;IMPORT&gt;java.util.List&lt;/IMPORT&gt;
+	&lt;/IMPORTS&gt;
+	&lt;USER-DEFINED-METHOD isUserDefinedMethod=&quot;FALSE&quot;&gt;&lt;/USER-DEFINED-METHOD&gt;
+	&lt;ALLOW-SELECTOR&gt;FALSE&lt;/ALLOW-SELECTOR&gt;
+	&lt;ALLOW-NEW&gt;FALSE&lt;/ALLOW-NEW&gt;
+	&lt;DISPLAY-PROPERTY&gt;Name&lt;/DISPLAY-PROPERTY&gt;
+	&lt;RETURN-TYPE&gt;String&lt;/RETURN-TYPE&gt;
+	&lt;GETTER&gt;
+		&lt;CODE&gt;return cellElement.getPropertyValue(&amp;quot;Model.Stereotype.Targets&amp;quot;);&lt;/CODE&gt;
+	&lt;/GETTER&gt;
+	&lt;SETTER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/SETTER&gt;
+	&lt;PICKER&gt;
+		&lt;CODE&gt;&lt;/CODE&gt;
+	&lt;/PICKER&gt;
+&lt;/IMPLEMENTATION&gt;
+&lt;/COLUMN&gt;
+</_Value>
+													<_Type type="a">MultiLine</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableView</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ChangeSelectionOnEnterTo</_Name>
+													<_Value type="a">down</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">left, right, up, down</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1441490_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">profile_update_links_layout</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::15:33:38</_modifiedTimeWeak>
+			<_modifiedTime type="a">3.4.2025::15:33:38</_modifiedTime>
+			<TableElementTypes type="c">
+				<IRPYRawContainer type="e">
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_links_layout</_hname>
+								<_hid type="a">GUID ba47705c-9e62-4bfd-a7bc-d9588e0fc28e</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">Stereotype</TableDataDefinitionName>
+						<_DataType type="a">53181160</_DataType>
+					</TableDataDefinition>
+					
+				</IRPYRawContainer>
+			</TableElementTypes>
+			<DataColumns type="c">
+				<IRPYRawContainer type="e">
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_links_layout</_hname>
+								<_hid type="a">GUID ba47705c-9e62-4bfd-a7bc-d9588e0fc28e</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">General.Name</TableDataDefinitionName>
+						<_columnName type="a">Name</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_links_layout</_hname>
+								<_hid type="a">GUID ba47705c-9e62-4bfd-a7bc-d9588e0fc28e</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Model.Stereotype.Name</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_links_layout</_hname>
+								<_hid type="a">GUID ba47705c-9e62-4bfd-a7bc-d9588e0fc28e</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Base Metaclass</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_links_layout</_hname>
+								<_hid type="a">GUID ba47705c-9e62-4bfd-a7bc-d9588e0fc28e</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Model.Stereotype.Sources</_columnName>
+					</TableDataDefinition>
+					
+					<TableDataDefinition type="e">
+						<_myTable type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">ITableLayout</_hm2Class>
+								<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+								<_hname type="a">profile_update_links_layout</_hname>
+								<_hid type="a">GUID ba47705c-9e62-4bfd-a7bc-d9588e0fc28e</_hid>
+							</IHandle>
+						</_myTable>
+						<_modelElement type="r">
+							<IHandle type="e">
+							</IHandle>
+						</_modelElement>
+						<TableDataDefinitionName type="a">UserDefinedMethod.Edit implementation...</TableDataDefinitionName>
+						<_columnName type="a">Model.Stereotype.Targets</_columnName>
+					</TableDataDefinition>
+					
+				</IRPYRawContainer>
+			</DataColumns>
+		</ITableLayout>
+		<ITableInstance type="e">
+			<_id type="a">GUID fa205eea-c687-4c9e-98c0-1981dbb08687</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableView</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">TableSortColumnState</_Name>
+													<_Value type="a">1,0,0,0,0,0,0</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableView</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">UseOwnerScope</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1441485_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">profile_analysis_view</_name>
+			<_modifiedTimeWeak type="a">12.20.2024::14:58:24</_modifiedTimeWeak>
+			<_modifiedTime type="a">12.20.2024::14:58:24</_modifiedTime>
+			<LayoutHandle type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">ITableLayout</_hm2Class>
+					<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+					<_hname type="a">profile_analysis_layout</_hname>
+					<_hid type="a">GUID 90236db7-02a9-413d-a979-a66eb7efd83a</_hid>
+				</IHandle>
+			</LayoutHandle>
+			<ScopeHandles type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IProfile</_hm2Class>
+							<_hname type="a">SafranArchitectureProfile</_hname>
+							<_hid type="a">GUID aadf7785-de23-4435-b8ac-521003c516f3</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</ScopeHandles>
+		</ITableInstance>
+		<ITableInstance type="e">
+			<_id type="a">GUID ee2810fd-64f2-48dc-8237-845303da6c86</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableView</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">TableFilters</_Name>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">TableSortColumnState</_Name>
+													<_Value type="a">-1,1,0,0,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,0,0,0</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableView</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">UseOwnerScope</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1441480_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">profile_update_view</_name>
+			<_modifiedTimeWeak type="a">6.10.2026::9:26:30</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.10.2026::9:26:30</_modifiedTime>
+			<LayoutHandle type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">ITableLayout</_hm2Class>
+					<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+					<_hname type="a">profile_update_layout</_hname>
+					<_hid type="a">GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</_hid>
+				</IHandle>
+			</LayoutHandle>
+			<ScopeHandles type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IProfile</_hm2Class>
+							<_hname type="a">SafranArchitectureProfile</_hname>
+							<_hid type="a">GUID aadf7785-de23-4435-b8ac-521003c516f3</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</ScopeHandles>
+		</ITableInstance>
+		<ITableInstance type="e">
+			<_id type="a">GUID 22072410-1501-4f48-bd7c-4d6062fb800c</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableView</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">TableSortColumnState</_Name>
+													<_Value type="a">1,0,0,0,0,0,0</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableView</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">UseOwnerScope</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1441479_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">deprecated_stereotypes</_name>
+			<_modifiedTimeWeak type="a">3.23.2026::14:33:59</_modifiedTimeWeak>
+			<_modifiedTime type="a">3.23.2026::14:33:59</_modifiedTime>
+			<LayoutHandle type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">ITableLayout</_hm2Class>
+					<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+					<_hname type="a">profile_analysis_layout</_hname>
+					<_hid type="a">GUID 90236db7-02a9-413d-a979-a66eb7efd83a</_hid>
+				</IHandle>
+			</LayoutHandle>
+			<ScopeHandles type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</ScopeHandles>
+		</ITableInstance>
+		<ITableInstance type="e">
+			<_id type="a">GUID 32e026db-6123-4b52-9cbb-87f2c0e7594a</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableView</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">TableFilters</_Name>
+													<_Value type="a">Model.Stereotype.Aggregates,,port,,TRUE,,FALSE,,FALSE,,FALSE,,FALSE,,FALSE,,FALSE</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableView</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">UseOwnerScope</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1441488_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">profile_update_aggregates_view</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::14:53:46</_modifiedTimeWeak>
+			<_modifiedTime type="a">3.4.2025::14:53:46</_modifiedTime>
+			<LayoutHandle type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">ITableLayout</_hm2Class>
+					<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+					<_hname type="a">profile_update_aggregates_layout</_hname>
+					<_hid type="a">GUID 3c0e8b39-73ab-4d44-9a9d-2a0e3bbce11b</_hid>
+				</IHandle>
+			</LayoutHandle>
+			<ScopeHandles type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IProfile</_hm2Class>
+							<_hname type="a">SafranArchitectureProfile</_hname>
+							<_hid type="a">GUID aadf7785-de23-4435-b8ac-521003c516f3</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</ScopeHandles>
+		</ITableInstance>
+		<ITableInstance type="e">
+			<_id type="a">GUID c93281a4-58e5-4710-ab0d-bb85605e6647</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableView</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">TableFilters</_Name>
+													<_Value type="a">Model.Stereotype.DrawingToolbar,,port,,TRUE,,FALSE,,FALSE,,FALSE,,FALSE,,FALSE,,FALSE</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableView</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">UseOwnerScope</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1441491_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">profile_update_toolbars_view</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::15:27:31</_modifiedTimeWeak>
+			<_modifiedTime type="a">3.4.2025::15:27:31</_modifiedTime>
+			<LayoutHandle type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">ITableLayout</_hm2Class>
+					<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+					<_hname type="a">profile_update_toolbars_layout</_hname>
+					<_hid type="a">GUID 1ac7582f-2bb6-4b81-a19f-f93f71d34cfe</_hid>
+				</IHandle>
+			</LayoutHandle>
+			<ScopeHandles type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IProfile</_hm2Class>
+							<_hname type="a">SafranArchitectureProfile</_hname>
+							<_hid type="a">GUID aadf7785-de23-4435-b8ac-521003c516f3</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</ScopeHandles>
+		</ITableInstance>
+		<ITableInstance type="e">
+			<_id type="a">GUID 5845d996-e94e-4dae-a3f3-9d8f43f54f85</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableView</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">TableFilters</_Name>
+													<_Value type="a">Model.Stereotype.Targets,,port,,TRUE,,FALSE,,FALSE,,FALSE,,FALSE,,FALSE,,FALSE</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_rmmServerID type="a">1441484_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">profile_update_links_view</_name>
+			<_modifiedTimeWeak type="a">3.4.2025::15:36:35</_modifiedTimeWeak>
+			<_modifiedTime type="a">3.4.2025::15:36:35</_modifiedTime>
+			<LayoutHandle type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">ITableLayout</_hm2Class>
+					<_hsubsystem type="a">_ProfileManagement</_hsubsystem>
+					<_hname type="a">profile_update_links_layout</_hname>
+					<_hid type="a">GUID ba47705c-9e62-4bfd-a7bc-d9588e0fc28e</_hid>
+				</IHandle>
+			</LayoutHandle>
+			<ScopeHandles type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IProject</_hm2Class>
+							<_hname type="a">SafranArchitectureProfile</_hname>
+							<_hid type="a">GUID 4a8f5d90-0c84-46fc-98d9-e2e63ba9cf47</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</ScopeHandles>
+		</ITableInstance>
+		
+	</RHAPSODY-MODEL>
+	<RHAPSODY-INDEX>
+		<ELEMENT>
+			<ID>1350430_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 4a8f5d90-0c84-46fc-98d9-e2e63ba9cf47</RHP-ID>
+			<NAME>SafranArchitectureProfile</NAME>
+			<TYPE>Project</TYPE>
+			<TYPE-ID>GUID_63940d46-f47e-45fb-8b3e-c97957d3d82b_1616336857</TYPE-ID>
+			<DISPLAY-TYPE>Project</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Projects</DISPLAY-GROUP>
+			<BROWSER-ICON>Project~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Project~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>true</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2026/6/10 9:42:9</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES>R:Profiles%7FRhapsodyModelManager | L:1350224_CmvNERkXEemjcZ7iaG_c3w | L:1350392_CmvNERkXEemjcZ7iaG_c3w | L:1441498_CmvNERkXEemjcZ7iaG_c3w | I:1350427_CmvNERkXEemjcZ7iaG_c3w | I:1441481_CmvNERkXEemjcZ7iaG_c3w | R:1251301_CmvNERkXEemjcZ7iaG_c3w | R:Packages%7FPredefinedTypes | R:Packages%7FPredefinedTypesCpp</AGGREGATES>
+			<REFERENCES></REFERENCES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1350427_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 031170fd-2cce-4fac-aa6e-284ac973bf88</RHP-ID>
+			<NAME>Default</NAME>
+			<TYPE>Package</TYPE>
+			<TYPE-ID>GUID_e766f5b1-86fe-4a8a-a6d3-e4da609bde24_1615988135</TYPE-ID>
+			<DISPLAY-TYPE>Package</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Packages</DISPLAY-GROUP>
+			<BROWSER-ICON>Package~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Package~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2026/5/11 12:15:57</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES>I:1350431_CmvNERkXEemjcZ7iaG_c3w</AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<DESCRIPTION>
+				<PLAIN-TEXT>d</PLAIN-TEXT>
+			</DESCRIPTION>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1350431_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 6b9d3c9f-7ad5-4b46-9d2e-49d3a43e13b9</RHP-ID>
+			<NAME>DefaultComponent</NAME>
+			<TYPE>Component</TYPE>
+			<TYPE-ID>GUID_712dcf64-04ab-42d9-a36f-07adbf8b2833_1616336857</TYPE-ID>
+			<DISPLAY-TYPE>Component</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Components</DISPLAY-GROUP>
+			<BROWSER-ICON>Component~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Component~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2026/5/11 12:15:57</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES>I:1350428_CmvNERkXEemjcZ7iaG_c3w | I:1350432_CmvNERkXEemjcZ7iaG_c3w</AGGREGATES>
+			<REFERENCES></REFERENCES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1350432_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID fa976cc9-34f6-40e1-90ed-930a9e4a5c0c</RHP-ID>
+			<NAME>Files</NAME>
+			<TYPE>Folder</TYPE>
+			<TYPE-ID>GUID_7df8403c-e0c0-47ca-8ecb-83619de862dc_1616336857</TYPE-ID>
+			<DISPLAY-TYPE>Folder</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Folders</DISPLAY-GROUP>
+			<BROWSER-ICON>Folder~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Folder~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2021/12/14 15:35:6</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1350428_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID f2a843a7-7e48-4ada-90e3-dfb6bb4bb7cd</RHP-ID>
+			<NAME>DefaultConfig</NAME>
+			<TYPE>Configuration</TYPE>
+			<TYPE-ID>GUID_d242ea69-04ea-4701-a49d-722724a747f5_1616336857</TYPE-ID>
+			<DISPLAY-TYPE>Configuration</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Configurations</DISPLAY-GROUP>
+			<BROWSER-ICON>Configuration~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Configuration~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2026/5/11 12:15:57</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES>I:1350429_CmvNERkXEemjcZ7iaG_c3w</AGGREGATES>
+			<REFERENCES></REFERENCES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1350429_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 6ba4a4b5-90ac-4724-b447-ff909113c065</RHP-ID>
+			<NAME>DefaultConfig</NAME>
+			<TYPE>Folder</TYPE>
+			<TYPE-ID>GUID_7df8403c-e0c0-47ca-8ecb-83619de862dc_1616336857</TYPE-ID>
+			<DISPLAY-TYPE>Folder</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Folders</DISPLAY-GROUP>
+			<BROWSER-ICON>Folder~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Folder~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2021/12/14 15:35:6</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1441481_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 4ef05f31-0291-495a-aa0a-7805f3c564c6</RHP-ID>
+			<NAME>_ProfileManagement</NAME>
+			<TYPE>Package</TYPE>
+			<TYPE-ID>GUID_e766f5b1-86fe-4a8a-a6d3-e4da609bde24_1615988135</TYPE-ID>
+			<DISPLAY-TYPE>Package</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Packages</DISPLAY-GROUP>
+			<BROWSER-ICON>Package~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>Package~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2026/6/10 9:26:30</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES>I:1441483_CmvNERkXEemjcZ7iaG_c3w | I:1441489_CmvNERkXEemjcZ7iaG_c3w | I:1441487_CmvNERkXEemjcZ7iaG_c3w | I:1441482_CmvNERkXEemjcZ7iaG_c3w | I:1441490_CmvNERkXEemjcZ7iaG_c3w | I:1441485_CmvNERkXEemjcZ7iaG_c3w | I:1441480_CmvNERkXEemjcZ7iaG_c3w | I:1441479_CmvNERkXEemjcZ7iaG_c3w | I:1441488_CmvNERkXEemjcZ7iaG_c3w | I:1441491_CmvNERkXEemjcZ7iaG_c3w | I:1441484_CmvNERkXEemjcZ7iaG_c3w | I:1441486_CmvNERkXEemjcZ7iaG_c3w</AGGREGATES>
+			<REFERENCES></REFERENCES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1441486_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 466aea5b-ff74-4fcc-8378-e7739e24628c</RHP-ID>
+			<NAME>profileDefinition.xlsx</NAME>
+			<TYPE>ControlledFile</TYPE>
+			<TYPE-ID>GUID_22f7c41f-d5cc-45dc-aac7-fb8d7bc6749a_1620664094</TYPE-ID>
+			<DISPLAY-TYPE>ControlledFile</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Controlled Files</DISPLAY-GROUP>
+			<BROWSER-ICON>ControlledFile~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>ControlledFile~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2026/3/24 16:28:59</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1441483_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 90236db7-02a9-413d-a979-a66eb7efd83a</RHP-ID>
+			<NAME>profile_analysis_layout</NAME>
+			<TYPE>TableLayout</TYPE>
+			<TYPE-ID>GUID_c6d770ee-f12c-4b2b-bb7b-4ea1b839cbe6_1620664094</TYPE-ID>
+			<DISPLAY-TYPE>TableLayout</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Table Layouts</DISPLAY-GROUP>
+			<BROWSER-ICON>TableLayout~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>TableLayout~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/12/20 15:38:38</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1441489_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 7a3f35ff-1842-4f7c-acf2-f40b4d0c1fd4</RHP-ID>
+			<NAME>profile_update_layout</NAME>
+			<TYPE>TableLayout</TYPE>
+			<TYPE-ID>GUID_c6d770ee-f12c-4b2b-bb7b-4ea1b839cbe6_1620664094</TYPE-ID>
+			<DISPLAY-TYPE>TableLayout</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Table Layouts</DISPLAY-GROUP>
+			<BROWSER-ICON>TableLayout~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>TableLayout~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/3/7 9:16:26</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1441487_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 3c0e8b39-73ab-4d44-9a9d-2a0e3bbce11b</RHP-ID>
+			<NAME>profile_update_aggregates_layout</NAME>
+			<TYPE>TableLayout</TYPE>
+			<TYPE-ID>GUID_c6d770ee-f12c-4b2b-bb7b-4ea1b839cbe6_1620664094</TYPE-ID>
+			<DISPLAY-TYPE>TableLayout</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Table Layouts</DISPLAY-GROUP>
+			<BROWSER-ICON>TableLayout~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>TableLayout~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/3/4 14:52:48</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1441482_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 1ac7582f-2bb6-4b81-a19f-f93f71d34cfe</RHP-ID>
+			<NAME>profile_update_toolbars_layout</NAME>
+			<TYPE>TableLayout</TYPE>
+			<TYPE-ID>GUID_c6d770ee-f12c-4b2b-bb7b-4ea1b839cbe6_1620664094</TYPE-ID>
+			<DISPLAY-TYPE>TableLayout</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Table Layouts</DISPLAY-GROUP>
+			<BROWSER-ICON>TableLayout~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>TableLayout~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/3/4 15:25:31</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1441490_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID ba47705c-9e62-4bfd-a7bc-d9588e0fc28e</RHP-ID>
+			<NAME>profile_update_links_layout</NAME>
+			<TYPE>TableLayout</TYPE>
+			<TYPE-ID>GUID_c6d770ee-f12c-4b2b-bb7b-4ea1b839cbe6_1620664094</TYPE-ID>
+			<DISPLAY-TYPE>TableLayout</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Table Layouts</DISPLAY-GROUP>
+			<BROWSER-ICON>TableLayout~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>TableLayout~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/3/4 15:33:38</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1441485_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID fa205eea-c687-4c9e-98c0-1981dbb08687</RHP-ID>
+			<NAME>profile_analysis_view</NAME>
+			<TYPE>TableView</TYPE>
+			<TYPE-ID>GUID_f41b8bc8-0d52-45aa-bf20-0bd934eab4ee_1620664094</TYPE-ID>
+			<DISPLAY-TYPE>TableView</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Table Views</DISPLAY-GROUP>
+			<BROWSER-ICON>TableView~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>TableView~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/12/20 14:58:24</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<PRESENTATION-TYPE>T:1441485_CmvNERkXEemjcZ7iaG_c3w</PRESENTATION-TYPE>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1441480_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID ee2810fd-64f2-48dc-8237-845303da6c86</RHP-ID>
+			<NAME>profile_update_view</NAME>
+			<TYPE>TableView</TYPE>
+			<TYPE-ID>GUID_f41b8bc8-0d52-45aa-bf20-0bd934eab4ee_1620664094</TYPE-ID>
+			<DISPLAY-TYPE>TableView</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Table Views</DISPLAY-GROUP>
+			<BROWSER-ICON>TableView~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>TableView~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2026/6/10 9:26:30</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<PRESENTATION-TYPE>T:1441480_CmvNERkXEemjcZ7iaG_c3w</PRESENTATION-TYPE>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1441479_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 22072410-1501-4f48-bd7c-4d6062fb800c</RHP-ID>
+			<NAME>deprecated_stereotypes</NAME>
+			<TYPE>TableView</TYPE>
+			<TYPE-ID>GUID_f41b8bc8-0d52-45aa-bf20-0bd934eab4ee_1620664094</TYPE-ID>
+			<DISPLAY-TYPE>TableView</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Table Views</DISPLAY-GROUP>
+			<BROWSER-ICON>TableView~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>TableView~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2026/3/23 14:33:59</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<PRESENTATION-TYPE>T:1441479_CmvNERkXEemjcZ7iaG_c3w</PRESENTATION-TYPE>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1441488_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 32e026db-6123-4b52-9cbb-87f2c0e7594a</RHP-ID>
+			<NAME>profile_update_aggregates_view</NAME>
+			<TYPE>TableView</TYPE>
+			<TYPE-ID>GUID_f41b8bc8-0d52-45aa-bf20-0bd934eab4ee_1620664094</TYPE-ID>
+			<DISPLAY-TYPE>TableView</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Table Views</DISPLAY-GROUP>
+			<BROWSER-ICON>TableView~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>TableView~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/3/4 14:53:46</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<PRESENTATION-TYPE>T:1441488_CmvNERkXEemjcZ7iaG_c3w</PRESENTATION-TYPE>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1441491_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID c93281a4-58e5-4710-ab0d-bb85605e6647</RHP-ID>
+			<NAME>profile_update_toolbars_view</NAME>
+			<TYPE>TableView</TYPE>
+			<TYPE-ID>GUID_f41b8bc8-0d52-45aa-bf20-0bd934eab4ee_1620664094</TYPE-ID>
+			<DISPLAY-TYPE>TableView</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Table Views</DISPLAY-GROUP>
+			<BROWSER-ICON>TableView~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>TableView~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/3/4 15:27:31</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<PRESENTATION-TYPE>T:1441491_CmvNERkXEemjcZ7iaG_c3w</PRESENTATION-TYPE>
+		</ELEMENT>
+		<ELEMENT>
+			<ID>1441484_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 5845d996-e94e-4dae-a3f3-9d8f43f54f85</RHP-ID>
+			<NAME>profile_update_links_view</NAME>
+			<TYPE>TableView</TYPE>
+			<TYPE-ID>GUID_f41b8bc8-0d52-45aa-bf20-0bd934eab4ee_1620664094</TYPE-ID>
+			<DISPLAY-TYPE>TableView</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Table Views</DISPLAY-GROUP>
+			<BROWSER-ICON>TableView~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>TableView~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2025/3/4 15:36:35</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+			<PRESENTATION-TYPE>T:1441484_CmvNERkXEemjcZ7iaG_c3w</PRESENTATION-TYPE>
+		</ELEMENT>
+	</RHAPSODY-INDEX>
+
+	<OslcLinks type="c">
+		<IRPYRawContainer type="e">
+		</IRPYRawContainer>
+	</OslcLinks>
+
+<RHAPSODY-INDEX-START>137345</RHAPSODY-INDEX-START>
+<RHAPSODY-INDEX-END>151917</RHAPSODY-INDEX-END>
+<OSLC-LINKS-START>151918</OSLC-LINKS-START>
+<OSLC-LINKS-END>152007</OSLC-LINKS-END>
+<INCLUDES-RHAPSODY-INDEX>true</INCLUDES-RHAPSODY-INDEX>
+</RhapsodyArchive>
+

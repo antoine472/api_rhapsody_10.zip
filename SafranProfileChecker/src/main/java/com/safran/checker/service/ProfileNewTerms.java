@@ -1,0 +1,94 @@
+// modificationCounter = 2
+// lastChange: 2026-07-20 - Added exact relation names required by the corrected checker definitions.
+
+package com.safran.checker.service;
+
+public final class ProfileNewTerms {
+    private ProfileNewTerms() { }
+
+    public static final String ACTIVATEDFUNCTION = "Activated Function";
+    public static final String ANALYSISPACKAGE = "G - Analysis Package";
+    public static final String CHECKMODELCOMMENT = "checkcommnent";
+    public static final String CIRCUITDIAGRAMTABLEVIEWHYPERLINK = "CircuitDiagramTableViewHyperLink";
+    public static final String CONTEXTDIAGRAM = "Context Diagram";
+    public static final String CONTEXTDIAGRAMTABLEVIEWHYPERLINK = "ContextDiagramTableViewHyperLink";
+    public static final String DOMAINDIAGRAM = "Domain Diagram";
+    public static final String DIRECTED_ASSOCIATION = "Directed Association";
+    public static final String DOMAINPACKAGE = "Domain Package";
+    public static final String ENDPHASE = "End Phase";
+    public static final String ENVIRONMENTDIAGRAM = "Environment Diagram";
+    public static final String FLOWCOMPOSITIONDIAGRAM = "Flow Composition Diagram";
+    public static final String FLOWITEM = "Flow Item";
+    public static final String FLOWPACKAGE = "F - Flow Package";
+    public static final String FLOW_PORT = "Flow Port";
+    public static final String FUNCTIONALLOCATION = "Function Allocation";
+    public static final String FUNCTIONALLOCATIONMATRIX = "Function Allocation Matrix";
+    public static final String FUNCTIONUSECASEMATRIX = "Function To Use Case Matrix";
+    public static final String FUNCTIONWITHREFERENCE = "Function With Reference";
+    public static final String FUNCTION = "Function";
+    public static final String FUNCTIONALANALYSISPACKAGE = "B - Functional Analysis Package";
+    public static final String FUNCTIONALBEHAVIORDIAGRAM = "Functional Behavior Diagram";
+    public static final String FUNCTIONALBEHAVIORDIAGRAMTABLEVIEWHYPERLINK = "FunctionalBehaviorDiagramTableViewHyperLink";
+    public static final String FUNCTIONALBREAKDOWNSTRUCTURE = "Functional Breakdown Structure";
+    public static final String FUNCTIONALCHAINDIAGRAM = "Functional Chain Diagram";
+    public static final String FUNCTIONALFLOW = "Functional Flow";
+    public static final String FUNCTIONALSEQUENCEDIAGRAM = "Functional Sequence Diagram";
+    public static final String FUNCTIONALSYSTEM = "Functional System";
+    public static final String GENERICFLOW = "Generic Flow";
+    public static final String IFMANAGEMENTPACKAGE = "E - Interfaces Management Package";
+    public static final String IMPORTPACKAGE = "_Import package";
+    public static final String LIFECYCLE = "Lifecycle";
+    public static final String LIFECYCLEDIAGRAM = "Lifecycle Diagram";
+    public static final String LIFECYCLEPHASE = "Lifecycle Phase";
+    public static final String LIFECYCLEPHASETRANSITION = "Lifecycle Phase Transition";
+    public static final String LOGICALANALYSISPACKAGE = "C - Logical Analysis Package";
+    public static final String LOGICALARCHITECTUREDIAGRAM = "Logical Architecture Diagram";
+    public static final String LOGICALARCHITECTUREDIAGRAMTABLEVIEWHYPERLINK = "LogicalArchitectureDiagramTableViewHyperLink";
+    public static final String LOGICALBREAKDOWNSTRUCTURE = "Logical Breakdown Structure";
+    public static final String LOGICALFLOW = "Logical Flow";
+    public static final String LOGICALIFDIAGRAM = "Logical Interfaces Diagram";
+    public static final String LOGICALIFPACKAGE = "Logical Interfaces Package";
+    public static final String LOGICALPORTREALIZATION = "Port Realization";
+    public static final String LOGICALSEQUENCEDIAGRAM = "Logical Sequence Diagram";
+    public static final String LOGICALSYSTEM = "Logical System";
+    public static final String LOGICALSYSTEMREALIZATION = "System Realization";
+    public static final String LOGICALSYSTEMWITHREFERENCE = "Logical System With Reference";
+    public static final String MODEFUNCTIONSMATRIX = "Function to Mode Matrix";
+    public static final String OPERATINGMODE = "Operating Mode";
+    public static final String OPERATINGMODECHART = "Operating Mode Chart";
+    public static final String OPERATIONALANALYSISPACKAGE = "A - Operational Analysis Package";
+    public static final String OPERATIONALFLOW = "Operational Flow";
+    public static final String OPERATIONALFLOWCHARTDIAGRAM = "Operational Flowchart Diagram";
+    public static final String OPERATIONALSEQUENCEDIAGRAM = "Operational Sequence Diagram";
+    public static final String OPERATIONALSEQUENCEDIAGRAMTABLEVIEWHYPERLINK = "OperationalSequenceDiagramTableViewHyperLink";
+    public static final String OPERATIONALSYSTEM = "Operational System";
+    public static final String REDEFINESCOMPONENT = "Redefines Component";
+    public static final String REDEFINESFUNCTION = "Redefines Function";
+    public static final String REDEFINESSYSTEM = "Redefines System";
+    public static final String REFERENCESFUNCTION = "References Function";
+    public static final String REFERENCESLOGICALSYSTEM = "References Logical System";
+    public static final String REFERENCESTECHNICALCOMPONENT = "References Technical Component";
+    public static final String RESPONSIBLEFOR = "Responsible For";
+    public static final String REUSEARTEFACTSTABLE = "Reuse Artefacts Table";
+    public static final String SAFRANARCHITECTUREPROJECT = "Safran Architecture Project";
+    public static final String SATISFIES = "Satisfies";
+    public static final String STAKEHOLDER = "Stakeholder";
+    public static final String STARTPHASE = "Start Phase";
+    public static final String SYSTEMFUNCTIONALBEHAVIOR = "System Functional Behavior";
+    public static final String TECHNICALANALYSISPACKAGE = "D - Technical Analysis Package";
+    public static final String TECHNICALARCHITECTUREDIAGRAM = "Technical Architecture Diagram";
+    public static final String TECHNICALARCHITECTUREDIAGRAMTABLEVIEWHYPERLINK = "TechnicalArchitectureDiagramTableViewHyperLink";
+    public static final String TECHNICALBREAKDOWNDIAGRAM = "Technical Breakdown Diagram";
+    public static final String TECHNICALCOMPONENT = "Technical Component";
+    public static final String TECHNICALCOMPONENTWITHREFERENCE = "Technical Component With Reference";
+    public static final String TECHNICALCONNECTION = "Technical Connection";
+    public static final String TECHNICALFLOW = "Technical Flow";
+    public static final String TECHNICALFLOWDIAGRAM = "Technical Flows Diagram";
+    public static final String TECHNICALIFDIAGRAM = "Technical Interfaces Diagram";
+    public static final String TECHNICALIFPACKAGE = "Technical Interfaces Package";
+    public static final String TECHNICALPORT = "Technical Port";
+    public static final String TRANSITIONFUNCTION = "Transition Function";
+    public static final String USECASEDIAGRAMTABLEVIEWHYPERLINK = "UseCaseDiagramTableViewHyperLink";
+    public static final String USE_CASE = "Use_Case";
+    public static final String USE_CASEDIAGRAM = "Use_Case Diagram";
+}

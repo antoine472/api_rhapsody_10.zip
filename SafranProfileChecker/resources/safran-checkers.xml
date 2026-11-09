@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<checkerConfiguration>
+  <checkers id="206469" javaClassName="OperationalFlowItemTypeCoherenceChecker" domain="SAFRAN" name="Operational Flow whose connected Flow Ports or conveyed Flow Item use inconsistent Flow Item types." severity="Error" enabled="true" completeness="false" shouldCallFromCG="false">
+    <metaClasses>Operational Flow</metaClasses>
+  </checkers>
+  <checkers id="206470" javaClassName="OperationalFlowPortStereotypeChecker" domain="SAFRAN" name="Operational Flow connected to a port that is not stereotyped as Flow Port." severity="Error" enabled="true" completeness="false" shouldCallFromCG="false">
+    <metaClasses>Operational Flow</metaClasses>
+  </checkers>
+  <checkers id="353035" javaClassName="OperationalFlowPortDirectionChecker" domain="SAFRAN" name="Operational Flow whose connected Flow Port directions are inconsistent with the flow direction." severity="Error" enabled="true" completeness="false" shouldCallFromCG="false">
+    <metaClasses>Operational Flow</metaClasses>
+  </checkers>
+  <checkers id="206471" javaClassName="FunctionalFlowPortDirectionChecker" domain="SAFRAN" name="Functional Flow whose connected Flow Port directions are inconsistent with the flow direction." severity="Error" enabled="true" completeness="false" shouldCallFromCG="false">
+    <metaClasses>Functional Flow</metaClasses>
+  </checkers>
+  <checkers id="206472" javaClassName="FunctionalFlowItemTypeCoherenceChecker" domain="SAFRAN" name="Functional Flow whose connected Flow Ports or conveyed Flow Item use inconsistent Flow Item types." severity="Error" enabled="true" completeness="false" shouldCallFromCG="false">
+    <metaClasses>Functional Flow</metaClasses>
+  </checkers>
+  <checkers id="207668" javaClassName="FunctionalFlowPortStereotypeChecker" domain="SAFRAN" name="Functional Flow connected to a port that is not stereotyped as Flow Port." severity="Error" enabled="true" completeness="false" shouldCallFromCG="false">
+    <metaClasses>Functional Flow</metaClasses>
+  </checkers>
+  <checkers id="206468" javaClassName="LogicalFlowPortDirectionChecker" domain="SAFRAN" name="Logical Flow whose connected Flow Port directions are inconsistent with the flow direction." severity="Error" enabled="true" completeness="false" shouldCallFromCG="false">
+    <metaClasses>Logical Flow</metaClasses>
+  </checkers>
+  <checkers id="207669" javaClassName="LogicalFlowItemTypeCoherenceChecker" domain="SAFRAN" name="Logical Flow whose connected Flow Ports or conveyed Flow Item use inconsistent Flow Item types." severity="Error" enabled="true" completeness="false" shouldCallFromCG="false">
+    <metaClasses>Logical Flow</metaClasses>
+  </checkers>
+  <checkers id="206499" javaClassName="LogicalFlowPortStereotypeChecker" domain="SAFRAN" name="Logical Flow connected to a port that is not stereotyped as Flow Port." severity="Error" enabled="true" completeness="false" shouldCallFromCG="false">
+    <metaClasses>Logical Flow</metaClasses>
+  </checkers>
+  <checkers id="208311" javaClassName="UnclassifiedGenericFlowChecker" domain="SAFRAN" name="The checker shall detect and report every Generic Flow that has not been specialized as an Operational Flow- Functional Flow- Logical Flow- or Technical Flow." severity="Warning" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Generic Flow</metaClasses>
+  </checkers>
+  <checkers id="206498" javaClassName="OperationalContextConnectivityChecker" domain="SAFRAN" name="Operational System or Stakeholder represented in a Context Diagram or Environment Diagram that is not linked to another Operational System or Stakeholder by an Operational Flow." severity="Error" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Operational System</metaClasses>
+    <metaClasses>Stakeholder</metaClasses>
+  </checkers>
+  <checkers id="207822" javaClassName="OperationalSequenceSystemOfInterestChecker" domain="SAFRAN" name="Operational Sequence Diagram that does not contain exactly one Operational System designated as SystemOfInterest" severity="Error" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Operational Sequence Diagram</metaClasses>
+  </checkers>
+  <checkers id="210753" javaClassName="OperationalSequenceFlowTypingChecker" domain="SAFRAN" name="DataFlow message in an Operational Sequence Diagram that has no dependency to a Flow Item- or whose associated Flow Item is not conveyed by an Operational Flow connecting the Operational Systems represented by the source and target lifelines." severity="Error" enabled="true" completeness="false" shouldCallFromCG="false">
+    <metaClasses>Operational Sequence Diagram</metaClasses>
+  </checkers>
+  <checkers id="210761" javaClassName="UnconnectedOperationalFlowPortChecker" domain="SAFRAN" name="Flow Port owned by an Operational System or Stakeholder that is not connected to an Operational Flow." severity="Warning" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Flow Port</metaClasses>
+  </checkers>
+  <checkers id="210762" javaClassName="UnconnectedFunctionalFlowPortChecker" domain="SAFRAN" name="Flow Port owned by a Function that is not connected to a Functional Flow." severity="Warning" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Flow Port</metaClasses>
+  </checkers>
+  <checkers id="210763" javaClassName="UnconnectedLogicalFlowPortChecker" domain="SAFRAN" name="Flow Port owned by a Logical System that is not connected to a Logical Flow." severity="Warning" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Flow Port</metaClasses>
+  </checkers>
+  <checkers id="206481" javaClassName="UnusedFlowItemChecker" domain="SAFRAN" name="Flow Item that is not used to type a Flow Port and is not conveyed by any Generic Flow- Operational Flow- Functional Flow- Logical Flow- or Technical Flow." severity="Warning" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Flow Item</metaClasses>
+  </checkers>
+  <checkers id="206486" javaClassName="UnnestedFunctionChecker" domain="SAFRAN" name="Function displayed in a Functional Behavior Diagram that has not been transformed through the Nest Function operation." severity="Warning" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Function</metaClasses>
+  </checkers>
+  <checkers id="207924" javaClassName="FunctionWithReferenceCompatibilityChecker" domain="SAFRAN" name="Function With Reference that does not reference exactly one Function- does not preserve the referenced Flow Ports- introduces a Flow Port that does not redefine a referenced Flow Port- or changes the direction or Flow Item type of a redefined Flow Port." severity="Error" enabled="true" completeness="false" shouldCallFromCG="false">
+    <metaClasses>Function With Reference</metaClasses>
+  </checkers>
+  <checkers id="206479" javaClassName="LogicalSystemBreakdownRepresentationChecker" domain="SAFRAN" name="Logical System that is not represented in at least one Logical Breakdown Structure." severity="Warning" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Logical System</metaClasses>
+  </checkers>
+  <checkers id="206487" javaClassName="UnnestedLogicalSystemChecker" domain="SAFRAN" name="Logical System displayed in a Logical Architecture Diagram that has not been transformed through the Nest Logical System operation." severity="Warning" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Logical System</metaClasses>
+  </checkers>
+  <checkers id="207925" javaClassName="LogicalSystemWithReferenceCompatibilityChecker" domain="SAFRAN" name="Logical System With Reference that does not reference exactly one Logical System- does not preserve the referenced Flow Ports- introduces a Flow Port that does not redefine a referenced Flow Port- or changes the direction or Flow Item type of a redefined Flow Port." severity="Error" enabled="true" completeness="false" shouldCallFromCG="false">
+    <metaClasses>Logical System With Reference</metaClasses>
+  </checkers>
+  <checkers id="206480" javaClassName="TechnicalComponentBreakdownRepresentationChecker" domain="SAFRAN" name="Technical Component that is not represented in at least one Technical Breakdown Diagram." severity="Warning" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Technical Component</metaClasses>
+  </checkers>
+  <checkers id="206488" javaClassName="UnnestedTechnicalComponentChecker" domain="SAFRAN" name="Technical Component displayed in a Technical Architecture Diagram that has not been transformed through the Nest Technical Component operation." severity="Warning" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Technical Component</metaClasses>
+  </checkers>
+  <checkers id="207927" javaClassName="TechnicalComponentWithReferenceCompatibilityChecker" domain="SAFRAN" name="Technical Component With Reference that does not reference exactly one Technical Component- does not preserve the referenced Technical Ports- introduces a Technical Port that does not redefine a referenced Technical Port- or changes the port contract of a redefined Technical Port." severity="Error" enabled="true" completeness="false" shouldCallFromCG="false">
+    <metaClasses>Technical Component With Reference</metaClasses>
+  </checkers>
+  <checkers id="206485" javaClassName="UseCaseDiagramRepresentationChecker" domain="SAFRAN" name="Use_Case that is not represented in at least one Use_Case Diagram contained directly in a Lifecycle Phase." severity="Warning" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Use_Case</metaClasses>
+  </checkers>
+  <checkers id="206493" javaClassName="UseCaseIncludeExtendTargetChecker" domain="SAFRAN" name="UML include or extend relationship whose source is a Use_Case and whose target is not another Use_Case." severity="Warning" enabled="true" completeness="false" shouldCallFromCG="false">
+    <metaClasses>Use_Case</metaClasses>
+  </checkers>
+  <checkers id="206482" javaClassName="UseCaseSatisfactionChecker" domain="SAFRAN" name="Use_Case that is not linked by Satisfies to at least one Function." severity="Warning" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Use_Case</metaClasses>
+  </checkers>
+  <checkers id="206483" javaClassName="UseCaseExternalActorAssociationChecker" domain="SAFRAN" name="Use_Case that is not connected to at least one Stakeholder or Operational System by a Directed Association or a standard UML Association." severity="Warning" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Use_Case</metaClasses>
+  </checkers>
+  <checkers id="206495" javaClassName="OperationalSequenceFlowPresenceChecker" domain="SAFRAN" name="Operational Sequence Diagram containing at least two represented Operational Systems when no DataFlow message is exchanged between their lifelines." severity="Warning" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Operational Sequence Diagram</metaClasses>
+  </checkers>
+  <checkers id="206496" javaClassName="OperationalSequenceConditionMarkChecker" domain="SAFRAN" name="Condition Mark in an Operational Sequence Diagram whose formal type is not an Operating Mode owned by the Operational System designated as SystemOfInterest." severity="Warning" enabled="true" completeness="false" shouldCallFromCG="false">
+    <metaClasses>Operational Sequence Diagram</metaClasses>
+  </checkers>
+  <checkers id="206489" javaClassName="OperationalSequenceActionBlockChecker" domain="SAFRAN" name="Action Block in an Operational Sequence Diagram that references a Function not owned by its lifeline Operational System- or whose Function is not available through Activated Function in the current Operating Mode defined by the last preceding Condition Mark on the same lifeline." severity="Warning" enabled="true" completeness="false" shouldCallFromCG="false">
+    <metaClasses>Operational Sequence Diagram</metaClasses>
+  </checkers>
+  <checkers id="206490" javaClassName="LifecyclePhaseRepresentationChecker" domain="SAFRAN" name="Lifecycle Phase that is not represented in at least one Lifecycle Diagram." severity="Warning" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Lifecycle Phase</metaClasses>
+  </checkers>
+  <checkers id="206491" javaClassName="LifecyclePhaseConnectivityChecker" domain="SAFRAN" name="Lifecycle Phase that is not connected by a Lifecycle Phase Transition to at least one Start Phase- Lifecycle Phase- or End Phase." severity="Warning" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Lifecycle Phase</metaClasses>
+  </checkers>
+  <checkers id="206503" javaClassName="OperatingModeRepresentationChecker" domain="SAFRAN" name="Operating Mode that is not represented in at least one Operating Mode Chart." severity="Warning" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Operating Mode</metaClasses>
+  </checkers>
+  <checkers id="206492" javaClassName="OperatingModeTransitionChecker" domain="SAFRAN" name="Operating Mode that does not have at least one incoming transition and at least one outgoing transition." severity="Warning" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Operating Mode</metaClasses>
+  </checkers>
+  <checkers id="206505" javaClassName="OperatingModeChartInitialStateChecker" domain="SAFRAN" name="Operating Mode Chart that has neither an initial pseudostate nor a default transition." severity="Warning" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Operating Mode Chart</metaClasses>
+  </checkers>
+  <checkers id="206504" javaClassName="OperatingModeChartFinalStateChecker" domain="SAFRAN" name="Operating Mode Chart that does not contain a TerminationState." severity="Warning" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Operating Mode Chart</metaClasses>
+  </checkers>
+  <checkers id="206501" javaClassName="OperationalSystemDiagramRepresentationChecker" domain="SAFRAN" name="Operational System that is not represented in at least one Context Diagram or Environment Diagram." severity="Warning" enabled="true" completeness="true" shouldCallFromCG="false">
+    <metaClasses>Operational System</metaClasses>
+  </checkers>
+  <checkers id="206484" javaClassName="ConnectedFlowPortNameChecker" domain="SAFRAN" name="Pair of Flow Ports connected by an Operational Flow- Functional Flow- Logical Flow- or Technical Flow whose names differ." severity="Info" enabled="true" completeness="false" shouldCallFromCG="false">
+    <metaClasses>Operational Flow</metaClasses>
+    <metaClasses>Functional Flow</metaClasses>
+    <metaClasses>Logical Flow</metaClasses>
+    <metaClasses>Technical Flow</metaClasses>
+  </checkers>
+</checkerConfiguration>

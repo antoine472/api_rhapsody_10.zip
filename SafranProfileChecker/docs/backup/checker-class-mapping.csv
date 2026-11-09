@@ -1,0 +1,41 @@
+checkerId,javaClassName,metaClasses,severity,enabled
+206469,OperationalFlowItemTypeCoherenceChecker,Operational Flow,Error,true
+206470,OperationalFlowPortStereotypeChecker,Operational Flow,Error,true
+353035,OperationalFlowPortDirectionChecker,Operational Flow,Error,true
+206471,FunctionalFlowPortDirectionChecker,Functional Flow,Error,true
+206472,FunctionalFlowItemTypeCoherenceChecker,Functional Flow,Error,true
+207668,FunctionalFlowPortStereotypeChecker,Functional Flow,Error,true
+206468,LogicalFlowPortDirectionChecker,Logical Flow,Error,true
+207669,LogicalFlowItemTypeCoherenceChecker,Logical Flow,Error,true
+206499,LogicalFlowPortStereotypeChecker,Logical Flow,Error,true
+208311,UnclassifiedGenericFlowChecker,Generic Flow,Warning,true
+206498,OperationalContextConnectivityChecker,Operational System; Stakeholder,Error,true
+207822,OperationalSequenceSystemOfInterestChecker,Operational Sequence Diagram,Error,true
+210753,OperationalSequenceFlowTypingChecker,Operational Sequence Diagram,Error,true
+210761,UnconnectedOperationalFlowPortChecker,Flow Port,Warning,true
+210762,UnconnectedFunctionalFlowPortChecker,Flow Port,Warning,true
+210763,UnconnectedLogicalFlowPortChecker,Flow Port,Warning,true
+206481,UnusedFlowItemChecker,Flow Item,Warning,true
+206486,UnnestedFunctionChecker,Function,Warning,true
+207924,FunctionWithReferenceCompatibilityChecker,Function With Reference,Error,true
+206479,LogicalSystemBreakdownRepresentationChecker,Logical System,Warning,true
+206487,UnnestedLogicalSystemChecker,Logical System,Warning,true
+207925,LogicalSystemWithReferenceCompatibilityChecker,Logical System With Reference,Error,true
+206480,TechnicalComponentBreakdownRepresentationChecker,Technical Component,Warning,true
+206488,UnnestedTechnicalComponentChecker,Technical Component,Warning,true
+207927,TechnicalComponentWithReferenceCompatibilityChecker,Technical Component With Reference,Error,true
+206485,UseCaseDiagramRepresentationChecker,Use_Case,Warning,true
+206493,UseCaseIncludeExtendTargetChecker,Use_Case,Warning,true
+206482,UseCaseSatisfactionChecker,Use_Case,Warning,true
+206483,UseCaseExternalActorAssociationChecker,Use_Case,Warning,true
+206495,OperationalSequenceFlowPresenceChecker,Operational Sequence Diagram,Warning,true
+206496,OperationalSequenceConditionMarkChecker,Operational Sequence Diagram,Warning,true
+206489,OperationalSequenceActionBlockChecker,Operational Sequence Diagram,Warning,true
+206490,LifecyclePhaseRepresentationChecker,Lifecycle Phase,Warning,true
+206491,LifecyclePhaseConnectivityChecker,Lifecycle Phase,Warning,true
+206503,OperatingModeRepresentationChecker,Operating Mode,Warning,true
+206492,OperatingModeTransitionChecker,Operating Mode,Error,true
+206505,OperatingModeChartInitialStateChecker,Operating Mode Chart,Warning,true
+206504,OperatingModeChartFinalStateChecker,Operating Mode Chart,Warning,true
+206501,OperationalSystemDiagramRepresentationChecker,Operational System,Warning,true
+206484,ConnectedFlowPortNameChecker,Operational Flow; Functional Flow; Logical Flow; Technical Flow,Info,true

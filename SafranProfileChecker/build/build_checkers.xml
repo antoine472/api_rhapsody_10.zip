@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project
+        name="SafranProfileChecker"
+        default="deploy"
+        basedir="..">
+
+    <description>
+        Builds the Safran Profile Checker JAR from Eclipse compiled classes
+        and copies safran-checkers.xml next to the generated JAR.
+    </description>
+
+    <!-- ================================================================ -->
+    <!-- Project configuration                                             -->
+    <!-- ================================================================ -->
+
+    <!-- SafranProfileChecker version delivered with CheckerRuleService v5. -->
+    <property
+            name="checker.version"
+            value="5"/>
+
+    <!-- Eclipse default output folder. Change this value if required. -->
+    <property
+            name="compiled.classes.directory"
+            location="bin"/>
+
+    <!-- External checker configuration stored in the project. -->
+    <property
+            name="resources.directory"
+            location="resources"/>
+
+    <property
+            name="checker.configuration.file"
+            location="${resources.directory}/safran-checkers.xml"/>
+
+    <!-- SafranArchitectureProfile is expected to be a sibling project. -->
+    <property
+            name="deployment.directory"
+            location="../SafranArchitectureProfile/SafranArchitectureProfile_EXE"/>
+
+    <property
+            name="checker.jar.file"
+            location="${deployment.directory}/safran_checker.jar"/>
+
+    <!-- ================================================================ -->
+    <!-- Validation                                                        -->
+    <!-- ================================================================ -->
+
+    <!-- Verifies that Eclipse has compiled the current project. -->
+    <target name="validate-compiled-classes">
+
+        <available
+                file="${compiled.classes.directory}"
+                type="dir"
+                property="compiled.classes.directory.exists"/>
+
+        <fail
+                unless="compiled.classes.directory.exists"
+                message="Compiled classes directory not found: ${compiled.classes.directory}. Run an Eclipse project build first."/>
+
+        <available
+                file="${compiled.classes.directory}/com/safran/checker/plugin/SafranCheckerPlugin.class"
+                type="file"
+                property="plugin.main.class.exists"/>
+
+        <fail
+                unless="plugin.main.class.exists"
+                message="SafranCheckerPlugin.class was not found. Run Project > Clean, then rebuild SafranProfileChecker."/>
+
+        <available
+                file="${compiled.classes.directory}/com/safran/checker/service/CheckerRuleService.class"
+                type="file"
+                property="checker.rule.service.class.exists"/>
+
+        <fail
+                unless="checker.rule.service.class.exists"
+                message="CheckerRuleService.class was not found in the Eclipse output folder."/>
+
+        <available
+                file="${compiled.classes.directory}/com/safran/checker/service/RhapsodyModelQueries.class"
+                type="file"
+                property="rhapsody.model.queries.class.exists"/>
+
+        <fail
+                unless="rhapsody.model.queries.class.exists"
+                message="RhapsodyModelQueries.class was not found in the Eclipse output folder."/>
+
+    </target>
+
+    <!-- Verifies that the external XML configuration exists. -->
+    <target name="validate-configuration">
+
+        <available
+                file="${checker.configuration.file}"
+                type="file"
+                property="checker.configuration.file.exists"/>
+
+        <fail
+                unless="checker.configuration.file.exists"
+                message="Checker configuration file not found: ${checker.configuration.file}"/>
+
+    </target>
+
+    <!-- Creates the target deployment directory. -->
+    <target
+            name="prepare-deployment"
+            depends="validate-compiled-classes,validate-configuration">
+
+        <mkdir dir="${deployment.directory}"/>
+
+    </target>
+
+    <!-- ================================================================ -->
+    <!-- Build                                                             -->
+    <!-- ================================================================ -->
+
+    <!-- Builds the plugin JAR from classes already compiled by Eclipse. -->
+    <target
+            name="build-jar"
+            depends="prepare-deployment">
+
+        <delete
+                file="${checker.jar.file}"
+                quiet="true"/>
+
+        <jar
+                destfile="${checker.jar.file}"
+                compress="true"
+                duplicate="preserve"
+                index="false">
+
+            <fileset dir="${compiled.classes.directory}">
+
+                <!-- Production classes. -->
+                <include name="checkers/**/*.class"/>
+                <include name="com/safran/checker/**/*.class"/>
+
+                <!-- Explicitly exclude src/test/java compiled packages. -->
+                <exclude name="main/**/*.class"/>
+                <exclude name="test/**/*.class"/>
+
+            </fileset>
+
+            <manifest>
+                <attribute
+                        name="Manifest-Version"
+                        value="1.0"/>
+
+                <attribute
+                        name="Implementation-Title"
+                        value="Safran Profile Checker"/>
+
+                <attribute
+                        name="Implementation-Version"
+                        value="${checker.version}"/>
+
+                <attribute
+                        name="Built-By"
+                        value="${user.name}"/>
+
+                <attribute
+                        name="Build-Java-Version"
+                        value="${java.version}"/>
+            </manifest>
+
+        </jar>
+
+        <echo
+                message="Created JAR: ${checker.jar.file}"/>
+
+    </target>
+
+    <!-- Copies the external configuration next to the generated JAR. -->
+    <target
+            name="copy-configuration"
+            depends="prepare-deployment">
+
+        <copy
+                file="${checker.configuration.file}"
+                tofile="${deployment.directory}/safran-checkers.xml"
+                overwrite="true"
+                preservelastmodified="true"/>
+
+        <echo
+                message="Copied configuration: ${deployment.directory}/safran-checkers.xml"/>
+
+    </target>
+
+    <!-- ================================================================ -->
+    <!-- Deployment verification                                           -->
+    <!-- ================================================================ -->
+
+    <!-- Verifies the two expected deployment artifacts. -->
+    <target
+            name="verify-deployment"
+            depends="build-jar,copy-configuration">
+
+        <available
+                file="${checker.jar.file}"
+                type="file"
+                property="deployed.jar.exists"/>
+
+        <fail
+                unless="deployed.jar.exists"
+                message="The checker JAR was not deployed."/>
+
+        <available
+                file="${deployment.directory}/safran-checkers.xml"
+                type="file"
+                property="deployed.configuration.exists"/>
+
+        <fail
+                unless="deployed.configuration.exists"
+                message="The checker configuration was not deployed."/>
+
+        <checksum
+                file="${checker.jar.file}"
+                algorithm="SHA-256"
+                property="checker.jar.sha256"/>
+
+        <checksum
+                file="${deployment.directory}/safran-checkers.xml"
+                algorithm="SHA-256"
+                property="checker.configuration.sha256"/>
+
+        <echo message="------------------------------------------------------------"/>
+        <echo message="Safran Profile Checker deployment completed."/>
+        <echo message="JAR: ${checker.jar.file}"/>
+        <echo message="JAR SHA-256: ${checker.jar.sha256}"/>
+        <echo message="Configuration: ${deployment.directory}/safran-checkers.xml"/>
+        <echo message="Configuration SHA-256: ${checker.configuration.sha256}"/>
+        <echo message="------------------------------------------------------------"/>
+
+    </target>
+
+    <!-- Default target used from Eclipse: Run As > Ant Build. -->
+    <target
+            name="deploy"
+            depends="verify-deployment"/>
+
+</project>

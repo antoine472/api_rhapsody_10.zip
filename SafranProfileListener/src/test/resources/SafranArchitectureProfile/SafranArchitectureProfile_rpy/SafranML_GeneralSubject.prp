@@ -1,0 +1,35 @@
+Subject General
+	Metaclass Graphics                                                  
+		Property AllowObjectReparenting Bool "True"
+		Property AdditionalCompartments String "System Realization"
+		Property DefaultBoxView  Enum  "Specification,Structured,Default" "Structured"
+		Property DelegateNewDependenciesToType Bool "False"
+		Property DiagramHeader MultiLine "$Name"
+		Property EnableQuickNavigation Bool "True"
+		Property ResizeWithoutContainedElements Bool "True"
+		Property ShowDiagramFrame Bool "True"
+		Property ShowStereotypes Enum "No,Prefix,Suffix" "No"
+		Property StructureDiagramContext Enum "Default,ClassOwner" "ClassOwner"
+		Property UpdateModelFromGraphicChange Bool "True"
+		Property WrapNameCompartmentText Bool "True"
+		Property DiagramHeader String "[$DiagramKind]_$Name"
+
+	end
+	Metaclass Model
+		Property DefaultType String "Untyped"
+		Property NamesRegExp String "^(([a-zA-Z0-9_][a-zA-Z0-9_ \é\è\ê\à\'\&\î\û\ù\#\-\/\ç\ô]*)|(operator.+))$"
+		Property PathInProjectList Enum "Absolute,Relative" "Relative"
+		Property ReferenceUnitPath Enum "Absolute,Relative" "Relative"
+		Property CommonList String ""
+		Property CommonTypes String "$ALL"
+		Property AutoCascadeAddNewMenu Bool "True"
+		Property NotifyPluginOnElementChange Bool "True"
+		Property CheckSpelling Bool "False"
+		Property PackageIsSavedUnit Bool "False"
+		Property BlockIsSavedUnit Bool "False"
+		Property ClassIsSavedUnit Bool "False"
+		Property DiagramIsSavedUnit Bool "False"
+		Property FileIsSavedUnit Bool "False"
+		Property ObjectIsSavedUnit Bool "False"		
+	end
+end

@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 
 import org.junit.jupiter.api.Test;
 
-import tools.GenerateTBD;
+import tools.GenerateTBS;
 
 /**
  * Verifie que les types de diagrammes crees par Generate LBS / FBS / TBS
@@ -34,11 +34,24 @@ public class ProfileDiagramTypesTest {
 	private static final Pattern NEW_TERM_NAME = Pattern.compile(
 			"<_Name type=\"a\">Name</_Name>\\s*<_Value type=\"a\">([^<]*)</_Value>");
 
+//	@Test
+//	void generateTbsCreatesADiagramTypeDefinedInTheProfile() throws IOException {
+//		Set<String> types = readNewTermNames();
+//		assertTrue(types.contains(GenerateTBS.DIAGRAM_TYPE),
+//				"Type de diagramme inconnu du profil : " + GenerateTBS.DIAGRAM_TYPE);
+//	}
+	
 	@Test
-	void generateTbsCreatesADiagramTypeDefinedInTheProfile() throws IOException {
-		Set<String> types = readNewTermNames();
-		assertTrue(types.contains(GenerateTBD.DIAGRAM_TYPE),
-				"Type de diagramme inconnu du profil : " + GenerateTBD.DIAGRAM_TYPE);
+	void generateTbsCreatesADiagramTypeDefinedInTheProfile()
+	        throws IOException {
+
+	    Set<String> types = readNewTermNames();
+
+	    assertTrue(
+	        types.contains(GenerateTBS.DIAGRAM_TYPE),
+	        "Type de diagramme inconnu du profil : "
+	            + GenerateTBS.DIAGRAM_TYPE
+	    );
 	}
 
 	@Test

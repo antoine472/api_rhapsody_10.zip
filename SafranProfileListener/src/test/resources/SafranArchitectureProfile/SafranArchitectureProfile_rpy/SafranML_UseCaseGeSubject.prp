@@ -1,0 +1,89 @@
+Subject UseCaseGe
+	Metaclass Actor
+		Property ShowName Enum  "Full_path,Relative,Name_only,Label" "Name_only"
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+	end
+	Metaclass Association
+		Property line_style Enum "straight_arrows,rectilinear_arrows,spline_arrows,rounded_rectilinear_arrows" "straight_arrows"
+		Property ShowName Enum  "Name,Label,None" "None"
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+		Property ShowSourceRole Bool "False"
+		Property ShowTargetRole Bool "False"
+		Property ShowSourceMultiplicity Bool "False"
+		Property ShowTargetMultiplicity Bool "False"
+		Property ShowSourceQualifier Bool "False"
+		Property ShowTargetQualifier Bool "False"
+		Property ShowRoleVisibility Bool "False"
+		Property DefaultLabel Enum "Association,Source_Role,Target_Role,Source_Multiplicity,Target_Multiplicity" "Target_Role"
+	end
+	Metaclass AutoPopulate
+		Property ArrowDirection Enum "Top-Bottom,Bottom-Top" "Bottom-Top"
+	end
+	Metaclass Complete
+		Property Complete_Relation Bool "True"
+	end
+	Metaclass Depends
+		Property line_style Enum "straight_arrows,rectilinear_arrows,spline_arrows,rounded_rectilinear_arrows" "straight_arrows"
+		Property ShowName Enum  "Name,Label,None" "None"
+		Property ShowStereotype Enum "Label,Bitmap,None" "Label"
+	end
+	Metaclass DiagramFrame
+		Property ShowName Enum "Name,Label" "Name"
+		Property ShowStereotype Enum "Label,None" "None"
+		Property DefaultSize String "20,20,590,500"
+	end
+	Metaclass General
+		Property SysMLDiagramKindTitle String ""
+	end
+	Metaclass Stakeholder
+		Property ShowAttributes Enum "All,None,Public,Explicit" "None"
+		Property ShowOperations Enum "All,None,Public,Explicit" "None"
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+		Property ShowName Enum  "Full_path,Relative,Name_only,Label" "Name_only"
+		Property ShowPorts Bool "False"
+		Property ShowPortsInterfaces Bool "False"
+		Property PortsSingleLabelLayout Enum "Off,Internal,External" "Internal"
+		Property Compartments MultiLine ""
+		Property ShowInheritedAttributes Bool "False"
+		Property ShowInheritedOperations Bool "False"
+	end
+	Metaclass ExternalSystem
+		Property ShowAttributes Enum "All,None,Public,Explicit" "None"
+		Property ShowOperations Enum "All,None,Public,Explicit" "None"
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+		Property ShowName Enum  "Full_path,Relative,Name_only,Label" "Name_only"
+		Property ShowPorts Bool "False"
+		Property ShowPortsInterfaces Bool "False"
+		Property PortsSingleLabelLayout Enum "Off,Internal,External" "Internal"
+		Property Compartments MultiLine ""
+		Property ShowInheritedAttributes Bool "False"
+		Property ShowInheritedOperations Bool "False"
+	end
+	
+	Metaclass Function_
+		Property ShowAttributes Enum "All,None,Public,Explicit" "None"
+		Property ShowOperations Enum "All,None,Public,Explicit" "None"
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+		Property ShowName Enum  "Full_path,Relative,Name_only,Label" "Name_only"
+		Property ShowPorts Bool "False"
+		Property ShowPortsInterfaces Bool "False"
+		Property PortsSingleLabelLayout Enum "Off,Internal,External" "Internal"
+		Property Compartments MultiLine ""
+		Property ShowInheritedAttributes Bool "False"
+		Property ShowInheritedOperations Bool "False"
+	end
+	Metaclass Satisfies
+		Property line_style Enum "straight_arrows,rectilinear_arrows,spline_arrows,rounded_rectilinear_arrows" "straight_arrows"
+		Property ShowName Enum  "Name,Label,None" "None"
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+	end		
+	Metaclass Use_Case
+		Property ShowName Enum  "Full_path,Relative,Name_only,Label" "Name_only"
+		Property ShowStereotype Enum "Label,Bitmap,None" "None"
+		Property LabelsStyle Enum  "Caption,Default" "Default"
+	end
+	Metaclass Use_CaseDiagram
+		Property Fill.Transparent_Fill Int "1"
+	end
+
+end

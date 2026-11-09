@@ -1,0 +1,85 @@
+﻿stereotypeName,Model.Stereotype.Name,effectiveNewTerm,source,RhapsodyMetaclass
+ImportPackage,_Import package,_Import package,Model.Stereotype.Name,Package
+OperationalAnalysisPackage,A - Operational Analysis Package,A - Operational Analysis Package,Model.Stereotype.Name,Package
+ActivatedFunction,Activated Function,Activated Function,Model.Stereotype.Name,Dependency
+FunctionalAnalysisPackage,B - Functional Analysis Package,B - Functional Analysis Package,Model.Stereotype.Name,Package
+LogicalAnalysisPackage,C - Logical Analysis Package,C - Logical Analysis Package,Model.Stereotype.Name,Package
+CheckModelComment,checkcommnent,checkcommnent,Model.Stereotype.Name,Comment
+CircuitDiagramTableViewHyperLink,,CircuitDiagramTableViewHyperLink,Stereotype name fallback,HyperLink
+ContextDiagram,Context Diagram,Context Diagram,Model.Stereotype.Name,StructureDiagram
+ContextDiagramTableViewHyperLink,,ContextDiagramTableViewHyperLink,Stereotype name fallback,HyperLink
+TechnicalAnalysisPackage,D - Technical Analysis Package,D - Technical Analysis Package,Model.Stereotype.Name,Package
+DomainDiagram,Domain Diagram,Domain Diagram,Model.Stereotype.Name,ObjectModelDiagram
+DomainPackage,Domain Package,Domain Package,Model.Stereotype.Name,Package
+IfManagementPackage,E - Interfaces Management Package,E - Interfaces Management Package,Model.Stereotype.Name,Package
+EndPhase,End Phase,End Phase,Model.Stereotype.Name,Package
+EnvironmentDiagram,Environment Diagram,Environment Diagram,Model.Stereotype.Name,StructureDiagram
+FlowPackage,F - Flow Package,F - Flow Package,Model.Stereotype.Name,Package
+FlowCompositionDiagram,Flow Composition Diagram,Flow Composition Diagram,Model.Stereotype.Name,StructureDiagram
+FlowItem,Flow Item,Flow Item,Model.Stereotype.Name,Class
+Flow_Port,Flow Port,Flow Port,Model.Stereotype.Name,SysMLPort
+Function_,Function,Function,Model.Stereotype.Name,Class
+FunctionAllocation,Function Allocation,Function Allocation,Model.Stereotype.Name,Dependency
+FunctionAllocationMatrix,Function Allocation Matrix,Function Allocation Matrix,Model.Stereotype.Name,MatrixView
+ModeFunctionsMatrix,Function to Mode Matrix,Function to Mode Matrix,Model.Stereotype.Name,MatrixView
+FunctionUseCaseMatrix,Function To Use Case Matrix,Function To Use Case Matrix,Model.Stereotype.Name,MatrixView
+FunctionWithReference,Function With Reference,Function With Reference,Model.Stereotype.Name,Class
+FunctionalBehaviorDiagram,Functional Behavior Diagram,Functional Behavior Diagram,Model.Stereotype.Name,StructureDiagram
+FunctionalBreakdownStructure,Functional Breakdown Structure,Functional Breakdown Structure,Model.Stereotype.Name,ObjectModelDiagram
+FunctionalChainDiagram,Functional Chain Diagram,Functional Chain Diagram,Model.Stereotype.Name,ObjectModelDiagram
+FunctionalFlow,Functional Flow,Functional Flow,Model.Stereotype.Name,Flow
+FunctionalSequenceDiagram,Functional Sequence Diagram,Functional Sequence Diagram,Model.Stereotype.Name,SequenceDiagram
+FunctionalSystem,Functional System,Functional System,Model.Stereotype.Name,Class
+FunctionalBehaviorDiagramTableViewHyperLink,,FunctionalBehaviorDiagramTableViewHyperLink,Stereotype name fallback,HyperLink
+AnalysisPackage,G - Analysis Package,G - Analysis Package,Model.Stereotype.Name,Package
+GenericFlow,Generic Flow,Generic Flow,Model.Stereotype.Name,Flow
+Lifecycle,Lifecycle,Lifecycle,Model.Stereotype.Name,Package
+LifecycleDiagram,Lifecycle Diagram,Lifecycle Diagram,Model.Stereotype.Name,ObjectModelDiagram
+LifecyclePhase,Lifecycle Phase,Lifecycle Phase,Model.Stereotype.Name,Package
+LifecyclePhaseTransition,Lifecycle Phase Transition,Lifecycle Phase Transition,Model.Stereotype.Name,Dependency
+LogicalArchitectureDiagram,Logical Architecture Diagram,Logical Architecture Diagram,Model.Stereotype.Name,StructureDiagram
+LogicalBreakdownStructure,Logical Breakdown Structure,Logical Breakdown Structure,Model.Stereotype.Name,ObjectModelDiagram
+LogicalFlow,Logical Flow,Logical Flow,Model.Stereotype.Name,Flow
+LogicalIfDiagram,Logical Interfaces Diagram,Logical Interfaces Diagram,Model.Stereotype.Name,StructureDiagram
+LogicalIfPackage,Logical Interfaces Package,Logical Interfaces Package,Model.Stereotype.Name,Package
+LogicalSequenceDiagram,Logical Sequence Diagram,Logical Sequence Diagram,Model.Stereotype.Name,SequenceDiagram
+LogicalSystem,Logical System,Logical System,Model.Stereotype.Name,Class
+LogicalSystemWithReference,Logical System With Reference,Logical System With Reference,Model.Stereotype.Name,Class
+LogicalArchitectureDiagramTableViewHyperLink,,LogicalArchitectureDiagramTableViewHyperLink,Stereotype name fallback,HyperLink
+OperatingMode,Operating Mode,Operating Mode,Model.Stereotype.Name,State
+OperatingModeChart,Operating Mode Chart,Operating Mode Chart,Model.Stereotype.Name,Statechart
+OperationalFlow,Operational Flow,Operational Flow,Model.Stereotype.Name,Flow
+OperationalFlowchartDiagram,Operational Flowchart Diagram,Operational Flowchart Diagram,Model.Stereotype.Name,ActivityDiagram
+OperationalSequenceDiagram,Operational Sequence Diagram,Operational Sequence Diagram,Model.Stereotype.Name,SequenceDiagram
+OperationalSystem,Operational System,Operational System,Model.Stereotype.Name,Class
+OperationalSequenceDiagramTableViewHyperLink,,OperationalSequenceDiagramTableViewHyperLink,Stereotype name fallback,HyperLink
+LogicalPortRealization,Port Realization,Port Realization,Model.Stereotype.Name,Dependency
+RedefinesComponent,Redefines Component,Redefines Component,Model.Stereotype.Name,Generalization
+RedefinesFunction,Redefines Function,Redefines Function,Model.Stereotype.Name,Generalization
+RedefinesSystem,Redefines System,Redefines System,Model.Stereotype.Name,Generalization
+ReferencesFunction,References Function,References Function,Model.Stereotype.Name,Generalization
+ReferencesLogicalSystem,References Logical System,References Logical System,Model.Stereotype.Name,Generalization
+ReferencesTechnicalComponent,References Technical Component,References Technical Component,Model.Stereotype.Name,Generalization
+ResponsibleFor,Responsible For,Responsible For,Model.Stereotype.Name,Dependency
+ReuseArtefactsTable,Reuse Artefacts Table,Reuse Artefacts Table,Model.Stereotype.Name,TableView
+SafranArchitectureProject,Safran Architecture Project,Safran Architecture Project,Model.Stereotype.Name,Project
+Satisfies,Satisfies,Satisfies,Model.Stereotype.Name,Dependency
+Stakeholder,Stakeholder,Stakeholder,Model.Stereotype.Name,Class
+StartPhase,Start Phase,Start Phase,Model.Stereotype.Name,Package
+SystemFunctionalBehavior,System Functional Behavior,System Functional Behavior,Model.Stereotype.Name,StructureDiagram
+LogicalSystemRealization,System Realization,System Realization,Model.Stereotype.Name,Dependency
+TechnicalArchitectureDiagram,Technical Architecture Diagram,Technical Architecture Diagram,Model.Stereotype.Name,StructureDiagram
+TechnicalBreakdownDiagram,Technical Breakdown Diagram,Technical Breakdown Diagram,Model.Stereotype.Name,ObjectModelDiagram
+TechnicalComponent,Technical Component,Technical Component,Model.Stereotype.Name,Class
+TechnicalComponentWithReference,Technical Component With Reference,Technical Component With Reference,Model.Stereotype.Name,Class
+TechnicalConnection,Technical Connection,Technical Connection,Model.Stereotype.Name,Flow
+TechnicalFlow,Technical Flow,Technical Flow,Model.Stereotype.Name,Flow
+TechnicalFlowDiagram,Technical Flows Diagram,Technical Flows Diagram,Model.Stereotype.Name,StructureDiagram
+TechnicalIfDiagram,Technical Interfaces Diagram,Technical Interfaces Diagram,Model.Stereotype.Name,StructureDiagram
+TechnicalIfPackage,Technical Interfaces Package,Technical Interfaces Package,Model.Stereotype.Name,Package
+TechnicalPort,Technical Port,Technical Port,Model.Stereotype.Name,Port
+TechnicalArchitectureDiagramTableViewHyperLink,,TechnicalArchitectureDiagramTableViewHyperLink,Stereotype name fallback,HyperLink
+TransitionFunction,Transition Function,Transition Function,Model.Stereotype.Name,Operation
+Use_Case,Use_Case,Use_Case,Model.Stereotype.Name,UseCase
+Use_CaseDiagram,Use_Case Diagram,Use_Case Diagram,Model.Stereotype.Name,UseCaseDiagram
+UseCaseDiagramTableViewHyperLink,,UseCaseDiagramTableViewHyperLink,Stereotype name fallback,HyperLink

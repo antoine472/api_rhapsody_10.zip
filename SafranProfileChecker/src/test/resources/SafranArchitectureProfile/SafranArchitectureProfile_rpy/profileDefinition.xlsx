@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RhapsodyArchive>
+	<MagicNumber></MagicNumber>
+	<CODE-PAGE>1252</CODE-PAGE>
+	<version>109.0.1</version>
+	<RMMIndexVersion>109.1</RMMIndexVersion>
+	<lang>C++</lang>
+	<BuildNo>202301021733</BuildNo>
+	<RMMMinimumClientVersion>100.0</RMMMinimumClientVersion>
+	
+	<RHAPSODY-MODEL>
+	<IEmbededFile type="e">
+			<_id type="a">GUID 466aea5b-ff74-4fcc-8378-e7739e24628c</_id>
+			<_rmmServerID type="a">1357621_CmvNERkXEemjcZ7iaG_c3w</_rmmServerID>
+			<_name type="a">profileDefinition.xlsx</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">12.20.2024::15:41:32</_modifiedTime>
+			<_MayNeedToRelocate type="a">0</_MayNeedToRelocate>
+			<_LastKnownFullPath type="a">C:\RTC_WORKSPACES\SimpleProfile\SafranArchitectureProfile\SafranArchitectureProfile_rpy\profileDefinition.xlsx</_LastKnownFullPath>
+		</IEmbededFile>
+		
+	</RHAPSODY-MODEL>
+	<RHAPSODY-INDEX>
+		<ELEMENT>
+			<ID>1357621_CmvNERkXEemjcZ7iaG_c3w</ID>
+			<RHP-ID>GUID 466aea5b-ff74-4fcc-8378-e7739e24628c</RHP-ID>
+			<NAME>profileDefinition.xlsx</NAME>
+			<TYPE>ControlledFile</TYPE>
+			<DISPLAY-TYPE>ControlledFile</DISPLAY-TYPE>
+			<DISPLAY-GROUP>Controlled Files</DISPLAY-GROUP>
+			<BROWSER-ICON>ControlledFile~ALL~BrowserIcon</BROWSER-ICON>
+			<GROUP-ICON>ControlledFile~ALL~GroupIcon</GROUP-ICON>
+			<IS-TOP-LEVEL>false</IS-TOP-LEVEL>
+			<MODIFIED-TIME-UTC>2024/12/20 15:41:32</MODIFIED-TIME-UTC>
+			<VIEW-PARENTS></VIEW-PARENTS>
+			<VIEW-CHILDREN></VIEW-CHILDREN>
+			<AGGREGATES></AGGREGATES>
+			<REFERENCES></REFERENCES>
+		</ELEMENT>
+	</RHAPSODY-INDEX>
+
+	<OslcLinks type="c">
+		<IRPYRawContainer type="e">
+		</IRPYRawContainer>
+	</OslcLinks>
+
+<RHAPSODY-INDEX-START>915</RHAPSODY-INDEX-START>
+<RHAPSODY-INDEX-END>1596</RHAPSODY-INDEX-END>
+<OSLC-LINKS-START>1597</OSLC-LINKS-START>
+<OSLC-LINKS-END>1686</OSLC-LINKS-END>
+<INCLUDES-RHAPSODY-INDEX>true</INCLUDES-RHAPSODY-INDEX>
+</RhapsodyArchive>
+
