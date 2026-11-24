@@ -11,6 +11,8 @@ Builds
 Changements depuis v2026-10-02
 ------------------------------
 24/11/2026
+- Icone du bouton Return home : maison des Fluent Emoji de Microsoft, style Flat
+  (licence MIT, voir Icons\LICENSE-fluentui-emoji.txt)
 - Barre d'outils : deux boutons a cote de Return home
   - Open Analysis Tables : ouvre la page Monitoring::Analysis Tables
     (icone Icons\AnalysisTables16.png, entree name55 du .hep)

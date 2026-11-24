@@ -23,6 +23,8 @@ Trois boutons du plugin Safran ouvrent une page, quel que soit le diagramme affi
 - L'adresse de la documentation est lue dans l'hyperlien de la vignette « Tool Documentation » : si l'adresse de la vignette change, le bouton suit.
 - Si la page ou l'hyperlien manque, le bouton écrit un message dans le log Rhapsody et ne fait rien d'autre.
 
+L'icône de Return home est la maison des Fluent Emoji de Microsoft, style Flat (licence MIT : `SafranArchitectureProfile/Icons/LICENSE-fluentui-emoji.txt`).
+
 Classes : `tools.OpenAnalysisTables`, `tools.OpenToolDocumentation` (enregistrées dans `main.SafranProfilePlugin`). Tests : `test.unittest.ToolbarButtonsTest`.
 
 Les boutons apparaissent après reconstruction de `safran_app.jar` et redémarrage de Rhapsody.
