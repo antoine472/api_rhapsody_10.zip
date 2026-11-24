@@ -18,6 +18,8 @@ import java.util.List;
  *   <li>NOK : tables sans layout ou fondees sur des termes de l'ancien profil
  *       (Logical Port, Continuous Link, Discrete Link, Context, State Diagram),
  *       et l'ancienne copie de la page Home ;</li>
+ *   <li>les tables de la page Analysis Tables sont ensuite mises a jour et renommees
+ *       (suffixe _SafranMLv2) par UpdateAnalysisTables ;</li>
  *   <li>TBD : contenu actuel inchange, plus le layout sans vue
  *       "Safran Architecture Model".</li>
  * </ul>
@@ -131,14 +133,15 @@ public final class MonitoringPlan {
 		for (String v : List.of("StakeholderView", "LogicalSystemView", "UseCaseView",
 				"FunctionCoveredByUseCaseView", "Logical Technical Systems Realization", "Technical Ports Realization",
 				"ModeAndFunctionTraceabilityView", "LogicalSystemFunctionView", "TechnicalComponentView",
-				"TechnicalICDView", "OperationalICDNewProfile_View")) {
+				"TechnicalICDView", "OperationalICDNewProfile_View",
+				// devient la table Logical ICD de la page (voir AnalysisTablesPlan)
+				"LogicalICDLayout_2_NEWPROFILE_VIEW")) {
 			moves.add(new Move(v, Kind.VIEW, page));
 		}
 		// Sous-requete de FunctionCoveredbyUseCaseLayout : rangee avec elle
 		moves.add(new Move("FunctionQuery", Kind.LAYOUT, page));
 		// Autres tables qui fonctionnent, sans vignette
-		for (String v : List.of("FICD", "Acronym Table View", "Function", "Function Flow", "System Flow",
-				"LogicalICDLayout_2_NEWPROFILE_VIEW")) {
+		for (String v : List.of("FICD", "Acronym Table View", "Function", "Function Flow", "System Flow")) {
 			moves.add(new Move(v, Kind.VIEW, OK + "/" + OTHER_TABLES));
 		}
 		// Tables qui ne fonctionnent pas avec le profil actuel

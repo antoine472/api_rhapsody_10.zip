@@ -258,7 +258,8 @@ public class OrganizeMonitoring {
 		return null;
 	}
 
-	private static IRPModelElement findInPackage(IRPPackage p, String name, Kind kind) {
+	/** Element d'un package ou de ses sous-packages, par nom et nature (premier trouve). */
+	static IRPModelElement findInPackage(IRPPackage p, String name, Kind kind) {
 		IRPModelElement e = findChild(p, name, kind);
 		if (e != null) return e;
 		for (Object o : p.getNestedElements().toList()) {
