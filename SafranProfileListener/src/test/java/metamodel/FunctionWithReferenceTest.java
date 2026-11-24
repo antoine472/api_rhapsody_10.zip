@@ -48,7 +48,7 @@ class FunctionWithReferenceTest {
      * de ne rien faire, sans lever d'exception.
      */
     @Test
-    void processDroppedSelection_doesNotThrow_onNullApp() { 
+    void processDroppedSelection_doesNotThrow_onNullApp() {
         assertDoesNotThrow(() -> FunctionWithReference.processDroppedSelection(null));
     }
 

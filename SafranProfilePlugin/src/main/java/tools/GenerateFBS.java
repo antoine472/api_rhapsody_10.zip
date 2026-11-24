@@ -1,16 +1,17 @@
 package tools;
 
 import java.util.ArrayList;
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.UIManager;
 
 import com.telelogic.rhapsody.core.IRPApplication;
 import com.telelogic.rhapsody.core.IRPClass;
+import com.telelogic.rhapsody.core.IRPClassifier;
 import com.telelogic.rhapsody.core.IRPCollection;
 import com.telelogic.rhapsody.core.IRPDependency;
 import com.telelogic.rhapsody.core.IRPDiagram;
@@ -20,9 +21,13 @@ import com.telelogic.rhapsody.core.IRPGraphElement;
 import com.telelogic.rhapsody.core.IRPGraphNode;
 import com.telelogic.rhapsody.core.IRPModelElement;
 import com.telelogic.rhapsody.core.IRPPackage;
+import com.telelogic.rhapsody.core.IRPProject;
+import com.telelogic.rhapsody.core.IRPUnit;
 
 import main.constants.RhpMetaClassConstants;
+import main.constants.Types;
 import utils.D2Rectangle;
+import utils.ScreenDialogs;
 
 /**
  * <b>Generate FBS (Functional Breakdown Structure) Diagram</b>
@@ -42,11 +47,29 @@ import utils.D2Rectangle;
  * 4. Diagram is generated or updated
  * </p>
  *
+ * <p><b>Start from a function</b> (Function / Function With Reference): the
+ * function is the root, then its nested functions recursively. A Function With
+ * Reference shows the children of its "References Function" target.</p>
+ *
+ * <p><b>Start from an Operational System or a Logical System</b>: the system is
+ * the root, then its functions. In addition, each function is expanded with the
+ * children of every function that redefines it ("Redefines Function"
+ * generalization owned by the lower-level function and pointing to it). The
+ * redefining functions are not drawn: only their children are attached, and the
+ * rule is applied transitively and at every level. The diagram is named after the
+ * system's System Functional Behavior, or after the system when it has none.</p>
+ *
+ * <p><b>Location</b>: a new FBS is always created in the first
+ * "B - Functional Analysis Package" located directly under the project that is
+ * not read-only. When there is none, such a package is created under the
+ * project.</p>
+ *
  * @author s570589
  */
 public class GenerateFBS extends RhapsodyTool {
 
 	public static final String COMMAND = "Safran Toolkit...\\Generate FBS";
+	private static final String COMMAND_TITLE = "Generate FBS";
 
 	private static final int FUNCTION_HEIGHT = 100;
 	private static final int FUNCTION_WIDTH = 300;
@@ -55,11 +78,22 @@ public class GenerateFBS extends RhapsodyTool {
 	private static final String FUNCTION = "Function";
 	private static final String FUNCTION_WITH_REFERENCE = "Function With Reference";
 	private static final String REFERENCES_FUNCTION = "References Function";
+	private static final String REDEFINES_FUNCTION = "Redefines Function";
+	private static final String OPERATIONAL_SYSTEM = "Operational System";
+	private static final String LOGICAL_SYSTEM = "Logical System";
+	private static final String SYSTEM_FUNCTIONAL_BEHAVIOR = "System Functional Behavior";
+	private static final String FBS_DIAGRAM = "Functional Breakdown Structure";
+	private static final String FUNCTIONAL_ANALYSIS_PACKAGE = "B - Functional Analysis Package";
+	private static final String DEFAULT_FA_PACKAGE_NAME = "FunctionalAnalysis";
 
 	private IRPDiagram attachedDiagram = null;
+	/** Diagram to select in the browser once the command is completed. */
+	private IRPDiagram diagramToLocate = null;
 	private IRPModelElement startPoint = null;
 	private int currentYPosition = 0;
 	private IRPCollection graphElements;
+	/** True when started from a system: "Redefines Function" links are followed. */
+	private boolean followRedefinitions = false;
 	private final List<IRPGraphNode[]> virtualContainments = new ArrayList<IRPGraphNode[]>();
 
 	public GenerateFBS(IRPApplication rpyApp) {
@@ -74,32 +108,31 @@ public class GenerateFBS extends RhapsodyTool {
 		rhpLog.debug("Starting execution of: " + COMMAND);
 
 		attachedDiagram = null;
+		diagramToLocate = null;
 		startPoint = rhApp.getSelectedElement();
 		currentYPosition = 0;
 		graphElements = rhApp.createNewCollection();
 		virtualContainments.clear();
+		followRedefinitions = false;
 
 		if (startPoint == null) {
 			rhpLog.error("No model element selected.");
-			JOptionPane.showMessageDialog(null, "Please select a model element to generate FBS.");
+			ScreenDialogs.message("Please select a model element to generate FBS.",
+					COMMAND_TITLE, JOptionPane.WARNING_MESSAGE);
 			return;
 		}
 
 		rhpLog.info("User selected element: " + startPoint.getName());
+		followRedefinitions = isSystem(startPoint);
+		if (followRedefinitions) {
+			rhpLog.info("FBS started from system " + startPoint.getName()
+					+ ": Redefines Function links will be followed.");
+		}
 
 		// Try to find existing FBS diagram linked to the element
-		@SuppressWarnings("unchecked")
-		List<IRPModelElement> referencesList = startPoint.getReferences().toList();
-
-		for (IRPModelElement reference : referencesList) {
-			if (reference instanceof IRPDependency) {
-				IRPDependency dependency = (IRPDependency) reference;
-				if (dependency.getDependent() instanceof IRPDiagram) {
-					attachedDiagram = (IRPDiagram) dependency.getDependent();
-					rhpLog.info("Found existing FBS diagram: " + attachedDiagram.getName());
-					break;
-				}
-			}
+		attachedDiagram = findAttachedFbs(startPoint);
+		if (attachedDiagram != null) {
+			rhpLog.info("Found existing FBS diagram: " + attachedDiagram.getName());
 		}
 
 		// Ask before changing an existing diagram or creating a new one.
@@ -122,6 +155,10 @@ public class GenerateFBS extends RhapsodyTool {
 		if (alertUser()) {
 			rhpLog.info("User confirmed diagram update.");
 			attachedDiagram.removeGraphElements(attachedDiagram.getGraphicalElements());
+			if (followRedefinitions) {
+				// Keep the label in sync with a renamed System Functional Behavior.
+				attachedDiagram.setDisplayName(diagramDisplayName());
+			}
 			createDiagram(maxDepth);
 		} else {
 			rhpLog.info("User cancelled diagram update.");
@@ -129,19 +166,27 @@ public class GenerateFBS extends RhapsodyTool {
 	}
 
 	/**
-	 * Creates a new diagram under the selected package.
+	 * Creates a new diagram in the target Functional Analysis Package.
 	 */
 	private void createNewDiagram(int maxDepth) {
-		IRPPackage parentPackage = findEnclosingPackage(startPoint);
+		IRPPackage parentPackage = findOrCreateFunctionalAnalysisPackage();
 		if (parentPackage == null) {
-			rhpLog.error("No package found in element hierarchy.");
-			JOptionPane.showMessageDialog(null, "Cannot find a containing package to create diagram.");
+			rhpLog.error("No writable Functional Analysis Package available.");
+			ScreenDialogs.message(
+					"Cannot find or create a Functional Analysis Package to create the FBS.",
+					COMMAND_TITLE, JOptionPane.ERROR_MESSAGE);
 			return;
 		}
 
-		attachedDiagram = (IRPDiagram) parentPackage.addNewAggr("Functional Breakdown Structure", startPoint.getName());
-		attachedDiagram.setDisplayName(startPoint.getDisplayName());
-		rhpLog.info("Created new FBS diagram: " + attachedDiagram.getName());
+		if (followRedefinitions) {
+			attachedDiagram = (IRPDiagram) addUniqueAggr(parentPackage, FBS_DIAGRAM, diagramName(), "_FBS");
+			attachedDiagram.setDisplayName(diagramDisplayName());
+		} else {
+			attachedDiagram = (IRPDiagram) addUniqueAggr(parentPackage, FBS_DIAGRAM, startPoint.getName(), "_FBS");
+			attachedDiagram.setDisplayName(startPoint.getDisplayName());
+		}
+		rhpLog.info("Created new FBS diagram: " + attachedDiagram.getName()
+				+ " in package " + parentPackage.getName());
 		createDiagram(maxDepth);
 		attachedDiagram.addDependencyTo(startPoint);
 	}
@@ -150,52 +195,28 @@ public class GenerateFBS extends RhapsodyTool {
 	 * User-facing confirmation if diagram exists.
 	 */
 	private boolean alertUser() {
-		return JOptionPane.showConfirmDialog(null,
-				"FBS already exists. Do you want to update it?",
-				"FBS Diagram Exists",
-				JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION;
+		return ScreenDialogs.confirm("FBS already exists. Do you want to update it?",
+				"FBS Diagram Exists");
 	}
 
 	/**
-	 * Prompt the user to select a recursion depth.
+	 * Prompt the user to select a recursion depth. The dialog is shown on the
+	 * screen where Rhapsody is used and stays on top of it.
 	 * @return Max depth or -1 for unlimited, null if cancelled
 	 */
 	private Integer selectMaxDepthInJavaWindow() {
-	    String[] options = { "*", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+		String[] options = { "*", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
 
-	    try {
-	        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-	    } catch (Exception e) {
-	        rhpLog.error("Could not set native look and feel: " + e);
-	    }
+		String selected = (String) ScreenDialogs.showInput(
+				"Select recursion depth for functions:",
+				"FBS Diagram Settings", options, options[0]);
 
-	    // Create a hidden always-on-top frame to anchor the dialog
-	    JFrame frame = new JFrame();
-	    frame.setUndecorated(true);
-	    frame.setAlwaysOnTop(true);
-	    frame.setLocationRelativeTo(null); // Center on default screen
-	    frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-	    frame.setVisible(true); // Necessary to bring it to front
+		if (selected == null) {
+			rhpLog.info("User cancelled depth selection.");
+			return null;
+		}
 
-	    // Show the dialog, blocking here until user input is provided
-	    String selected = (String) JOptionPane.showInputDialog(
-	            frame,
-	            "Select recursion depth for functions:",
-	            "FBS Diagram Settings",
-	            JOptionPane.QUESTION_MESSAGE,
-	            null,
-	            options,
-	            options[0]);
-
-	    // Clean up
-	    frame.dispose();
-
-	    if (selected == null) {
-	        rhpLog.info("User cancelled depth selection.");
-	        return null;
-	    }
-
-	    return selected.equals("*") ? -1 : Integer.parseInt(selected);
+		return selected.equals("*") ? -1 : Integer.parseInt(selected);
 	}
 
 	/**
@@ -212,6 +233,7 @@ public class GenerateFBS extends RhapsodyTool {
 		createVirtualContainments();
 		repositionRelations();
 		attachedDiagram.openDiagram();
+		diagramToLocate = attachedDiagram;
 		rhpLog.debug("Diagram creation completed.");
 	}
 
@@ -247,29 +269,17 @@ public class GenerateFBS extends RhapsodyTool {
 		currentYPosition = y + FUNCTION_HEIGHT + VERTICAL_SPACING;
 		if (remainingDepth == 1) return;
 
-		IRPModelElement container = element;
-		if (FUNCTION_WITH_REFERENCE.equals(element.getUserDefinedMetaClass())) {
-			IRPClass base = findReferencedFunction(element);
-			if (base == null) {
-				rhpLog.warn("FBS reference has no References Function target: "
-						+ element.getName());
-				return;
-			}
-			if (path.contains(base.getGUID())) {
-				rhpLog.warn("FBS reference cycle detected: " + element.getName()
-						+ " -> " + base.getName() + "; branch skipped.");
-				return;
-			}
-			path.add(base.getGUID());
-			container = base;
-		}
+		// Elements whose nested functions are displayed under this node.
+		List<IRPModelElement> containers = collectContainers(element, path);
 
-		@SuppressWarnings("unchecked")
-		List<IRPModelElement> nested = container
-				.getNestedElementsByMetaClass(RhpMetaClassConstants.CLASS, 0).toList();
-		for (IRPModelElement child : nested) {
-			String metaClass = child.getUserDefinedMetaClass();
-			if (FUNCTION.equals(metaClass) || FUNCTION_WITH_REFERENCE.equals(metaClass)) {
+		Set<String> drawnChildren = new HashSet<String>();
+		for (IRPModelElement container : containers) {
+			@SuppressWarnings("unchecked")
+			List<IRPModelElement> nested = container
+					.getNestedElementsByMetaClass(RhpMetaClassConstants.CLASS, 0).toList();
+			for (IRPModelElement child : nested) {
+				if (!isFunction(child)) continue;
+				if (!drawnChildren.add(child.getGUID())) continue;
 				addFunctionToDiagram(child, x + HORIZONTAL_OFFSET,
 						currentYPosition, remainingDepth == -1 ? -1 : remainingDepth - 1,
 						path, node);
@@ -278,9 +288,70 @@ public class GenerateFBS extends RhapsodyTool {
 	}
 
 	/**
-	 * Draw only hierarchical containment arrows (native and referenced).
-	 * Their graphical representation does not modify the Safran model.
+	 * Returns the elements whose nested functions are displayed under the node of
+	 * {@code element}:
+	 * <ul>
+	 * <li>the element itself, or its "References Function" target when it is a
+	 * Function With Reference (the target is never drawn);</li>
+	 * <li>when started from a system, the same for every function that redefines
+	 * it, transitively (the redefining functions are never drawn).</li>
+	 * </ul>
+	 * GUIDs of traversed bases and redefining functions are added to {@code path}
+	 * so that cycles are cut in the descendants.
 	 */
+	private List<IRPModelElement> collectContainers(IRPModelElement element, Set<String> path) {
+		List<IRPModelElement> containers = new ArrayList<IRPModelElement>();
+		Set<String> visited = new HashSet<String>();
+		Deque<IRPModelElement> queue = new ArrayDeque<IRPModelElement>();
+		queue.add(element);
+		visited.add(element.getGUID());
+
+		while (!queue.isEmpty()) {
+			IRPModelElement current = queue.poll();
+
+			IRPModelElement container = current;
+			if (FUNCTION_WITH_REFERENCE.equals(current.getUserDefinedMetaClass())) {
+				IRPClass base = findReferencedFunction(current);
+				if (base == null) {
+					rhpLog.warn("FBS reference has no References Function target: "
+							+ current.getName());
+					container = null;
+				} else if (path.contains(base.getGUID())) {
+					rhpLog.warn("FBS reference cycle detected: " + current.getName()
+							+ " -> " + base.getName() + "; branch skipped.");
+					container = null;
+				} else {
+					path.add(base.getGUID());
+					container = base;
+				}
+			}
+			if (container != null) {
+				containers.add(container);
+			}
+
+			if (!followRedefinitions) continue;
+
+			List<IRPClass> redefiners = findRedefiningFunctions(current);
+			if (container != null && container != current) {
+				redefiners.addAll(findRedefiningFunctions(container));
+			}
+			for (IRPClass redefiner : redefiners) {
+				String guid = redefiner.getGUID();
+				if (!visited.add(guid)) continue;
+				if (path.contains(guid)) {
+					rhpLog.warn("FBS redefinition cycle detected: " + redefiner.getName()
+							+ " -> " + current.getName() + "; branch skipped.");
+					continue;
+				}
+				rhpLog.debug("FBS: " + redefiner.getName() + " redefines "
+						+ current.getName() + "; attaching its children.");
+				path.add(guid);
+				queue.add(redefiner);
+			}
+		}
+		return containers;
+	}
+
 	/**
 	 * Remove port graphics automatically exposed when an existing Logical System
 	 * is dropped into a diagram. Removing their graphical representation does not
@@ -343,6 +414,176 @@ public class GenerateFBS extends RhapsodyTool {
 	}
 
 	/**
+	 * Functions that redefine {@code target}: classes holding a generalization
+	 * stereotyped "Redefines Function" whose base is {@code target}.
+	 */
+	private List<IRPClass> findRedefiningFunctions(IRPModelElement target) {
+		List<IRPClass> result = new ArrayList<IRPClass>();
+		if (!(target instanceof IRPClassifier)) return result;
+
+		String targetGuid = target.getGUID();
+		IRPCollection derived;
+		try {
+			derived = ((IRPClassifier) target).getDerivedClassifiers();
+		} catch (Exception e) {
+			rhpLog.warn("FBS: cannot read derived classifiers of " + target.getName() + ": " + e);
+			return result;
+		}
+		if (derived == null) return result;
+
+		for (Object item : derived.toList()) {
+			if (!(item instanceof IRPClass)) continue;
+			IRPClass candidate = (IRPClass) item;
+			if (!isFunction(candidate)) continue;
+
+			IRPCollection generalizations = candidate.getGeneralizations();
+			if (generalizations == null) continue;
+			for (Object g : generalizations.toList()) {
+				if (!(g instanceof IRPGeneralization)) continue;
+				IRPGeneralization generalization = (IRPGeneralization) g;
+				if (!REDEFINES_FUNCTION.equals(generalization.getUserDefinedMetaClass())) continue;
+				IRPClassifier base = generalization.getBaseClass();
+				if (base != null && targetGuid.equals(base.getGUID())) {
+					result.add(candidate);
+					break;
+				}
+			}
+		}
+		return result;
+	}
+
+	private boolean isFunction(IRPModelElement element) {
+		String metaClass = element.getUserDefinedMetaClass();
+		return FUNCTION.equals(metaClass) || FUNCTION_WITH_REFERENCE.equals(metaClass);
+	}
+
+	private boolean isSystem(IRPModelElement element) {
+		String metaClass = element.getUserDefinedMetaClass();
+		return OPERATIONAL_SYSTEM.equals(metaClass) || LOGICAL_SYSTEM.equals(metaClass);
+	}
+
+	/**
+	 * Existing FBS linked to the element by a dependency (diagram -> element).
+	 * Only Functional Breakdown Structure diagrams are considered, so another
+	 * breakdown diagram (e.g. the LBS of a Logical System) is never overwritten.
+	 */
+	private IRPDiagram findAttachedFbs(IRPModelElement element) {
+		@SuppressWarnings("unchecked")
+		List<IRPModelElement> referencesList = element.getReferences().toList();
+		for (IRPModelElement reference : referencesList) {
+			if (!(reference instanceof IRPDependency)) continue;
+			IRPModelElement dependent = ((IRPDependency) reference).getDependent();
+			if (dependent instanceof IRPDiagram
+					&& FBS_DIAGRAM.equals(dependent.getUserDefinedMetaClass())) {
+				return (IRPDiagram) dependent;
+			}
+		}
+		return null;
+	}
+
+	/** System Functional Behavior directly owned by the selected system, if any. */
+	private IRPModelElement findSystemFunctionalBehavior() {
+		@SuppressWarnings("unchecked")
+		List<Object> nested = startPoint.getNestedElements().toList();
+		for (Object item : nested) {
+			if (item instanceof IRPModelElement && SYSTEM_FUNCTIONAL_BEHAVIOR
+					.equals(((IRPModelElement) item).getUserDefinedMetaClass())) {
+				return (IRPModelElement) item;
+			}
+		}
+		return null;
+	}
+
+	/** System mode: name of the System Functional Behavior, else of the system. */
+	private String diagramName() {
+		IRPModelElement sfb = findSystemFunctionalBehavior();
+		return sfb != null ? sfb.getName() : startPoint.getName();
+	}
+
+	private String diagramDisplayName() {
+		IRPModelElement sfb = findSystemFunctionalBehavior();
+		return sfb != null ? sfb.getDisplayName() : startPoint.getDisplayName();
+	}
+
+	/**
+	 * Creates an element with the requested name. If the name is already taken in
+	 * the owner (e.g. another FBS for a homonymous function, or the LBS of the same
+	 * Logical System), a suffix is added to the internal name. For diagrams the
+	 * display name still shows the requested name.
+	 */
+	private IRPModelElement addUniqueAggr(IRPModelElement owner, String type,
+			String name, String suffix) {
+		try {
+			return owner.addNewAggr(type, name);
+		} catch (Exception e) {
+			rhpLog.warn("FBS: name '" + name + "' already used in "
+					+ owner.getName() + "; using a suffixed name.");
+		}
+		for (int i = 1; ; i++) {
+			String candidate = name + suffix + (i == 1 ? "" : String.valueOf(i));
+			try {
+				return owner.addNewAggr(type, candidate);
+			} catch (Exception e) {
+				if (i >= 50) throw new IllegalStateException(
+						"Cannot create " + type + " named " + name, e);
+			}
+		}
+	}
+
+	/**
+	 * First "B - Functional Analysis Package" directly under the project that is
+	 * not read-only. If there is none, a new one is created under the project.
+	 */
+	private IRPPackage findOrCreateFunctionalAnalysisPackage() {
+		IRPProject project = startPoint.getProject();
+		if (project == null) project = rhApp.activeProject();
+		if (project == null) return null;
+
+		@SuppressWarnings("unchecked")
+		List<Object> packages = project
+				.getNestedElementsByMetaClass(RhpMetaClassConstants.PACKAGE, 0).toList();
+		for (Object item : packages) {
+			if (!(item instanceof IRPPackage)) continue;
+			IRPPackage pkg = (IRPPackage) item;
+			if (!FUNCTIONAL_ANALYSIS_PACKAGE.equals(pkg.getUserDefinedMetaClass())) continue;
+			if (isReadOnly(pkg)) {
+				rhpLog.debug("FBS: skipping read-only package " + pkg.getName());
+				continue;
+			}
+			rhpLog.info("FBS target package: " + pkg.getName());
+			return pkg;
+		}
+
+		rhpLog.warn("FBS: no writable Functional Analysis Package under the project;"
+				+ " creating one.");
+		try {
+			IRPPackage created = (IRPPackage) addUniqueAggr(project,
+					FUNCTIONAL_ANALYSIS_PACKAGE, DEFAULT_FA_PACKAGE_NAME, "_");
+			rhpLog.info("FBS: created Functional Analysis Package " + created.getName());
+			return created;
+		} catch (Exception e) {
+			rhpLog.error("FBS: cannot create a Functional Analysis Package: " + e);
+			return null;
+		}
+	}
+
+	/** A package is read-only when it, or the unit it is saved in, is read-only. */
+	private boolean isReadOnly(IRPPackage pkg) {
+		try {
+			if (pkg.isReadOnly() == Types.Unit.READ_ONLY) return true;
+		} catch (Exception e) {
+			rhpLog.debug("FBS: cannot read isReadOnly of " + pkg.getName() + ": " + e);
+		}
+		try {
+			IRPUnit unit = pkg.getSaveUnit();
+			if (unit != null && unit.isReadOnly() == Types.Unit.READ_ONLY) return true;
+		} catch (Exception e) {
+			rhpLog.debug("FBS: cannot read save unit of " + pkg.getName() + ": " + e);
+		}
+		return false;
+	}
+
+	/**
 	 * Repositions edge source and target points based on node geometry.
 	 */
 	private void repositionRelations() {
@@ -376,16 +617,19 @@ public class GenerateFBS extends RhapsodyTool {
 	}
 
 	/**
-	 * Utility to find the enclosing IRPPackage of an element.
+	 * Selects the generated diagram in the browser so the user sees where it
+	 * was created. Done after the command, when the browser refresh is restored.
 	 */
-	private IRPPackage findEnclosingPackage(IRPModelElement element) {
-		while (element != null) {
-			if (element instanceof IRPPackage) {
-				return (IRPPackage) element;
-			}
-			element = element.getOwner();
+	@Override
+	public void afterExecute() {
+		if (diagramToLocate == null) return;
+		try {
+			diagramToLocate.locateInBrowser();
+		} catch (Exception e) {
+			rhpLog.warn("Cannot locate diagram in browser: " + e);
+		} finally {
+			diagramToLocate = null;
 		}
-		return null;
 	}
 
 	@Override

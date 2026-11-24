@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RhapsodyArchive>
+	<MagicNumber></MagicNumber>
+	<CODE-PAGE>1252</CODE-PAGE>
+	<version>110.0.2</version>
+	<lang>*</lang>
+	<BuildNo>202504251049</BuildNo>
+	<RMMMinimumClientVersion>100.0</RMMMinimumClientVersion>
+	
+	<RHAPSODY-MODEL>
+	<CGEMdiWorkspace type="e">
+			<stubList type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</stubList>
+			<isLoadOnDemand type="a">0</isLoadOnDemand>
+			<isDisablePopupNotifications type="a">0</isDisablePopupNotifications>
+			<myViewsWithID type="c">
+				<IRPYRawContainer type="e">
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">2</m_nFlags>
+								<m_showCmd type="a">3</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">5</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">27</m_ptMaxPositionY>
+								<m_nLeft type="a">5</m_nLeft>
+								<m_nTop type="a">27</m_nTop>
+								<m_nRight type="a">801</m_nRight>
+								<m_nBottom type="a">795</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IDiagram</_hm2Class>
+								<_hfilename type="a">.\SafranArchitectureProfileMetamodel_rpy\SafranArchitectureProfileMetamodel.sbsx</_hfilename>
+								<_hsubsystem type="a">SafranArchitectureProfileMetamodel::MetaModElements</_hsubsystem>
+								<_hclass type="a">Activated Function</_hclass>
+								<_hname type="a">Activated Function Overview Diagram</_hname>
+								<_hid type="a">GUID 8ce0211c-c674-4ab5-8d83-9197facdfd6c</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">242 0 </_UpLeft>
+						<_DownRight type="a">1017 721 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-1</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-1</m_ptMaxPositionY>
+								<m_nLeft type="a">5</m_nLeft>
+								<m_nTop type="a">27</m_nTop>
+								<m_nRight type="a">801</m_nRight>
+								<m_nBottom type="a">795</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IDiagram</_hm2Class>
+								<_hfilename type="a">.\SafranArchitectureProfileMetamodel_rpy\SafranArchitectureProfileMetamodel.sbsx</_hfilename>
+								<_hsubsystem type="a">SafranArchitectureProfileMetamodel::MetaModElements</_hsubsystem>
+								<_hclass type="a">Function Allocation</_hclass>
+								<_hname type="a">Function Allocation Overview Diagram</_hname>
+								<_hid type="a">GUID 8ef5d9ed-e03e-4161-850b-69f030bc62ed</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">27 -10 </_UpLeft>
+						<_DownRight type="a">802 711 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-1</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-1</m_ptMaxPositionY>
+								<m_nLeft type="a">5</m_nLeft>
+								<m_nTop type="a">27</m_nTop>
+								<m_nRight type="a">801</m_nRight>
+								<m_nBottom type="a">795</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IDiagram</_hm2Class>
+								<_hfilename type="a">.\SafranArchitectureProfileMetamodel_rpy\SafranArchitectureProfileMetamodel.sbsx</_hfilename>
+								<_hsubsystem type="a">SafranArchitectureProfileMetamodel::MetaModElements</_hsubsystem>
+								<_hclass type="a">Functional Flow</_hclass>
+								<_hname type="a">Functional Flow Overview Diagram</_hname>
+								<_hid type="a">GUID f9f71259-ca92-491b-b83b-0ca2e5e66c21</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">0 -110 </_UpLeft>
+						<_DownRight type="a">775 611 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-1</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-1</m_ptMaxPositionY>
+								<m_nLeft type="a">5</m_nLeft>
+								<m_nTop type="a">27</m_nTop>
+								<m_nRight type="a">801</m_nRight>
+								<m_nBottom type="a">795</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IDiagram</_hm2Class>
+								<_hfilename type="a">.\SafranArchitectureProfileMetamodel_rpy\SafranArchitectureProfileMetamodel.sbsx</_hfilename>
+								<_hsubsystem type="a">SafranArchitectureProfileMetamodel::MetaModElements</_hsubsystem>
+								<_hclass type="a">Lifecycle Phase Transition</_hclass>
+								<_hname type="a">Lifecycle Phase Transition Overview Diagram</_hname>
+								<_hid type="a">GUID 7704caf2-586a-4474-b2ff-3c7e75ae7225</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">-88 120 </_UpLeft>
+						<_DownRight type="a">687 841 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-1</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-1</m_ptMaxPositionY>
+								<m_nLeft type="a">5</m_nLeft>
+								<m_nTop type="a">27</m_nTop>
+								<m_nRight type="a">801</m_nRight>
+								<m_nBottom type="a">795</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IDiagram</_hm2Class>
+								<_hfilename type="a">.\SafranArchitectureProfileMetamodel_rpy\SafranArchitectureProfileMetamodel.sbsx</_hfilename>
+								<_hsubsystem type="a">SafranArchitectureProfileMetamodel::MetaModElements</_hsubsystem>
+								<_hclass type="a">Logical Flow</_hclass>
+								<_hname type="a">Logical Flow Overview Diagram</_hname>
+								<_hid type="a">GUID a46b45c1-f66e-48b1-9123-94feedaf4231</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">0 0 </_UpLeft>
+						<_DownRight type="a">775 721 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">2</m_nFlags>
+								<m_showCmd type="a">3</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">5</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">27</m_ptMaxPositionY>
+								<m_nLeft type="a">5</m_nLeft>
+								<m_nTop type="a">27</m_nTop>
+								<m_nRight type="a">1233</m_nRight>
+								<m_nBottom type="a">733</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IDiagram</_hm2Class>
+								<_hfilename type="a">.\SafranArchitectureProfileMetamodel_rpy\SafranArchitectureProfileMetamodel.sbsx</_hfilename>
+								<_hsubsystem type="a">SafranArchitectureProfileMetamodel::MetaModElements</_hsubsystem>
+								<_hclass type="a">Logical Interfaces Diagram</_hclass>
+								<_hname type="a">Logical Interfaces Diagram Overview Diagram</_hname>
+								<_hid type="a">GUID 797ca99f-3b1d-46db-81fe-59b163018d81</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">-106 0 </_UpLeft>
+						<_DownRight type="a">1101 659 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-1</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-1</m_ptMaxPositionY>
+								<m_nLeft type="a">5</m_nLeft>
+								<m_nTop type="a">27</m_nTop>
+								<m_nRight type="a">801</m_nRight>
+								<m_nBottom type="a">795</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IDiagram</_hm2Class>
+								<_hfilename type="a">.\SafranArchitectureProfileMetamodel_rpy\SafranArchitectureProfileMetamodel.sbsx</_hfilename>
+								<_hsubsystem type="a">SafranArchitectureProfileMetamodel::MetaModElements</_hsubsystem>
+								<_hclass type="a">Logical Port Realization</_hclass>
+								<_hname type="a">Port Realization Overview Diagram</_hname>
+								<_hid type="a">GUID 8572add3-fafd-4998-990f-020e39da50e1</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">225 0 </_UpLeft>
+						<_DownRight type="a">1000 721 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-1</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-1</m_ptMaxPositionY>
+								<m_nLeft type="a">5</m_nLeft>
+								<m_nTop type="a">27</m_nTop>
+								<m_nRight type="a">1233</m_nRight>
+								<m_nBottom type="a">733</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IDiagram</_hm2Class>
+								<_hfilename type="a">.\SafranArchitectureProfileMetamodel_rpy\SafranArchitectureProfileMetamodel.sbsx</_hfilename>
+								<_hsubsystem type="a">SafranArchitectureProfileMetamodel::MetaModElements</_hsubsystem>
+								<_hclass type="a">Logical Sequence Diagram</_hclass>
+								<_hname type="a">Logical Sequence Diagram Overview Diagram</_hname>
+								<_hid type="a">GUID 448fd6f4-9ccb-4650-87be-597cc49b34d1</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">-106 -87 </_UpLeft>
+						<_DownRight type="a">1235 645 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_bIsActiveView type="a">1</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-1</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-1</m_ptMaxPositionY>
+								<m_nLeft type="a">5</m_nLeft>
+								<m_nTop type="a">27</m_nTop>
+								<m_nRight type="a">801</m_nRight>
+								<m_nBottom type="a">795</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IDiagram</_hm2Class>
+								<_hfilename type="a">.\SafranArchitectureProfileMetamodel_rpy\SafranArchitectureProfileMetamodel.sbsx</_hfilename>
+								<_hsubsystem type="a">SafranArchitectureProfileMetamodel::MetaModElements</_hsubsystem>
+								<_hclass type="a">Logical System Realization</_hclass>
+								<_hname type="a">System Realization Overview Diagram</_hname>
+								<_hid type="a">GUID 03bca8ef-0a2d-40cb-b2fa-dafb6aa44068</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">225 0 </_UpLeft>
+						<_DownRight type="a">1000 721 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-1</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-1</m_ptMaxPositionY>
+								<m_nLeft type="a">5</m_nLeft>
+								<m_nTop type="a">27</m_nTop>
+								<m_nRight type="a">801</m_nRight>
+								<m_nBottom type="a">795</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IDiagram</_hm2Class>
+								<_hfilename type="a">.\SafranArchitectureProfileMetamodel_rpy\SafranArchitectureProfileMetamodel.sbsx</_hfilename>
+								<_hsubsystem type="a">SafranArchitectureProfileMetamodel::MetaModElements</_hsubsystem>
+								<_hclass type="a">Operational Flow</_hclass>
+								<_hname type="a">Operational Flow Overview Diagram</_hname>
+								<_hid type="a">GUID 08fcc2fa-772a-4f31-a745-13e7962b86b7</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">0 0 </_UpLeft>
+						<_DownRight type="a">775 721 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-1</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-1</m_ptMaxPositionY>
+								<m_nLeft type="a">5</m_nLeft>
+								<m_nTop type="a">27</m_nTop>
+								<m_nRight type="a">801</m_nRight>
+								<m_nBottom type="a">795</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IDiagram</_hm2Class>
+								<_hfilename type="a">.\SafranArchitectureProfileMetamodel_rpy\SafranArchitectureProfileMetamodel.sbsx</_hfilename>
+								<_hsubsystem type="a">SafranArchitectureProfileMetamodel::MetaModElements</_hsubsystem>
+								<_hclass type="a">Redefines Component</_hclass>
+								<_hname type="a">Redefines Component Overview Diagram</_hname>
+								<_hid type="a">GUID ed561b33-61a1-4c5a-a63b-18f63d5ed443</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">0 0 </_UpLeft>
+						<_DownRight type="a">775 721 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-1</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-1</m_ptMaxPositionY>
+								<m_nLeft type="a">5</m_nLeft>
+								<m_nTop type="a">27</m_nTop>
+								<m_nRight type="a">801</m_nRight>
+								<m_nBottom type="a">795</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IDiagram</_hm2Class>
+								<_hfilename type="a">.\SafranArchitectureProfileMetamodel_rpy\SafranArchitectureProfileMetamodel.sbsx</_hfilename>
+								<_hsubsystem type="a">SafranArchitectureProfileMetamodel::MetaModElements</_hsubsystem>
+								<_hclass type="a">Redefines System</_hclass>
+								<_hname type="a">Redefines System Overview Diagram</_hname>
+								<_hid type="a">GUID 291c5ff2-5c2c-4a9d-bd0f-ca591b0e0c50</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">0 0 </_UpLeft>
+						<_DownRight type="a">775 721 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-1</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-1</m_ptMaxPositionY>
+								<m_nLeft type="a">5</m_nLeft>
+								<m_nTop type="a">27</m_nTop>
+								<m_nRight type="a">801</m_nRight>
+								<m_nBottom type="a">795</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IDiagram</_hm2Class>
+								<_hfilename type="a">.\SafranArchitectureProfileMetamodel_rpy\SafranArchitectureProfileMetamodel.sbsx</_hfilename>
+								<_hsubsystem type="a">SafranArchitectureProfileMetamodel::MetaModElements</_hsubsystem>
+								<_hclass type="a">References Function</_hclass>
+								<_hname type="a">References Function Overview</_hname>
+								<_hid type="a">GUID fb79045e-7490-4f2c-be19-ca128c3c06e9</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">0 0 </_UpLeft>
+						<_DownRight type="a">775 721 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-1</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-1</m_ptMaxPositionY>
+								<m_nLeft type="a">5</m_nLeft>
+								<m_nTop type="a">27</m_nTop>
+								<m_nRight type="a">801</m_nRight>
+								<m_nBottom type="a">795</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IDiagram</_hm2Class>
+								<_hfilename type="a">.\SafranArchitectureProfileMetamodel_rpy\SafranArchitectureProfileMetamodel.sbsx</_hfilename>
+								<_hsubsystem type="a">SafranArchitectureProfileMetamodel::MetaModElements</_hsubsystem>
+								<_hclass type="a">References Logical System</_hclass>
+								<_hname type="a">References Logical System Overview</_hname>
+								<_hid type="a">GUID f966ce87-dac1-440f-bb0c-ded6a2afdd9f</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">382 0 </_UpLeft>
+						<_DownRight type="a">1157 721 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-1</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-1</m_ptMaxPositionY>
+								<m_nLeft type="a">5</m_nLeft>
+								<m_nTop type="a">27</m_nTop>
+								<m_nRight type="a">801</m_nRight>
+								<m_nBottom type="a">795</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IDiagram</_hm2Class>
+								<_hfilename type="a">.\SafranArchitectureProfileMetamodel_rpy\SafranArchitectureProfileMetamodel.sbsx</_hfilename>
+								<_hsubsystem type="a">SafranArchitectureProfileMetamodel::MetaModElements</_hsubsystem>
+								<_hclass type="a">Satisfies</_hclass>
+								<_hname type="a">Satisfies Overview Diagram</_hname>
+								<_hid type="a">GUID 46c26de3-c922-405d-86db-6968df913d94</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">311 -118 </_UpLeft>
+						<_DownRight type="a">1086 603 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-1</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-1</m_ptMaxPositionY>
+								<m_nLeft type="a">5</m_nLeft>
+								<m_nTop type="a">27</m_nTop>
+								<m_nRight type="a">801</m_nRight>
+								<m_nBottom type="a">795</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IDiagram</_hm2Class>
+								<_hfilename type="a">.\SafranArchitectureProfileMetamodel_rpy\SafranArchitectureProfileMetamodel.sbsx</_hfilename>
+								<_hsubsystem type="a">SafranArchitectureProfileMetamodel::MetaModElements</_hsubsystem>
+								<_hclass type="a">Technical Connection</_hclass>
+								<_hname type="a">Technical Connection Overview Diagram</_hname>
+								<_hid type="a">GUID e98ed87e-488f-4023-9fb4-f59d738393d0</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">0 0 </_UpLeft>
+						<_DownRight type="a">775 721 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-1</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-1</m_ptMaxPositionY>
+								<m_nLeft type="a">5</m_nLeft>
+								<m_nTop type="a">27</m_nTop>
+								<m_nRight type="a">801</m_nRight>
+								<m_nBottom type="a">795</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">0</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IDiagram</_hm2Class>
+								<_hfilename type="a">.\SafranArchitectureProfileMetamodel_rpy\SafranArchitectureProfileMetamodel.sbsx</_hfilename>
+								<_hsubsystem type="a">SafranArchitectureProfileMetamodel::MetaModElements</_hsubsystem>
+								<_hclass type="a">Technical Flow</_hclass>
+								<_hname type="a">Technical Flow Overview Diagram</_hname>
+								<_hid type="a">GUID bce42781-c6fb-4e22-b9b1-4e91e620b43f</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">0 0 </_UpLeft>
+						<_DownRight type="a">775 721 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+				</IRPYRawContainer>
+			</myViewsWithID>
+			<_fullName type="a">C:\Users\S655683\SLS_RMM\SafranArchitectureProfileMetamodel\SafranArchitectureProfileMetamodel</_fullName>
+			<m_SearchScopeList type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</m_SearchScopeList>
+			<bUsingBrowserCustomView type="a">0</bUsingBrowserCustomView>
+			<bApplyOnDiagrams type="a">0</bApplyOnDiagrams>
+			<liCustomViewIDs type="c">
+				<IRPYRawContainer type="e">
+					<value>GUID b1689e6c-47b6-47ad-90a1-37f3a2220a85</value>
+				</IRPYRawContainer>
+			</liCustomViewIDs>
+			<mapOslcRmCollections type="c">
+				<IRPYRawContainer type="e">
+					<value>$$$KEYhttps://jazz.landing-systems.safran/am/process/project-areas/_vGLQsB0EEey8Y_TbEs_pCw;Linked$$$VALUE</value>
+					
+					<value>$$$KEYhttps://safranls.clm.ibmcloud.com/ccm/process/project-areas/__645UHfZEe23VMExIgwW3g;Linked$$$VALUE</value>
+					
+					<value>$$$KEYhttps://safranls.clm.ibmcloud.com/rm/process/project-areas/_rMJ8UO9vEe-FhvQxBrld_w;Linked$$$VALUE</value>
+					
+				</IRPYRawContainer>
+			</mapOslcRmCollections>
+			<m_currentGcName type="a">BAS V1.00</m_currentGcName>
+			<m_currentGcUrl type="a">https://agsjts.snm.snecma:9443/gc/configuration/34</m_currentGcUrl>
+			<diagramsToPublish type="c">
+				<IRPYRawContainer type="e">
+					<value>GUID 68011ff9-6ac0-430e-ba10-b89f6fbff8d5</value>
+					<value>GUID e98ed87e-488f-4023-9fb4-f59d738393d0</value>
+					<value>GUID 5d6865e4-f7ef-4081-ac56-33e3ad18db9d</value>
+					<value>GUID 4375c9d4-6aa8-4a6a-ba69-c816d78aaab7</value>
+					<value>GUID 9ab0591f-dcb5-464d-b7fb-4619ec804250</value>
+					<value>GUID a46b45c1-f66e-48b1-9123-94feedaf4231</value>
+					<value>GUID 8d4a3c0e-70f1-4aac-ac24-fcad0ee7db98</value>
+					<value>GUID f8579cfe-1ef4-4ebf-b252-2eadd86bf510</value>
+					<value>GUID 0031919a-8d76-4789-a874-25e7b9b3e3c1</value>
+					<value>GUID fb79045e-7490-4f2c-be19-ca128c3c06e9</value>
+					<value>GUID 8ef5d9ed-e03e-4161-850b-69f030bc62ed</value>
+					<value>GUID 9cb415e3-0e1e-4833-8fa5-d323ab9a9949</value>
+					<value>GUID f966ce87-dac1-440f-bb0c-ded6a2afdd9f</value>
+					<value>GUID 31a832fe-0c99-452e-bf41-0fab6fa56e07</value>
+					<value>GUID fc07b5eb-8141-466d-828e-60ce3ab6d5c1</value>
+					<value>GUID 9e34b3f0-6e93-4ad4-8c89-6e94f8979918</value>
+					<value>GUID e00c6dfc-8350-4424-a084-153b71693ed3</value>
+					<value>GUID 8ce0211c-c674-4ab5-8d83-9197facdfd6c</value>
+					<value>GUID c7671501-7267-4e85-8aeb-9f25096f39b0</value>
+					<value>GUID 7a77edf5-c688-47f7-ad64-72f2a76338dd</value>
+					<value>GUID 510aea43-1c21-4e26-bf21-31d4d497a984</value>
+					<value>GUID 971bc14f-6f6b-4df7-ba59-9b5c9033b1af</value>
+					<value>GUID da489f1c-0a1c-4303-b0cf-246e91b560e3</value>
+					<value>GUID 5368ebd5-0776-41e2-be74-e65944c1e350</value>
+					<value>GUID 3c8bcf59-045b-4573-9f71-38292c68f89a</value>
+					<value>GUID 08fcc2fa-772a-4f31-a745-13e7962b86b7</value>
+					<value>GUID e7768b85-f9d3-46a5-82df-35657170da85</value>
+					<value>GUID cad314be-9c14-4f88-972b-22061407e43a</value>
+					<value>GUID f9f71259-ca92-491b-b83b-0ca2e5e66c21</value>
+					<value>GUID a49a1d30-ecb7-4bca-bd19-5a6e30da9fa9</value>
+					<value>GUID 6e3fca03-3fd1-46f1-a209-7097b59b3ab0</value>
+					<value>GUID 2d139695-f32f-4c23-bbae-ed31f695b02e</value>
+					<value>GUID 873da466-7a86-4c22-8a55-7b091d00c0a0</value>
+					<value>GUID 797ca99f-3b1d-46db-81fe-59b163018d81</value>
+					<value>GUID 7659752d-8c7b-435d-9e42-e6f517ad1da6</value>
+					<value>GUID 347da5df-3339-4ece-a3dd-58dea317e0c8</value>
+					<value>GUID ee8e905d-f632-4d39-b20a-f25ce84386a0</value>
+					<value>GUID f86cae13-3d17-483d-b4c1-66b7cc8dd6ca</value>
+					<value>GUID d16ea0aa-ce04-406e-be47-2b54291808b2</value>
+					<value>GUID 611dc4c9-f398-4fa7-9068-839534c2d5fa</value>
+					<value>GUID c7b1ae43-dec5-41c5-88a9-53244c1f9504</value>
+					<value>GUID 40ff5374-0627-45bd-91c7-9363457f88dd</value>
+					<value>GUID a41ce32a-dcbc-4143-a626-e667a2ea3e84</value>
+					<value>GUID 61fbac67-fe44-4d60-870f-777cc616d196</value>
+					<value>GUID 03bca8ef-0a2d-40cb-b2fa-dafb6aa44068</value>
+					<value>GUID 06ecf715-88cc-4928-9a23-adc993309915</value>
+					<value>GUID 46c26de3-c922-405d-86db-6968df913d94</value>
+					<value>GUID add9f8b0-a6a9-4eaa-ad09-56ac010fec18</value>
+					<value>GUID 25867bb7-8dcb-40cd-bb26-314a4db41a0e</value>
+					<value>GUID 76fb2f8c-37ca-4cb1-aa19-e2e1f1d885a6</value>
+					<value>GUID 448fd6f4-9ccb-4650-87be-597cc49b34d1</value>
+					<value>GUID 90f9ca91-43ec-4c10-bfbe-7bf173b51411</value>
+					<value>GUID 702fd35e-8beb-450e-9e18-177b6b22b945</value>
+					<value>GUID b2b16b7b-0111-4451-8002-8797b7fafd9e</value>
+					<value>GUID cfa95813-e2f3-46c7-913e-5f4050417e1e</value>
+					<value>GUID 16139a91-65de-4902-bd26-2a19651018fa</value>
+					<value>GUID a0dafcf6-851e-45d8-a343-aada478f745a</value>
+					<value>GUID 449c9c65-1139-4ed3-9ada-d4db0a250cb5</value>
+					<value>GUID 51f4a0a0-b94c-4ee0-aa54-a7ca19d289db</value>
+					<value>GUID 007ebde5-f279-4f90-be04-626f50d38d55</value>
+					<value>GUID 8572add3-fafd-4998-990f-020e39da50e1</value>
+					<value>GUID ad8530f3-5794-4286-9527-01d7e7d1d570</value>
+					<value>GUID 638ede26-0b5c-48a0-9cbb-af82b93d6af2</value>
+					<value>GUID f230c94a-6630-4c70-bd98-a2ea640e4033</value>
+					<value>GUID 3d2a50c6-3abb-4853-a9fd-521124a63ff4</value>
+					<value>GUID 05e5df23-d888-4df6-bb63-3d1541df043e</value>
+					<value>GUID 91038826-ac66-409f-aa71-de578dd4122d</value>
+					<value>GUID c5f017d4-f4d3-42d3-9fb3-bbe2cd1e2b5f</value>
+					<value>GUID 6c3ac198-57d6-417c-be05-953e8ac66172</value>
+					<value>GUID d81615ff-1aec-452c-81cf-4d3d81db1af4</value>
+					<value>GUID b0af58eb-f3fc-4e63-8f06-946a5451c144</value>
+					<value>GUID e4ba0b13-0296-4cdd-9d7b-87323115478a</value>
+					<value>GUID 6e592e5c-02c6-4789-a0cb-4be74ffcdc16</value>
+					<value>GUID ed28260a-0845-4365-857a-b16281ebb7a6</value>
+					<value>GUID 82c112b5-b605-43dd-9492-062c892bbdd0</value>
+					<value>GUID ed561b33-61a1-4c5a-a63b-18f63d5ed443</value>
+					<value>GUID b5075843-1341-44bb-9a8d-9562c676d1f0</value>
+					<value>GUID 2b453baf-b658-4c5d-aeae-88f5945f4077</value>
+					<value>GUID 291c5ff2-5c2c-4a9d-bd0f-ca591b0e0c50</value>
+					<value>GUID 366da7f1-867c-4ff4-a14a-aa378f1f8c24</value>
+					<value>GUID 1ba3f925-0c52-4463-8380-923adc217d65</value>
+					<value>GUID a0b3ceac-108a-4b80-9619-aaf5ed7115e6</value>
+					<value>GUID bce42781-c6fb-4e22-b9b1-4e91e620b43f</value>
+					<value>GUID 7704caf2-586a-4474-b2ff-3c7e75ae7225</value>
+					<value>GUID 1337a615-0340-46fc-9693-c20b64d95af2</value>
+					<value>GUID f075406a-32b0-4a8e-9525-30c50a8f7998</value>
+					<value>GUID 11762c8a-1cec-4856-ab10-a2ca596a5eba</value>
+					<value>GUID a53a0dcf-989f-425e-aa2c-5fb1b4471aab</value>
+					<value>GUID 4e85668c-ba75-43ab-ba74-302500f23569</value>
+					<value>GUID b27b342c-9449-4373-9604-bb2de1fc2899</value>
+				</IRPYRawContainer>
+			</diagramsToPublish>
+			<favoritesItem type="e">
+				<generation type="a">0</generation>
+				<name type="a">Favorites</name>
+				<idOrFolder type="a">folder</idOrFolder>
+			</favoritesItem>
+			
+		</CGEMdiWorkspace>
+		
+	</RHAPSODY-MODEL>
+	<OslcLinks type="c">
+		<IRPYRawContainer type="e">
+		</IRPYRawContainer>
+	</OslcLinks>
+
+<INCLUDES-RHAPSODY-INDEX>false</INCLUDES-RHAPSODY-INDEX>
+</RhapsodyArchive>
+

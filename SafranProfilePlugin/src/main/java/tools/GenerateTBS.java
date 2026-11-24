@@ -5,9 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.UIManager;
 
 import com.telelogic.rhapsody.core.IRPApplication;
 import com.telelogic.rhapsody.core.IRPClass;
@@ -23,6 +21,7 @@ import com.telelogic.rhapsody.core.IRPPackage;
 
 import main.constants.RhpMetaClassConstants;
 import utils.D2Rectangle;
+import utils.ScreenDialogs;
 
 /**
  * <b>Generate TBS (Technical Breakdown Structure) Diagram</b>
@@ -58,6 +57,8 @@ public class GenerateTBS extends RhapsodyTool {
 	private static final String REFERENCE_LINK = "References Technical Component";
 
 	private IRPDiagram attachedDiagram = null;
+	/** Diagram to select in the browser once the command is completed. */
+	private IRPDiagram diagramToLocate = null;
 	private IRPModelElement startPoint = null;
 	private int currentYPosition = 0;
 	private IRPCollection graphElements;
@@ -75,6 +76,7 @@ public class GenerateTBS extends RhapsodyTool {
 		rhpLog.debug("Starting execution of: " + COMMAND);
 
 		attachedDiagram = null;
+		diagramToLocate = null;
 		startPoint = rhApp.getSelectedElement();
 		currentYPosition = 0;
 		graphElements = rhApp.createNewCollection();
@@ -82,7 +84,7 @@ public class GenerateTBS extends RhapsodyTool {
 
 		if (startPoint == null) {
 			rhpLog.error("No model element selected.");
-			JOptionPane.showMessageDialog(null, "Please select a model element to generate TBD.");
+			ScreenDialogs.message("Please select a model element to generate TBD.", "Generate TBS", JOptionPane.WARNING_MESSAGE);
 			return;
 		}
 
@@ -136,7 +138,7 @@ public class GenerateTBS extends RhapsodyTool {
 		IRPPackage parentPackage = findEnclosingPackage(startPoint);
 		if (parentPackage == null) {
 			rhpLog.error("No package found in element hierarchy.");
-			JOptionPane.showMessageDialog(null, "Cannot find a containing package to create diagram.");
+			ScreenDialogs.message("Cannot find a containing package to create diagram.", "Generate TBS", JOptionPane.ERROR_MESSAGE);
 			return;
 		}
 
@@ -151,10 +153,8 @@ public class GenerateTBS extends RhapsodyTool {
 	 * User-facing confirmation if diagram exists.
 	 */
 	private boolean alertUser() {
-		return JOptionPane.showConfirmDialog(null,
-				"TBD already exists. Do you want to update it?",
-				"TBD Diagram Exists",
-				JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION;
+		return ScreenDialogs.confirm("TBD already exists. Do you want to update it?",
+				"TBD Diagram Exists");
 	}
 
 	/**
@@ -162,41 +162,19 @@ public class GenerateTBS extends RhapsodyTool {
 	 * @return Max depth or -1 for unlimited, null if cancelled
 	 */
 	private Integer selectMaxDepthInJavaWindow() {
-	    String[] options = { "*", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+		String[] options = { "*", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
 
-	    try {
-	        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-	    } catch (Exception e) {
-	        rhpLog.error("Could not set native look and feel: " + e);
-	    }
+		// Shown on Rhapsody's screen (mouse cursor screen), always on top.
+		String selected = (String) ScreenDialogs.showInput(
+				"Select recursion depth for technical component:",
+				"TBD Diagram Settings", options, options[0]);
 
-	    // Create a hidden always-on-top frame to anchor the dialog
-	    JFrame frame = new JFrame();
-	    frame.setUndecorated(true);
-	    frame.setAlwaysOnTop(true);
-	    frame.setLocationRelativeTo(null); // Center on default screen
-	    frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-	    frame.setVisible(true); // Necessary to bring it to front
+		if (selected == null) {
+			rhpLog.info("User cancelled depth selection.");
+			return null;
+		}
 
-	    // Show the dialog, blocking here until user input is provided
-	    String selected = (String) JOptionPane.showInputDialog(
-	            frame,
-	            "Select recursion depth for technical component:",
-	            "TBD Diagram Settings",
-	            JOptionPane.QUESTION_MESSAGE,
-	            null,
-	            options,
-	            options[0]);
-
-	    // Clean up
-	    frame.dispose();
-
-	    if (selected == null) {
-	        rhpLog.info("User cancelled depth selection.");
-	        return null;
-	    }
-
-	    return selected.equals("*") ? -1 : Integer.parseInt(selected);
+		return selected.equals("*") ? -1 : Integer.parseInt(selected);
 	}
 
 	/**
@@ -213,6 +191,7 @@ public class GenerateTBS extends RhapsodyTool {
 		createVirtualContainments();
 		repositionRelations();
 		attachedDiagram.openDiagram();
+		diagramToLocate = attachedDiagram;
 		rhpLog.debug("Diagram creation completed.");
 	}
 
@@ -387,6 +366,22 @@ public class GenerateTBS extends RhapsodyTool {
 			element = element.getOwner();
 		}
 		return null;
+	}
+
+	/**
+	 * Selects the generated diagram in the browser so the user sees where it
+	 * was created. Done after the command, when the browser refresh is restored.
+	 */
+	@Override
+	public void afterExecute() {
+		if (diagramToLocate == null) return;
+		try {
+			diagramToLocate.locateInBrowser();
+		} catch (Exception e) {
+			rhpLog.warn("Cannot locate diagram in browser: " + e);
+		} finally {
+			diagramToLocate = null;
+		}
 	}
 
 	@Override

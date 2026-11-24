@@ -46,7 +46,7 @@ import tools.UpdateRedefinedPorts;
 
 public class SafranProfilePlugin extends RPUserPlugin {
 
-	private static final String BUILD_VERSION = "20261008_20-50";
+	private static final String BUILD_VERSION = "20251215_16-45";
 
 	private static RhapsodyLogger rhpLog = RhapsodyLogger.getInstance();
 
@@ -279,6 +279,12 @@ public class SafranProfilePlugin extends RPUserPlugin {
 						rhpLog.error("Cannot unfreeze refresh: " + e);
 						utils.UndoTrace.mark(rhpApp, rhpLog, "unfreeze refresh EXCEPTION");
 					}
+				}
+
+				try {
+					commandTool.afterExecute();
+				} catch (Exception e) {
+					rhpLog.error("afterExecute failed for " + menuItem + ": " + e);
 				}
 
 				utils.UndoTrace.mark(rhpApp, rhpLog, "EXIT OnMenuItemSelect (outermost)");

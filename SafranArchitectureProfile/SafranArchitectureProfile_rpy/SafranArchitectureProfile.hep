@@ -48,7 +48,7 @@ isVisible2=1
 name6=Safran Toolkit...\Generate FBS
 isPlugInCommand6=1
 command6=SafranPlugin
-applicableTo6=Function, Functional System
+applicableTo6=Function, Functional System, Operational System, Logical System
 isVisible6=1
 
 # Generate a Logical Structure Diagram

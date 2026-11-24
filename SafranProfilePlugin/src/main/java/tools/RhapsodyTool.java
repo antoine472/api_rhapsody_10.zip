@@ -35,6 +35,14 @@ public abstract class RhapsodyTool {
 		return false;
 	}
 
+	/**
+	 * Called by SafranProfilePlugin once execute() has returned, the undo
+	 * transaction is closed and the browser/GE refresh is restored. Use it for UI
+	 * actions that need an up-to-date browser (e.g. locating a created element).
+	 */
+	public void afterExecute() {
+	}
+
 	// ------------------------------------------------------------------
 	// Live elements (selector tools: the model may change while a selector is open)
 	// ------------------------------------------------------------------
