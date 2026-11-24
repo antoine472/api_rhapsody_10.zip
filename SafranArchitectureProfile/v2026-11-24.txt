@@ -1,0 +1,57 @@
+SafranArchitectureProfile - version v2026-11-24
+=================================================
+
+Builds
+------
+- safran_app.jar (SafranProfilePlugin) : BUILD_VERSION 20261124_17-00
+- safran_listener.jar (SafranProfileListener) : BUILD_VERSION 20261124_17-00
+  A reconstruire dans Eclipse (build_safran_app.jardesc, build_safran_listener.jardesc).
+  Le safran_app.jar present dans SafranArchitectureProfile_EXE est plus ancien.
+
+Changements depuis v2026-10-02
+------------------------------
+24/11/2026
+- Barre d'outils : deux boutons a cote de Return home
+  - Open Analysis Tables : ouvre la page Monitoring::Analysis Tables
+    (icone Icons\AnalysisTables16.png, entree name55 du .hep)
+  - Open Tool Documentation : ouvre l'adresse de la vignette Tool Documentation
+    de la page Home (icone Icons\ToolDocumentation16.png, entree name56 du .hep)
+- Page Analysis Tables : programme UpdateAnalysisTables (test/manual)
+  - les 12 tables suivent la table de reference Operational ICD SafranML v2
+  - suffixe _SafranMLv2_Layout / _SafranMLv2_View (OperationalICDNewProfile devient OperationalICD)
+  - Logical ICD et Technical ICD : copies de la reference, a partir du
+    Logical Architecture Diagram et du Technical Architecture Diagram
+  - termes du profil v2 dans les motifs, getters proteges (instanceof, null)
+- Package Monitoring et page Home : programme OrganizeMonitoring (test/manual)
+  - tables qui fonctionnent dans OK (Diagram Indexes A a D, Analysis Tables Page,
+    Other Tables), tables de l'ancien profil dans NOK
+  - 9 tables d'index creees : la page Home couvre les 22 types de diagrammes
+  - 9 vignettes ajoutees dans Icons\Home, 3 images en chemin absolu corrigees
+- Fusion de la version locale du 24/11 : projet SafranArchitectureProfileMetamodel,
+  ScreenDialogs, tables Monitoring ; bouton Rearrange Tree Layout retabli
+
+09/11/2026
+- Sources SafranProfileChecker et SafranProfileListener, Generate TBS
+
+04/11/2026
+- Tables Monitoring, lot 1 : ICD (cote To), gardes des getters, Context Diagram,
+  Mode and Function Traceability, allocation des fonctions
+
+12/10/2026
+- Decomposition fonctionnelle (Functional Decomposition Layout / View)
+
+08/10/2026
+- Rearrange Tree Layout (FBS, LBS, TBS), Generate TBS avec le type du profil
+
+A faire dans Rhapsody apres mise a jour
+---------------------------------------
+1. Ouvrir le profil, lancer OrganizeMonitoring puis UpdateAnalysisTables
+   (Run As, Java Application, d'abord avec l'argument DRY), enregistrer le profil.
+2. Reconstruire safran_app.jar et safran_listener.jar, redemarrer Rhapsody
+   pour charger les nouveaux boutons.
+
+Tests (sans Rhapsody)
+---------------------
+- SafranProfilePlugin : 317 OK, 58 KO (tests qui demandent Rhapsody)
+- getters des tables Monitoring : 61 OK
+- SafranProfileListener : 134 OK, 1 KO (connu)

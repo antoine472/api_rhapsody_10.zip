@@ -28,6 +28,8 @@ import tools.GenericFlow;
 import tools.LocateFlowItemInBrowser;
 import tools.OpenParentDiagram;
 import tools.PropagatePortProperties;
+import tools.OpenAnalysisTables;
+import tools.OpenToolDocumentation;
 import tools.ReturnHome;
 import tools.RearrangeTreeLayout;
 import tools.ReverseFlowDirection;
@@ -46,7 +48,7 @@ import tools.UpdateRedefinedPorts;
 
 public class SafranProfilePlugin extends RPUserPlugin {
 
-	private static final String BUILD_VERSION = "20251215_16-45";
+	private static final String BUILD_VERSION = "20261124_17-00";
 
 	private static RhapsodyLogger rhpLog = RhapsodyLogger.getInstance();
 
@@ -99,6 +101,9 @@ public class SafranProfilePlugin extends RPUserPlugin {
 		tools.put(SelectFunctionDefinition.COMMAND, new SelectFunctionDefinition(rhpApp));
 		tools.put(SelectModeDefinition.COMMAND, new SelectModeDefinition(rhpApp));
 		tools.put(ReturnHome.COMMAND, new ReturnHome(rhpApp));
+		// Boutons de la barre d'outils, a cote de Return home : page Analysis Tables et documentation
+		tools.put(OpenAnalysisTables.COMMAND, new OpenAnalysisTables(rhpApp));
+		tools.put(OpenToolDocumentation.COMMAND, new OpenToolDocumentation(rhpApp));
 		tools.put(OpenParentDiagram.COMMAND, new OpenParentDiagram(rhpApp));
 		tools.put(PropagatePortProperties.COMMAND, new PropagatePortProperties(rhpApp));
 		tools.put(ConfigurePropagateProperties.COMMAND, new ConfigurePropagateProperties(rhpApp));

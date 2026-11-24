@@ -8,7 +8,7 @@ import logging.RhapsodyLogger;
 
 public class SafranListenerPlugin extends RPUserPlugin {
 
-	private static final String BUILD_VERSION="20251114_13-55";
+	private static final String BUILD_VERSION="20261124_17-00";
 
 	private static RhapsodyLogger rhpLog = RhapsodyLogger.getInstance();
 

@@ -1,7 +1,7 @@
 [Helpers]
 numberOfElements=100
 
-#prochainIndiceLibre = 55
+#prochainIndiceLibre = 57
 
 ##################################################################################
 Definition of the Safran Plugin - reacts to user actions through context menu
@@ -293,5 +293,21 @@ command54=SafranPlugin
 isToolbarButton54=1
 pluginIcon54=..\Icons\RearrangeTree16.png
 isVisible54=1
+
+#REM: Open Analysis Tables page in toolbar (like Return home)
+name55=Open Analysis Tables
+isPlugInCommand55=1
+command55=SafranPlugin
+isToolbarButton55=1
+pluginIcon55=..\Icons\AnalysisTables16.png
+isVisible55=1
+
+#REM: Open Tool Documentation (address of the Home page tile) in toolbar
+name56=Open Tool Documentation
+isPlugInCommand56=1
+command56=SafranPlugin
+isToolbarButton56=1
+pluginIcon56=..\Icons\ToolDocumentation16.png
+isVisible56=1
 
 # Note: Not required to declare Checkers in .hep file.
